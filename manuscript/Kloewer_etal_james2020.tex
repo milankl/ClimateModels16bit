@@ -277,21 +277,54 @@ Furthermore, posits also come with a no overflow/no underflow-rounding mode: Whe
 
 The posit number framework also highly recommends \emph{quires}, an additional register on hardware to store intermediate results. Fused operations like \emph{multiply-add} can therefore be executed with a single rounding error without the rounding of intermediate results. The quire concept could also be applied to floating-point arithmetic, but is technically difficult to implement on hardware as the required registers would need to be much larger in size. For fair comparison we do not take quires into account. Appendix \ref{sec:app2} includes a short discussion on the benefits of quires. The posit number format is explained in more detail in \citeA{Gustafson2017b}.
 
+\subsection{Emulating posit numbers in the Julia language}
+\label{sec:Julia}
+
+In order to use posits on a conventional CPU we developed the posit emulator \emph{SoftPosit.jl} \cite{Kloewer2019}, a wrapper for the C-based library SoftPosit \cite{Heung2019}, written in Julia \cite{Bezanson2014}. This emulator defines conversion and arithmetic operations with posits. Julia's programming paradigms around \emph{multiple dispatch} and \emph{type stability} facilitate the use of arbitrary number formats without the need to rewrite an algorithm. As this is an essential feature of the Julia language and extensively made use of in this study, we briefly outline the benefits of Julia by computing the harmonic sum with various number types as an example.
+
 \begin{figure}[htbp]
 \begin{verbatim}
-julia> using SoftPosit
-julia> a = Posit16(12.3) 	# convert float to 16bit posit
-julia> c = a+a            # posit addition 
-julia> bits(c," ")        # bits split in sign, regime, exponent and fraction
-"0 1110 0 1000100110"
-julia> Float64(c)         # convert back to Float64
-24.59375
+function harmonic_sum(::Type{T},steps::Int) where T
+    
+    s = zero(T)
+    o = one(T)
+    
+    for i in 1:steps
+    	
+        s_old = s
+        s += o/T(i)
+    	
+        if s == s_old    # check for convergence
+            println(Float64(s),i)
+            break
+        end
+    end
+end    
 \end{verbatim}
-\caption{Example use of the posit emulator \emph{SoftPosit.jl} in the Julia shell.}
+\caption{A type-stable harmonic sum function in the Julia language.}
 \label{fig:emulator}
 \end{figure}
 
-In order to use posits on a conventional CPU we use the posit emulator \emph{SigmoidNumbers} written by Isaac Yonemoto in Julia \cite{Bezanson2014}. This emulator defines conversion to and from floats and arithmetic operations with posits (see Fig. \ref{fig:emulator} for an example). Consequently, posit arithmetic can be used for the numerical integration of the Lorenz equations (section \ref{sec:L63}) and the shallow water model (section \ref{sec:swm}).
+Executing the function \texttt{harmonic\_sum} for the first time with a type \texttt{T} as the first argument, triggers Julia's \emph{just-in-time} compiler. The function is type stable, as the types of all variables are declared. At the same time Julia allows for type flexibility, as its \emph{multiple dispatch} means that calling  \texttt{harmonic\_sum} with another type \texttt{T1} will result in a separately compiled function for \texttt{T1}. We can therefore compute the harmonic sum with aribitrary number types, as long as the zero-element \texttt{zero(T)}; the one-element \texttt{one(T)}; addition; division; conversion from integer and conversion to float are defined for \texttt{T}. 
+
+\begin{figure}[htbp]
+\begin{verbatim}
+julia> using SoftPosit
+julia> using BFloat16s
+julia> harmonic_sum(Float16,2000)
+(7.0859375, 513)
+julia> harmonic_sum(BFloat16,2000)
+(5.0625, 65)
+julia> harmonic_sum(Posit16,2000)    # Posit16 is the Posit(16,1) standard
+(7.77734375, 1024)
+\end{verbatim}
+\caption{Harmonic sum example use of the posit emulator \emph{SoftPosit.jl} in the Julia shell.}
+\label{fig:emulator}
+\end{figure}
+
+The harmonic sum converges after 513 elements when using Float16. The decimal precision of BFloat16 is so low that the sum already converges after 65 elements, as the addition of the next term $1/66$ is round back to 5.0625. We identify the addition of small terms to prognostic variables of size $\mathcal{O}(1)$ as one of the major challenges with low precision arithmetic, which is discussed in more detail in section \ref{sec:mixedprec}. Using 16bit posits with 1 exponent bit, the sum only converges after 1024 terms, due to the higher decimal precision of posits around 1. 
+
+We implement this type-flexible programming paradigm in the numerical integration of the Lorenz equations (section \ref{sec:L63}) and the shallow water model (section \ref{sec:swm}), which allows various number types to be used interchangeably.
 
 \subsection{Decimal precision}
 \label{sec:decprec}
