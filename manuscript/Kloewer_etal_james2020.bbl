@@ -1,0 +1,963 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Arakawa%
+\ \BBA {} Hsu%
+}{%
+Arakawa%
+\ \BBA {} Hsu%
+}{%
+{\protect \APACyear {1990}}%
+}]{%
+Arakawa1990}
+\APACinsertmetastar {%
+Arakawa1990}%
+\begin{APACrefauthors}%
+Arakawa, A.%
+\BCBT {}\ \BBA {} Hsu, Y\BHBI J\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1990}{}{}.
+\newblock
+\APACrefbtitle {{Energy Conserving and Potential-Enstrophy Dissipating Schemes
+  for the Shallow Water Equations}} {{Energy Conserving and Potential-Enstrophy
+  Dissipating Schemes for the Shallow Water Equations}}\ (\BVOL~118)\
+  (\BNUM~10).
+\newblock
+\begin{APACrefURL}
+  \url{http://dx.doi.org/10.1175/1520-0493(1990)118{\%}3C1960:ECAPED{\%}3E2.0.CO{\%}5Cn2}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0493(1990)118<1960:ECAPED>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Arakawa%
+\ \BBA {} Lamb%
+}{%
+Arakawa%
+\ \BBA {} Lamb%
+}{%
+{\protect \APACyear {1977}}%
+}]{%
+Arakawa1977}
+\APACinsertmetastar {%
+Arakawa1977}%
+\begin{APACrefauthors}%
+Arakawa, A.%
+\BCBT {}\ \BBA {} Lamb, V\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1977}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Computational design of the basic dynamical processes
+  of the UCLA general circulation model}} {{Computational design of the basic
+  dynamical processes of the UCLA general circulation model}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Methods of Computational Physics}{17}{}{173--265}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Arbic%
+\ \BBA {} Scott%
+}{%
+Arbic%
+\ \BBA {} Scott%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+Arbic2008}
+\APACinsertmetastar {%
+Arbic2008}%
+\begin{APACrefauthors}%
+Arbic, B\BPBI K.%
+\BCBT {}\ \BBA {} Scott, R\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{On Quadratic Bottom Drag, Geostrophic Turbulence, and
+  Oceanic Mesoscale Eddies}} {{On Quadratic Bottom Drag, Geostrophic
+  Turbulence, and Oceanic Mesoscale Eddies}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Physical Oceanography}{38}{1}{84--103}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/2007JPO3653.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bezanson%
+, Edelman%
+, Karpinski%
+\BCBL {}\ \BBA {} Shah%
+}{%
+Bezanson%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+Bezanson2014}
+\APACinsertmetastar {%
+Bezanson2014}%
+\begin{APACrefauthors}%
+Bezanson, J.%
+, Edelman, A.%
+, Karpinski, S.%
+\BCBL {}\ \BBA {} Shah, V\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Julia: A Fresh Approach to Numerical Computing}}
+  {{Julia: A Fresh Approach to Numerical Computing}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{}{59}{1}{65--98}.
+\newblock
+\begin{APACrefURL} \url{http://arxiv.org/abs/1411.1607} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1137/141000671} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Butcher%
+}{%
+Butcher%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+Butcher2008}
+\APACinsertmetastar {%
+Butcher2008}%
+\begin{APACrefauthors}%
+Butcher, J\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2008}.
+\newblock
+\APACrefbtitle {{Numerical Methods for Ordinary Differential Equations}}
+  {{Numerical Methods for Ordinary Differential Equations}}\
+  (\PrintOrdinal{2nd}\ \BEd).
+\newblock
+\APACaddressPublisher{}{Wiley}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chaurasiya%
+\ \protect \BOthers {.}}{%
+Chaurasiya%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+Chaurasiya2018}
+\APACinsertmetastar {%
+Chaurasiya2018}%
+\begin{APACrefauthors}%
+Chaurasiya, R.%
+, Gustafson, J.%
+, Shrestha, R.%
+, Neudorfer, J.%
+, Nambiar, S.%
+\BCBL {}\ \BBA {} Niyogi, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Parameterized Posit Arithmetic Hardware Generator}}
+  {{Parameterized Posit Arithmetic Hardware Generator}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{}{}{}{9}.
+\newblock
+\begin{APACrefURL} \url{https://posithub.org/docs/iccd_submission_v1.pdf}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chen%
+\ \BBA {} Hofstee%
+}{%
+Chen%
+\ \BBA {} Hofstee%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+Chen2018}
+\APACinsertmetastar {%
+Chen2018}%
+\begin{APACrefauthors}%
+Chen, J.%
+\BCBT {}\ \BBA {} Hofstee, H\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{A Matrix-Multiply Unit for Posits in Reconfigurable
+  Logic Leveraging ( Open ) CAPI}} {{A Matrix-Multiply Unit for Posits in
+  Reconfigurable Logic Leveraging ( Open ) CAPI}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{}{}{}{1--5}.
+\newblock
+\begin{APACrefDOI} \doi{10.1145/3190339.3190340} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dawson%
+\ \BBA {} D{\"{u}}ben%
+}{%
+Dawson%
+\ \BBA {} D{\"{u}}ben%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+Dawson2017}
+\APACinsertmetastar {%
+Dawson2017}%
+\begin{APACrefauthors}%
+Dawson, A.%
+\BCBT {}\ \BBA {} D{\"{u}}ben, P\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Rpe v5: An emulator for reduced floating-point
+  precision in large numerical simulations}} {{Rpe v5: An emulator for reduced
+  floating-point precision in large numerical simulations}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Geoscientific Model Development}{10}{6}{2221--2230}.
+\newblock
+\begin{APACrefDOI} \doi{10.5194/gmd-10-2221-2017} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+D{\"{u}}ben%
+}{%
+D{\"{u}}ben%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+Duben2018}
+\APACinsertmetastar {%
+Duben2018}%
+\begin{APACrefauthors}%
+D{\"{u}}ben, P\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{A new number format for ensemble simulations}} {{A new
+  number format for ensemble simulations}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Advances in Modeling Earth Systems}{}{}{}.
+\newblock
+\begin{APACrefURL} \url{http://doi.wiley.com/10.1029/2018MS001420}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1029/2018MS001420} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+D{\"{u}}ben%
+\ \BBA {} Palmer%
+}{%
+D{\"{u}}ben%
+\ \BBA {} Palmer%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+Duben2014}
+\APACinsertmetastar {%
+Duben2014}%
+\begin{APACrefauthors}%
+D{\"{u}}ben, P\BPBI D.%
+\BCBT {}\ \BBA {} Palmer, T\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Benchmark Tests for Numerical Weather Forecasts on
+  Inexact Hardware}} {{Benchmark Tests for Numerical Weather Forecasts on
+  Inexact Hardware}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monthly Weather Review}{142}{10}{3809--3829}.
+\newblock
+\begin{APACrefURL}
+  \url{http://journals.ametsoc.org/doi/abs/10.1175/MWR-D-14-00110.1}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1175/MWR-D-14-00110.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Gill%
+}{%
+Gill%
+}{%
+{\protect \APACyear {1982}}%
+}]{%
+Gill1982}
+\APACinsertmetastar {%
+Gill1982}%
+\begin{APACrefauthors}%
+Gill, A\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1982}.
+\newblock
+\APACrefbtitle {{Atmosphere-Ocean Dynamics}} {{Atmosphere-Ocean Dynamics}}.
+\newblock
+\APACaddressPublisher{}{Academic Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Glaser%
+\ \protect \BOthers {.}}{%
+Glaser%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+Glaser2017}
+\APACinsertmetastar {%
+Glaser2017}%
+\begin{APACrefauthors}%
+Glaser, F.%
+, Mach, S.%
+, Rahimi, A.%
+, G{\"{u}}rkaynak, F\BPBI K.%
+, Huang, Q.%
+\BCBL {}\ \BBA {} Benini, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{An 826 MOPS, 210 uW/MHz Unum ALU in 65 nm}} {{An 826
+  MOPS, 210 uW/MHz Unum ALU in 65 nm}}.{\BBCQ}
+\newblock
+\begin{APACrefURL} \url{http://arxiv.org/abs/1712.01021} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1109/ISCAS.2018.8351546} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Grassberger%
+\ \BBA {} Procaccia%
+}{%
+Grassberger%
+\ \BBA {} Procaccia%
+}{%
+{\protect \APACyear {1983}}%
+}]{%
+Grassberger1983}
+\APACinsertmetastar {%
+Grassberger1983}%
+\begin{APACrefauthors}%
+Grassberger, P.%
+\BCBT {}\ \BBA {} Procaccia, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1983}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Measuring the strangeness of strange attractors}}
+  {{Measuring the strangeness of strange attractors}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physica D: Nonlinear Phenomena}{9}{1-2}{189--208}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/0167-2789(83)90298-1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Griffies%
+\ \BBA {} Hallberg%
+}{%
+Griffies%
+\ \BBA {} Hallberg%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+Griffies2000}
+\APACinsertmetastar {%
+Griffies2000}%
+\begin{APACrefauthors}%
+Griffies, S\BPBI M.%
+\BCBT {}\ \BBA {} Hallberg, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Biharmonic Friction with a Smagorinsky-Like Viscosity
+  for Use in Large-Scale Eddy-Permitting Ocean Models}} {{Biharmonic Friction
+  with a Smagorinsky-Like Viscosity for Use in Large-Scale Eddy-Permitting
+  Ocean Models}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monthly Weather Review}{128}{8}{2935--2946}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0493(2000)128<2935} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Gustafson%
+}{%
+Gustafson%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+Gustafson2017b}
+\APACinsertmetastar {%
+Gustafson2017b}%
+\begin{APACrefauthors}%
+Gustafson, J\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+\APACrefbtitle {{Posit Arithmetic}.} {{Posit Arithmetic}.}
+\newblock
+\begin{APACrefURL} \url{https://posithub.org/docs/Posits4.pdf} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Gustafson%
+\ \BBA {} Yonemoto%
+}{%
+Gustafson%
+\ \BBA {} Yonemoto%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+Gustafson2017}
+\APACinsertmetastar {%
+Gustafson2017}%
+\begin{APACrefauthors}%
+Gustafson, J\BPBI L.%
+\BCBT {}\ \BBA {} Yonemoto, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Beating Floating Point at its Own Game: Posit
+  Arithmetic}} {{Beating Floating Point at its Own Game: Posit
+  Arithmetic}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Supercomputing Frontiers and
+  Innovations}{4}{2}{71--86}.
+\newblock
+\begin{APACrefURL} \url{http://superfri.org/superfri/article/view/137}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.14529/jsfi170206} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hatfield%
+\ \protect \BOthers {.}}{%
+Hatfield%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+Hatfield2018}
+\APACinsertmetastar {%
+Hatfield2018}%
+\begin{APACrefauthors}%
+Hatfield, S.%
+, D{\"{u}}ben, P.%
+, Chantry, M.%
+, Kondo, K.%
+, Miyoshi, T.%
+\BCBL {}\ \BBA {} Palmer, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Choosing the Optimal Numerical Precision for Data
+  Assimilation in the Presence of Model Error}} {{Choosing the Optimal
+  Numerical Precision for Data Assimilation in the Presence of Model
+  Error}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Advances in Modeling Earth Systems}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1029/2018MS001341} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+IEEE%
+}{%
+IEEE%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+IEEE}
+\APACinsertmetastar {%
+IEEE}%
+\begin{APACrefauthors}%
+IEEE.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{aug}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{IEEE Standard for Floating-Point Arithmetic}} {{IEEE
+  Standard for Floating-Point Arithmetic}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Std 754-2008}{}{}{1--70}.
+\newblock
+\begin{APACrefDOI} \doi{10.1109/IEEESTD.2008.4610935} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Jeffress%
+, D{\"{u}}ben%
+\BCBL {}\ \BBA {} Palmer%
+}{%
+Jeffress%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+Jeffress2017}
+\APACinsertmetastar {%
+Jeffress2017}%
+\begin{APACrefauthors}%
+Jeffress, S.%
+, D{\"{u}}ben, P.%
+\BCBL {}\ \BBA {} Palmer, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Bitwise efficiency in chaotic models}} {{Bitwise
+  efficiency in chaotic models}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Proceedings of the Royal Society A: Mathematical,
+  Physical and Engineering Science}{473}{2205}{20170144}.
+\newblock
+\begin{APACrefURL}
+  \url{http://rspa.royalsocietypublishing.org/lookup/doi/10.1098/rspa.2017.0144}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1098/rspa.2017.0144} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kwasniok%
+}{%
+Kwasniok%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+Kwasniok2014}
+\APACinsertmetastar {%
+Kwasniok2014}%
+\begin{APACrefauthors}%
+Kwasniok, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Enhanced regime predictability in atmospheric low-order
+  models due to stochastic forcing}} {{Enhanced regime predictability in
+  atmospheric low-order models due to stochastic forcing}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Philosophical Transactions of the Royal Society A:
+  Mathematical, Physical and Engineering Sciences}{372}{2018}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1098/rsta.2013.0286} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lorenz%
+}{%
+Lorenz%
+}{%
+{\protect \APACyear {1963}}%
+}]{%
+Lorenz1963}
+\APACinsertmetastar {%
+Lorenz1963}%
+\begin{APACrefauthors}%
+Lorenz, E\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1963}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Deterministic Nonperiodic Flow}} {{Deterministic
+  Nonperiodic Flow}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the Atmospheric Sciences}{20}{}{130--141}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+McGuinness%
+}{%
+McGuinness%
+}{%
+{\protect \APACyear {1983}}%
+}]{%
+McGuinness1983}
+\APACinsertmetastar {%
+McGuinness1983}%
+\begin{APACrefauthors}%
+McGuinness, M\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1983}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{The fractal dimension of the Lorenz attractor}} {{The
+  fractal dimension of the Lorenz attractor}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physics Letters A}{99}{1}{5--9}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/0375-9601(83)90052-X} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+T.~Palmer%
+}{%
+T.~Palmer%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+Palmer2015}
+\APACinsertmetastar {%
+Palmer2015}%
+\begin{APACrefauthors}%
+Palmer, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Build imprecise supercomputers}} {{Build imprecise
+  supercomputers}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature}{526}{}{2--3}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/526032a} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+T\BPBI N.~Palmer%
+}{%
+T\BPBI N.~Palmer%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+Palmer2012a}
+\APACinsertmetastar {%
+Palmer2012a}%
+\begin{APACrefauthors}%
+Palmer, T\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Towards the probabilistic Earth-system simulator: A
+  vision for the future of climate and weather prediction}} {{Towards the
+  probabilistic Earth-system simulator: A vision for the future of climate and
+  weather prediction}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Quarterly Journal of the Royal Meteorological
+  Society}{138}{665}{841--861}.
+\newblock
+\begin{APACrefDOI} \doi{10.1002/qj.1923} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+R{\"{u}}dis{\"{u}}hli%
+, Walser%
+\BCBL {}\ \BBA {} Fuhrer%
+}{%
+R{\"{u}}dis{\"{u}}hli%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+Rudisuhli2013}
+\APACinsertmetastar {%
+Rudisuhli2013}%
+\begin{APACrefauthors}%
+R{\"{u}}dis{\"{u}}hli, S.%
+, Walser, A.%
+\BCBL {}\ \BBA {} Fuhrer, O.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{COSMO in single precision}} {{COSMO in single
+  precision}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{COSMO Newsletter}{}{}{}.
+\newblock
+\begin{APACrefURL}
+  \url{http://www.cosmo-model.org/content/model/documentation/newsLetters/newsLetter14/cnl14_09.pdf}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Russell%
+, D{\"{u}}ben%
+, Niu%
+, Luk%
+\BCBL {}\ \BBA {} Palmer%
+}{%
+Russell%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+Russell2017}
+\APACinsertmetastar {%
+Russell2017}%
+\begin{APACrefauthors}%
+Russell, F\BPBI P.%
+, D{\"{u}}ben, P\BPBI D.%
+, Niu, X.%
+, Luk, W.%
+\BCBL {}\ \BBA {} Palmer, T\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Exploiting the chaotic behaviour of atmospheric models
+  with reconfigurable architectures}} {{Exploiting the chaotic behaviour of
+  atmospheric models with reconfigurable architectures}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Computer Physics Communications}{221}{}{160--173}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1016/j.cpc.2017.08.011}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.cpc.2017.08.011} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sadourny%
+}{%
+Sadourny%
+}{%
+{\protect \APACyear {1975}}%
+}]{%
+Sadourny1975}
+\APACinsertmetastar {%
+Sadourny1975}%
+\begin{APACrefauthors}%
+Sadourny, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1975}{}{}.
+\newblock
+\APACrefbtitle {{The Dynamics of Finite-Difference Models of the Shallow-Water
+  Equations}} {{The Dynamics of Finite-Difference Models of the Shallow-Water
+  Equations}}\ (\BVOL~32)\ (\BNUM~4).
+\newblock
+\begin{APACrefURL}
+  \url{http://dx.doi.org/10.1175/1520-0469(1975)032{\%}3C0680:TDOFDM{\%}3E2.0.CO{\%}5Cn2}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0469(1975)032<0680:TDOFDM>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Smolarkiewicz%
+\ \BBA {} Pudykiewicz%
+}{%
+Smolarkiewicz%
+\ \BBA {} Pudykiewicz%
+}{%
+{\protect \APACyear {1992}}%
+}]{%
+Smolarkiewicz1992}
+\APACinsertmetastar {%
+Smolarkiewicz1992}%
+\begin{APACrefauthors}%
+Smolarkiewicz, P\BPBI K.%
+\BCBT {}\ \BBA {} Pudykiewicz, J\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1992}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{A Class of Semi-Lagrangian Approximations for Fluids}}
+  {{A Class of Semi-Lagrangian Approximations for Fluids}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the atmospheric
+  sciences}{49}{22}{2082--2096}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0469(1992)049<2082:ACOSLA>2.0.CO;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tantet%
+, Lucarini%
+\BCBL {}\ \BBA {} Dijkstra%
+}{%
+Tantet%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+Tantet2018}
+\APACinsertmetastar {%
+Tantet2018}%
+\begin{APACrefauthors}%
+Tantet, A.%
+, Lucarini, V.%
+\BCBL {}\ \BBA {} Dijkstra, H\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Resonances in a Chaotic Attractor Crisis of the Lorenz
+  Flow}} {{Resonances in a Chaotic Attractor Crisis of the Lorenz
+  Flow}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Statistical Physics}{170}{3}{584--616}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1007/s10955-017-1938-0}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s10955-017-1938-0} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Thornes%
+, D{\"{u}}ben%
+\BCBL {}\ \BBA {} Palmer%
+}{%
+Thornes%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+Thornes2017}
+\APACinsertmetastar {%
+Thornes2017}%
+\begin{APACrefauthors}%
+Thornes, T.%
+, D{\"{u}}ben, P.%
+\BCBL {}\ \BBA {} Palmer, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{On the use of scale-dependent precision in Earth System
+  modelling}} {{On the use of scale-dependent precision in Earth System
+  modelling}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Quarterly Journal of the Royal Meteorological
+  Society}{143}{703}{897--908}.
+\newblock
+\begin{APACrefDOI} \doi{10.1002/qj.2974} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Vallis%
+}{%
+Vallis%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+Vallis2006}
+\APACinsertmetastar {%
+Vallis2006}%
+\begin{APACrefauthors}%
+Vallis, G\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2006}.
+\newblock
+\APACrefbtitle {{Atmospheric and Ocean Fluid Dynamics}} {{Atmospheric and Ocean
+  Fluid Dynamics}}.
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+V{\'{a}}{\v{n}}a%
+\ \protect \BOthers {.}}{%
+V{\'{a}}{\v{n}}a%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+Vana2017}
+\APACinsertmetastar {%
+Vana2017}%
+\begin{APACrefauthors}%
+V{\'{a}}{\v{n}}a, F.%
+, D{\"{u}}ben, P.%
+, Lang, S.%
+, Palmer, T.%
+, Leutbecher, M.%
+, Salmond, D.%
+\BCBL {}\ \BBA {} Carver, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Single Precision in Weather Forecasting Models: An
+  Evaluation with the IFS}} {{Single Precision in Weather Forecasting Models:
+  An Evaluation with the IFS}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monthly Weather Review}{145}{2}{495--502}.
+\newblock
+\begin{APACrefURL}
+  \url{http://journals.ametsoc.org/doi/10.1175/MWR-D-16-0228.1}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1175/MWR-D-16-0228.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+van Dam%
+}{%
+van Dam%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+VanDam2018}
+\APACinsertmetastar {%
+VanDam2018}%
+\begin{APACrefauthors}%
+van Dam, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2018}.
+\unskip\
+\newblock
+\APACrefbtitle {{Enabling High Performance Posit Arithmetic Applications Using
+  Hardware Acceleration}} {{Enabling High Performance Posit Arithmetic
+  Applications Using Hardware Acceleration}}\ \APACtypeAddressSchool
+  {\BUPhD}{}{}.
+\unskip\
+\newblock
+\APACaddressSchool {}{Delft University of Technology}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
