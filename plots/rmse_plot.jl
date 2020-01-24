@@ -41,8 +41,6 @@ ax.fill_between(t,Rp[1,6,:]/cerr,Rp[2,6,:]/cerr,color="#900000",alpha=0.2)
 ax.fill_between(t,Rp[1,7,:]/cerr,Rp[2,7,:]/cerr,color="C0",alpha=0.2)
 ax.fill_between(t,Rp[1,8,:]/cerr,Rp[2,8,:]/cerr,color="C1",alpha=0.2)
 
-
-
 ax.set_ylabel("normalized RMSE")
 ax.set_xlabel("time [days]")
 #
