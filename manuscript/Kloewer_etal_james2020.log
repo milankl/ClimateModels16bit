@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  20 JAN 2020 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  23 JAN 2020 12:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2884,7 +2884,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  5318 strings out of 492982
  73202 string characters out of 6134896
- 177037 words of memory out of 5000000
+ 176037 words of memory out of 5000000
  8782 multiletter control sequences out of 15000+600000
  12407 words of font info for 46 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
@@ -2910,7 +2910,7 @@ blic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt9.pfb>
-Output written on Kloewer_etal_james2020.pdf (17 pages, 2023169 bytes).
+Output written on Kloewer_etal_james2020.pdf (17 pages, 2023714 bytes).
 PDF statistics:
  195 PDF objects out of 1000 (max. 8388607)
  112 compressed objects within 2 object streams

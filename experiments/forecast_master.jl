@@ -1,19 +1,16 @@
-using Juls
+include("/home/kloewer/git/ShallowWaters.jl/src/ShallowWaters.jl")
+using .ShallowWaters
 
-RunJuls(Float32,
+RunModel(Float32,
         output=true,
-        Ndays=500.0,
-        outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast",
-        output_vars=["u","v","η"],
-        α=1.,
-        diffusion="constant")
+        Ndays=1000.0,
+        outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast2",
+        output_vars=["u","v","η"])
 
-RunJuls(Float32,
+RunModel(Float32,
         output=true,
         Ndays=50*365,
-        outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast",
+        outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast2",
         output_vars=["u","v","η"],
         initial_cond="ncfile",
-        init_run_id=0,
-        α=1.,
-        diffusion="constant")
+        init_run_id=0)
