@@ -11,8 +11,8 @@ run_id1 = "run0001"
 run_id2 = "run0002"
 run_id3 = "run0003"
 run_id4 = "run0004"
-run_id5 = "run0001"
-run_id6 = "run0001"
+run_id5 = "run0005"
+run_id6 = "run0006"
 
 
 # READ DATA
@@ -44,17 +44,19 @@ sst6 = reshape(nc.vars["sst"][:,:,time_step],length(x),length(y))
 NetCDF.close(nc)
 
 ## Plot
-levs = collect(0:0.05:1)
+levs = collect(0:0.025:1)
+levs2 = collect(-1:0.05:1)
 
 ioff()
 fig,axs = subplots(3,2,figsize=(8,7),sharex=true,sharey=true)
 
-tight_layout(rect=[-.025,0.07,1,0.99],w_pad=0.03,h_pad=0.6)
+tight_layout(rect=[-.025,0.07,1,0.99],w_pad=0.05,h_pad=0.6)
 pos1 = axs[3,1].get_position()
 pos2 = axs[3,2].get_position()
 cax = fig.add_axes([pos1.x0,0.07,pos2.x1-pos1.x0,0.02])
 
 cmap = cm.tempo_r
+cmap2 = cm.balance
 
 q = axs[1,1].contourf(x,y,sst1',levs,cmap=cmap)
 axs[2,1].contourf(x,y,sst2',levs,cmap=cmap)
@@ -63,7 +65,6 @@ axs[3,1].contourf(x,y,sst3',levs,cmap=cmap)
 axs[1,2].contourf(x,y,sst4',levs,cmap=cmap)
 axs[2,2].contourf(x,y,sst5',levs,cmap=cmap)
 axs[3,2].contourf(x,y,sst6',levs,cmap=cmap)
-
 
 cb = colorbar(q,cax=cax,orientation="horizontal")
 cb.set_label("Tracer concentration")

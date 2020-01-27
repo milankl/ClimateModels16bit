@@ -2,7 +2,7 @@ using FileIO
 using Statistics
 using PyPlot
 
-var = "v"
+var = "u"
 R = load("analysis/RMSE_$var.jld2")["RMSE"]
 
 n = size(R)[2]      # number of time steps
