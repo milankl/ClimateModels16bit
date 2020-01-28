@@ -14,14 +14,14 @@
 %
 
 %% To submit your paper:
-\documentclass[draft]{agujournal2019}
+\documentclass[final]{agujournal2019}
 \usepackage{url} %this package should fix any errors with URLs in refs.
 \usepackage{lineno}
 \usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
 \usepackage{soul}
 \usepackage{amsmath}
 \usepackage{listings}
-\linenumbers
+%\linenumbers
 
 \definecolor{mygreen}{rgb}{0,.5,0}
 \definecolor{mygray}{rgb}{0.9,0.9,0.9}
@@ -46,21 +46,20 @@
   frame=single,	                   % adds a frame around the code
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   keywordstyle=\color{mygreen}\textbf,       % keyword style
-  language=Python,                 % the language of the code
+  language=Matlab,                 % the language of the code
   morekeywords={julia},            % if you want to add more keywords to the set
-  numbers=right,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=5pt,                   % how far the line-numbers are from the code
-  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
   rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
   showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
   showstringspaces=false,          % underline spaces within strings only
   showtabs=false,                  % show tabs within strings adding particular underscores
-  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
   stringstyle=\color{black},     % string literal style
   tabsize=2,	                   % sets default tabsize to 2 spaces
   title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
-
 
 \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
@@ -251,8 +250,6 @@ The study  is structured as follows: Section \ref{sec:posits} introduces the pos
 \subsection{The posit number format}
 \label{sec:posit_methods}
 
-%Posit numbers extend the IEEE standard on floating-point arithmetic \cite{IEEE} by introducing regime bits, that are mostly responsible for the dynamic range of representable numbers. Instead of having a fixed length, regime bits are defined as the leading identical bits after the sign bit. The flexible length allows the significand (or mantissa) to occupy more bits when less regime bits are needed, which is the case for numbers around one. A resulting higher precision around one is traded against a gradually lower precision for very large or very small numbers. This is in contrast to floating-point numbers, that have a fixed number of significant bits (16-bit half precision floats have 1 sign, 5 exponent and 10 significant bits) and consequently a constant number of significant digits throughout their dynamic range of representable numbers. 
-
 Following the IEEE standard on floating-point arithmetic \cite{IEEE}, floats encode a real number in terms of a sign bit, and a fixed number of exponent and significant bits (16-bit half precision floats have 1 sign, 5 exponent and 10 significant bits). Consequently, they have a constant number of significant digits throughout their dynamic range of representable numbers. This is in contrast to posit numbers, which extend floating-point arithmetic by introducing regime bits, that are mostly responsible for the dynamic range of representable numbers. Instead of having a fixed length, regime bits are defined as the sequence of identical bits after the sign bit, which are eventually terminated by an opposite bit. The flexible length allows the significand (or mantissa) to occupy more bits when less regime bits are needed, which is the case for numbers around one. A resulting higher precision around one is traded against a gradually lower precision for very large or very small numbers. A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017b} (negative posit numbers are converted first to their two's complement, see Eq. \ref{eq:2comp})
 \begin{equation}
 p = (-1)^{sign~bit} \cdot useed^k \cdot 2^e \cdot (1+f)
@@ -283,24 +280,24 @@ The posit number framework also highly recommends \emph{quires}, an additional r
 In order to use posits on a conventional CPU we developed the posit emulator \emph{SoftPosit.jl} \cite{Kloewer2019}, a wrapper for the C-based library SoftPosit \cite{Heung2019}, written in Julia \cite{Bezanson2014}. This emulator defines conversion and arithmetic operations with posits. Julia's programming paradigms around \emph{multiple dispatch} and \emph{type stability} facilitate the use of arbitrary number formats without the need to rewrite an algorithm. As this is an essential feature of the Julia language and extensively made use of in this study, we briefly outline the benefits of Julia by computing the harmonic sum with various number types as an example.
 
 \begin{figure}[htbp]
-\begin{verbatim}
+\begin{lstlisting}
 function harmonic_sum(::Type{T},steps::Int) where T
-    
+
     s = zero(T)
     o = one(T)
-    
+
     for i in 1:steps
-    	
+
         s_old = s
         s += o/T(i)
-    	
+
         if s == s_old    # check for convergence
             println(Float64(s),i)
             break
         end
     end
-end    
-\end{verbatim}
+end
+\end{lstlisting}
 \caption{A type-stable harmonic sum function in the Julia language.}
 \label{fig:emulator}
 \end{figure}
@@ -308,17 +305,17 @@ end
 Executing the function \texttt{harmonic\_sum} for the first time with a type \texttt{T} as the first argument, triggers Julia's \emph{just-in-time} compiler. The function is type stable, as the types of all variables are declared. At the same time Julia allows for type flexibility, as its \emph{multiple dispatch} means that calling  \texttt{harmonic\_sum} with another type \texttt{T1} will result in a separately compiled function for \texttt{T1}. We can therefore compute the harmonic sum with aribitrary number types, as long as the zero-element \texttt{zero(T)}; the one-element \texttt{one(T)}; addition; division; conversion from integer and conversion to float are defined for \texttt{T}. 
 
 \begin{figure}[htbp]
-\begin{verbatim}
+\begin{lstlisting}
 julia> using SoftPosit
 julia> using BFloat16s
 julia> harmonic_sum(Float16,2000)
 (7.0859375, 513)
 julia> harmonic_sum(BFloat16,2000)
 (5.0625, 65)
-julia> harmonic_sum(Posit16,2000)    # Posit16 is the Posit(16,1) standard
+julia> harmonic_sum(Posit16,2000)
 (7.77734375, 1024)
-\end{verbatim}
-\caption{Harmonic sum example use of the posit emulator \emph{SoftPosit.jl} in the Julia shell.}
+\end{lstlisting}
+\caption{Harmonic sum example use of the posit emulator \emph{SoftPosit.jl} in the Julia shell. \texttt{Posit16} is the Posit(16,1) standard.}
 \label{fig:emulator}
 \end{figure}
 
@@ -340,7 +337,7 @@ Fig. \ref{fig:dec_acc}a compares the worst-case decimal precision for various 16
 The decimal precision of 16-bit integers is negative infinity for any number below 0.5 (round to 0) and maximised for the largest representable integer $2^{15} - 1 =  32767$. Similar conclusions hold for the fixed-point format Q6.10, as the decimal precision is shifted towards smaller numbers by a factor of $\tfrac{1}{2}$ for each additional fraction bit. This indicates problems for reduced precision modelling: Rescaling of the equations is desired to place many arithmetic calculations near the largest representable number, however, any result beyond will lead to disastrous results, as integer overflow usually returns a negative value following a wrap around behaviour. Flexibility regarding the dynamic range can be achieved with integer arithmetic if fixed point numbers are used \cite{Russell2017}. However, we did not achieve convincing results with integer arithmetic for the applications in this paper (see section \ref{sec:lorenz}).
 
 \begin{figure}
-\includegraphics[width=1\textwidth]{figs/decimal_precision_hist.png}
+\includegraphics[width=1\textwidth]{../plots/decimal_precision.png}
 \caption{(a) Decimal precision of various 16-bit number formats. Dashed vertical lines indicate the dynamic range of representable numbers for each format. (b) Histogram of results of all arithmetic operations in the rescaled Lorenz system, that are subject to rounding errors, considering absolute values.}
 \label{fig:dec_acc}
 \end{figure}
@@ -383,8 +380,8 @@ The rescaling of the Lorenz system has its limitations: The non-linear terms in 
 
 
 \begin{figure}
-\includegraphics[width=1\textwidth]{figs/lorenz_attractor.png}
-\caption{The Lorenz attractor computed with different arithmetics and precision. (a) 64bit double precision floats, (b) 16-bit half precision floats, (c) 16-bit posits with 1 exponent bit and (d) 16-bit integers. The scaling of the Lorenz equations (Eq. \ref{eq:L63s}) is (a,b) $s=1$, (c) $s=0.1$ and (d) $s=100$. All curves are integrated for the same number of time-steps.}
+\includegraphics[width=1\textwidth]{../plots/lorenz_attractor.png}
+\caption{The Lorenz attractor computed with different number formats. The scaling of the Lorenz equations (Eq. \ref{eq:L63s}) is (a,b,d) $s=1$, (d) $s=0.1$. All curves are integrated from the same initial conditions for 100,000 time-steps with spacing $\Delta t = 0.08$.}
 \label{fig:L63}
 \end{figure}
 
@@ -396,7 +393,7 @@ Integrating the Lorenz system with half precision floats yields an attractor tha
 We have calculated the so-called \emph{fractal dimension} as a diagnostic to quantify the fidelity of simulations of the discretised Lorenz equations when different number formats are used. The fractal dimension quantifies how space-filling an attractor is. Using a box-counting algorithm, we estimate the dimension of the posit attractor to be 1.78, whereas the half precision float attractor is only 1.29, compared to the true value of approximately 2.06 \cite{Grassberger1983,McGuinness1983}. 
 
 
-\section{Fluid circulation model}
+\section{Shallow water model}
 \label{sec:swm}
 
 \subsection{Methods}
@@ -428,22 +425,40 @@ where $RK_\eta$ is the Runge-Kutta coefficient times $\tfrac{\Delta t}{\Delta}$ 
 \subsection{Results}
 
 \begin{figure}
-\includegraphics[width=1\textwidth]{figs/snapshot_tracer.png}
-\caption{Snapshot of tracer concentration simulated by the shallow water model, based on (a) double precision floats and (b) posit arithmetic (16 bit with 2 exponent bits) and (c) half precision floats. The tracer was injected uniformly in the left half of the domain 25 days before. This simulation was run at a resolution of $\Delta = 10$km (200x100 grid points). The corresponding video can be found at \url{http://milank.de/videos/swm_posit_tracer.mp4}}
+\includegraphics[width=1\textwidth]{../plots/snapshot.png}
+\caption{Snapshot of tracer concentration simulated by the shallow water model, based on different 16bit number formats. Mixed precision using Float32 for the prognostic variables only is used for (e-f). The tracer was injected uniformly in the lower half of the domain 50 days before. This simulation was run at a resolution of $\Delta = 5$km (400x200 grid points).}
 \label{fig:snapshot}
 \end{figure}
 
 The solution to the shallow water equations includes vigorous turbulence that dominates a meandering zonal current. Using either float or posit arithmetic with 16 bit the simulated fluid dynamics are very similar to a double precision reference: As shown in a snapshot of tracer concentration (Fig. \ref{fig:snapshot}) stirring and mixing can be well simulated with half precision floats and with 16-bit posits (2 exponent bits). However, the half precision simulation (Fig. \ref{fig:snapshot}c) deviates much faster than the posit simulation (Fig. \ref{fig:snapshot}b) from the double precision reference (Fig. \ref{fig:snapshot}a). This provides a first evidence that the accumulated rounding errors with posits are smaller than with floats. Only the posit simulations without exponent bit suffer from numerical instabilities, due to the limited dynamic range (Fig. \ref{fig:dec_acc}a). 
 
 \begin{figure}
-\includegraphics[width=1\textwidth]{figs/forecast_error.pdf}
-\caption{Forecast error measured as the root mean square error (RMSE) of sea surface height taking the double precision forecast as reference. The RMSE is normalised by a mean forecast error at very long lead times. Solid lines represent the median of 280 forecasts per number format. The shaded areas denote the interquartile range.}
+\includegraphics[width=1\textwidth]{../plots/rmse_eta.pdf}
+\caption{Forecast error measured as the root mean square error (RMSE) of sea surface height $\eta$ taking Float64 as reference. The RMSE is normalised by a mean forecast error at very long lead times. Solid lines represent the median of 300 forecasts per number format. The shaded areas denote ensemble spread quantified by the interquartile range.}
 \label{fig:rmse}
 \end{figure}
 
 To quantify differences between reduced precision arithmetics we perform model forecasts that compare rounding errors. The forecast error in the shallow water model is computed as root mean square error (RMSE) taking the model based on double precision floating-point arithmetics as reference truth. We use the sea surface height (equivalent to pressure) to compute the forecast error as this variable captures the large scale circulation. The forecasts are created based on 280 different initial conditions from random start dates of a 50 year long control simulation. Each forecast is performed several times from identical initial conditions but with the various number formats. To compare the magnitude of rounding error that are caused by a reduction in precision to a realistic level of error that is caused by model discretisation, we also perform forecasts at double precision that fall back to a 3rd-order Runge-Kutta scheme for time integration and a simpler enstrophy conserving advection scheme described in \citeA{Sadourny1975}. Both advection schemes have the same continuous formulation, but the \citeA{Arakawa1990} advection scheme has a wider stencil. We normalise the RMSE by the climatological mean forecast error at very long lead times. A normalised RMSE of 1 therefore means that all information of the initial conditions is removed by chaos.
 
 Clearly the best forecast is obtained for posit arithmetic with 1 or 2 exponent bits (Fig. \ref{fig:rmse}), with a small accumulation of rounding errors even for lead times of 100 days. The forecast error for 16-bit posits without exponent bit increases quickly (Fig. \ref{fig:rmse}), especially for short forecast lead times, but a persistence forecast, i.e. assuming the initial conditions persist over time, is still worse (not shown). Half precision floats outperform 16-bit posits without exponent bit, presumably due to the limited dynamic range of only 8 orders of magnitude compared to 12 for half precision floats (Fig. \ref{fig:dec_acc}a). The forecast error of half precision floats is larger than the discretisation error.
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{../plots/meanvar_u.pdf}
+\caption{Climatology and variability of the zonal current. (a) Zonally-averaged zonal current $u$ as a function of the meridional coordinate $y$. (b) Zonal variance of the zonal current as a function of $y$. Shaded areas denote the temporal variability around the (a) mean and (b) variance of reference simulation with Float64.}
+\label{fig:mean}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{../plots/entropy.pdf}
+\caption{Entropy of mixing calculated from the tracer concentration simulated with various 16bit number formats. Lines represent the median of 300 forecasts per number format. The entropy is normalized by the entropy of a homogeneous fluid. The shaded area denotes the ensemble spread of the reference simulation with Float64. Note the quadratically scaled y-axis.}
+\label{fig:entropy}
+\end{figure}
+
+\subsection{Mixed precision arithmetic}
+\label{sec:mixed}
+
+
+
 
 \section{Discussion and Conclusion}
 \label{sec:discuss}

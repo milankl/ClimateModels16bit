@@ -77,8 +77,8 @@ axs[3,1].set_xlabel(L"$x$")
 axs[3,2].set_xlabel(L"$x$")
 
 axs[1,1].set_title("Float64",loc="left",fontsize=8)
-axs[2,1].set_title("Posit16",loc="left",fontsize=8)
-axs[3,1].set_title("Posit16_2",loc="left",fontsize=8)
+axs[2,1].set_title("Posit(16,1)",loc="left",fontsize=8)
+axs[3,1].set_title("Posit(16,2)",loc="left",fontsize=8)
 
 axs[1,2].set_title("Float16",loc="left",fontsize=8)
 axs[2,2].set_title("Mixed precision: Float16/Float32",loc="left",fontsize=8)
@@ -91,7 +91,6 @@ axs[3,1].set_title("c",loc="right",fontsize=8,fontweight="bold")
 axs[1,2].set_title("d",loc="right",fontsize=8,fontweight="bold")
 axs[2,2].set_title("e",loc="right",fontsize=8,fontweight="bold")
 axs[3,2].set_title("f",loc="right",fontsize=8,fontweight="bold")
-
 
 axs[1,1].set_xticks([])
 axs[1,1].set_yticks([])

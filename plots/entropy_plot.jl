@@ -57,7 +57,7 @@ ax.set_yticks(ytik.^q)
 ax.set_yticklabels(string.(ytik))
 
 #ax.set_ylim(0,1)
-ax.set_title("Mixing entropy", loc="left")
+ax.set_title("Entropy of mixing", loc="left")
 #
 ax.legend(loc=2,ncol=2)
 #

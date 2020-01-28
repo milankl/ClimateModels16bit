@@ -861,99 +861,99 @@ Corresponding author: #1,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % 9) Listing, ==>>
-\def\@listI{\leftmargin\leftmargini
-            \parsep 0\p@ %\@plus2\p@ \@minus0\p@
-            \topsep 4\p@ %\@plus2\p@ \@minus0\p@
-            \itemsep1\p@ %\@plus2\p@ \@minus0\p@
-}
-\let\@listi\@listI
-\@listi
-
-\def\@listii {\leftmargin\leftmarginii
-              \labelwidth\leftmarginii
-              \advance\labelwidth-\labelsep
-              \topsep    4\p@ \@plus2\p@ \@minus\p@
-              \parsep    2\p@ \@plus\p@  \@minus\p@
-              \itemsep   \parsep}
-\def\@listiii{\leftmargin\leftmarginiii
-              \labelwidth\leftmarginiii
-              \advance\labelwidth-\labelsep
-              \topsep    2\p@ \@plus\p@\@minus\p@
-              \parsep    \z@
-              \partopsep \p@ \@plus\z@ \@minus\p@
-              \itemsep   \topsep}
-\def\@listiv {\leftmargin\leftmarginiv
-              \labelwidth\leftmarginiv
-              \advance\labelwidth-\labelsep}
-\def\@listv  {\leftmargin\leftmarginv
-              \labelwidth\leftmarginv
-              \advance\labelwidth-\labelsep}
-\def\@listvi {\leftmargin\leftmarginvi
-              \labelwidth\leftmarginvi
-              \advance\labelwidth-\labelsep}
-
-  %% amount left edge of text is indented relative to normal text
-  %% i is for first level in, ii is for second level in, etc.
-\setlength\leftmargini  {28pt}
-\setlength\leftmarginii  {11pt}
-\setlength\leftmarginiii {1.87em}
-\setlength\leftmarginiv  {1.7em}
-\setlength\leftmarginv  {1em}
-\setlength\leftmarginvi {1em}
-
-
-  %% default indentation for first level itemized lists
-\setlength\leftmargin    {\leftmargini}
-
-  %% horizontal distance between item and following text
-\setlength  \labelsep  {6pt}
-
-  %% how wide should item be?
-\setlength  \labelwidth{\leftmargini}
-
-  %% subtract width of label separation
-\addtolength\labelwidth{-\labelsep}
-
-  %% more listing defaults
-\leftmargin\leftmargini
-\labelwidth\leftmargini\advance\labelwidth-\labelsep
-
-
-\@beginparpenalty -\@lowpenalty
-\@endparpenalty   -\@lowpenalty
-\@itempenalty     -\@lowpenalty
-
-  %% defining listing markers for enumerate
-\renewcommand{\theenumi}{\arabic{enumi}}
-\renewcommand{\theenumii}{\alph{enumii}}
-\renewcommand{\theenumiii}{\roman{enumiii}}
-\renewcommand{\theenumiv}{\Alph{enumiv}}
-
-  %% using listing markers for enumerate
-\newcommand{\labelenumi}{\theenumi.\hskip-2pt}
-\newcommand{\labelenumii}{(\theenumii)}
-\newcommand{\labelenumiii}{\theenumiii.}
-\newcommand{\labelenumiv}{\theenumiv.}
-
-  %% crossreferencing for listing markers
-\renewcommand{\p@enumii}{\theenumi}
-\renewcommand{\p@enumiii}{\theenumi(\theenumii)}
-\renewcommand{\p@enumiv}{\p@enumiii\theenumiii}
-
-  %% listing markers for itemize (no crossreferencing needed)
-\newcommand{\labelitemi}{\raise.4ex\hbox{\tiny$\bullet$}}
-\newcommand{\labelitemii}{\normalfont\bfseries --}
-\newcommand{\labelitemiii}{$\m@th\ast$}
-\newcommand{\labelitemiv}{$\m@th\cdot$}
-
-  %% Setting up description listing environment
-\newenvironment{description}
-               {\list{}{\labelwidth\z@ \itemindent-\leftmargin
-                        \let\makelabel\descriptionlabel}}
-               {\endlist}
-
-\newcommand*{\descriptionlabel}[1]{\hspace\labelsep
-                                \normalfont\bfseries #1}
+%\def\@listI{\leftmargin\leftmargini
+%            \parsep 0\p@ %\@plus2\p@ \@minus0\p@
+%            \topsep 4\p@ %\@plus2\p@ \@minus0\p@
+%            \itemsep1\p@ %\@plus2\p@ \@minus0\p@
+%}
+%\let\@listi\@listI
+%\@listi
+%
+%\def\@listii {\leftmargin\leftmarginii
+%              \labelwidth\leftmarginii
+%              \advance\labelwidth-\labelsep
+%              \topsep    4\p@ \@plus2\p@ \@minus\p@
+%              \parsep    2\p@ \@plus\p@  \@minus\p@
+%              \itemsep   \parsep}
+%\def\@listiii{\leftmargin\leftmarginiii
+%              \labelwidth\leftmarginiii
+%              \advance\labelwidth-\labelsep
+%              \topsep    2\p@ \@plus\p@\@minus\p@
+%              \parsep    \z@
+%              \partopsep \p@ \@plus\z@ \@minus\p@
+%              \itemsep   \topsep}
+%\def\@listiv {\leftmargin\leftmarginiv
+%              \labelwidth\leftmarginiv
+%              \advance\labelwidth-\labelsep}
+%\def\@listv  {\leftmargin\leftmarginv
+%              \labelwidth\leftmarginv
+%              \advance\labelwidth-\labelsep}
+%\def\@listvi {\leftmargin\leftmarginvi
+%              \labelwidth\leftmarginvi
+%              \advance\labelwidth-\labelsep}
+%
+%  %% amount left edge of text is indented relative to normal text
+%  %% i is for first level in, ii is for second level in, etc.
+%\setlength\leftmargini  {28pt}
+%\setlength\leftmarginii  {11pt}
+%\setlength\leftmarginiii {1.87em}
+%\setlength\leftmarginiv  {1.7em}
+%\setlength\leftmarginv  {1em}
+%\setlength\leftmarginvi {1em}
+%
+%
+%  %% default indentation for first level itemized lists
+%\setlength\leftmargin    {\leftmargini}
+%
+%  %% horizontal distance between item and following text
+%\setlength  \labelsep  {6pt}
+%
+%  %% how wide should item be?
+%\setlength  \labelwidth{\leftmargini}
+%
+%  %% subtract width of label separation
+%\addtolength\labelwidth{-\labelsep}
+%
+%  %% more listing defaults
+%\leftmargin\leftmargini
+%\labelwidth\leftmargini\advance\labelwidth-\labelsep
+%
+%
+%\@beginparpenalty -\@lowpenalty
+%\@endparpenalty   -\@lowpenalty
+%\@itempenalty     -\@lowpenalty
+%
+%  %% defining listing markers for enumerate
+%\renewcommand{\theenumi}{\arabic{enumi}}
+%\renewcommand{\theenumii}{\alph{enumii}}
+%\renewcommand{\theenumiii}{\roman{enumiii}}
+%\renewcommand{\theenumiv}{\Alph{enumiv}}
+%
+%  %% using listing markers for enumerate
+%\newcommand{\labelenumi}{\theenumi.\hskip-2pt}
+%\newcommand{\labelenumii}{(\theenumii)}
+%\newcommand{\labelenumiii}{\theenumiii.}
+%\newcommand{\labelenumiv}{\theenumiv.}
+%
+%  %% crossreferencing for listing markers
+%\renewcommand{\p@enumii}{\theenumi}
+%\renewcommand{\p@enumiii}{\theenumi(\theenumii)}
+%\renewcommand{\p@enumiv}{\p@enumiii\theenumiii}
+%
+%  %% listing markers for itemize (no crossreferencing needed)
+%\newcommand{\labelitemi}{\raise.4ex\hbox{\tiny$\bullet$}}
+%\newcommand{\labelitemii}{\normalfont\bfseries --}
+%\newcommand{\labelitemiii}{$\m@th\ast$}
+%\newcommand{\labelitemiv}{$\m@th\cdot$}
+%
+%  %% Setting up description listing environment
+%\newenvironment{description}
+%               {\list{}{\labelwidth\z@ \itemindent-\leftmargin
+%                        \let\makelabel\descriptionlabel}}
+%               {\endlist}
+%
+%\newcommand*{\descriptionlabel}[1]{\hspace\labelsep
+%                                \normalfont\bfseries #1}
 
 %%% <<=== end of listing commands
 
