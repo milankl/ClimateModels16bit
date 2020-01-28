@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  28 JAN 2020 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  28 JAN 2020 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,19 +516,19 @@ Package pdftex.def Info: ../plots/entropy.pdf  used on input line 452.
 
 Underfull \hbox (badness 10000) in paragraph at lines 453--453
 []\OT1/cmr/bx/n/9 Figure  8. \OT1/cmr/m/n/9 En-tropy of mix-ing cal-cu-lated fr
-om the tracer con-cen-tra-tion sim-u-lated with var-
+om the tracer con-cen-tra-tion sim-u-lated with var-i-ous
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 453--453
-\OT1/cmr/m/n/9 i-ous 16bit num-ber for-mats. Lines rep-re-sent the me-dian of 3
-00 fore-casts per num-ber for-mat.
+\OT1/cmr/m/n/9 16bit num-ber for-mats. Lines rep-re-sent the mean of 50 fore-ca
+sts per num-ber for-mat. The en-tropy
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 453--453
-\OT1/cmr/m/n/9 The en-tropy is nor-mal-ized by the en-tropy of a ho-mo-ge-neous
- fluid. The shaded area de-notes the
+\OT1/cmr/m/n/9 is nor-mal-ized by the en-tropy of a ho-mo-ge-neous tracer. The 
+shaded area de-notes the en-sem-ble
  []
 
 
@@ -804,10 +804,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5894 strings out of 492982
- 79760 string characters out of 6134896
+ 5895 strings out of 492982
+ 79768 string characters out of 6134896
  253242 words of memory out of 5000000
- 9357 multiletter control sequences out of 15000+600000
+ 9358 multiletter control sequences out of 15000+600000
  11939 words of font info for 44 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
  43i,18n,37p,1411b,1614s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -830,7 +830,7 @@ fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmtt9.pfb>
-Output written on Kloewer_etal_james2020.pdf (20 pages, 1916695 bytes).
+Output written on Kloewer_etal_james2020.pdf (20 pages, 1922431 bytes).
 PDF statistics:
  307 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams

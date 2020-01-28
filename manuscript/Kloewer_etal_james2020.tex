@@ -450,7 +450,7 @@ Clearly the best forecast is obtained for posit arithmetic with 1 or 2 exponent 
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/entropy.pdf}
-\caption{Entropy of mixing calculated from the tracer concentration simulated with various 16bit number formats. Lines represent the median of 300 forecasts per number format. The entropy is normalized by the entropy of a homogeneous fluid. The shaded area denotes the ensemble spread of the reference simulation with Float64. Note the quadratically scaled y-axis.}
+\caption{Entropy of mixing calculated from the tracer concentration simulated with various 16bit number formats. Lines represent the mean of 50 forecasts per number format. The entropy is normalized by the entropy of a homogeneous tracer. The shaded area denotes the ensemble spread of the reference simulation with Float64. Note the cubically scaled y-axis.}
 \label{fig:entropy}
 \end{figure}
 
@@ -479,7 +479,7 @@ This is not a realistic set-up for weather or climate models. Real models includ
 \section{Shallow water model}
 \label{sec:app}
 
-The shallow water equations are discretised on the $(x,y)$-plane over the rectangular domain $L_x \times L_y$. We associate $x$ with the zonal and $y$ with the meridional direction. The domain is centred at 30N and the beta-plane approximation \cite{Vallis2006} is used to linearize the Coriolis parameter which varies linearly from $7.27 \times 10^{-5}\op{s}^{-1}$ at the southern boundary to $9.25 \times 10^{-5}\op{s}^{-1}$ at the northern boundary. The boundary conditions are periodic in zonal direction and partial slip at the northern and southern boundary. The layer thickness is $h = \eta + H(x)$, with
+The shallow water equations are discretised on the $(x,y)$-plane over the rectangular domain $L_x \times L_y$. We associate $x$ with the zonal and $y$ with the meridional direction. The domain is centred at 45N and the beta-plane approximation \cite{Vallis2006} is used to linearize the Coriolis parameter which varies linearly from $7.27 \times 10^{-5}\op{s}^{-1}$ at the southern boundary to $9.25 \times 10^{-5}\op{s}^{-1}$ at the northern boundary. The boundary conditions are periodic in zonal direction and no-slip at the northern and southern boundary. The layer thickness is $h = \eta + H(x)$, with
 \begin{equation}
 H(x) = H_0 - H_1\exp\left(-H_\sigma^{-2}(x-\tfrac{L_x}{2})^2\right)
 \end{equation}
@@ -702,7 +702,7 @@ where $RK_u$ is a constant that includes the Runge-Kutta coefficient and the tim
 
 
 \acknowledgments
- The authors would like to thank Isaac Yonemoto for providing the Julia-based emulator for posit numbers, that was used for this study.
+ The authors would like to thank Mos\`{e} Giordano who contributed to \emph{SoftPosit.jl}
 
 Milan Kl\"{o}wer and Tim N. Palmer gratefully acknowledge funding by the European Research Council under grant number 741112 \emph{An Information Theoretic Approach to Improving the Reliability of Weather and Climate Simulations}. Milan Kl\"{o}wer is also funded by NERC grant number NE/L002612/1.  Peter D. D\"{u}ben gratefully acknowledges funding from the Royal Society for his University Research Fellowship as well as funding from the ESIWACE project. ESIWACE has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement 675191.
 
