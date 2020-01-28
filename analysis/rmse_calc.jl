@@ -12,7 +12,7 @@ nt = 404     # number of time steps
 ne = 300     # number of ensemble members
 R = Array{Float64,3}(undef,nn,nt,ne)
 
-var = "v"
+vari = "u"
 
 for i in 0:ne-1
 
@@ -21,42 +21,42 @@ for i in 0:ne-1
     run_id = "run"*@sprintf("%04d",i)
 
     # READ TRUTH
-    nc = NetCDF.open(joinpath(path,"Float64",run_id,var*".nc"))
-    F64 = nc.vars[var][:,:,:]
+    nc = NetCDF.open(joinpath(path,"Float64",run_id,vari*".nc"))
+    F64 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
     # Persistence forecast
     F64p = repeat(F64[:,:,1],1,1,size(F64)[3])
 
     # READ F64 with Sadourny/RK3
-    nc = NetCDF.open(joinpath(path,"Float64_RK3_Sad",run_id,var*".nc"))
-    F64RK3 = nc.vars[var][:,:,:]
+    nc = NetCDF.open(joinpath(path,"Float64_RK3_Sad",run_id,vari*".nc"))
+    F64RK3 = nc.vars[vari][:,:,:]
     # due to differnt time stepping one time step less, copy last time step
     F64RK3 = cat(F64RK3,F64RK3[:,:,end],dims=3)
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"Float32",run_id,var*".nc"))
-    F32 = nc.vars[var][:,:,:]
+    nc = NetCDF.open(joinpath(path,"Float32",run_id,vari*".nc"))
+    F32 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"Float16",run_id,var*".nc"))
-    F16 = nc.vars[var][:,:,:]
+    nc = NetCDF.open(joinpath(path,"Float16",run_id,vari*".nc"))
+    F16 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"Posit16",run_id,var*".nc"))
-    P16 = nc.vars[var][:,:,:]
+    nc = NetCDF.open(joinpath(path,"Posit16",run_id,vari*".nc"))
+    P16 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"Posit16_2",run_id,var*".nc"))
-    P162 = nc.vars[var][:,:,:]
+    nc = NetCDF.open(joinpath(path,"Posit16_2",run_id,vari*".nc"))
+    P162 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"Float16_32",run_id,var*".nc"))
-    F1632 = nc.vars[var][:,:,:]
+    nc = NetCDF.open(joinpath(path,"Float16_32",run_id,vari*".nc"))
+    F1632 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"BFloat16_32",run_id,var*".nc"))
-    BF1632 = nc.vars[var][:,:,:]
+    nc = NetCDF.open(joinpath(path,"BFloat16_32",run_id,vari*".nc"))
+    BF1632 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
     # Compute RMSEs - average over space, time is last dim
@@ -71,4 +71,4 @@ for i in 0:ne-1
 end
 
 # OUTPUT
-save("RMSE_$var.jld2","RMSE",R)
+save("RMSE_$vari.jld2","RMSE",R)

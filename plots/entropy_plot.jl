@@ -1,5 +1,6 @@
 using FileIO
 using Statistics
+using StatsBase
 using PyPlot
 
 R = load("analysis/entropy.jld2")["entropy"]*2
@@ -37,14 +38,14 @@ fig,ax = subplots(1,1,figsize=(6,4))
 
 q = 2
 
-ax.plot(t,median(R[1,:,:],dims=2).^q,"C3",lw=2,label="Float64",zorder=4)
+ax.plot(t,median(R[1,:,:],dims=2).^q,"C0",lw=3,label="Float64")
 ax.plot(t,median(R[4,:,:],dims=2).^q,"k",label="Float16")
-ax.plot(t,median(R[5,:,:],dims=2).^q,"C2",label="Posit(16,1)")
-ax.plot(t,median(R[6,:,:],dims=2).^q,"#900000",label="Posit(16,2)")
-ax.plot(t,median(R[8,:,:],dims=2).^q,"C1",label="BFloat16/Float32")
-ax.plot(t,median(R[7,:,:],dims=2).^q,"C0",label="Float16/Float32")
+ax.plot(t,median(R[5,:,:],dims=2).^q,"#50C070",ls="--",label="Posit(16,1)")
+ax.plot(t,median(R[6,:,:],dims=2).^q,"#900000",ls="--",label="Posit(16,2)")
+ax.plot(t,median(R[8,:,:],dims=2).^q,"grey",ls="-.",label="BFloat16/Float32")
+ax.plot(t,median(R[7,:,:],dims=2).^q,"C1",ls="-.",label="Float16/Float32")
 
-ax.fill_between(t,Rp[1,1,:].^q,Rp[2,1,:].^q,color="C3",alpha=0.2,label="Float64 ensemble",zorder=-1)
+ax.fill_between(t,Rp[1,1,:].^q,Rp[2,1,:].^q,color="C0",alpha=0.2,label="Float64 ensemble",zorder=-1)
 
 ax.set_ylabel("normalized entropy")
 ax.set_xlabel("time [days]")

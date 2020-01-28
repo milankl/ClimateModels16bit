@@ -53,7 +53,6 @@ for (ri,M) in enumerate([sst1,sst2,sst3,sst4,sst5,sst6])
     end
 end
 
-
 ## Plot
 ioff()
 fig,ax = subplots(1,1,figsize=(6,4))
