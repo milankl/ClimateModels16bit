@@ -8,7 +8,7 @@ path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast2/long/"
 
 nn = 6      # number of number types to compare
 nt = 1613   # number of time steps
-ne = 20     # number of ensemble members
+ne = 50     # number of ensemble members
 nx = 100    # number of grid cells in x
 ny = 50     # number of grid cells in y
 R = Array{Float64,3}(undef,nn,nt,ne)
