@@ -3,7 +3,7 @@ using Statistics
 using StatsBase
 using PyPlot
 
-R = load("analysis/entropy_long.jld2")["entropy"]
+R = load("analysis/entropy_long2.jld2")["entropy"]
 
 nT,n,ne = size(R)      # number of types, time steps, ensemble members
 p = 25

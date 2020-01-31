@@ -61,10 +61,13 @@ for i in 0:ne-1
     # for (ri,M) in enumerate([F64,F64RK3,F32,F16,P16,P162,F1632,BF1632])
     for (ri,M) in enumerate([F64,F16,P16,P162,F1632,BF1632])
         for it in 1:nt
-            R[ri,it,i+1] = entropy(M[:,:,it][:],2)/(nx*ny)*2
+            p = M[:,:,it][:]
+            p[p .> 1.0] .= 1.0
+            R[ri,it,i+1] = (entropy(p,2) +
+                            entropy(1.0 .- p,2))/(nx*ny)
         end
     end
 end
 
 # OUTPUT
-save("entropy_long.jld2","entropy",R)
+save("entropy_long2.jld2","entropy",R)
