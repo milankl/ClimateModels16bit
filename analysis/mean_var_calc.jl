@@ -4,7 +4,7 @@ using Printf
 using Statistics
 using StatsBase
 
-path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast2/"
+path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/"
 
 nn = 8          # number of number types to compare
 ny = 50         # number of grid cells in y

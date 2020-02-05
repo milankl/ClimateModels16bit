@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  28 JAN 2020 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  5 FEB 2020 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -404,19 +404,19 @@ Package pdftex.def Info: ../plots/decimal_precision.png  used on input line 340
 
 Underfull \hbox (badness 10000) in paragraph at lines 341--341
 []\OT1/cmr/bx/n/9 Figure  3. \OT1/cmr/m/n/9 (a) Dec-i-mal pre-ci-sion of var-i-
-ous 16-bit num-ber for-mats. Dashed ver-ti-cal lines in-
+ous 16-bit num-ber for-mats. Dashed ver-ti-cal lines in-di-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 341--341
-\OT1/cmr/m/n/9 di-cate the dy-namic range of rep-re-sentable num-bers for each 
-for-mat. (b) His-togram of re-sults
+\OT1/cmr/m/n/9 cate the dy-namic range of rep-re-sentable num-bers for each for
+-mat. 8bit posits (no ex-po-nent bits)
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 341--341
-\OT1/cmr/m/n/9 of all arith-metic op-er-a-tions in the rescaled Lorenz sys-tem,
- that are sub-ject to round-ing er-rors,
+\OT1/cmr/m/n/9 are shown for com-par-i-son. (b) His-togram of re-sults of all a
+rith-metic op-er-a-tions in the rescaled
  []
 
 
@@ -460,11 +460,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 429--429
  half of the do-main 50 days be-fore.
  []
 
-<../plots/rmse_eta.pdf, id=60, 433.62pt x 289.08pt>
+<../plots/rmse_eta.pdf, id=60, 578.16pt x 289.08pt>
 File: ../plots/rmse_eta.pdf Graphic file (type pdf)
 <use ../plots/rmse_eta.pdf>
 Package pdftex.def Info: ../plots/rmse_eta.pdf  used on input line 436.
-(pdftex.def)             Requested size: 397.48499pt x 265.00404pt.
+(pdftex.def)             Requested size: 397.48499pt x 198.742pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 437--437
 []\OT1/cmr/bx/n/9 Figure  6. \OT1/cmr/m/n/9 Fore-cast er-ror mea-sured as the r
@@ -531,18 +531,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 453--453
 shaded area de-notes the en-sem-ble
  []
 
-
+[13 <../plots/rmse_eta.pdf>] [14 <../plots/meanvar_u.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13 <../plots/rmse_eta.pdf>] [14 <../plots/meanvar_u.pdf>] [15 <../plots/entro
-py.pdf>]
-[16]
+ [15 <../plots/entropy.pdf>] [16]
 Overfull \hbox (6.6259pt too wide) in paragraph at lines 707--708
 \OT1/cmr/m/it/10 proach to Im-prov-ing the Re-li-a-bil-ity of Weather and Cli-m
 ate Sim-u-la-tions\OT1/cmr/m/n/10 . Mi-lan Kl^^?ower 
  []
 
-[17] (./Kloewer_etal_james2020.bbl
+(./Kloewer_etal_james2020.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 16--35
 \OT1/cmr/m/n/10 trieved from $\OT1/cmtt/m/n/10 http :// dx [] .doi [] .org / 10
  [] .1175 / 1520 [] -0493(1990 ) 118{\ % }3C1960 : 
@@ -555,7 +553,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--35
 : 
  []
 
-
+[17]
 Underfull \hbox (badness 4792) in paragraph at lines 49--62
 \OT1/cmr/m/n/10 pro-cesses of the UCLA gen-eral cir-cu-la-tion model.  \OT1/cmr
 /m/it/10 Meth-ods of Com-pu-ta-tional 
@@ -636,7 +634,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 444--463
 uperfri / article / view / 137$   \OT1/cmr/m/n/10 doi: 
  []
 
-[18]
+
 Underfull \hbox (badness 1132) in paragraph at lines 475--495
 []\OT1/cmr/m/n/10 Hatfield, S., D^^?uben, P., Chantry, M., Kondo, K., Miyoshi, 
 T., & Palmer, T.  (2018). 
@@ -679,6 +677,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 534--554
  []
 
 
+Underfull \vbox (badness 2293) has occurred while \output is active []
+
+ [18]
 Underfull \hbox (badness 5817) in paragraph at lines 566--581
 \OT1/cmr/m/n/10 els due to stochas-tic forc-ing.  \OT1/cmr/m/it/10 Philo-soph-i
 -cal Trans-ac-tions of the Royal So-ci-ety 
@@ -783,15 +784,12 @@ doi / 10 [] .1175 / MWR [] -D [] -16 [] -0228 [] .1$   \OT1/cmr/m/n/10 doi:
  []
 
 
-Underfull \vbox (badness 1043) has occurred while \output is active []
-
- [19]
 Underfull \hbox (badness 2073) in paragraph at lines 947--962
 \OT1/cmr/m/it/10 ing Hard-ware Ac-cel-er-a-tion \OT1/cmr/m/n/10 (Un-pub-lished 
 doc-toral dis-ser-ta-tion).  Delft Uni-ver- 
  []
 
-) [20] (./Kloewer_etal_james2020.aux)
+) [19] (./Kloewer_etal_james2020.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
@@ -830,10 +828,10 @@ fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmtt9.pfb>
-Output written on Kloewer_etal_james2020.pdf (20 pages, 1922431 bytes).
+Output written on Kloewer_etal_james2020.pdf (19 pages, 2125182 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
+ 314 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

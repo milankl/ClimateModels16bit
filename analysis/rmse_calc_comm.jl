@@ -5,12 +5,11 @@ using Printf
 using Statistics
 using StatsBase
 
-pathref = "/network/aopp/chaos/pred/kloewer/julsdata/forecast2/long/"
-path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast2/comm/"
+path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast"
 
 nn = 5       # number of number types to compare
-nt = 1613     # number of time steps
-ne = 50     # number of ensemble members
+nt = 601     # number of time steps
+ne = 200     # number of ensemble members
 R = Array{Float64,3}(undef,nn,nt,ne)
 
 vari = "eta"
@@ -22,27 +21,27 @@ for i in 0:ne-1
     run_id = "run"*@sprintf("%04d",i)
 
     # READ TRUTH
-    nc = NetCDF.open(joinpath(pathref,"Float64",run_id,vari*".nc"))
+    nc = NetCDF.open(joinpath(path,"Float64",run_id,vari*".nc"))
     F64 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"Float16",run_id,vari*".nc"))
+    nc = NetCDF.open(joinpath(path,"comm","Float16",run_id,vari*".nc"))
     F16 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"BFloat16",run_id,vari*".nc"))
+    nc = NetCDF.open(joinpath(path,"comm","BFloat16",run_id,vari*".nc"))
     BF16 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"Posit16",run_id,vari*".nc"))
+    nc = NetCDF.open(joinpath(path,"comm","Posit16",run_id,vari*".nc"))
     P16 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"Posit16_2",run_id,vari*".nc"))
+    nc = NetCDF.open(joinpath(path,"comm","Posit16_2",run_id,vari*".nc"))
     P162 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
-    nc = NetCDF.open(joinpath(path,"Posit8",run_id,vari*".nc"))
+    nc = NetCDF.open(joinpath(path,"comm","Posit8",run_id,vari*".nc"))
     P8 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 

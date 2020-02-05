@@ -1,5 +1,6 @@
 using FileIO
 using Statistics
+using StatsBase
 using PyPlot
 
 var = "eta"
@@ -12,7 +13,7 @@ t = (0:(n-1))*0.25  # time array in days, 6h time step
 
 n2 = size(R2)[2]      # number of time steps
 nT2 = size(R2)[1]      # number of types
-t2 = (0:(n2-1))*0.25  # time array in days, 6h time step
+t2 = (0:(n2-1))*0.5  # time array in days, 12h time step
 
 cerr = 1.2      # climatology of the forecast error for long lead time
 p = 25

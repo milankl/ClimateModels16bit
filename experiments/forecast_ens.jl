@@ -1,13 +1,13 @@
 include("/home/kloewer/git/ShallowWaters.jl/src/ShallowWaters.jl")
 using .ShallowWaters
 using FileIO
-#using BFloat16s
+using BFloat16s
 using SoftPosit
 
-# Base.round(x::BFloat16, r::RoundingMode{:Up}) = BFloat16(ceil(Float32(x)))
-# Base.round(x::BFloat16, r::RoundingMode{:Down}) = BFloat16(floor(Float32(x)))
-# Base.round(x::BFloat16, r::RoundingMode{:Nearest}) = BFloat16(round(Float32(x)))
-# Base.Int64(x::BFloat16) = Int64(Float32(x))
+Base.round(x::BFloat16, r::RoundingMode{:Up}) = BFloat16(ceil(Float32(x)))
+Base.round(x::BFloat16, r::RoundingMode{:Down}) = BFloat16(floor(Float32(x)))
+Base.round(x::BFloat16, r::RoundingMode{:Nearest}) = BFloat16(round(Float32(x)))
+Base.Int64(x::BFloat16) = Int64(Float32(x))
 
 
 """Finds the first gap in a list of integers."""
@@ -34,25 +34,25 @@ function get_run_id(path::String,order::String="continue")
     return run_id
 end
 
-path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast2/"
+path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/"
 startis = load(joinpath(path,"starti.jld2"))["starti"]
-outpath = joinpath(path,"Posit16")
+outpath = joinpath(path,"Posit16_2")
 
-for i in 1:50
+for i in 1:10
     run_id = get_run_id(outpath,"fill")
 
     starti = startis[run_id+1]
 
-    RunModel(Posit16,
+    RunModel(Posit16_2,
             output=true,
-            Ndays=100.0,
+            Ndays=300.0,
+            output_dt=12,
             outpath=outpath,
             initial_cond="ncfile",
-            output_vars=["u","v","η","sst"],
+            output_vars=["u","η","sst"],
             initpath=path,
             init_run_id=1,
             init_starti=starti,
-            get_id_mode="fill"
-            )
+            get_id_mode="fill")
 
 end

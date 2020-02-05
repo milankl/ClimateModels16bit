@@ -338,7 +338,7 @@ The decimal precision of 16-bit integers is negative infinity for any number bel
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/decimal_precision.png}
-\caption{(a) Decimal precision of various 16-bit number formats. Dashed vertical lines indicate the dynamic range of representable numbers for each format. (b) Histogram of results of all arithmetic operations in the rescaled Lorenz system, that are subject to rounding errors, considering absolute values.}
+\caption{(a) Decimal precision of various 16-bit number formats. Dashed vertical lines indicate the dynamic range of representable numbers for each format. 8bit posits (no exponent bits) are shown for comparison. (b) Histogram of results of all arithmetic operations in the rescaled Lorenz system, considering absolute values.}
 \label{fig:dec_acc}
 \end{figure}
 
@@ -434,7 +434,7 @@ The solution to the shallow water equations includes vigorous turbulence that do
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/rmse_eta.pdf}
-\caption{Forecast error measured as the root mean square error (RMSE) of sea surface height $\eta$ taking Float64 as reference. The RMSE is normalised by a mean forecast error at very long lead times. Solid lines represent the median of 300 forecasts per number format. The shaded areas denote ensemble spread quantified by the interquartile range.}
+\caption{Forecast error measured as the root mean square error (RMSE) of sea surface height $\eta$ taking Float64 as reference. The RMSE is normalised by a mean forecast error at very long lead times. Solid lines represent the median of 300 forecasts per number format. The shaded areas denote the interquartile range of the ensemble.}
 \label{fig:rmse}
 \end{figure}
 
