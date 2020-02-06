@@ -5,14 +5,14 @@ using Printf
 using Statistics
 using StatsBase
 
-path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast2/"
+path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/"
 
-nn = 8       # number of number types to compare
-nt = 404     # number of time steps
-ne = 300     # number of ensemble members
+nn = 6       # number of number types to compare
+nt = 601     # number of time steps
+ne = 190     # number of ensemble members
 R = Array{Float64,3}(undef,nn,nt,ne)
 
-vari = "u"
+vari = "eta"
 
 for i in 0:ne-1
 
@@ -23,16 +23,6 @@ for i in 0:ne-1
     # READ TRUTH
     nc = NetCDF.open(joinpath(path,"Float64",run_id,vari*".nc"))
     F64 = nc.vars[vari][:,:,:]
-    NetCDF.close(nc)
-
-    # Persistence forecast
-    F64p = repeat(F64[:,:,1],1,1,size(F64)[3])
-
-    # READ F64 with Sadourny/RK3
-    nc = NetCDF.open(joinpath(path,"Float64_RK3_Sad",run_id,vari*".nc"))
-    F64RK3 = nc.vars[vari][:,:,:]
-    # due to differnt time stepping one time step less, copy last time step
-    F64RK3 = cat(F64RK3,F64RK3[:,:,end],dims=3)
     NetCDF.close(nc)
 
     nc = NetCDF.open(joinpath(path,"Float32",run_id,vari*".nc"))
@@ -60,14 +50,12 @@ for i in 0:ne-1
     NetCDF.close(nc)
 
     # Compute RMSEs - average over space, time is last dim
-    R[1,:,i+1] = sqrt.(mean((F64-F64p).^2,dims=(1,2)))[1,1,:]
-    R[2,:,i+1] = sqrt.(mean((F64-F64RK3).^2,dims=(1,2)))[1,1,:]
-    R[3,:,i+1] = sqrt.(mean((F64-F32).^2,dims=(1,2)))[1,1,:]
-    R[4,:,i+1] = sqrt.(mean((F64-F16).^2,dims=(1,2)))[1,1,:]
-    R[5,:,i+1] = sqrt.(mean((F64-P16).^2,dims=(1,2)))[1,1,:]
-    R[6,:,i+1] = sqrt.(mean((F64-P162).^2,dims=(1,2)))[1,1,:]
-    R[7,:,i+1] = sqrt.(mean((F64-F1632).^2,dims=(1,2)))[1,1,:]
-    R[8,:,i+1] = sqrt.(mean((F64-BF1632).^2,dims=(1,2)))[1,1,:]
+    R[1,:,i+1] = sqrt.(mean((F64-F32).^2,dims=(1,2)))[1,1,:]
+    R[2,:,i+1] = sqrt.(mean((F64-F16).^2,dims=(1,2)))[1,1,:]
+    R[3,:,i+1] = sqrt.(mean((F64-P16).^2,dims=(1,2)))[1,1,:]
+    R[4,:,i+1] = sqrt.(mean((F64-P162).^2,dims=(1,2)))[1,1,:]
+    R[5,:,i+1] = sqrt.(mean((F64-F1632).^2,dims=(1,2)))[1,1,:]
+    R[6,:,i+1] = sqrt.(mean((F64-BF1632).^2,dims=(1,2)))[1,1,:]
 end
 
 # OUTPUT

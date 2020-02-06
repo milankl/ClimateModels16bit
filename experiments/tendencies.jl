@@ -10,7 +10,7 @@ Base.Int64(x::BFloat16) = Int64(Float32(x))
 
 # RunModel(Float64,
 #         output=true,
-#         Ndays=50,
+#         Ndays=10,
 #         nx=400,
 #         initpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/nx400/",
 #         outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/tend/",
@@ -18,9 +18,9 @@ Base.Int64(x::BFloat16) = Int64(Float32(x))
 #         initial_cond="ncfile",
 #         init_run_id=0)
 #
-# RunModel(Float16,
+# RunModel(Float32,
 #         output=true,
-#         Ndays=50,
+#         Ndays=10,
 #         nx=400,
 #         initpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/nx400/",
 #         outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/tend/",
@@ -28,21 +28,10 @@ Base.Int64(x::BFloat16) = Int64(Float32(x))
 #         initial_cond="ncfile",
 #         init_run_id=0)
 #
-# RunModel(Float16,
-#         Tprog=Float32,
-#         output=true,
-#         Ndays=50,
-#         nx=400,
-#         initpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/nx400/",
-#         outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/tend/",
-#         output_vars=["u","v","η","du","dv","dη"],
-#         initial_cond="ncfile",
-#         init_run_id=0)
-
 # RunModel(BFloat16,
 #         Tprog=Float32,
 #         output=true,
-#         Ndays=50,
+#         Ndays=10,
 #         nx=400,
 #         initpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/nx400/",
 #         outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/tend/",
@@ -50,19 +39,30 @@ Base.Int64(x::BFloat16) = Int64(Float32(x))
 #         initial_cond="ncfile",
 #         init_run_id=0)
 
-# RunModel(Posit16,
+# RunModel(Float16,
+#         Tprog=Float32,
 #         output=true,
-#         Ndays=50,
+#         Ndays=10,
 #         nx=400,
 #         initpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/nx400/",
 #         outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/tend/",
 #         output_vars=["u","v","η","du","dv","dη"],
 #         initial_cond="ncfile",
 #         init_run_id=0)
-#
+
+# RunModel(Float16,
+#         output=true,
+#         Ndays=10,
+#         nx=400,
+#         initpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/nx400/",
+#         outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/tend/",
+#         output_vars=["u","v","η","du","dv","dη"],
+#         initial_cond="ncfile",
+#         init_run_id=0)
+
 RunModel(Posit16_2,
         output=true,
-        Ndays=50,
+        Ndays=10,
         nx=400,
         initpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/nx400/",
         outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/tend/",

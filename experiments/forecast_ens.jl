@@ -3,6 +3,7 @@ using .ShallowWaters
 using FileIO
 using BFloat16s
 using SoftPosit
+using Printf
 
 Base.round(x::BFloat16, r::RoundingMode{:Up}) = BFloat16(ceil(Float32(x)))
 Base.round(x::BFloat16, r::RoundingMode{:Down}) = BFloat16(floor(Float32(x)))
@@ -19,7 +20,7 @@ function gap(a::Array{Int,1})
     end
 end
 
-function get_run_id(path::String,order::String="continue")
+function get_run_id(path::String,order::String="continue";create::Bool=false)
     runlist = filter(x->startswith(x,"run"),readdir(path))
     existing_runs = [parse(Int,id[4:end]) for id in runlist]
     if length(existing_runs) == 0           # if no runfolder exists yet
@@ -31,19 +32,25 @@ function get_run_id(path::String,order::String="continue")
             run_id = maximum(existing_runs)+1
         end
     end
+
+    if create
+        runpath = joinpath(path,"run"*@sprintf("%04d",run_id))
+        mkdir(runpath)
+    end
+
     return run_id
 end
 
 path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/"
 startis = load(joinpath(path,"starti.jld2"))["starti"]
-outpath = joinpath(path,"Posit16_2")
+outpath = joinpath(path,"Posit16")
 
-for i in 1:10
-    run_id = get_run_id(outpath,"fill")
+for i in [1]
+    run_id = get_run_id(outpath,"fill",create=true)
 
     starti = startis[run_id+1]
 
-    RunModel(Posit16_2,
+    RunModel(Posit16,
             output=true,
             Ndays=300.0,
             output_dt=12,
@@ -53,6 +60,7 @@ for i in 1:10
             initpath=path,
             init_run_id=1,
             init_starti=starti,
-            get_id_mode="fill")
+            get_id_mode="specific",
+            run_id=run_id)
 
 end
