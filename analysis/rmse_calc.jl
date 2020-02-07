@@ -9,7 +9,7 @@ path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/"
 
 nn = 6       # number of number types to compare
 nt = 601     # number of time steps
-ne = 190     # number of ensemble members
+ne = 200     # number of ensemble members
 R = Array{Float64,3}(undef,nn,nt,ne)
 
 vari = "eta"

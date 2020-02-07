@@ -1,11 +1,41 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  5 FEB 2020 16:24
-entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Debian)  (format=lualatex 2019.5.23)  7 FEB 2020 14:16
+ restricted system commands enabled.
 **Kloewer_etal_james2020.tex
 (./Kloewer_etal_james2020.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
+Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2017-02-01 2.5 ConTeXt Lua libraries -- extended co
+llection.(using write cache: /home/kloewer/.texlive2017/texmf-var/luatex-cache/g
+eneric)(using read cache: /var/lib/texmf/luatex-cache/generic /home/kloewer/.tex
+live2017/texmf-var/luatex-cache/generic)
+luaotfload | conf : Root cache directory is /home/kloewer/.texlive2017/texmf-var
+/luatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2017-02-11.lua” from kpse
+-resolved path “/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader
+-2017-02-11.lua”.
+Lua-only attribute luaotfload@state = 1
+Lua-only attribute luaotfload@noligature = 2
+Lua-only attribute luaotfload@syllabe = 3
+luaotfload | init : Context OpenType loader version “3.027”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 4
+luaotfload | conf : Root cache directory is /home/kloewer/.texlive2017/texmf-var
+/luatex-cache/generic/names.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 0.086 seconds
+Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (./agujournal2019.cls
 Document Class: agujournal2019 01/14/2019
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -24,10 +54,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: luatex.def on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
 ))
 \Gin@req@height=\dimen102
 \Gin@req@width=\dimen103
@@ -38,7 +68,7 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Driver file: luatex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -108,6 +138,9 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@mess@toks=\toks16
 )
 \draftskip=\count87
+luaotfload | db : Font names database loaded from /home/kloewer/.texlive2017/tex
+mf-var/luatex-cache/generic/names/luaotfload-names.luc(load luc: /home/kloewer/.
+texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc)
 \c@section=\count88
 \c@subsection=\count89
 \c@subsubsection=\count90
@@ -119,8 +152,7 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \belowcaptionskip=\skip58
 \c@appendnum=\count95
 \bibindent=\dimen109
-
-(/usr/share/texlive/texmf-dist/tex/latex/apacite/apacite.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/apacite/apacite.sty
 Package: apacite 2013/07/21 v6.03 APA citation
 \c@BibCnt=\count96
 \bibleftmargin=\skip59
@@ -176,13 +208,8 @@ Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
+Package ifluatex Info: LuaTeX detected.
+))))
 Package morefloats Info: Maximum number of possible floats asked for: 36
 (morefloats)             (i.e. 18 more floats).
 (morefloats)             LaTeX might run out of memory before this
@@ -287,8 +314,11 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 
 LaTeX Warning: Label `fig:emulator' multiply defined.
 
+
+LaTeX Warning: Label `fig:snapshot' multiply defined.
+
 )
-\openout1 = `Kloewer_etal_james2020.aux'.
+\openout1 = Kloewer_etal_james2020.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
 LaTeX Font Info:    ... okay on input line 126.
@@ -297,6 +327,8 @@ LaTeX Font Info:    ... okay on input line 126.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
 LaTeX Font Info:    ... okay on input line 126.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 126.
 LaTeX Font Info:    ... okay on input line 126.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
 LaTeX Font Info:    ... okay on input line 126.
@@ -325,27 +357,27 @@ Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
-)
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO)
+
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
-Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks30
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
+8.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
+,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
 ))
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 126.
@@ -357,481 +389,598 @@ LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
 \c@lstlisting=\count132
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 235.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 235.
-
-
+(load luc: /home/kloewer/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/l
+mroman12-regular.luc)(load luc: /home/kloewer/.texlive2017/texmf-var/luatex-cach
+e/generic/fonts/otl/lmroman12-bold.luc)(load luc: /home/kloewer/.texlive2017/tex
+mf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc)(load luc: /home/kloewe
+r/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc)(lo
+ad luc: /home/kloewer/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmro
+man6-regular.luc)(load luc: /home/kloewer/.texlive2017/texmf-var/luatex-cache/ge
+neric/fonts/otl/lmroman9-regular.luc)(load luc: /home/kloewer/.texlive2017/texmf
+-var/luatex-cache/generic/fonts/otl/lmmono9-regular.luc)(load luc: /home/kloewer
+/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-italic.luc) [1{/
+var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2]
-[3]
+ [2](load luc: /home/kloewer/.texlive2017/texmf-var/luatex-cache/generic/fonts/o
+tl/lmroman7-regular.luc)(load luc: /home/kloewer/.texlive2017/texmf-var/luatex-c
+ache/generic/fonts/otl/lmroman5-regular.luc) [3](load luc: /home/kloewer/.texliv
+e2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc)
 
-LaTeX Warning: Citation `Kloewer2019' undefined on input line 280.
+LaTeX Warning: Reference `sec:app2' on page 4 undefined on input line 281.
 
 
-LaTeX Warning: Citation `Heung2019' undefined on input line 280.
+LaTeX Warning: Citation `Kloewer2019' undefined on input line 286.
 
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 284.
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-[]\OT1/cmr/bx/n/9 Figure  2. \OT1/cmr/m/n/9 Har-monic sum ex-am-ple use of the 
-posit em-u-la-tor \OT1/cmr/m/it/9 Soft-Posit.jl \OT1/cmr/m/n/9 in the Ju-lia sh
-ell.
+LaTeX Warning: Citation `Heung2019' undefined on input line 286.
+
+(load luc: /home/kloewer/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/l
+mmono10-regular.luc)
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 290.
+(load luc: /home/kloewer/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/l
+mmonolt10-bold.luc)(load luc: /home/kloewer/.texlive2017/texmf-var/luatex-cache/
+generic/fonts/otl/lmroman9-bold.luc)
+Underfull \hbox (badness 10000) in paragraph at lines 324--324
+[]\TU/lmr/bx/n/9 Fig-ure  2. \TU/lmr/m/n/9 Har-monic sum ex-am-ple use of the p
+osit em-u-la-tor \TU/lmr/m/it/9 Soft-Posit.jl \TU/lmr/m/n/9 in the Ju-lia shell
+.
  []
 
 
-LaTeX Warning: Reference `sec:mixedprec' on page 4 undefined on input line 322.
+LaTeX Warning: Reference `sec:mixedprec' on page 4 undefined on input line 328.
 
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-[5]
-<../plots/decimal_precision.png, id=36, 505.89pt x 433.62pt>
+[4] [5]
+<../plots/decimal_precision.png, id=38, 505.89pt x 433.62pt>
 File: ../plots/decimal_precision.png Graphic file (type png)
 <use ../plots/decimal_precision.png>
-Package pdftex.def Info: ../plots/decimal_precision.png  used on input line 340
-.
-(pdftex.def)             Requested size: 397.48499pt x 340.71004pt.
+Package luatex.def Info: ../plots/decimal_precision.png  used on input line 346.
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--341
-[]\OT1/cmr/bx/n/9 Figure  3. \OT1/cmr/m/n/9 (a) Dec-i-mal pre-ci-sion of var-i-
-ous 16-bit num-ber for-mats. Dashed ver-ti-cal lines in-di-
+(luatex.def)             Requested size: 397.48499pt x 340.71004pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
+[]\TU/lmr/bx/n/9 Fig-ure  3. \TU/lmr/m/n/9 (a) Dec-i-mal pre-ci-sion of var-i-o
+us 16-bit num-ber for-mats. Dashed ver-ti-cal lines in-di-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--341
-\OT1/cmr/m/n/9 cate the dy-namic range of rep-re-sentable num-bers for each for
--mat. 8bit posits (no ex-po-nent bits)
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
+\TU/lmr/m/n/9 cate the dy-namic range of rep-re-sentable num-bers for each for-
+mat. 8bit posits (no ex-po-nent bits)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--341
-\OT1/cmr/m/n/9 are shown for com-par-i-son. (b) His-togram of re-sults of all a
-rith-metic op-er-a-tions in the rescaled
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
+\TU/lmr/m/n/9 are shown for com-par-i-son. (b) His-togram of re-sults of all ar
+ith-metic op-er-a-tions in the rescaled
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6]
-[7 <../plots/decimal_precision.png>]
-<../plots/lorenz_attractor.png, id=46, 462.528pt x 346.896pt>
+[6] [7<../plots/decimal_precision.png>]
+<../plots/lorenz_attractor.png, id=47, 462.528pt x 346.896pt>
 File: ../plots/lorenz_attractor.png Graphic file (type png)
 <use ../plots/lorenz_attractor.png>
-Package pdftex.def Info: ../plots/lorenz_attractor.png  used on input line 383.
+Package luatex.def Info: ../plots/lorenz_attractor.png  used on input line 389.
+(luatex.def)             Requested size: 397.48499pt x 298.12889pt.
 
-(pdftex.def)             Requested size: 397.48499pt x 298.12889pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--384
-[]\OT1/cmr/bx/n/9 Figure  4. \OT1/cmr/m/n/9 The Lorenz at-trac-tor com-puted wi
-th dif-fer-ent num-ber for-mats. The scal-ing of the
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+[]\TU/lmr/bx/n/9 Fig-ure  4. \TU/lmr/m/n/9 The Lorenz at-trac-tor com-puted wit
+h dif-fer-ent num-ber for-mats. The scal-ing of the
  []
 
-[8] [9 <../plots/lorenz_attractor.png>] [10]
-<../plots/snapshot.png, id=59, 578.16pt x 505.89pt>
+[8] [9<../plots/lorenz_attractor.png>] [10]
+<../plots/snapshot.png, id=62, 578.16pt x 505.89pt>
 File: ../plots/snapshot.png Graphic file (type png)
 <use ../plots/snapshot.png>
-Package pdftex.def Info: ../plots/snapshot.png  used on input line 428.
-(pdftex.def)             Requested size: 397.48499pt x 347.79851pt.
+Package luatex.def Info: ../plots/snapshot.png  used on input line 434.
+(luatex.def)             Requested size: 397.48499pt x 347.79851pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
-[]\OT1/cmr/bx/n/9 Figure  5. \OT1/cmr/m/n/9 Snap-shot of tracer con-cen-tra-tio
+Underfull \hbox (badness 10000) in paragraph at lines 435--435
+[]\TU/lmr/bx/n/9 Fig-ure  5. \TU/lmr/m/n/9 Snap-shot of tracer con-cen-tra-tion
+ sim-u-lated by the shal-low wa-ter model, based on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--435
+\TU/lmr/m/n/9 dif-fer-ent 16bit num-ber for-mats. Mixed pre-ci-sion us-ing Floa
+t32 for the prog-nos-tic vari-ables only is
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--435
+\TU/lmr/m/n/9 used for (e-f). The tracer was in-jected uni-formly in the lower 
+half of the do-main 50 days be-fore.
+ []
+
+<../plots/rmse_eta.pdf, id=63, 578.16pt x 289.08pt>
+File: ../plots/rmse_eta.pdf Graphic file (type pdf)
+<use ../plots/rmse_eta.pdf>
+Package luatex.def Info: ../plots/rmse_eta.pdf  used on input line 442.
+(luatex.def)             Requested size: 397.48499pt x 198.742pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--443
+[]\TU/lmr/bx/n/9 Fig-ure  6. \TU/lmr/m/n/9 Fore-cast er-ror mea-sured as the ro
+ot mean square er-ror (RMSE) of sea sur-face
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--443
+\TU/lmr/m/n/9 height $\OML/cmm/m/it/9 $ \TU/lmr/m/n/9 tak-ing Float64 as ref-e
+r-ence. (a) Fore-cast er-ror for var-i-ous 16bit num-ber for-mats and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--443
+\TU/lmr/m/n/9 mixed 16bit/32bit sim-u-la-tions for which the prog-nos-tic vari-
+ables are kept at Float32. (b) Fore-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--443
+\TU/lmr/m/n/9 cast er-ror for re-duced pre-ci-sion com-mu-ni-ca-tion in 8 or 16
+bit with var-i-ous num-ber for-mats used
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--443
+\TU/lmr/m/n/9 for en-cod-ing, with Float64 used for all cal-cu-la-tions. The co
+m-mu-ni-ca-tion of bound-ary val-ues oc-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--443
+\TU/lmr/m/n/9 curs at ev-ery time step for the prog-nos-tic vari-ables, with va
+l-ues copied be-tween the left and right
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--443
+\TU/lmr/m/n/9 bound-ary, due to the pe-ri-odic bound-ary con-di-tions. The RMSE
+ is nor-malised by a mean fore-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--443
+\TU/lmr/m/n/9 cast er-ror at very long lead times. Solid lines rep-re-sent the 
+me-dian of 200 fore-casts per num-ber
+ []
+
+[11] [12<../plots/snapshot.png>] [13<../plots/rmse_eta.pdf>]
+<../plots/meanvar_u.pdf, id=132, 433.62pt x 361.35pt>
+File: ../plots/meanvar_u.pdf Graphic file (type pdf)
+<use ../plots/meanvar_u.pdf>
+Package luatex.def Info: ../plots/meanvar_u.pdf  used on input line 452.
+(luatex.def)             Requested size: 397.48499pt x 331.25507pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--453
+[]\TU/lmr/bx/n/9 Fig-ure  7. \TU/lmr/m/n/9 Cli-ma-tol-ogy and vari-abil-ity of 
+the zonal cur-rent. (a) Zonally-averaged zonal cur-rent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--453
+\OML/cmm/m/it/9 u$ \TU/lmr/m/n/9 as a func-tion of the merid-ional co-or-di-nat
+e $\OML/cmm/m/it/9 y$\TU/lmr/m/n/9 . (b) Zonal vari-ance of the zonal cur-rent 
+as a func-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--453
+\TU/lmr/m/n/9 tion of $\OML/cmm/m/it/9 y$\TU/lmr/m/n/9 . Shaded ar-eas de-note 
+the in-terquar-tile tem-po-ral vari-abil-ity around the (a) mean and (b)
+ []
+
+<../plots/entropy.pdf, id=133, 433.62pt x 289.08pt>
+File: ../plots/entropy.pdf Graphic file (type pdf)
+<use ../plots/entropy.pdf>
+Package luatex.def Info: ../plots/entropy.pdf  used on input line 458.
+(luatex.def)             Requested size: 397.48499pt x 265.00404pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--459
+[]\TU/lmr/bx/n/9 Fig-ure  8. \TU/lmr/m/n/9 En-tropy of mix-ing cal-cu-lated fro
+m the tracer con-cen-tra-tion sim-u-lated with var-i-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--459
+\TU/lmr/m/n/9 ous 16bit num-ber for-mats. The en-tropy is nor-mal-ized by the e
+n-tropy of a ho-mo-ge-neous tracer.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--459
+\TU/lmr/m/n/9 Lines rep-re-sent the mean of 200 fore-casts per num-ber for-mat.
+ The shaded area de-notes the in-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--459
+\TU/lmr/m/n/9 terquar-tile range of the ref-er-ence en-sem-ble sim-u-la-tions w
+ith Float64. Note the cu-bi-cally scaled
+ []
+
+<../plots/tendency_hist.pdf, id=134, 722.7pt x 433.62pt>
+File: ../plots/tendency_hist.pdf Graphic file (type pdf)
+<use ../plots/tendency_hist.pdf>
+Package luatex.def Info: ../plots/tendency_hist.pdf  used on input line 464.
+(luatex.def)             Requested size: 397.48499pt x 238.49173pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--465
+[]\TU/lmr/bx/n/9 Fig-ure  9. \TU/lmr/m/n/9 His-tograms of the nu-meric val-ues 
+of the prog-nos-tic vari-ables (a) zonal ve-loc-ity $\OML/cmm/m/it/9 u$\TU/lmr/
+m/n/9 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--465
+\TU/lmr/m/n/9 (b) merid-ional ve-loc-ity $\OML/cmm/m/it/9 v$\TU/lmr/m/n/9 , (c)
+ sea sur-face height $\OML/cmm/m/it/9 $\TU/lmr/m/n/9 , and the re-spec-tive te
+n-den-cies of (d) $\OML/cmm/m/it/9 u$\TU/lmr/m/n/9 , (e)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--465
+\OML/cmm/m/it/9 v$\TU/lmr/m/n/9 , and (f) $\OML/cmm/m/it/9 $\TU/lmr/m/n/9 , si
+m-u-lated with dif-fer-ent 16, 32 and 64bit num-ber for-mats. Mean, 10th and 90
+th
+ []
+
+<../plots/snapshot_comm.png, id=135, 578.16pt x 505.89pt>
+File: ../plots/snapshot_comm.png Graphic file (type png)
+<use ../plots/snapshot_comm.png>
+Package luatex.def Info: ../plots/snapshot_comm.png  used on input line 470.
+(luatex.def)             Requested size: 397.48499pt x 347.79851pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--472
+[]\TU/lmr/bx/n/9 Fig-ure  10. \TU/lmr/m/n/9 Snap-shot of tracer con-cen-tra-tio
 n sim-u-lated by the shal-low wa-ter model, based on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
-\OT1/cmr/m/n/9 dif-fer-ent 16bit num-ber for-mats. Mixed pre-ci-sion us-ing Flo
-at32 for the prog-nos-tic vari-ables only is
+Underfull \hbox (badness 10000) in paragraph at lines 472--472
+\TU/lmr/m/n/9 re-duced pre-ci-sion com-mu-ni-ca-tion. The com-mu-ni-ca-tion of 
+bound-ary val-ues oc-curs at ev-ery time
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
-\OT1/cmr/m/n/9 used for (e-f). The tracer was in-jected uni-formly in the lower
- half of the do-main 50 days be-fore.
- []
-
-<../plots/rmse_eta.pdf, id=60, 578.16pt x 289.08pt>
-File: ../plots/rmse_eta.pdf Graphic file (type pdf)
-<use ../plots/rmse_eta.pdf>
-Package pdftex.def Info: ../plots/rmse_eta.pdf  used on input line 436.
-(pdftex.def)             Requested size: 397.48499pt x 198.742pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 437--437
-[]\OT1/cmr/bx/n/9 Figure  6. \OT1/cmr/m/n/9 Fore-cast er-ror mea-sured as the r
-oot mean square er-ror (RMSE) of sea sur-face
+Underfull \hbox (badness 10000) in paragraph at lines 472--472
+\TU/lmr/m/n/9 step for the prog-nos-tic vari-ables, with val-ues copied be-twee
+n the left and right bound-ary, due to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--437
-\OT1/cmr/m/n/9 height $\OML/cmm/m/it/9 ^^Q$ \OT1/cmr/m/n/9 tak-ing Float64 as r
-ef-er-ence. The RMSE is nor-malised by a mean fore-cast er-ror at very
+Underfull \hbox (badness 10000) in paragraph at lines 472--472
+\TU/lmr/m/n/9 the pe-ri-odic bound-ary con-di-tions. Float64 was used for all c
+al-cu-la-tions. Ar-eas where the ab-so-lute
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--437
-\OT1/cmr/m/n/9 long lead times. Solid lines rep-re-sent the me-dian of 300 fore
--casts per num-ber for-mat. The shaded
- []
-
-[11] [12 <../plots/snapshot.png>]
-<../plots/meanvar_u.pdf, id=68, 433.62pt x 361.35pt>
-File: ../plots/meanvar_u.pdf Graphic file (type pdf)
-<use ../plots/meanvar_u.pdf>
-Package pdftex.def Info: ../plots/meanvar_u.pdf  used on input line 446.
-(pdftex.def)             Requested size: 397.48499pt x 331.25507pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 447--447
-[]\OT1/cmr/bx/n/9 Figure  7. \OT1/cmr/m/n/9 Cli-ma-tol-ogy and vari-abil-ity of
- the zonal cur-rent. (a) Zonally-averaged zonal cur-rent
+Underfull \hbox (badness 10000) in paragraph at lines 472--472
+\TU/lmr/m/n/9 er-ror ex-ceeds 0.05 are shaded in red only in the lower half of 
+the do-main. The tracer was in-jected
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--447
-\OML/cmm/m/it/9 u$ \OT1/cmr/m/n/9 as a func-tion of the merid-ional co-or-di-na
-te $\OML/cmm/m/it/9 y$\OT1/cmr/m/n/9 . (b) Zonal vari-ance of the zonal cur-ren
-t as a func-
+Underfull \hbox (badness 10000) in paragraph at lines 472--472
+\TU/lmr/m/n/9 uni-formly in the lower half of the do-main 50 days be-fore. This
+ sim-u-la-tion was run at a res-o-lu-tion
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 447--447
-\OT1/cmr/m/n/9 tion of $\OML/cmm/m/it/9 y$\OT1/cmr/m/n/9 . Shaded ar-eas de-not
-e the tem-po-ral vari-abil-ity around the (a) mean and (b) vari-ance of
- []
-
-<../plots/entropy.pdf, id=69, 433.62pt x 289.08pt>
-File: ../plots/entropy.pdf Graphic file (type pdf)
-<use ../plots/entropy.pdf>
-Package pdftex.def Info: ../plots/entropy.pdf  used on input line 452.
-(pdftex.def)             Requested size: 397.48499pt x 265.00404pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 453--453
-[]\OT1/cmr/bx/n/9 Figure  8. \OT1/cmr/m/n/9 En-tropy of mix-ing cal-cu-lated fr
-om the tracer con-cen-tra-tion sim-u-lated with var-i-ous
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 453--453
-\OT1/cmr/m/n/9 16bit num-ber for-mats. Lines rep-re-sent the mean of 50 fore-ca
-sts per num-ber for-mat. The en-tropy
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 453--453
-\OT1/cmr/m/n/9 is nor-mal-ized by the en-tropy of a ho-mo-ge-neous tracer. The 
-shaded area de-notes the en-sem-ble
- []
-
-[13 <../plots/rmse_eta.pdf>] [14 <../plots/meanvar_u.pdf>]
+[14<../plots/meanvar_u.pdf>] [15<../plots/entropy.pdf><../plots/tendency_hist.pd
+f>] [16<../plots/snapshot_comm.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15 <../plots/entropy.pdf>] [16]
-Overfull \hbox (6.6259pt too wide) in paragraph at lines 707--708
-\OT1/cmr/m/it/10 proach to Im-prov-ing the Re-li-a-bil-ity of Weather and Cli-m
-ate Sim-u-la-tions\OT1/cmr/m/n/10 . Mi-lan Kl^^?ower 
+ [17]
+Overfull \hbox (5.64517pt too wide) in paragraph at lines 726--727
+\TU/lmr/m/it/10 proach to Im-prov-ing the Re-li-a-bil-ity of Weather and Cli-ma
+te Sim-u-la-tions\TU/lmr/m/n/10 . Mi-lan Klöwer 
  []
 
 (./Kloewer_etal_james2020.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 16--35
-\OT1/cmr/m/n/10 trieved from $\OT1/cmtt/m/n/10 http :// dx [] .doi [] .org / 10
- [] .1175 / 1520 [] -0493(1990 ) 118{\ % }3C1960 : 
+\TU/lmr/m/n/10 trieved from $\TU/lmtt/m/n/10 http://dx[].doi[].org/10[].1175/15
+20[]-0493(1990)118{\%}3C1960: 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--35
-\OT1/cmtt/m/n/10 ECAPED{\ % }3E2 [] .0 [] .CO{\ % }5Cn2$   \OT1/cmr/m/n/10 doi:
- $10 [] .1175 / 1520 [] -0493(1990 ) 118\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 1960 
-: 
+\TU/lmtt/m/n/10 ECAPED{\%}3E2[].0[].CO{\%}5Cn2$   \TU/lmr/m/n/10 doi: $10[].117
+5/1520[]-0493(1990)118<1960: 
  []
 
-[17]
-Underfull \hbox (badness 4792) in paragraph at lines 49--62
-\OT1/cmr/m/n/10 pro-cesses of the UCLA gen-eral cir-cu-la-tion model.  \OT1/cmr
-/m/it/10 Meth-ods of Com-pu-ta-tional 
+[18]
+Underfull \hbox (badness 4805) in paragraph at lines 49--62
+\TU/lmr/m/n/10 pro-cesses of the UCLA gen-eral cir-cu-la-tion model.  \TU/lmr/m
+/it/10 Meth-ods of Com-pu-ta-tional 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 76--91
-\OT1/cmr/m/n/10 bu-lence, and Oceanic Mesoscale Ed-dies.  \OT1/cmr/m/it/10 Jour
--nal of Phys-i-cal Oceanog-ra-phy\OT1/cmr/m/n/10 , 
+\TU/lmr/m/n/10 bu-lence, and Oceanic Mesoscale Ed-dies.  \TU/lmr/m/it/10 Jour-n
+al of Phys-i-cal Oceanog-ra-phy\TU/lmr/m/n/10 , 
  []
 
-
+(load luc: /home/kloewer/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/l
+mmono8-regular.luc)
 Underfull \hbox (badness 10000) in paragraph at lines 160--179
-[]\OT1/cmr/m/n/10 Chaurasiya, R., Gustafson, J., Shrestha, R., Neu-dor-fer, J.,
- Nam-biar, S., & Niyogi, K. 
+[]\TU/lmr/m/n/10 Chaurasiya, R., Gustafson, J., Shrestha, R., Neu-dor-fer, J., 
+Nam-biar, S., & Niyogi, K. 
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 160--179
-\OT1/cmr/m/n/10 (2018).  Pa-ram-e-ter-ized Posit Arith-metic Hard-ware Gen-er-a
--tor. , 9.  Re-trieved 
+Underfull \hbox (badness 1231) in paragraph at lines 160--179
+\TU/lmr/m/n/10 (2018).  Pa-ram-e-ter-ized Posit Arith-metic Hard-ware Gen-er-a-
+tor. , 9.  Re-trieved 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 222--237
-\OT1/cmr/m/n/10 pre-ci-sion in large nu-mer-i-cal sim-u-la-tions.  \OT1/cmr/m/i
-t/10 Geo-sci-en-tific Model De-vel-op-ment\OT1/cmr/m/n/10 , 
+\TU/lmr/m/n/10 pre-ci-sion in large nu-mer-i-cal sim-u-la-tions.  \TU/lmr/m/it/
+10 Geo-sci-en-tific Model De-vel-op-ment\TU/lmr/m/n/10 , 
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 279--298
-[]\OT1/cmr/m/n/10 D^^?uben, P. D., & Palmer, T. N.  (2014).  Bench-mark Tests f
-or Nu-mer-i-cal Weather 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 279--298
-\OT1/cmr/m/n/10 Fore-casts on In-ex-act Hard-ware.  \OT1/cmr/m/it/10 Monthly We
-ather Re-view\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 142\OT1/cmr/m/n/10 (10), 3809--
- 
+Underfull \hbox (badness 2689) in paragraph at lines 279--298
+[]\TU/lmr/m/n/10 Düben, P. D., & Palmer, T. N.  (2014).  Bench-mark Tests for 
+Nu-mer-i-cal Weather 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 279--298
-\OT1/cmr/m/n/10 3829.  Re-trieved from $\OT1/cmtt/m/n/10 http :// journals [] .
-ametsoc [] .org / doi / abs / 10 [] .1175 / 
+\TU/lmr/m/n/10 Fore-casts on In-ex-act Hard-ware.  \TU/lmr/m/it/10 Monthly Weat
+her Re-view\TU/lmr/m/n/10 , \TU/lmr/m/it/10 142\TU/lmr/m/n/10 (10), 3809-- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--298
+\TU/lmr/m/n/10 3829.  Re-trieved from $\TU/lmtt/m/n/10 http://journals[].ametso
+c[].org/doi/abs/10[].1175/ 
  []
 
 
 Underfull \hbox (badness 1701) in paragraph at lines 332--350
-\OT1/cmr/m/n/10 An 826 MOPS, 210 uW/MHz Unum ALU in 65 nm.  Re-trieved from $\O
-T1/cmtt/m/n/10 http :// 
+\TU/lmr/m/n/10 An 826 MOPS, 210 uW/MHz Unum ALU in 65 nm.  Re-trieved from $\TU
+/lmtt/m/n/10 http:// 
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 364--378
-\OT1/cmr/m/n/10 tors.  \OT1/cmr/m/it/10 Phys-ica D: Non-lin-ear Phe-nom-ena\OT1
-/cmr/m/n/10 , \OT1/cmr/m/it/10 9\OT1/cmr/m/n/10 (1-2), 189--208.  doi: $10 [] .
-1016 / 0167 [] 
+Underfull \hbox (badness 1571) in paragraph at lines 364--378
+\TU/lmr/m/n/10 tors.  \TU/lmr/m/it/10 Phys-ica D: Non-lin-ear Phe-nom-ena\TU/lm
+r/m/n/10 , \TU/lmr/m/it/10 9\TU/lmr/m/n/10 (1-2), 189--208.  doi: $10[].1016/01
+67[] 
  []
 
 
-Underfull \hbox (badness 3260) in paragraph at lines 392--408
-[]\OT1/cmr/m/n/10 Griffies, S. M., & Hall-berg, R.  (2000).  Bi-har-monic Fric-
-tion with a Smagorinsky- 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 444--463
-\OT1/cmr/m/n/10 Posit Arith-metic.  \OT1/cmr/m/it/10 Su-per-com-put-ing Fron-ti
-ers and In-no-va-tions\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 4\OT1/cmr/m/n/10 (2), 
-71--86. 
+Underfull \hbox (badness 3250) in paragraph at lines 392--408
+[]\TU/lmr/m/n/10 Griffies, S. M., & Hall-berg, R.  (2000).  Bi-har-monic Fric-t
+ion with a Smagorinsky- 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 444--463
-\OT1/cmr/m/n/10 Re-trieved from $\OT1/cmtt/m/n/10 http :// superfri [] .org / s
-uperfri / article / view / 137$   \OT1/cmr/m/n/10 doi: 
+\TU/lmr/m/n/10 Posit Arith-metic.  \TU/lmr/m/it/10 Su-per-com-put-ing Fron-tier
+s and In-no-va-tions\TU/lmr/m/n/10 , \TU/lmr/m/it/10 4\TU/lmr/m/n/10 (2), 71--8
+6. 
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 475--495
-[]\OT1/cmr/m/n/10 Hatfield, S., D^^?uben, P., Chantry, M., Kondo, K., Miyoshi, 
-T., & Palmer, T.  (2018). 
+Underfull \hbox (badness 10000) in paragraph at lines 444--463
+\TU/lmr/m/n/10 Re-trieved from $\TU/lmtt/m/n/10 http://superfri[].org/superfri/
+article/view/137$   \TU/lmr/m/n/10 doi: 
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 475--495
+[]\TU/lmr/m/n/10 Hat-field, S., Düben, P., Chantry, M., Kondo, K., Miyoshi, T.
+, & Palmer, T.  (2018). 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 475--495
-\OT1/cmr/m/n/10 Choos-ing the Op-ti-mal Nu-mer-i-cal Pre-ci-sion for Data As-si
-m-i-la-tion in the Pres- 
+\TU/lmr/m/n/10 Choos-ing the Op-ti-mal Nu-mer-i-cal Pre-ci-sion for Data As-sim
+-i-la-tion in the Pres- 
  []
 
 
-Underfull \hbox (badness 2486) in paragraph at lines 475--495
-\OT1/cmr/m/n/10 ence of Model Er-ror.  \OT1/cmr/m/it/10 Jour-nal of Ad-vances i
-n Mod-el-ing Earth Sys-tems\OT1/cmr/m/n/10 .  doi: 
+Underfull \hbox (badness 2671) in paragraph at lines 475--495
+\TU/lmr/m/n/10 ence of Model Er-ror.  \TU/lmr/m/it/10 Jour-nal of Ad-vances in 
+Mod-el-ing Earth Sys-tems\TU/lmr/m/n/10 .  doi: 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--554
-[]\OT1/cmr/m/n/10 Jeffress, S., D^^?uben, P., & Palmer, T.  (2017).  Bit-wise e
-f-fi-ciency in chaotic 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--554
-\OT1/cmr/m/n/10 mod-els.  \OT1/cmr/m/it/10 Pro-ceed-ings of the Royal So-ci-ety
- A: Math-e-mat-i-cal, Phys-i-cal and 
+Underfull \hbox (badness 4899) in paragraph at lines 507--520
+[]\TU/lmr/m/n/10 IEEE.  (2008, aug).  IEEE Stan-dard for Floating-Point Arith-m
+etic.  \TU/lmr/m/it/10 IEEE Std 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 534--554
-\OT1/cmr/m/it/10 En-gi-neer-ing Sci-ence\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 473\
-OT1/cmr/m/n/10 (2205), 20170144.  Re-trieved from $\OT1/cmtt/m/n/10 http :// 
+[]\TU/lmr/m/n/10 Jef-fress, S., Düben, P., & Palmer, T.  (2017).  Bit-wise eff
+i-ciency in chaotic 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 534--554
-\OT1/cmtt/m/n/10 rspa [] .royalsocietypublishing [] .org / lookup / doi / 10 []
- .1098 / rspa [] .2017 [] .0144$ 
+\TU/lmr/m/n/10 mod-els.  \TU/lmr/m/it/10 Pro-ceed-ings of the Royal So-ci-ety A
+: Math-e-mat-i-cal, Phys-i-cal 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--554
+\TU/lmr/m/it/10 and En-gi-neer-ing Sci-ence\TU/lmr/m/n/10 , \TU/lmr/m/it/10 473
+\TU/lmr/m/n/10 (2205), 20170144.  Re-trieved from $\TU/lmtt/m/n/10 http:// 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--554
+\TU/lmtt/m/n/10 rspa[].royalsocietypublishing[].org/lookup/doi/10[].1098/rspa[]
+.2017[].0144$ 
  []
 
 
 Underfull \vbox (badness 2293) has occurred while \output is active []
 
- [18]
-Underfull \hbox (badness 5817) in paragraph at lines 566--581
-\OT1/cmr/m/n/10 els due to stochas-tic forc-ing.  \OT1/cmr/m/it/10 Philo-soph-i
--cal Trans-ac-tions of the Royal So-ci-ety 
+ [19]
+Underfull \hbox (badness 5802) in paragraph at lines 566--581
+\TU/lmr/m/n/10 els due to stochas-tic forc-ing.  \TU/lmr/m/it/10 Philo-soph-i-c
+al Trans-ac-tions of the Royal So-ci-ety 
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 593--607
+\TU/lmr/m/it/10 Sci-ences\TU/lmr/m/n/10 , \TU/lmr/m/it/10 20\TU/lmr/m/n/10 , 13
+0--141.  doi: $10[].1175/1520[]-0469(1963)020<0130:DNF>2[].0[].CO; 
  []
 
 
 Underfull \hbox (badness 6825) in paragraph at lines 669--685
-[]\OT1/cmr/m/n/10 Palmer, T. N.  (2012).  To-wards the prob-a-bilis-tic Earth-s
-ystem sim-u-la-tor: A vi- 
+[]\TU/lmr/m/n/10 Palmer, T. N.  (2012).  To-wards the prob-a-bilis-tic Earth-sy
+stem sim-u-la-tor: A vi- 
  []
 
 
-Underfull \hbox (badness 3460) in paragraph at lines 699--716
-\OT1/cmr/m/it/10 Newslet-ter\OT1/cmr/m/n/10 .  Re-trieved from $\OT1/cmtt/m/n/1
-0 http :// www [] .cosmo [] -model [] .org / content / model / 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 732--753
-[]\OT1/cmr/m/n/10 Russell, F. P., D^^?uben, P. D., Niu, X., Luk, W., & Palmer, 
-T. N.  (2017).  Ex- 
+Underfull \hbox (badness 3668) in paragraph at lines 699--716
+\TU/lmr/m/it/10 Newslet-ter\TU/lmr/m/n/10 .  Re-trieved from $\TU/lmtt/m/n/10 h
+ttp://www[].cosmo[]-model[].org/content/model/ 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 732--753
-\OT1/cmr/m/n/10 ploit-ing the chaotic be-haviour of at-mo-spheric mod-els with 
-re-con-fig-urable 
+[]\TU/lmr/m/n/10 Rus-sell, F. P., Düben, P. D., Niu, X., Luk, W., & Palmer, T.
+ N.  (2017).  Ex- 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 732--753
-\OT1/cmr/m/n/10 ar-chi-tec-tures.  \OT1/cmr/m/it/10 Com-puter Physics Com-mu-ni
--ca-tions\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 221\OT1/cmr/m/n/10 , 160--173.  Re-
- 
+\TU/lmr/m/n/10 ploit-ing the chaotic be-haviour of at-mo-spheric mod-els with r
+e-con-fig-urable 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 732--753
-\OT1/cmr/m/n/10 trieved from $\OT1/cmtt/m/n/10 http :// dx [] .doi [] .org / 10
- [] .1016 / j [] .cpc [] .2017 [] .08 [] .011$   \OT1/cmr/m/n/10 doi: 
+\TU/lmr/m/n/10 ar-chi-tec-tures.  \TU/lmr/m/it/10 Com-puter Physics Com-mu-ni-c
+a-tions\TU/lmr/m/n/10 , \TU/lmr/m/it/10 221\TU/lmr/m/n/10 , 160--173.  Re- 
  []
 
 
-Underfull \hbox (badness 4036) in paragraph at lines 765--782
-[]\OT1/cmr/m/n/10 Sadourny, R.  (1975).  \OT1/cmr/m/it/10 The Dy-nam-ics of Fin
-ite-Difference Mod-els of the Shallow- 
+Underfull \hbox (badness 10000) in paragraph at lines 732--753
+\TU/lmr/m/n/10 trieved from $\TU/lmtt/m/n/10 http://dx[].doi[].org/10[].1016/j[
+].cpc[].2017[].08[].011$   \TU/lmr/m/n/10 doi: 
+ []
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 765--782
+[]\TU/lmr/m/n/10 Sadourny, R.  (1975).  \TU/lmr/m/it/10 The Dy-nam-ics of Finit
+e-Difference Mod-els of the Shallow- 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 765--782
-\OT1/cmr/m/it/10 Water Equa-tions \OT1/cmr/m/n/10 (Vol.[] 32) (No.[] 4).  Re-tr
-ieved from $\OT1/cmtt/m/n/10 http :// dx [] .doi [] .org / 
+\TU/lmr/m/it/10 Water Equa-tions \TU/lmr/m/n/10 (Vol.[] 32) (No.[] 4).  Re-trie
+ved from $\TU/lmtt/m/n/10 http://dx[].doi[].org/ 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 765--782
-\OT1/cmtt/m/n/10 10 [] .1175 / 1520 [] -0469(1975 ) 032{\ % }3C0680 : TDOFDM{\ 
-% }3E2 [] .0 [] .CO{\ % }5Cn2$ 
+\TU/lmtt/m/n/10 10[].1175/1520[]-0469(1975)032{\%}3C0680:TDOFDM{\%}3E2[].0[].CO
+{\%}5Cn2$ 
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 796--812
-[]\OT1/cmr/m/n/10 Smolarkiewicz, P. K., & Pudykiewicz, J. A.  (1992).  A Class 
+Underfull \hbox (badness 3668) in paragraph at lines 796--812
+[]\TU/lmr/m/n/10 Smo-larkiewicz, P. K., & Pudykiewicz, J. A.  (1992).  A Class 
 of Semi-Lagrangian 
  []
 
 
 Underfull \hbox (badness 4001) in paragraph at lines 826--845
-[]\OT1/cmr/m/n/10 Tantet, A., Lu-carini, V., & Di-jk-stra, H. A.  (2018).  Res-
+[]\TU/lmr/m/n/10 Tan-tet, A., Lu-carini, V., & Di-jk-stra, H. A.  (2018).  Res-
 o-nances in a Chaotic At- 
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 826--845
-\OT1/cmr/m/n/10 trac-tor Cri-sis of the Lorenz Flow.  \OT1/cmr/m/it/10 Jour-nal
- of Sta-tis-ti-cal Physics\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 170\OT1/cmr/m/n/10
- (3), 584-- 
+Underfull \hbox (badness 1681) in paragraph at lines 826--845
+\TU/lmr/m/n/10 trac-tor Cri-sis of the Lorenz Flow.  \TU/lmr/m/it/10 Jour-nal o
+f Sta-tis-ti-cal Physics\TU/lmr/m/n/10 , \TU/lmr/m/it/10 170\TU/lmr/m/n/10 (3),
+ 584-- 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 911--935
-[]\OT1/cmr/m/n/10 V^^Sa^^Tna, F., D^^?uben, P., Lang, S., Palmer, T., Leut-bech
-er, M., Salmond, D., & Carver, 
+[]\TU/lmr/m/n/10 Váňa, F., Düben, P., Lang, S., Palmer, T., Leut-becher, M.,
+ Salmond, D., & Carver, 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 911--935
-\OT1/cmr/m/n/10 G.  (2017).  Sin-gle Pre-ci-sion in Weather Fore-cast-ing Mod-e
-ls: An Eval-u-a- 
+\TU/lmr/m/n/10 G.  (2017).  Sin-gle Pre-ci-sion in Weather Fore-cast-ing Mod-el
+s: An Eval-u-a- 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 911--935
-\OT1/cmr/m/n/10 tion with the IFS.  \OT1/cmr/m/it/10 Monthly Weather Re-view\OT
-1/cmr/m/n/10 , \OT1/cmr/m/it/10 145\OT1/cmr/m/n/10 (2), 495--502.  Re-trieved 
+\TU/lmr/m/n/10 tion with the IFS.  \TU/lmr/m/it/10 Monthly Weather Re-view\TU/l
+mr/m/n/10 , \TU/lmr/m/it/10 145\TU/lmr/m/n/10 (2), 495--502.  Re-trieved 
  []
 
 
 Underfull \hbox (badness 5064) in paragraph at lines 911--935
-\OT1/cmr/m/n/10 from $\OT1/cmtt/m/n/10 http :// journals [] .ametsoc [] .org / 
-doi / 10 [] .1175 / MWR [] -D [] -16 [] -0228 [] .1$   \OT1/cmr/m/n/10 doi: 
+\TU/lmr/m/n/10 from $\TU/lmtt/m/n/10 http://journals[].ametsoc[].org/doi/10[].1
+175/MWR[]-D[]-16[]-0228[].1$   \TU/lmr/m/n/10 doi: 
  []
 
 
-Underfull \hbox (badness 2073) in paragraph at lines 947--962
-\OT1/cmr/m/it/10 ing Hard-ware Ac-cel-er-a-tion \OT1/cmr/m/n/10 (Un-pub-lished 
-doc-toral dis-ser-ta-tion).  Delft Uni-ver- 
+Underfull \hbox (badness 2269) in paragraph at lines 947--962
+\TU/lmr/m/it/10 ing Hard-ware Ac-cel-er-a-tion \TU/lmr/m/n/10 (Un-pub-lished do
+c-toral dis-ser-ta-tion).  Delft Uni-ver- 
  []
 
-) [19] (./Kloewer_etal_james2020.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.45pt have occurred.
-
+) [20] (./Kloewer_etal_james2020.aux)
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
- ) 
-Here is how much of TeX's memory you used:
- 5895 strings out of 492982
- 79768 string characters out of 6134896
- 253242 words of memory out of 5000000
- 9358 multiletter control sequences out of 15000+600000
- 11939 words of font info for 44 fonts, out of 8000000 for 9000
- 1147 hyphenation exceptions out of 8191
- 43i,18n,37p,1411b,1614s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmtt9.pfb>
-Output written on Kloewer_etal_james2020.pdf (19 pages, 2125182 bytes).
-PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+)
+
+Here is how much of LuaTeX's memory you used:
+ 6403 strings out of 494480
+ 156270,184870 words of node,token memory allocated
+ 718 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 1 kern, 10 sub_mlist, 38 attribute, 71 glue
+_spec, 38 attribute_list, 1 write nodes
+   avail lists: 1:1,2:2398,3:310,4:2822,5:2533,6:5397,7:3058,8:2096,9:3817,10:28
+,11:538
+ 10208 multiletter control sequences out of 65536+600000
+ 63 fonts using 4950815 bytes
+ 43i,17n,37p,1392b,1164s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texm
+f/fonts/opentype/public/lm/lmroman9-bold.otf></usr/share/texmf/fonts/opentype/pu
+blic/lm/lmmonolt10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman5-
+regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></us
+r/share/texmf/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf/fo
+nts/opentype/public/lm/lmmono9-regular.otf></usr/share/texmf/fonts/opentype/publ
+ic/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-
+regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/
+share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/
+opentype/public/lm/lmroman9-italic.otf></usr/share/texmf/fonts/opentype/public/l
+m/lmroman9-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Kloewer_etal_james2020.pdf (20 pages, 3043819 bytes).
+
+PDF statistics: 462 PDF objects out of 1000 (max. 8388607)
+ 199 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

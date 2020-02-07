@@ -41,8 +41,8 @@ fig,(ax1,ax2) = subplots(1,2,figsize=(8,4),sharey=true,sharex=true)
 ax1.semilogy(t,median(R[2,2:end,:],dims=2)/cerr,"k",label="Float16")
 ax1.semilogy(t,median(R[3,2:end,:],dims=2)/cerr,"#50C070",ls="--",label="Posit(16,1)")
 ax1.semilogy(t,median(R[4,2:end,:],dims=2)/cerr,"#900000",ls="--",label="Posit(16,2)")
-ax1.semilogy(t,median(R[6,2:end,:],dims=2)/cerr,"grey",ls="-.",label="BFloat16,Float32 mixed")
-ax1.semilogy(t,median(R[5,2:end,:],dims=2)/cerr,"C1",ls="-.",label="Float16,Float32 mixed")
+ax1.semilogy(t,median(R[6,2:end,:],dims=2)/cerr,"grey",ls="-.",label="BFloat16/Float32")
+ax1.semilogy(t,median(R[5,2:end,:],dims=2)/cerr,"C1",ls="-.",label="Float16/Float32")
 ax1.semilogy(t,median(R[1,2:end,:],dims=2)/cerr,"C0",label="Float32")
 
 ax1.fill_between(t,Rp[1,2,:]/cerr,Rp[2,2,:]/cerr,color="k",alpha=0.2)
@@ -61,7 +61,7 @@ ax1.set_ylim(1e-4,1)
 ax1.set_title("Forecast error:\n16bit calculations", loc="left")
 ax1.set_title("a", loc="right", fontweight="bold")
 
-ax1.legend(loc=4,fontsize=8)
+ax1.legend(loc=3,fontsize=7)
 
 ax2.semilogy(t2,median(R2[1,2:end,:],dims=2)/cerr,"k",label="Float16")
 ax2.semilogy(t2,median(R2[2,2:end,:],dims=2)/cerr,"grey",ls="-",label="BFloat16")
@@ -78,7 +78,7 @@ ax2.fill_between(t2,Rp2[1,5,:]/cerr,Rp2[2,5,:]/cerr,color="C4",alpha=0.2)
 ax2.set_title("Forecast error:\n16 or 8bit communication", loc="left")
 ax2.set_title("b", loc="right", fontweight="bold")
 
-ax2.legend(loc=4,fontsize=8)
+ax2.legend(loc=4,fontsize=7)
 
 tight_layout()
 savefig("plots/rmse_$var.pdf")

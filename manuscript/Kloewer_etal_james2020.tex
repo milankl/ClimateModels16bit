@@ -223,7 +223,13 @@
 %% \begin{abstract} starts the second page
 
 \begin{abstract}
-Posit numbers, a recently proposed alternative to floating-point numbers, claim to have smaller arithmetic rounding errors in many applications. By studying weather and climate models of low and medium complexity (the Lorenz system and a shallow water model) we present benefits of posits compared to floats at 16bit. As a standardized posit processor does not exist yet, we emulate posit arithmetic on a conventional CPU. Using a shallow water model, forecasts based on 16bit posits with 1 or 2 exponent bits are clearly more accurate than half precision floats. We therefore propose 16 bit with 2 exponent bits as a standard posit format, as its wide dynamic range of 32 orders of magnitude provides a great potential for many weather and climate models. Although the focus is on geophysical fluid simulations, the results are also meaningful and promising for reduced precision posit arithmetic in the wider field of computational fluid dynamics.
+Posit numbers, a recently proposed alternative to floating-point numbers, claim to have smaller arithmetic rounding errors in many applications. By studying weather and climate models of low and medium complexity (the Lorenz system and a shallow water model) we present benefits of posits compared to floats at 16bit. As a standardized posit processor does not exist yet, we emulate posit arithmetic on a conventional CPU. Forecasts based on 16bit posits are clearly more accurate than 16bit floats in shallow water simulations. No 16bit format was found to have a significant impact on the climatological mean state, however, 
+
+
+Using 16bit arithmetics only for the computation of tendencies 
+
+
+%We therefore propose 16 bit with 2 exponent bits as a standard posit format, as its wide dynamic range of 32 orders of magnitude provides a great potential for many weather and climate models. Although the focus is on geophysical fluid simulations, the results are also meaningful and promising for reduced precision posit arithmetic in the wider field of computational fluid dynamics.
 \end{abstract}
 
 %% ------------------------------------------------------------------------ %%
@@ -434,7 +440,7 @@ The solution to the shallow water equations includes vigorous turbulence that do
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/rmse_eta.pdf}
-\caption{Forecast error measured as the root mean square error (RMSE) of sea surface height $\eta$ taking Float64 as reference. The RMSE is normalised by a mean forecast error at very long lead times. Solid lines represent the median of 300 forecasts per number format. The shaded areas denote the interquartile range of the ensemble.}
+\caption{Forecast error measured as the root mean square error (RMSE) of sea surface height $\eta$ taking Float64 as reference. (a) Forecast error for various 16bit number formats and mixed 16bit/32bit simulations for which the prognostic variables are kept at Float32. (b) Forecast error for reduced precision communication in 8 or 16bit with various number formats used for encoding, with Float64 used for all calculations.  The communication of boundary values occurs at every time step for the prognostic variables, with values copied between the left and right boundary, due to the periodic boundary conditions. The RMSE is normalised by a mean forecast error at very long lead times. Solid lines represent the median of 200 forecasts per number format. The shaded areas denote the interquartile range of the ensemble.}
 \label{fig:rmse}
 \end{figure}
 
@@ -444,14 +450,27 @@ Clearly the best forecast is obtained for posit arithmetic with 1 or 2 exponent 
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/meanvar_u.pdf}
-\caption{Climatology and variability of the zonal current. (a) Zonally-averaged zonal current $u$ as a function of the meridional coordinate $y$. (b) Zonal variance of the zonal current as a function of $y$. Shaded areas denote the temporal variability around the (a) mean and (b) variance of reference simulation with Float64.}
+\caption{Climatology and variability of the zonal current. (a) Zonally-averaged zonal current $u$ as a function of the meridional coordinate $y$. (b) Zonal variance of the zonal current as a function of $y$. Shaded areas denote the interquartile temporal variability around the (a) mean and (b) variance of reference simulation with Float64.}
 \label{fig:mean}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/entropy.pdf}
-\caption{Entropy of mixing calculated from the tracer concentration simulated with various 16bit number formats. Lines represent the mean of 50 forecasts per number format. The entropy is normalized by the entropy of a homogeneous tracer. The shaded area denotes the ensemble spread of the reference simulation with Float64. Note the cubically scaled y-axis.}
+\caption{Entropy of mixing calculated from the tracer concentration simulated with various 16bit number formats. The entropy is normalized by the entropy of a homogeneous tracer. Lines represent the mean of 200 forecasts per number format. The shaded area denotes the interquartile range of the reference ensemble simulations with Float64. Note the cubically scaled y-axis.}
 \label{fig:entropy}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{../plots/tendency_hist.pdf}
+\caption{Histograms of the numeric values of the prognostic variables (a) zonal velocity $u$, (b) meridional velocity $v$, (c) sea surface height $\eta$, and the respective tendencies of (d) $u$, (e) $v$, and (f) $\eta$, simulated with different 16, 32 and 64bit number formats. Mean, 10th and 90th percentile are shown above the histograms in respective colors. Note the break on the x-axis.}
+\label{fig:tend}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{../plots/snapshot_comm.png}
+\caption{Snapshot of tracer concentration simulated by the shallow water model, based on reduced precision communication. The communication of boundary values occurs at every time step for the prognostic variables, with values copied between the left and right boundary, due to the periodic boundary conditions. %The communication is analogous to a domain decomposition parallelism, with MPI communication between the subdomains. 
+Float64 was used for all calculations. Areas where the absolute error exceeds 0.05 are shaded in red only in the lower half of the domain. The tracer was injected uniformly in the lower half of the domain 50 days before. This simulation was run at a resolution of $\Delta = 5$km (400x200 grid points).}
+\label{fig:snapshot}
 \end{figure}
 
 \subsection{Mixed precision arithmetic}
@@ -504,13 +523,13 @@ The semi-Lagrangian advection scheme involves the computation of a departure poi
 \end{equation}
 where $\mathbf{\tilde{x}}_a$ are the coordinates of the arrival grid node and $\mathbf{u}_i$ the velocity interpolated on the mid-point in space and time\cite{Smolarkiewicz1992}. The advective time step $\Delta t_\text{adv}$ is much larger than $\Delta t$ to reduce numerical diffusion of the tracer due to a smaller number of interpolations. In the simulations of Fig. \ref{fig:snapshot} ($\Delta = 10\op{km}$) the rescaled time step is $\tfrac{\Delta t_\text{adv}}{\Delta} \approx \tfrac{2 \cdot 10^4\op{s}}{10^4\op{m}} =  2 \op{sm}^{-1}$ and therefore precomputed.
 
-\section{Perspectives for quires}
-\label{sec:app2}
-Although we do not use quires throughout the simulations, for completeness we want to discuss computations that could greatly benefit from the use of quires. Summing the tendencies of the right-hand side of Eq. \ref{eq:swe}a involves computations like
-\begin{equation}
-u^{n+1} = u^{n} + RK_u \left( Qhv + \partial_xp + D_x + F_x \right)
-\end{equation}
-where $RK_u$ is a constant that includes the Runge-Kutta coefficient and the time step. $Qhv$ is the advection of potential vorticity, $\partial_xp$ is the gradient of the Bernoulli potential, $D_x$ is the $u$-component of bottom friction and diffusion and $F_x$ is the wind forcing. It is a priori not clear which of the terms $u^n, Qhv, \partial_xp, D_x$ or $F_x$ dominate the sum. Physically speaking, the shallow water model is often close to geostrophic balance, which means that the Coriolis term (which is included in $Qhv$) and the pressure gradient term (which is included in $\partial_xp$) oppose each other. In general, however, the dominating balance will vary in space and time and therefore it is only clear at runtime what the preferred order of addition is, which is crucial to reducing the rounding error. Using quires could solve this problem since quires will be able to reduce rounding errors greatly when performing intermediate operations. Quires may allow to perform the sum over different terms to calculate the right-hand side of the equations with a single rounding error due to 16-bit arithmetic when the final result for the new velocity value is stored.
+%\section{Perspectives for quires}
+%\label{sec:app2}
+%Although we do not use quires throughout the simulations, for completeness we want to discuss computations that could greatly benefit from the use of quires. Summing the tendencies of the right-hand side of Eq. \ref{eq:swe}a involves computations like
+%\begin{equation}
+%u^{n+1} = u^{n} + RK_u \left( Qhv + \partial_xp + D_x + F_x \right)
+%\end{equation}
+%where $RK_u$ is a constant that includes the Runge-Kutta coefficient and the time step. $Qhv$ is the advection of potential vorticity, $\partial_xp$ is the gradient of the Bernoulli potential, $D_x$ is the $u$-component of bottom friction and diffusion and $F_x$ is the wind forcing. It is a priori not clear which of the terms $u^n, Qhv, \partial_xp, D_x$ or $F_x$ dominate the sum. Physically speaking, the shallow water model is often close to geostrophic balance, which means that the Coriolis term (which is included in $Qhv$) and the pressure gradient term (which is included in $\partial_xp$) oppose each other. In general, however, the dominating balance will vary in space and time and therefore it is only clear at runtime what the preferred order of addition is, which is crucial to reducing the rounding error. Using quires could solve this problem since quires will be able to reduce rounding errors greatly when performing intermediate operations. Quires may allow to perform the sum over different terms to calculate the right-hand side of the equations with a single rounding error due to 16-bit arithmetic when the final result for the new velocity value is stored.
 
 %Similarly, on every time step the potential vorticity $Q = \tfrac{f + \partial_xv - \partial_yu}{h}$ is computed as
 %\begin{equation}

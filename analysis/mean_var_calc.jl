@@ -8,7 +8,7 @@ path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/"
 
 nn = 7          # number of number types to compare
 ny = 50         # number of grid cells in y
-ne = 190        # number of ensemble members
+ne = 200        # number of ensemble members
 
 Rm = Array{Float64,3}(undef,nn,ny,ne)
 Rv = Array{Float64,3}(undef,nn,ny,ne)

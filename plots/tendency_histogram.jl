@@ -4,32 +4,35 @@ using PyCall
 using Statistics
 using StatsBase
 
-path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/tendtest/"
+path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/tend/"
 
 run_ids = [ "run0000",
             "run0001",
             "run0002",
-            "run0003"]
-            # "run0004",
-            # "run0005"]
+            "run0003",
+            "run0004",
+            "run0005",
+            "run0006"]
 
 labels = [  "Float64",
             "Float32",
             "BFloat16/Float32",
             "Float16/Float32",
-            "Posit16",
-            "Posit16_2"]
+            "Float16",
+            "Posit(16,1)",
+            "Posit(16,2)"]
 
 colours = [ "C0",
-            "k",
+            "#0000A0",
             "grey",
             "C1",
-            "C2",
-            "C3"]
+            "k",
+            "#50C070",
+            "#900000"]
 
 nruns = length(run_ids)
 
-bins = 10.0.^(-11:0.05:1)
+bins = cat(dims=1,[0],10.0.^(-12:0.05:1))
 nbins = length(bins)-1
 
 vars = ["u","v","eta","du","dv","deta"]
@@ -61,30 +64,44 @@ end
 
 ## PLOT
 ioff()
-fig,axs = subplots(2,3,figsize=(10,6),sharex=true,sharey=true)
+fig,axs = subplots(2,2,figsize=(10,6),sharex=true,sharey=true)
+
+zp = [1,2,3,4,5,6,7]
+z = [4,5,7,6,1,3,2]
+zη = [6,7,4,5,1,3,2]
 
 for i in 1:nruns
-    axs[1,1].loglog(bins[1:end-1],H[i,1,:],colours[i],label=labels[i],drawstyle="steps-post",zorder=i)
-    axs[1,2].plot(bins[1:end-1],H[i,2,:],colours[i],drawstyle="steps-post",zorder=i)
-    axs[1,3].plot(bins[1:end-1],H[i,3,:],colours[i],drawstyle="steps-post",zorder=i)
+    axs[1,1].loglog(bins[1:end-1],H[i,1,:],colours[i],label=labels[i],drawstyle="steps-post",zorder=zp[i])
+    axs[1,2].plot(bins[1:end-1],H[i,2,:],colours[i],drawstyle="steps-post",zorder=zp[i])
+    axs[1,3].plot(bins[1:end-1],H[i,3,:],colours[i],drawstyle="steps-post",zorder=zp[i])
 
-    axs[2,1].plot(bins[1:end-1],H[i,4,:],colours[i],drawstyle="steps-post",zorder=i)
-    axs[2,2].plot(bins[1:end-1],H[i,5,:],colours[i],drawstyle="steps-post",zorder=i)
-    axs[2,3].plot(bins[1:end-1],H[i,6,:],colours[i],drawstyle="steps-post",zorder=i)
+    axs[2,1].plot(bins[1:end-1],H[i,4,:],colours[i],drawstyle="steps-post",zorder=z[i])
+    axs[2,2].plot(bins[1:end-1],H[i,5,:],colours[i],drawstyle="steps-post",zorder=z[i])
+    axs[2,3].plot(bins[1:end-1],H[i,6,:],colours[i],drawstyle="steps-post",zorder=zη[i])
 end
 
 # ranges
-yscaling(i) = exp(i/1.5)*3e5
+yscaling(i) = exp((nruns-i+1)/2.3)*6e5
 
 for k in 1:3
     for i in 1:nruns
-        axs[2,k].scatter(M[i,3+k,1],yscaling(i),s=10,c=colours[i])
-        axs[2,k].plot(M[i,3+k,2:3],[1,1]*yscaling(i),colours[i],marker="|")
+        axs[1,k].scatter(M[i,k,1],yscaling(i),s=4,c=colours[i])
+        axs[1,k].plot(M[i,k,2:3],[1,1]*yscaling(i),colours[i],marker="|",ms=4)
+
+        axs[2,k].scatter(M[i,3+k,1],yscaling(i),s=4,c=colours[i])
+        axs[2,k].plot(M[i,3+k,2:3],[1,1]*yscaling(i),colours[i],marker="|",ms=4)
     end
+
+    axs[1,k].text(0.03,-0.02,"//",transform=axs[1,k].transAxes,fontsize=11)
+    #axs[1,k].text(0.038,-0.016,"-",transform=axs[1,k].transAxes,color="w",fontweight="bold",fontsize=9)
+    axs[2,k].text(0.03,-0.02,"//",transform=axs[2,k].transAxes,fontsize=11)
+    #axs[2,k].text(0.038,-0.016,"-",transform=axs[2,k].transAxes,color="w",fontweight="bold",fontsize=9)
 end
 
-axs[1,1].set_xlim(minimum(bins),maximum(bins))
-axs[1,1].set_ylim(0.5,1e7)
+axs[1,1].set_xlim(bins[2]/2,maximum(bins))
+axs[1,1].set_xticks([7.5e-13,1e-10,1e-7,1e-4,1e-1])
+axs[1,1].set_xticklabels([0,L"$10^{-10}$",L"$10^{-7}$",L"$10^{-4}$",L"$10^{-1}$"])
+axs[1,1].set_ylim(0.5,2e7)
 
 axs[1,1].legend(loc=2,fontsize=8)
 
@@ -108,6 +125,10 @@ axs[2,1].set_xlabel("value")
 axs[2,2].set_xlabel("value")
 axs[2,3].set_xlabel("value")
 
+axs[1,1].set_ylabel("N")
+axs[2,1].set_ylabel("N")
+
 tight_layout()
 savefig("plots/tendency_hist.png",dpi=300)
+savefig("plots/tendency_hist.pdf")
 close(fig)

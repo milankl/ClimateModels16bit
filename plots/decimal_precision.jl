@@ -110,4 +110,5 @@ ax2.set_title("b",loc="right",fontweight="bold")
 
 tight_layout()
 savefig("plots/decimal_precision.png",dpi=300)
+savefig("plots/decimal_precision.pdf")
 close(fig)
