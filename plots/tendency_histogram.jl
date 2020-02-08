@@ -64,7 +64,7 @@ end
 
 ## PLOT
 ioff()
-fig,axs = subplots(2,2,figsize=(10,6),sharex=true,sharey=true)
+fig,axs = subplots(2,2,figsize=(7,5),sharex=true,sharey=true)
 
 zp = [1,2,3,4,5,6,7]
 z = [4,5,7,6,1,3,2]
@@ -72,29 +72,29 @@ zη = [6,7,4,5,1,3,2]
 
 for i in 1:nruns
     axs[1,1].loglog(bins[1:end-1],H[i,1,:],colours[i],label=labels[i],drawstyle="steps-post",zorder=zp[i])
-    axs[1,2].plot(bins[1:end-1],H[i,2,:],colours[i],drawstyle="steps-post",zorder=zp[i])
-    axs[1,3].plot(bins[1:end-1],H[i,3,:],colours[i],drawstyle="steps-post",zorder=zp[i])
+    #axs[1,2].plot(bins[1:end-1],H[i,2,:],colours[i],drawstyle="steps-post",zorder=zp[i])
+    axs[1,2].plot(bins[1:end-1],H[i,3,:],colours[i],drawstyle="steps-post",zorder=zp[i])
 
     axs[2,1].plot(bins[1:end-1],H[i,4,:],colours[i],drawstyle="steps-post",zorder=z[i])
-    axs[2,2].plot(bins[1:end-1],H[i,5,:],colours[i],drawstyle="steps-post",zorder=z[i])
-    axs[2,3].plot(bins[1:end-1],H[i,6,:],colours[i],drawstyle="steps-post",zorder=zη[i])
+    #axs[2,2].plot(bins[1:end-1],H[i,5,:],colours[i],drawstyle="steps-post",zorder=z[i])
+    axs[2,2].plot(bins[1:end-1],H[i,6,:],colours[i],drawstyle="steps-post",zorder=zη[i])
 end
 
 # ranges
 yscaling(i) = exp((nruns-i+1)/2.3)*6e5
 
-for k in 1:3
+for (a,k) in enumerate([1,3])
     for i in 1:nruns
-        axs[1,k].scatter(M[i,k,1],yscaling(i),s=4,c=colours[i])
-        axs[1,k].plot(M[i,k,2:3],[1,1]*yscaling(i),colours[i],marker="|",ms=4)
+        axs[1,a].scatter(M[i,k,1],yscaling(i),s=4,c=colours[i])
+        axs[1,a].plot(M[i,k,2:3],[1,1]*yscaling(i),colours[i],marker="|",ms=4)
 
-        axs[2,k].scatter(M[i,3+k,1],yscaling(i),s=4,c=colours[i])
-        axs[2,k].plot(M[i,3+k,2:3],[1,1]*yscaling(i),colours[i],marker="|",ms=4)
+        axs[2,a].scatter(M[i,3+k,1],yscaling(i),s=4,c=colours[i])
+        axs[2,a].plot(M[i,3+k,2:3],[1,1]*yscaling(i),colours[i],marker="|",ms=4)
     end
 
-    axs[1,k].text(0.03,-0.02,"//",transform=axs[1,k].transAxes,fontsize=11)
+    axs[1,a].text(0.03,-0.02,"//",transform=axs[1,a].transAxes,fontsize=11)
     #axs[1,k].text(0.038,-0.016,"-",transform=axs[1,k].transAxes,color="w",fontweight="bold",fontsize=9)
-    axs[2,k].text(0.03,-0.02,"//",transform=axs[2,k].transAxes,fontsize=11)
+    axs[2,a].text(0.03,-0.02,"//",transform=axs[2,a].transAxes,fontsize=11)
     #axs[2,k].text(0.038,-0.016,"-",transform=axs[2,k].transAxes,color="w",fontweight="bold",fontsize=9)
 end
 
@@ -106,24 +106,24 @@ axs[1,1].set_ylim(0.5,2e7)
 axs[1,1].legend(loc=2,fontsize=8)
 
 axs[1,1].set_title(L"Zonal velocity $u$")
-axs[1,2].set_title(L"Meridional velocity $v$")
-axs[1,3].set_title(L"Sea surface height $\eta$")
+#axs[1,2].set_title(L"Meridional velocity $v$")
+axs[1,2].set_title(L"Sea surface height $\eta$")
 
 axs[2,1].set_title(L"Tendency of $u$")
-axs[2,2].set_title(L"Tendency of $v$")
-axs[2,3].set_title(L"Tendency of $\eta$")
+#axs[2,2].set_title(L"Tendency of $v$")
+axs[2,2].set_title(L"Tendency of $\eta$")
 
 axs[1,1].set_title("a",loc="right",fontweight="bold")
 axs[1,2].set_title("b",loc="right",fontweight="bold")
-axs[1,3].set_title("c",loc="right",fontweight="bold")
+#axs[1,3].set_title("c",loc="right",fontweight="bold")
 
-axs[2,1].set_title("d",loc="right",fontweight="bold")
-axs[2,2].set_title("e",loc="right",fontweight="bold")
-axs[2,3].set_title("f",loc="right",fontweight="bold")
+axs[2,1].set_title("c",loc="right",fontweight="bold")
+axs[2,2].set_title("d",loc="right",fontweight="bold")
+#axs[2,3].set_title("f",loc="right",fontweight="bold")
 
 axs[2,1].set_xlabel("value")
 axs[2,2].set_xlabel("value")
-axs[2,3].set_xlabel("value")
+#axs[2,3].set_xlabel("value")
 
 axs[1,1].set_ylabel("N")
 axs[2,1].set_ylabel("N")
