@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+  \PYG{k}{function} \PYG{n}{harmonic\PYGZus{}sum}\PYG{p}{(}\PYG{o}{::}\PYG{k+kt}{Type}\PYG{p}{\PYGZob{}}\PYG{n}{T}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{steps}\PYG{o}{::}\PYG{k+kt}{Int}\PYG{p}{)} \PYG{n}{where} \PYG{n}{T}
+
+      \PYG{n}{s} \PYG{o}{=} \PYG{n}{zero}\PYG{p}{(}\PYG{n}{T}\PYG{p}{)}
+      \PYG{n}{o} \PYG{o}{=} \PYG{n}{one}\PYG{p}{(}\PYG{n}{T}\PYG{p}{)}
+
+      \PYG{k}{for} \PYG{n}{i} \PYG{k+kp}{in} \PYG{l+m+mi}{1}\PYG{o}{:}\PYG{n}{steps}
+
+          \PYG{n}{s\PYGZus{}old} \PYG{o}{=} \PYG{n}{s}
+          \PYG{n}{s} \PYG{o}{+=} \PYG{n}{o}\PYG{o}{/}\PYG{n}{T}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}
+
+          \PYG{k}{if} \PYG{n}{s} \PYG{o}{==} \PYG{n}{s\PYGZus{}old}    \PYG{c}{\PYGZsh{} check for convergence}
+              \PYG{n}{println}\PYG{p}{(}\PYG{k+kt}{Float64}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}\PYG{p}{,}\PYG{n}{i}\PYG{p}{)}
+              \PYG{k}{break}
+         \PYG{k}{end}
+      \PYG{k}{end}
+  \PYG{k}{end}
+\end{Verbatim}

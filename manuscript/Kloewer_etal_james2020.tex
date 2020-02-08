@@ -14,13 +14,14 @@
 %
 
 %% To submit your paper:
-\documentclass[final]{agujournal2019}
+\documentclass[finalold]{agujournal2019}
 \usepackage{url} %this package should fix any errors with URLs in refs.
 \usepackage{lineno}
 \usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
 \usepackage{soul}
 \usepackage{amsmath}
 \usepackage{listings}
+\usepackage{minted}
 %\linenumbers
 
 \definecolor{mygreen}{rgb}{0,.5,0}
@@ -286,32 +287,32 @@ The posit number framework also highly recommends \emph{quires}, an additional r
 In order to use posits on a conventional CPU we developed the posit emulator \emph{SoftPosit.jl} \cite{Kloewer2019}, a wrapper for the C-based library SoftPosit \cite{Heung2019}, written in Julia \cite{Bezanson2014}. This emulator defines conversion and arithmetic operations with posits. Julia's programming paradigms around \emph{multiple dispatch} and \emph{type stability} facilitate the use of arbitrary number formats without the need to rewrite an algorithm. As this is an essential feature of the Julia language and extensively made use of in this study, we briefly outline the benefits of Julia by computing the harmonic sum with various number types as an example.
 
 \begin{figure}[htbp]
-\begin{lstlisting}
-function harmonic_sum(::Type{T},steps::Int) where T
+\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray,gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
+  function harmonic_sum(::Type{T},steps::Int) where T
 
-    s = zero(T)
-    o = one(T)
+      s = zero(T)
+      o = one(T)
 
-    for i in 1:steps
+      for i in 1:steps
 
-        s_old = s
-        s += o/T(i)
+          s_old = s
+          s += o/T(i)
 
-        if s == s_old    # check for convergence
-            println(Float64(s),i)
-            break
-        end
-    end
-end
-\end{lstlisting}
-\caption{A type-stable harmonic sum function in the Julia language.}
+          if s == s_old    # check for convergence
+              println(Float64(s),i)
+              break
+         end
+      end
+  end
+\end{minted}
+\caption{A type-flexible harmonic sum function in the Julia language.}
 \label{fig:emulator}
 \end{figure}
 
 Executing the function \texttt{harmonic\_sum} for the first time with a type \texttt{T} as the first argument, triggers Julia's \emph{just-in-time} compiler. The function is type stable, as the types of all variables are declared. At the same time Julia allows for type flexibility, as its \emph{multiple dispatch} means that calling  \texttt{harmonic\_sum} with another type \texttt{T1} will result in a separately compiled function for \texttt{T1}. We can therefore compute the harmonic sum with aribitrary number types, as long as the zero-element \texttt{zero(T)}; the one-element \texttt{one(T)}; addition; division; conversion from integer and conversion to float are defined for \texttt{T}. 
 
 \begin{figure}[htbp]
-\begin{lstlisting}
+\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray, gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
 julia> using SoftPosit
 julia> using BFloat16s
 julia> harmonic_sum(Float16,2000)
@@ -320,7 +321,7 @@ julia> harmonic_sum(BFloat16,2000)
 (5.0625, 65)
 julia> harmonic_sum(Posit16,2000)
 (7.77734375, 1024)
-\end{lstlisting}
+\end{minted}
 \caption{Harmonic sum example use of the posit emulator \emph{SoftPosit.jl} in the Julia shell. \texttt{Posit16} is the Posit(16,1) standard.}
 \label{fig:emulator}
 \end{figure}
