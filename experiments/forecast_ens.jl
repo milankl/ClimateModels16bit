@@ -2,6 +2,7 @@ include("/home/kloewer/git/ShallowWaters.jl/src/ShallowWaters.jl")
 using .ShallowWaters
 using FileIO
 using BFloat16s
+using Float8s
 using SoftPosit
 using Printf
 
@@ -43,14 +44,15 @@ end
 
 path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/"
 startis = load(joinpath(path,"starti.jld2"))["starti"]
-outpath = joinpath(path,"Posit16")
+outpath = joinpath(path,"comm/Float8_4")
 
-for i in [1]
+for i in 1:50
     run_id = get_run_id(outpath,"fill",create=true)
 
     starti = startis[run_id+1]
 
-    RunModel(Posit16,
+    RunModel(Float64,
+            Tcomm=Float8_4,
             output=true,
             Ndays=300.0,
             output_dt=12,

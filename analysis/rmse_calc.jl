@@ -7,7 +7,7 @@ using StatsBase
 
 path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/"
 
-nn = 6       # number of number types to compare
+nn = 7       # number of number types to compare
 nt = 601     # number of time steps
 ne = 200     # number of ensemble members
 R = Array{Float64,3}(undef,nn,nt,ne)
@@ -49,6 +49,10 @@ for i in 0:ne-1
     BF1632 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
+    nc = NetCDF.open(joinpath(path,"Posit32",run_id,vari*".nc"))
+    P32 = nc.vars[vari][:,:,:]
+    NetCDF.close(nc)
+
     # Compute RMSEs - average over space, time is last dim
     R[1,:,i+1] = sqrt.(mean((F64-F32).^2,dims=(1,2)))[1,1,:]
     R[2,:,i+1] = sqrt.(mean((F64-F16).^2,dims=(1,2)))[1,1,:]
@@ -56,6 +60,7 @@ for i in 0:ne-1
     R[4,:,i+1] = sqrt.(mean((F64-P162).^2,dims=(1,2)))[1,1,:]
     R[5,:,i+1] = sqrt.(mean((F64-F1632).^2,dims=(1,2)))[1,1,:]
     R[6,:,i+1] = sqrt.(mean((F64-BF1632).^2,dims=(1,2)))[1,1,:]
+    R[7,:,i+1] = sqrt.(mean((F64-P32).^2,dims=(1,2)))[1,1,:]
 end
 
 # OUTPUT

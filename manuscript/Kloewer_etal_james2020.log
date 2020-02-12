@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  8 FEB 2020 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  12 FEB 2020 15:06
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **Kloewer_etal_james2020.tex
 (./Kloewer_etal_james2020.tex
@@ -328,7 +328,7 @@ tim
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 67.
+Package shellesc Info: Restricted shell escape enabled on input line 69.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
@@ -348,14 +348,11 @@ Package pdftexcmds Info: \pdfdraftmode found.
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/catchfile.sty
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
-runsystem(uname -s > "Kloewer_etal_james2020.w18")...executed.
 
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
 
-(./Kloewer_etal_james2020.w18)
-runsystem(rm -- "Kloewer_etal_james2020.w18")...executed.
-
-)
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write4
 \integerpart=\count140
@@ -387,17 +384,37 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks30
 \c@listing=\count145
 )
-runsystem(mkdir -p _minted-Kloewer_etal_james2020)...executed.
+runsystem(mkdir -p _minted-Kloewer_etal_james2020)...disabled (restricted).
 
 
+
+! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 
+     
+? 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-runsystem(which pygmentize && touch Kloewer_etal_james2020.aex)...executed.
+runsystem(which pygmentize && touch Kloewer_etal_james2020.aex)...disabled (res
+tricted).
 
-runsystem(rm Kloewer_etal_james2020.aex)...executed.
 
 
+! Package minted Error: You must have `pygmentize' installed to use this packag
+e.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127 \begin{document}
+                      
+? 
 (./Kloewer_etal_james2020.aux
 
 LaTeX Warning: Label `fig:emulator' multiply defined.
@@ -716,7 +733,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 444--444
  []
 
 [11] [12 <../plots/snapshot.png>] [13 <../plots/rmse_eta.pdf>]
-<../plots/meanvar_u.pdf, id=125, 433.62pt x 361.35pt>
+<../plots/meanvar_u.pdf, id=126, 433.62pt x 361.35pt>
 File: ../plots/meanvar_u.pdf Graphic file (type pdf)
 <use ../plots/meanvar_u.pdf>
 Package pdftex.def Info: ../plots/meanvar_u.pdf  used on input line 453.
@@ -740,7 +757,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 454--454
 e the in-terquar-tile tem-po-ral vari-abil-ity around the (a) mean and (b)
  []
 
-<../plots/entropy.pdf, id=126, 433.62pt x 289.08pt>
+<../plots/entropy.pdf, id=127, 433.62pt x 289.08pt>
 File: ../plots/entropy.pdf Graphic file (type pdf)
 <use ../plots/entropy.pdf>
 Package pdftex.def Info: ../plots/entropy.pdf  used on input line 459.
@@ -769,7 +786,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 460--460
 with Float64. Note the cu-bi-cally scaled
  []
 
-<../plots/tendency_hist.pdf, id=127, 505.89pt x 361.35pt>
+<../plots/tendency_hist.pdf, id=128, 505.89pt x 361.35pt>
 File: ../plots/tendency_hist.pdf Graphic file (type pdf)
 <use ../plots/tendency_hist.pdf>
 Package pdftex.def Info: ../plots/tendency_hist.pdf  used on input line 465.
@@ -795,7 +812,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 466--466
 d 90th
  []
 
-<../plots/snapshot_comm.png, id=128, 578.16pt x 505.89pt>
+<../plots/snapshot_comm.png, id=129, 578.16pt x 505.89pt>
 File: ../plots/snapshot_comm.png Graphic file (type png)
 <use ../plots/snapshot_comm.png>
 Package pdftex.def Info: ../plots/snapshot_comm.png  used on input line 471.
@@ -1107,13 +1124,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-runsystem(rm Kloewer_etal_james2020.pyg)...executed.
+runsystem(rm Kloewer_etal_james2020.pyg)...disabled (restricted).
 
  ) 
 Here is how much of TeX's memory you used:
- 8418 strings out of 492982
- 135402 string characters out of 6134896
- 286266 words of memory out of 5000000
+ 8415 strings out of 492982
+ 135344 string characters out of 6134896
+ 286211 words of memory out of 5000000
  11806 multiletter control sequences out of 15000+600000
  12107 words of font info for 45 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
@@ -1138,9 +1155,9 @@ t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts
 /public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt9.pfb>
-Output written on Kloewer_etal_james2020.pdf (22 pages, 3084069 bytes).
+Output written on Kloewer_etal_james2020.pdf (22 pages, 3086089 bytes).
 PDF statistics:
- 388 PDF objects out of 1000 (max. 8388607)
+ 389 PDF objects out of 1000 (max. 8388607)
  158 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
