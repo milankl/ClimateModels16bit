@@ -70,14 +70,14 @@ ax2.semilogy(t2,median(R2[2,2:end,:],dims=2)/cerr,"grey",ls="-",label="BFloat16"
 ax2.semilogy(t2,median(R2[3,2:end,:],dims=2)/cerr,"#50C070",ls="--",label="Posit(16,1)")
 ax2.semilogy(t2,median(R2[4,2:end,:],dims=2)/cerr,"#900000",ls="--",label="Posit(16,2)")
 ax2.semilogy(t2,median(R2[5,2:end,:],dims=2)/cerr,"C4",ls="--",label="Posit(8,0)")
-ax2.semilogy(t2,median(R2[6,2:end,:],dims=2)/cerr,"C5",ls="-",label="Float8")
+ax2.semilogy(t2,median(R2[6,2:end,:],dims=2)/cerr,"#E0E020",ls="-",label="Float8")
 
 ax2.fill_between(t2,Rp2[1,1,:]/cerr,Rp2[2,1,:]/cerr,color="k",alpha=0.2)
 ax2.fill_between(t2,Rp2[1,2,:]/cerr,Rp2[2,2,:]/cerr,color="grey",alpha=0.2)
 ax2.fill_between(t2,Rp2[1,3,:]/cerr,Rp2[2,3,:]/cerr,color="#50C070",alpha=0.2)
 ax2.fill_between(t2,Rp2[1,4,:]/cerr,Rp2[2,4,:]/cerr,color="#900000",alpha=0.2)
 ax2.fill_between(t2,Rp2[1,5,:]/cerr,Rp2[2,5,:]/cerr,color="C4",alpha=0.2)
-ax2.fill_between(t2,Rp2[1,6,:]/cerr,Rp2[2,6,:]/cerr,color="C5",alpha=0.2)
+ax2.fill_between(t2,Rp2[1,6,:]/cerr,Rp2[2,6,:]/cerr,color="#E0E020",alpha=0.2)
 
 ax2.set_title("Forecast error:\n16 or 8bit communication", loc="left")
 ax2.set_title("b", loc="right", fontweight="bold")
