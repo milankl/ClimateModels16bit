@@ -1,8 +1,8 @@
 julia> using SoftPosit
 julia> using BFloat16s
-julia> harmonic_sum(Float16,2000)
+julia> harmonic_sum(Float16)
 (7.0859375, 513)
-julia> harmonic_sum(BFloat16,2000)
+julia> harmonic_sum(BFloat16)
 (5.0625, 65)
-julia> harmonic_sum(Posit16,2000)
+julia> harmonic_sum(Posit16)
 (7.77734375, 1024)

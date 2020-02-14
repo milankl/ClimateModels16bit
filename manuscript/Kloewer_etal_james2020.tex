@@ -21,7 +21,7 @@
 \usepackage{soul}
 \usepackage{amsmath}
 \usepackage{listings}
-\usepackage{minted}
+%\usepackage{minted}
 %\linenumbers
 
 \definecolor{mygreen}{rgb}{0,.5,0}
@@ -197,9 +197,12 @@
 % \end{keypoints}
 
 \begin{keypoints}
-\item Posit numbers have smaller arithmetic rounding errors compared to floating-point numbers in weather and climate applications
-\item Reduced rounding errors with posits enable reliable shallow water simulations at 16bit
-\item Mixed 16bit/32bit precision is recommended for weather and climate models on available floating-point based hardware.
+\item $\circ$ Posit numbers have smaller rounding errors compared to floating-point numbers in weather and climate applications, enabling reliable shallow water simulations entirely computed with 16bit arithmetic.
+
+\item $\circ$ Errors caused by 16bit floating-point arithmetic are strongly reduced with key computations in 32bit, which can be implemented on present-day hardware.
+
+\item $\circ$ 16 or even 8bit communication of boundary values, preferably encoded as posit numbers, introduces negligible errors, providing perspectives for reduced data communication for weather and climate models computed in parallel.
+
 \end{keypoints}
 
 %% ------------------------------------------------------------------------ %%
@@ -224,10 +227,7 @@
 %% \begin{abstract} starts the second page
 
 \begin{abstract}
-Posit numbers, a recently proposed alternative to floating-point numbers, claim to have smaller arithmetic rounding errors in many applications. By studying weather and climate models of low and medium complexity (the Lorenz system and a shallow water model) we present benefits of posits compared to floats at 16bit. As a standardized posit processor does not exist yet, we emulate posit arithmetic on a conventional CPU. Forecasts based on 16bit posits are clearly more accurate than 16bit floats in shallow water simulations. No 16bit format was found to have a significant impact on the climatological mean state, however, the variability was found to be increased up to 30\%.
-
-
-Using 16bit arithmetics only for the computation of tendencies 
+Posit numbers, a recently proposed alternative to floating-point numbers, claim to have smaller arithmetic rounding errors in many applications. By studying weather and climate models of low and medium complexity (the Lorenz system and a shallow water model) we present benefits of posits compared to floats at 16bit. As a standardized posit processor does not exist yet, we emulate posit arithmetic on a conventional processor. Forecasts based on 16bit posits are reliable and clearly more accurate than 16bit floats in shallow water simulations. No 16bit format was found to have a significant impact on the climatological mean state, however, the variability increased up to 30\%. Instabilities in the flow field, triggered by rounding errors of 16bit floats, were found to alter the dynamics of the simulated flow slightly. Mixing 16bit arithmetic with 32bit for key computations strongly reduces errors and is promising even on present-day float-based hardware. 
 
 
 %We therefore propose 16 bit with 2 exponent bits as a standard posit format, as its wide dynamic range of 32 orders of magnitude provides a great potential for many weather and climate models. Although the focus is on geophysical fluid simulations, the results are also meaningful and promising for reduced precision posit arithmetic in the wider field of computational fluid dynamics.
@@ -287,24 +287,24 @@ The posit number framework also highly recommends \emph{quires}, an additional r
 In order to use posits on a conventional CPU we developed the posit emulator \emph{SoftPosit.jl} \cite{Kloewer2019}, a wrapper for the C-based library SoftPosit \cite{Heung2019}, written in Julia \cite{Bezanson2014}. This emulator defines conversion and arithmetic operations with posits. Julia's programming paradigms around \emph{multiple dispatch} and \emph{type stability} facilitate the use of arbitrary number formats without the need to rewrite an algorithm. As this is an essential feature of the Julia language and extensively made use of in this study, we briefly outline the benefits of Julia by computing the harmonic sum with various number types as an example.
 
 \begin{figure}[htbp]
-\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray,gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
-  function harmonic_sum(::Type{T},steps::Int) where T
-
-      s = zero(T)
-      o = one(T)
-
-      for i in 1:steps
-
-          s_old = s
-          s += o/T(i)
-
-          if s == s_old    # check for convergence
-              println(Float64(s),i)
-              break
-         end
-      end
-  end
-\end{minted}
+%\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray,gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
+%  function harmonic_sum(::Type{T},steps::Int=2000) where T
+%
+%      s = zero(T)
+%      o = one(T)
+%
+%      for i in 1:steps
+%
+%          s_old = s
+%          s += o/T(i)
+%
+%          if s == s_old    # check for convergence
+%              println(Float64(s),i)
+%              break
+%         end
+%      end
+%  end
+%\end{minted}
 \caption{A type-flexible harmonic sum function in the Julia language.}
 \label{fig:emulator}
 \end{figure}
@@ -312,16 +312,16 @@ In order to use posits on a conventional CPU we developed the posit emulator \em
 Executing the function \texttt{harmonic\_sum} for the first time with a type \texttt{T} as the first argument, triggers Julia's \emph{just-in-time} compiler. The function is type stable, as the types of all variables are declared. At the same time Julia allows for type flexibility, as its \emph{multiple dispatch} means that calling  \texttt{harmonic\_sum} with another type \texttt{T1} will result in a separately compiled function for \texttt{T1}. We can therefore compute the harmonic sum with aribitrary number types, as long as the zero-element \texttt{zero(T)}; the one-element \texttt{one(T)}; addition; division; conversion from integer and conversion to float are defined for \texttt{T}. 
 
 \begin{figure}[htbp]
-\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray, gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
-julia> using SoftPosit
-julia> using BFloat16s
-julia> harmonic_sum(Float16,2000)
-(7.0859375, 513)
-julia> harmonic_sum(BFloat16,2000)
-(5.0625, 65)
-julia> harmonic_sum(Posit16,2000)
-(7.77734375, 1024)
-\end{minted}
+%\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray, gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
+%julia> using SoftPosit
+%julia> using BFloat16s
+%julia> harmonic_sum(Float16)
+%(7.0859375, 513)
+%julia> harmonic_sum(BFloat16)
+%(5.0625, 65)
+%julia> harmonic_sum(Posit16)
+%(7.77734375, 1024)
+%\end{minted}
 \caption{Harmonic sum example use of the posit emulator \emph{SoftPosit.jl} in the Julia shell. \texttt{Posit16} is the Posit(16,1) standard.}
 \label{fig:emulator}
 \end{figure}
@@ -345,7 +345,7 @@ The decimal precision of 16-bit integers is negative infinity for any number bel
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/decimal_precision.png}
-\caption{(a) Decimal precision of various 16-bit number formats. Dashed vertical lines indicate the dynamic range of representable numbers for each format. 8bit posits (no exponent bits) are shown for comparison. (b) Histogram of results of all arithmetic operations in the rescaled Lorenz system, considering absolute values.}
+\caption{(a) Decimal precision of various 16bit number formats. Dashed vertical lines indicate range of representable numbers for each format. 8bit floats (3 exponent bits) and posits (no exponent bits) are shown for comparison. Float32 and Posit32 are beyond the axes limits. (b) Histogram of results of all arithmetic operations in the rescaled Lorenz system, considering absolute values.}
 \label{fig:dec_acc}
 \end{figure}
 
