@@ -3,11 +3,11 @@ using Statistics
 using StatsBase
 using PyPlot
 
-R = load("analysis/entropy_long2.jld2")["entropy"]
+R = load("analysis/entropy_LR.jld2")["entropy"]
 
 nT,n,ne = size(R)      # number of types, time steps, ensemble members
 p = 25
-t = (0:(n-1))*0.25      # time vector
+t = (0:(n-1))*0.5      # time vector
 
 Ridx = BitArray(undef,n)     # index to remove double entries in R, due to SL time stepping
 Ridx[1] = true
@@ -44,6 +44,7 @@ ax.plot(t,mean(R[3,:,:],dims=2).^q,"#50C070",ls="--",label="Posit(16,1)")
 ax.plot(t,mean(R[4,:,:],dims=2).^q,"#900000",ls="--",label="Posit(16,2)")
 ax.plot(t,mean(R[6,:,:],dims=2).^q,"grey",ls="-.",label="BFloat16/Float32")
 ax.plot(t,mean(R[5,:,:],dims=2).^q,"C1",ls="-.",label="Float16/Float32")
+ax.plot(t,mean(R[7,:,:],dims=2).^q,"C0",ls="--",label="Float64 low res")
 
 ax.fill_between(t,Rp[1,1,:].^q,Rp[2,1,:].^q,color="C0",alpha=0.2,label="Float64 ensemble",zorder=-1)
 

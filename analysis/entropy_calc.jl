@@ -4,13 +4,13 @@ using Printf
 using Statistics
 using StatsBase
 
-path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast2/long/"
+path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast"
 
-nn = 6      # number of number types to compare
-nt = 1613   # number of time steps
-ne = 50     # number of ensemble members
-nx = 100    # number of grid cells in x
-ny = 50     # number of grid cells in y
+nn = 7          # number of number types to compare
+nt = 601        # number of time steps
+ne = 200        # number of ensemble members
+nx = 100        # number of grid cells in x
+ny = 50         # number of grid cells in y
 R = Array{Float64,3}(undef,nn,nt,ne)
 
 vari = "sst"
@@ -57,6 +57,10 @@ for i in 0:ne-1
     BF1632 = nc.vars[vari][:,:,:]
     NetCDF.close(nc)
 
+    nc = NetCDF.open(joinpath(path,"Float64_LR",run_id,vari*".nc"))
+    F64LR = nc.vars[vari][:,:,1:nt]
+    NetCDF.close(nc)
+
     # Compute - average over x & time (last dimension)
     # for (ri,M) in enumerate([F64,F64RK3,F32,F16,P16,P162,F1632,BF1632])
     for (ri,M) in enumerate([F64,F16,P16,P162,F1632,BF1632])
@@ -67,7 +71,15 @@ for i in 0:ne-1
                             entropy(1.0 .- p,2))/(nx*ny)
         end
     end
+
+    # for Low resolution
+    for it in 1:nt
+        p = F64LR[:,:,it][:]
+        p[p .> 1.0] .= 1.0
+        R[7,it,i+1] = (entropy(p,2) +
+                        entropy(1.0 .- p,2))/(nx/2*ny/2)
+    end
 end
 
 # OUTPUT
-save("entropy_long2.jld2","entropy",R)
+save("entropy_LR.jld2","entropy",R)

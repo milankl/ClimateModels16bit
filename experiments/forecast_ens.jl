@@ -44,15 +44,15 @@ end
 
 path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/"
 startis = load(joinpath(path,"starti.jld2"))["starti"]
-outpath = joinpath(path,"comm/Float8_4")
+outpath = joinpath(path,"Float64_LR")
 
-for i in 1:50
+for i in 1:200
     run_id = get_run_id(outpath,"fill",create=true)
 
     starti = startis[run_id+1]
 
     RunModel(Float64,
-            Tcomm=Float8_4,
+            nx=50,
             output=true,
             Ndays=300.0,
             output_dt=12,

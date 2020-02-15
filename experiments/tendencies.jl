@@ -42,11 +42,11 @@ Base.Int64(x::BFloat16) = Int64(Float32(x))
 #         initial_cond="ncfile",
 #         init_run_id=0)
 
-RunModel(Posit16_2,
+RunModel(Float64,
         output=true,
         Ndays=100,
         output_dt=12,
-        nx=400,
+        nx=200,
         initpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/nx400/",
         outpath="/network/aopp/chaos/pred/kloewer/julsdata/forecast/geostrophic/",
         output_vars=["u","v","η"],
