@@ -82,7 +82,7 @@ for i in 0:ne-1
         η = F64[:,:,it]
         η_itp = interpolate((x_T,y_T),η,Gridded(Linear()))
         F64i = η_itp(x_T_new,y_T_new)
-        R[7,it,i+1] = sqrt(mean((F64i-F64LR[:,:,it]).^2))
+        R[8,it,i+1] = sqrt(mean((F64i-F64LR[:,:,it]).^2))
     end
 
 end
