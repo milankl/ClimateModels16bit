@@ -23,7 +23,7 @@ axs[2,2].plot(XYZ_BF16[1,:],XYZ_BF16[3,:],"k",lw=0.2)
 
 axs[1,1].set_title("Float64",loc="left")
 axs[1,2].set_title("Float16",loc="left")
-axs[2,1].set_title("Posit16",loc="left")
+axs[2,1].set_title("Posit(16,1)",loc="left")
 axs[2,2].set_title("BFloat16",loc="left")
 
 axs[1,1].set_title("a",loc="right",fontweight="bold")

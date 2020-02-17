@@ -14,7 +14,7 @@
 %
 
 %% To submit your paper:
-\documentclass[finalold]{agujournal2019}
+\documentclass[draft]{agujournal2019}
 \usepackage{url} %this package should fix any errors with URLs in refs.
 \usepackage{lineno}
 \usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
@@ -22,7 +22,7 @@
 \usepackage{amsmath}
 \usepackage{listings}
 %\usepackage{minted}
-%\linenumbers
+\linenumbers
 
 \definecolor{mygreen}{rgb}{0,.5,0}
 \definecolor{mygray}{rgb}{0.9,0.9,0.9}
@@ -138,7 +138,7 @@
 
 % Example: \title{This is a test title}
 
-\title{Weather and climate models at 16bit: Posit, floating-point or mixed precision arithmetic?}
+\title{Weather and climate models in 16bit: Posit, floating-point or mixed precision arithmetic?}
 
 %% ------------------------------------------------------------------------ %%
 %
@@ -227,10 +227,7 @@
 %% \begin{abstract} starts the second page
 
 \begin{abstract}
-Posit numbers, a recently proposed alternative to floating-point numbers, claim to have smaller arithmetic rounding errors in many applications. By studying weather and climate models of low and medium complexity (the Lorenz system and a shallow water model) we present benefits of posits compared to floats at 16bit. As a standardized posit processor does not exist yet, we emulate posit arithmetic on a conventional processor. Forecasts based on 16bit posits are reliable and clearly more accurate than 16bit floats in shallow water simulations. No 16bit format was found to have a significant impact on the climatological mean state, however, the variability increased up to 30\%. Instabilities in the flow field, triggered by rounding errors of 16bit floats, were found to alter the dynamics of the simulated flow slightly. Mixing 16bit arithmetic with 32bit for key computations strongly reduces errors and is promising even on present-day float-based hardware. 
-
-
-%We therefore propose 16 bit with 2 exponent bits as a standard posit format, as its wide dynamic range of 32 orders of magnitude provides a great potential for many weather and climate models. Although the focus is on geophysical fluid simulations, the results are also meaningful and promising for reduced precision posit arithmetic in the wider field of computational fluid dynamics.
+Posit numbers, a recently proposed alternative to floating-point numbers, claim to have smaller arithmetic rounding errors in many applications. By studying weather and climate models of low and medium complexity (the Lorenz system and a shallow water model) we present benefits of posits compared to floats at 16bit. As a standardized posit processor does not exist yet, we emulate posit arithmetic on a conventional processor. Forecasts based on posits are clearly more accurate than floats in shallow water simulations. Even the rounding error of 16bit floats is not larger than the discretization error, that results from simulations run at half the spatial resolution. No 16bit format was found to have a significant impact on the climatological mean state, however, the variability increased up to 30\%. Instabilities in the flow field, triggered by rounding errors of 16bit formats, were found to not alter the dynamics of the simulated flow significantly. Mixing 16bit arithmetic with 32bit for key computations strongly reduces errors and is promising for present-day float-based hardware. Reduced precision communication of boundary values with 16 or 8bit encoded as floats or posits introduces negligible errors, presenting a perspective for reduced data communication within a computer cluster. The results promote the potential of 16bit formats for parts of complex weather and climate models, for which rounding errors would be masked by intitial condition, model or discretization error.
 \end{abstract}
 
 %% ------------------------------------------------------------------------ %%
@@ -257,12 +254,12 @@ The study  is structured as follows: Section \ref{sec:posits} introduces the pos
 \subsection{The posit number format}
 \label{sec:posit_methods}
 
-Following the IEEE standard on floating-point arithmetic \cite{IEEE}, floats encode a real number in terms of a sign bit, and a fixed number of exponent and significant bits (16-bit half precision floats have 1 sign, 5 exponent and 10 significant bits). Consequently, they have a constant number of significant digits throughout their dynamic range of representable numbers. This is in contrast to posit numbers, which extend floating-point arithmetic by introducing regime bits, that are mostly responsible for the dynamic range of representable numbers. Instead of having a fixed length, regime bits are defined as the sequence of identical bits after the sign bit, which are eventually terminated by an opposite bit. The flexible length allows the significand (or mantissa) to occupy more bits when less regime bits are needed, which is the case for numbers around one. A resulting higher precision around one is traded against a gradually lower precision for very large or very small numbers. A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017b} (negative posit numbers are converted first to their two's complement, see Eq. \ref{eq:2comp})
+The IEEE standard on floating-point arithmetic \cite{IEEE} defines how floats encode a real number in terms of a sign bit, and a fixed number of exponent and significant bits (16bit half precision floats have 1 sign, 5 exponent and 10 significant bits). Consequently, they have a constant number of significant digits throughout their range of representable numbers. This is in contrast to posit numbers, which extend floating-point arithmetic by introducing regime bits, which are mostly responsible for the dynamic range of representable numbers. Instead of having a fixed length, regime bits are defined as the sequence of identical bits after the sign bit, which are eventually terminated by an opposite bit. The flexible length allows the significand (or mantissa) to occupy more bits when less regime bits are needed, which is the case for numbers around one. A resulting higher precision around one is traded against a gradually lower precision for very large or very small numbers. A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017b} (negative posit numbers are converted first to their two's complement, see Eq. \ref{eq:2comp})
 \begin{equation}
 p = (-1)^{sign~bit} \cdot useed^k \cdot 2^e \cdot (1+f)
 \label{eq:posit}
 \end{equation}
-where $k$ is the number of regime bits. $e$ is the integer represented by the exponent bits and $f$ is the fraction which is encoded in the fraction (or significant) bits. The base $useed = 2^{2^{e_s}}$ is determined by the number of exponent bits $e_s$. More exponent bits increase - by increasing $useed$ - the dynamic range of representable numbers for the cost of precision. The exponent bits themselves do not affect the dynamic range by changing the value of $2^e$ in Eq. \ref{eq:posit}. They fill gaps of powers of 2 spanned by $useed = 4,16,256,...$ for $e_s=1,2,3,...$, and every posit number can be written as $p = \pm 2^n \cdot (1+f)$ with a given integer $n$ \cite{Gustafson2017,Chen2018}. Throughout this article we will use a notation where Posit($n$,$e_s$) defines the posit numbers with $n$ bits including $e_s$ exponent bits. A posit example is provided in the Posit(8,1)-system (i.e. $useed = 4$)
+where $k$ is the number of regime bits. $e$ is the integer represented by the exponent bits and $f$ is the fraction which is encoded in the fraction (or significant) bits. The base $useed = 2^{2^{e_s}}$ is determined by the number of exponent bits $e_s$. More exponent bits increase - by increasing $useed$ - the dynamic range of representable numbers for the cost of precision. The exponent bits themselves do not affect the dynamic range by changing the value of $2^e$ in Eq. \ref{eq:posit}. They fill gaps of powers of 2 spanned by $useed = 4,16,256,...$ for $e_s=1,2,3,...$, and every posit number can be written as $p = \pm 2^n \cdot (1+f)$ with a given integer $n$ \cite{Gustafson2017,Chen2018}. We will use a notation where Posit($n$,$e_s$) defines the posit numbers with $n$ bits including $e_s$ exponent bits. A posit example is provided in the Posit(8,1)-system (i.e. $useed = 4$)
 \begin{equation}
 57 \approx {\color{psign}0}{\color{pregime}111}{\color{pregimet}0}{\color{pexpo}1}11_{\op{Posit}(8,1)} = (-1)^{\color{psign}0} \cdot 4^{\color{pregime}2} \cdot 2^{\color{pexpo}1} \cdot (1+2^{-1}+2^{-2}) = 56
 \label{eq:posit_pos}
@@ -277,9 +274,9 @@ The sign bit is given in red, regime bits in orange, the terminating regime bit 
 \end{equation}
 After the conversion to the two's complement, the bits are interpreted in the same way as in Eq. \ref{eq:posit_pos}.
 
-Furthermore, posits also come with a no overflow/no underflow-rounding mode: Where floats overflow and return infinity when the exact result of an arithmetic operation is larger than the largest representable number ($maxpos$), posit arithmetic simply returns $maxpos$ instead, and similarly for underflow where the smallest representable number $minpos$ is returned. This is motivated as rounding to infinity returns a result that is infinitely less correct than $maxpos$, although often desired to indicate that an overflow occurred in the simulation. Instead, it is proposed to perform overflow-like checks on the software level to simplify exception handling on hardware \cite{Gustafson2017b}.
+Posits also come with a no overflow/no underflow-rounding mode: Where floats overflow and return infinity when the exact result of an arithmetic operation is larger than the largest representable number ($maxpos$), posit arithmetic returns $maxpos$ instead, and similarly for underflow where the smallest representable number $minpos$ is returned. This is motivated as rounding to infinity returns a result that is infinitely less correct than $maxpos$, although often desired to indicate that an overflow occurred in the simulation. Instead, it is proposed to perform overflow-like checks on the software level to simplify exception handling on hardware \cite{Gustafson2017b}.
 
-The posit number framework also highly recommends \emph{quires}, an additional register on hardware to store intermediate results. Fused operations like \emph{multiply-add} can therefore be executed with a single rounding error without the rounding of intermediate results. The quire concept could also be applied to floating-point arithmetic, but is technically difficult to implement on hardware as the required registers would need to be much larger in size. For fair comparison we do not take quires into account. Appendix \ref{sec:app2} includes a short discussion on the benefits of quires. The posit number format is explained in more detail in \citeA{Gustafson2017b}.
+The posit number framework also highly recommends \emph{quires}, an additional register on hardware to store intermediate results. Fused operations like \emph{multiply-add} can therefore be executed with a single rounding error without the rounding of intermediate results. The quire concept could also be applied to floating-point arithmetic, but is technically difficult to implement on hardware as the required registers would need to be much larger in size. For fair comparison we do not take quires into account. The posit number format is explained in more detail in \citeA{Gustafson2017b}.
 
 \subsection{Emulating posit numbers in the Julia language}
 \label{sec:Julia}
@@ -309,7 +306,7 @@ In order to use posits on a conventional CPU we developed the posit emulator \em
 \label{fig:emulator}
 \end{figure}
 
-Executing the function \texttt{harmonic\_sum} for the first time with a type \texttt{T} as the first argument, triggers Julia's \emph{just-in-time} compiler. The function is type stable, as the types of all variables are declared. At the same time Julia allows for type flexibility, as its \emph{multiple dispatch} means that calling  \texttt{harmonic\_sum} with another type \texttt{T1} will result in a separately compiled function for \texttt{T1}. We can therefore compute the harmonic sum with aribitrary number types, as long as the zero-element \texttt{zero(T)}; the one-element \texttt{one(T)}; addition; division; conversion from integer and conversion to float are defined for \texttt{T}. 
+Executing the function \texttt{harmonic\_sum} for the first time with a type \texttt{T} as the first argument, triggers Julia's \emph{just-in-time} compiler. The function is type stable, as the types of all variables are declared. At the same time Julia allows for type flexibility, as its \emph{multiple dispatch} means that calling  \texttt{harmonic\_sum} with another type \texttt{T2} will result in a separately compiled function for \texttt{T2}. We can therefore compute the harmonic sum with aribitrary number types, as long as the zero-element \texttt{zero(T)}; the one-element \texttt{one(T)}; addition; division; conversion from integer and conversion to float are defined for \texttt{T}. 
 
 \begin{figure}[htbp]
 %\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray, gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
@@ -326,7 +323,7 @@ Executing the function \texttt{harmonic\_sum} for the first time with a type \te
 \label{fig:emulator}
 \end{figure}
 
-The harmonic sum converges after 513 elements when using Float16. The decimal precision of BFloat16 is so low that the sum already converges after 65 elements, as the addition of the next term $1/66$ is round back to 5.0625. We identify the addition of small terms to prognostic variables of size $\mathcal{O}(1)$ as one of the major challenges with low precision arithmetic, which is discussed in more detail in section \ref{sec:mixedprec}. Using 16bit posits with 1 exponent bit, the sum only converges after 1024 terms, due to the higher decimal precision of posits around 1. 
+The harmonic sum converges after 513 elements when using Float16. The precision of BFloat16 is so low that the sum already converges after 65 elements, as the addition of the next term $1/66$ is round back to 5.0625. We identify the addition of small terms to prognostic variables of size $\mathcal{O}(1)$ as one of the major challenges with low precision arithmetic, which is discussed in more detail in section \ref{sec:mixed}. Using 16bit posits with 1 exponent bit, the sum only converges after 1024 terms, due to the higher decimal precision of posits around 1. 
 
 We implement this type-flexible programming paradigm in the numerical integration of the Lorenz equations (section \ref{sec:L63}) and the shallow water model (section \ref{sec:swm}), which allows various number types to be used interchangeably.
 
@@ -339,15 +336,35 @@ The decimal precision is defined as \cite{Gustafson2017,Gustafson2017b}
 \end{equation}
 where $x_\text{exact}$ is the exact result of an arithmetic operation and $x_\text{repr}$ is the representable number that $x_\text{exact}$ is rounded to, given a specified rounding mode. For round-to-nearest rounding mode, the decimal precision approaches infinity when the exact result approaches the representable number and has a minimum in between two representable numbers. This minimum defines the \emph{worst-case} decimal precision, i.e. the decimal precision when the rounding error is maximised. The worst-case decimal precision is the number of decimal places that are at least correct after rounding. 
 
-Fig. \ref{fig:dec_acc}a compares the worst-case decimal precision for various 16-bit number formats: Half precision floats, 16-bit posits with various number of exponent bits, 16-bit integers and the fixed-point format Q6.10 (6 integer bits, 10 fraction bits). Floats have a nearly constant decimal precision of almost 4 decimal places, which decreases for the subnormal numbers towards the smallest representable number $minpos$. Posits, on the other hand, show an increased decimal precision for numbers around 1. Posits with 1 or 2 exponent bits also have a wider dynamic range than half precision floats, in exchange for less precision for numbers on the order of $10^4$ as well as $10^{-4}$. Due to the no overflow/no underflow-rounding mode, the decimal precision is slightly above zero outside the dynamic range.
-
-The decimal precision of 16-bit integers is negative infinity for any number below 0.5 (round to 0) and maximised for the largest representable integer $2^{15} - 1 =  32767$. Similar conclusions hold for the fixed-point format Q6.10, as the decimal precision is shifted towards smaller numbers by a factor of $\tfrac{1}{2}$ for each additional fraction bit. This indicates problems for reduced precision modelling: Rescaling of the equations is desired to place many arithmetic calculations near the largest representable number, however, any result beyond will lead to disastrous results, as integer overflow usually returns a negative value following a wrap around behaviour. Flexibility regarding the dynamic range can be achieved with integer arithmetic if fixed point numbers are used \cite{Russell2017}. However, we did not achieve convincing results with integer arithmetic for the applications in this paper (see section \ref{sec:lorenz}).
-
-\begin{figure}
+\begin{figure}[htbp]
 \includegraphics[width=1\textwidth]{../plots/decimal_precision.png}
-\caption{(a) Decimal precision of various 16bit number formats. Dashed vertical lines indicate range of representable numbers for each format. 8bit floats (3 exponent bits) and posits (no exponent bits) are shown for comparison. Float32 and Posit32 are beyond the axes limits. (b) Histogram of results of all arithmetic operations in the rescaled Lorenz system, considering absolute values.}
+\caption{(a) Decimal precision of various number formats. Dashed vertical lines indicate the range of representable numbers for each format. Float64, Float32 and Posit32 are beyond the axes limits. (b) Histogram of results of all arithmetic operations in the rescaled Lorenz system, considering absolute values.}
 \label{fig:dec_acc}
 \end{figure}
+
+Fig. \ref{fig:dec_acc}a compares the worst-case decimal precision for various 16 and 8bit floats and posits, as well as 16bit integers and the fixed-point format Q6.10 (6 integer bits, 10 fraction bits). Float16 has a nearly constant decimal precision of almost 4 decimal places, which decreases for the subnormal numbers towards the smallest representable number $minpos$. 16bit posits, on the other hand, show an increased decimal precision for numbers around 1 and a wider dynamic range, in exchange for less precision for numbers on the order of $10^4$ as well as $10^{-4}$.  The machine error $\epsilon$, defined as half the distance between 1 and the next representable number, can be given in terms of decimal precision and is summarized in Table \ref{tab:formats} for the various formats. Due to the no overflow/no underflow-rounding mode, the decimal precision is slightly above zero outside the dynamic range. 
+
+The decimal precision of 16bit integers is negative infinity for any number below 0.5 (round to 0) and maximised for the largest representable integer $2^{15} - 1 =  32767$. Similar conclusions hold for the fixed-point format Q6.10, as the decimal precision is shifted towards smaller numbers by a factor of $\tfrac{1}{2}$ for each additional fraction bit. This indicates problems for reduced precision modelling: Rescaling of the equations is desired to place many arithmetic calculations near the largest representable number, however, any result beyond will lead to disastrous results, as integer overflow usually returns a negative value following a wrap around behaviour. Flexibility regarding the dynamic range can be achieved with integer arithmetic if fixed point numbers are used \cite{Russell2017}. However, we did not achieve convincing results with integer arithmetic for the applications in this study.
+
+\begin{table}
+\center
+\begin{tabular}{l | r | r | l | l | r | r}
+Format & bits & exp bits & minpos & maxpos & $\epsilon$ &  \% NaR \\
+\hline
+Float64	& 64 & 11 & $5.0 \cdot 10^{-324}$ & $1.8 \cdot 10^{308}$  & 16.3 & 0.0 \\
+Float32	& 32 & 8 & $1.0 \cdot 10^{-45}$ & $3.4 \cdot 10^{38}$ & 7.6 & 0.4 \\
+Float16	& 16 & 5 & $6.0 \cdot 10^{-8}$ & 65504 & 3.7 & 3.1 \\
+BFloat16	& 16 & 8 & $ 1.0 \cdot 10^{-45}$ & $3.4 \cdot 10^{38}$ & 2.8 & 0.4  \\
+Posit32	& 32 & 2 &  $7.5 \cdot 10^{-37}$ & $7.5 \cdot 10^{37}$ & 8.8 & 0.0 \\
+Posit(16,1) & 16 & 1 & $3.7 \cdot 10^{-9}$ & $3.7 \cdot 10^{9}$ & 4.3 & 0.0\\
+Posit(16,2) & 16 & 2 & $1.4 \cdot 10^{-17}$ & $1.4 \cdot 10^{17}$ & 4.0 & 0.0\\
+Posit(8,0) & 8 & 0 & $1.5 \cdot 10^{-2}$ & 64 & 2.2 & 0.4  \\
+Float8 & 8 & 3 & $1.5 \cdot 10^{-2}$ & 15.5 & 1.9 &12.5\\
+\end{tabular}
+\vspace{10pt}
+\caption{Some characteristics of various number formats. minpos is the smallest representable positive number, maxpos the largest. The machine error $\epsilon$ is here given as decimal precision. \% NaR denotes the percentage of bit patterns that represent not a number (NaN), infinity or not a real (NaR).}
+\label{tab:formats}
+\end{table}
 
 
 \section{Lorenz 1963 system}
@@ -388,7 +405,7 @@ The rescaling of the Lorenz system has its limitations: The non-linear terms in 
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/lorenz_attractor.png}
-\caption{The Lorenz attractor computed with different number formats. The scaling of the Lorenz equations (Eq. \ref{eq:L63s}) is (a,b,d) $s=1$, (d) $s=0.1$. All curves are integrated from the same initial conditions for 100,000 time-steps with spacing $\Delta t = 0.08$.}
+\caption{The Lorenz attractor computed with different number formats. The scaling of the Lorenz equations (Eq. \ref{eq:L63s}) is (a,b,d) $s=1$, (c) $s=0.1$. All trajectories are integrated from the same initial conditions for 100,000 time-steps with spacing $\Delta t = 0.08$.}
 \label{fig:L63}
 \end{figure}
 
@@ -429,11 +446,12 @@ For reduced precision it is essential to rescale the shallow water equations to 
 \end{equation}
 where $RK_\eta$ is the Runge-Kutta coefficient times $\tfrac{\Delta t}{\Delta}$ which is precomputed at high precision, to avoid a division by a large value $\Delta$ and a subsequent multiplication with a large value for $\Delta t$. The other terms are rescaled accordingly ($\tilde{f} = f\Delta$; $\tilde{\mathbf{F}} = \mathbf{F}\Delta$; please see appendix \ref{sec:app} for a discussion of the dissipation term $\mathbf{D}$). The entire numerical integration is performed using the various reduced precision number formats. However, posits are converted back to single precision floats for model output and some of the forcing and boundary terms that remain constant throughout the model integration are computed at higher precision during model initialisation to avoid problems with the dynamic range.
 
+
 \subsection{Results}
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/snapshot.png}
-\caption{Snapshot of tracer concentration simulated by the shallow water model, based on different 16bit number formats. Mixed precision using Float32 for the prognostic variables only is used for (e-f). The tracer was injected uniformly in the lower half of the domain 50 days before. This simulation was run at a resolution of $\Delta = 5$km (400x200 grid points).}
+\caption{Snapshot of tracer concentration simulated by the shallow water model using different 16bit number formats. Mixed precision using Float32 for the prognostic variables only is used for (e) and (f). The tracer was injected uniformly in the lower half of the domain 50 days before. This simulation was run at a resolution of $\Delta = 5$km (400x200 grid points).}
 \label{fig:snapshot}
 \end{figure}
 
@@ -441,7 +459,7 @@ The solution to the shallow water equations includes vigorous turbulence that do
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/rmse_eta.pdf}
-\caption{Forecast error measured as the root mean square error (RMSE) of sea surface height $\eta$ taking Float64 as reference. (a) Forecast error for various 16bit number formats and mixed 16bit/32bit simulations for which the prognostic variables are kept at Float32. (b) Forecast error for reduced precision communication in 8 or 16bit with various number formats used for encoding, with Float64 used for all calculations.  The communication of boundary values occurs at every time step for the prognostic variables, with values copied between the left and right boundary, due to the periodic boundary conditions. The RMSE is normalised by a mean forecast error at very long lead times. Solid lines represent the median of 200 forecasts per number format. The shaded areas denote the interquartile range of the ensemble.}
+\caption{Forecast error measured as the root mean square error (RMSE) of sea surface height $\eta$ taking Float64 as reference. (a) Forecast error for various 16bit number formats and mixed 16bit/32bit simulations for which the prognostic variables are kept at Float32. (b) Forecast error for reduced precision communication in 8 or 16bit with various number formats used for encoding, with Float64 used for all calculations.  The communication of boundary values occurs at every time step for the prognostic variables. The RMSE is normalised by a mean forecast error at very long lead times. Solid lines represent the median of 200 forecasts per number format. The shaded areas denote the interquartile range of the ensemble.}
 \label{fig:rmse}
 \end{figure}
 
@@ -456,10 +474,16 @@ Clearly the best forecast is obtained for posit arithmetic with 1 or 2 exponent 
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=1\textwidth]{../plots/entropy.pdf}
-\caption{Entropy of mixing calculated from the tracer concentration simulated with various 16bit number formats. The entropy is normalized by the entropy of a homogeneous tracer. Lines represent the mean of 200 forecasts per number format. The shaded area denotes the interquartile range of the reference ensemble simulations with Float64. Note the cubically scaled y-axis.}
-\label{fig:entropy}
+\includegraphics[width=1\textwidth]{../plots/ageostrophic.pdf}
+\caption{Geostrophic balance as simulated with different number formats. (a) Histograms of flow-parallel components of geostrophic velocity. (b) as (a) but for the ageostrophic velocities. Horizontal bars denote the mean, 10th and 90th-percentile in respective colours.}
+\label{fig:mean}
 \end{figure}
+
+%\begin{figure}
+%\includegraphics[width=1\textwidth]{../plots/entropy.pdf}
+%\caption{Entropy of mixing calculated from the tracer concentration simulated with various 16bit number formats. The entropy is normalized by the entropy of a homogeneous tracer. Lines represent the mean of 200 forecasts per number format. The shaded area denotes the interquartile range of the reference ensemble simulations with Float64. Note the cubically scaled y-axis.}
+%\label{fig:entropy}
+%\end{figure}
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/tendency_hist.pdf}
@@ -467,16 +491,18 @@ Clearly the best forecast is obtained for posit arithmetic with 1 or 2 exponent 
 \label{fig:tend}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=1\textwidth]{../plots/snapshot_comm.png}
-\caption{Snapshot of tracer concentration simulated by the shallow water model, based on reduced precision communication. The communication of boundary values occurs at every time step for the prognostic variables, with values copied between the left and right boundary, due to the periodic boundary conditions. %The communication is analogous to a domain decomposition parallelism, with MPI communication between the subdomains. 
-Float64 was used for all calculations. Areas where the absolute error exceeds 0.05 are shaded in red only in the lower half of the domain. The tracer was injected uniformly in the lower half of the domain 50 days before. This simulation was run at a resolution of $\Delta = 5$km (400x200 grid points).}
-\label{fig:snapshot}
-\end{figure}
-
 \subsection{Mixed precision arithmetic}
 \label{sec:mixed}
 
+
+\subsection{Reduced precision communication}
+\label{sec:comm}
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{../plots/snapshot_comm.png}
+\caption{Snapshot of tracer concentration simulated by the shallow water model using reduced precision communication. The communication of boundary values occurs at every time step for the prognostic variables. Float64 was used for all calculations. Areas where the absolute error exceeds 0.05 are shaded in red only in the lower half of the domain. The tracer was injected uniformly in the lower half of the domain 50 days before. This simulation was run at a resolution of $\Delta = 5$km (400x200 grid points).}
+\label{fig:snapshot_comm}
+\end{figure}
 
 
 
@@ -722,9 +748,7 @@ where $\mathbf{\tilde{x}}_a$ are the coordinates of the arrival grid node and $\
 
 
 \acknowledgments
- The authors would like to thank Mos\`{e} Giordano who contributed to \emph{SoftPosit.jl}
-
-Milan Kl\"{o}wer and Tim N. Palmer gratefully acknowledge funding by the European Research Council under grant number 741112 \emph{An Information Theoretic Approach to Improving the Reliability of Weather and Climate Simulations}. Milan Kl\"{o}wer is also funded by NERC grant number NE/L002612/1.  Peter D. D\"{u}ben gratefully acknowledges funding from the Royal Society for his University Research Fellowship as well as funding from the ESIWACE project. ESIWACE has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement 675191.
+ The authors would like to thank Cerlane Leong and Mos\`{e} Giordano who contributed to \emph{SoftPosit.jl}. Milan Kl\"{o}wer and Tim N. Palmer gratefully acknowledge funding by the European Research Council under grant number 741112 \emph{An Information Theoretic Approach to Improving the Reliability of Weather and Climate Simulations}. Milan Kl\"{o}wer is also funded by NERC grant number NE/L002612/1.  Peter D. D\"{u}ben gratefully acknowledges funding from the Royal Society for his University Research Fellowship as well as funding from the ESIWACE project. ESIWACE has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement 675191.
 
 %% ------------------------------------------------------------------------ %%
 %% References and Citations

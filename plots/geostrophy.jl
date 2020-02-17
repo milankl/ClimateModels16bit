@@ -234,6 +234,8 @@ ax2.set_ylabel(L"N [10$^5$]")
 ax1.set_xlabel("[m/s]")
 ax2.set_xlabel("[m/s]")
 
+ax2.set_yticks([0,1,2,3,4])
+
 ax1.set_ylim(-0.25,10)
 ax2.set_ylim(-0.125,4.3)
 
@@ -244,7 +246,7 @@ ax2.set_title("b", loc="right", fontweight="bold")
 
 ax1.legend(loc=(0.47,0.4),fontsize=8)
 
-tight_layout()
+tight_layout(w_pad=-0.5)
 savefig("plots/ageostrophic.png",dpi=300)
-# savefig("plots/ageostrophic.pdf")
+savefig("plots/ageostrophic.pdf")
 close(fig)
