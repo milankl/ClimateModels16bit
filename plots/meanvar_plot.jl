@@ -37,9 +37,9 @@ u0(x::AbstractArray) = cat(zero(eltype(x)),x,zero(eltype(x)),dims=1)
 
 ##
 ioff()
-fig,(ax1,ax2) = subplots(2,1,figsize=(6,5),sharex=true)
+fig,(ax1,ax2) = subplots(2,1,figsize=(7,5),sharex=true)
 
-ax1.plot(xf,u0(mean(Rm[1,:,:],dims=2)),"C0",lw=1.5,label="Float64")
+ax1.plot(xf,u0(mean(Rm[1,:,:],dims=2)),"C0",lw=3,label="Float64")
 ax1.plot(xf,u0(mean(Rm[3,:,:],dims=2)),"k",lw=1.5,label="Float16")
 ax1.plot(xf,u0(mean(Rm[4,:,:],dims=2)),"#50C070",ls="--",lw=1.5,label="Posit(16,1)")
 ax1.plot(xf,u0(mean(Rm[5,:,:],dims=2)),"#900000",ls="--",lw=1.5,label="Posit(16,2)")
@@ -47,10 +47,10 @@ ax1.plot(xf,u0(mean(Rm[6,:,:],dims=2)),"grey",ls="-.",lw=1.5,label="BFloat16/Flo
 ax1.plot(xf,u0(mean(Rm[7,:,:],dims=2)),"C1",ls="-.",lw=1.5,label="Float16/Float32")
 
 # discretisation error
-ax1.plot(xfLR,u0(mean(Rm_LR[:,:],dims=2)),"C0",ls="--")
+ax1.plot(xfLR,u0(mean(Rm_LR[:,:],dims=2)),"#E0E020",ls="-",lw=1.5)
 ax1.plot(xf,u0(zero(x)),"k",lw=0.1)
 
-ax1.fill_between(xf,u0(Rpm[1,1,:]),u0(Rpm[2,1,:]),color="C0",alpha=0.2,label="Float64 ensemble")
+ax1.fill_between(xf,u0(Rpm[1,1,:]),u0(Rpm[2,1,:]),color="C0",alpha=0.1,label="Float64 ensemble")
 
 ax2.plot(xf,u0(mean(Rv[1,:,:],dims=2)),"C0",lw=3,label="Float64")
 ax2.plot(xf,u0(mean(Rv[3,:,:],dims=2)),"k",lw=1.5,label="Float16")
@@ -58,9 +58,9 @@ ax2.plot(xf,u0(mean(Rv[4,:,:],dims=2)),"#50C070",ls="--",lw=1.5,label="Posit(16,
 ax2.plot(xf,u0(mean(Rv[5,:,:],dims=2)),"#900000",ls="--",lw=1.5,label="Posit(16,2)")
 ax2.plot(xf,u0(mean(Rv[6,:,:],dims=2)),"grey",ls="-.",lw=1.5,label="BFloat16/Float32")
 ax2.plot(xf,u0(mean(Rv[7,:,:],dims=2)),"C1",ls="-.",lw=1.5,label="Float16/Float32")
-ax2.plot(xfLR,u0(mean(Rv_LR[:,:],dims=2)),"C0",ls="--",lw=1.5,label="Float64 low resolution")
+ax2.plot(xfLR,u0(mean(Rv_LR[:,:],dims=2)),"#E0E020",ls="-",lw=1.5,label="Float64 low resolution")
 
-ax2.fill_between(xf,u0(Rpv[1,1,:]),u0(Rpv[2,1,:]),color="C0",alpha=0.2,label="Float64 ensemble")
+ax2.fill_between(xf,u0(Rpv[1,1,:]),u0(Rpv[2,1,:]),color="C0",alpha=0.1,label="Float64 ensemble")
 
 ax1.set_ylabel(L"$u$ [m/s]")
 ax2.set_ylabel(L"Variance(u) [$m^2/s^2$]")
