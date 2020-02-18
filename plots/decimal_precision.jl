@@ -3,7 +3,7 @@ using SoftPosit, PyPlot, Lorenz63, StatsBase, Statistics
 include("representable_numbers.jl")
 include("lorenz_data.jl")
 
-N = 100_000
+N = 1_000_000
 L63data_s0 = lorenz_data(N,1/10)
 L63data_s1 = lorenz_data(N,1.)
 L63data_s2 = lorenz_data(N,10.)
@@ -30,7 +30,7 @@ i_wda = decprec(i_am,round.(i_am))
 i_am[1] = 1
 
 ## histograms
-bins = 10.0.^(-5:0.05:5)
+bins = 10.0.^(-5:0.025:5)
 H_s0 = fit(Histogram,abs.(L63data_s0[:]),bins)
 w_s0 = H_s0.weights
 
@@ -91,7 +91,7 @@ xtik = 10.0.^(-16:4:16)
 
 ax2.set_xscale("log",basex=10)
 ax2.set_xlim(x0,x1)
-#ax2.set_xticks(xtik)
+ax2.set_yticks([0,1,2])
 #ax1.set_xticks(xtik)
 
 bins[1] = 1e-16
