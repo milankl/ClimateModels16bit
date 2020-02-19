@@ -277,7 +277,7 @@ After the conversion to the two's complement, the bits are interpreted in the sa
 \begin{figure}
 \center
 \includegraphics[width=1\textwidth]{figs/circles.pdf}
-\caption{Two posit number formats obtained by projecting the real axis onto a circle. (a) 2bit Posit(2,0) and (b) 4bit Posit(4,1). The bit patterns are marked on the outside and the respective values on the inside of each circle. Bit patterns of negative numbers (black) have to be converted to their two's complement (colours) first (see text). At the top of every circle is complex infinity ($\pm \infty$) or NaR (Not-a-Real). After from \cite{Gustafson2017b}. }
+\caption{Two posit number formats obtained by projecting the real axis onto a circle. (a) 2bit Posit(2,0) and (b) 4bit Posit(4,1). The bit patterns are marked on the outside and the respective values on the inside of each circle. Bit patterns of negative numbers (black) have to be converted to their two's complement (colours) first (see text). At the top of every circle is complex infinity ($\pm \infty$) or NaR (Not-a-Real). After \citeA{Gustafson2017b}. }
 \label{fig:circle}
 \end{figure}
 
@@ -309,8 +309,26 @@ In order to use posits on a conventional CPU we developed for the Julia programm
 %      end
 %  end
 %\end{minted}
+\begin{verbatim}
+  function harmonic_sum(::Type{T},steps::Int=2000) where T
+
+      s = zero(T)
+      o = one(T)
+
+      for i in 1:steps
+
+          s_old = s
+          s += o/T(i)
+
+          if s == s_old    # check for convergence
+              println(Float64(s),i)
+              break
+         end
+      end
+  end
+\end{verbatim}
 \caption{A type-flexible harmonic sum function in the Julia language.}
-\label{fig:emulator}
+\label{fig:harmsum}
 \end{figure}
 
 Executing the function \texttt{harmonic\_sum} for the first time with a type \texttt{T} as the first argument, triggers Julia's \emph{just-in-time} compiler. The function is type stable, as the types of all variables are declared. At the same time Julia allows for type flexibility, as its \emph{multiple dispatch} means that calling  \texttt{harmonic\_sum} with another type \texttt{T2} will result in a separately compiled function for \texttt{T2}. We can therefore compute the harmonic sum with aribitrary number types, as long as the zero-element \texttt{zero(T)}; the one-element \texttt{one(T)}; addition; division; conversion from integer and conversion to float are defined for \texttt{T}. 
@@ -326,11 +344,21 @@ Executing the function \texttt{harmonic\_sum} for the first time with a type \te
 %julia> harmonic_sum(Posit16)
 %(7.77734375, 1024)
 %\end{minted}
+\begin{verbatim}
+    julia> using SoftPosit
+    julia> using BFloat16s
+    julia> harmonic_sum(Float16)
+    (7.0859375, 513)
+    julia> harmonic_sum(BFloat16)
+    (5.0625, 65)
+    julia> harmonic_sum(Posit16)
+    (7.77734375, 1024)
+\end{verbatim}
 \caption{Harmonic sum example use of the posit emulator \emph{SoftPosit.jl} in the Julia shell. \texttt{Posit16} is the Posit(16,1) standard.}
-\label{fig:emulator}
+\label{fig:harmsum2}
 \end{figure}
 
-The harmonic sum converges after 513 elements when using Float16. The precision of BFloat16 is so low that the sum already converges after 65 elements, as the addition of the next term $1/66$ is round back to 5.0625. We identify the addition of small terms to prognostic variables of size $\mathcal{O}(1)$ as one of the major challenges with low precision arithmetic, which is discussed in more detail in section \ref{sec:mixed}. Using 16bit posits with 1 exponent bit, the sum only converges after 1024 terms, due to the higher decimal precision of posits around 1. 
+The harmonic sum converges after 513 elements when using Float16. The precision of BFloat16 is so low that the sum already converges after 65 elements, as the addition of the next term $1/66$ is round back to 5.0625. We identify the addition of small terms to prognostic variables of size $\mathcal{O}(1)$ as one of the major challenges with low precision arithmetic, which is discussed in more detail in section \ref{sec:mixed}. Using Posit(16,1), the sum only converges after 1024 terms, due to the higher decimal precision of posits between 1 and 10.
 
 We implement this type-flexible programming paradigm in the numerical integration of the Lorenz equations (section \ref{sec:L63}) and the shallow water model (section \ref{sec:swm}), which allows various number types to be used interchangeably.
 
@@ -402,7 +430,7 @@ We solve the equations using a fourth order Runge-Kutta method \cite{Butcher2008
 \end{align}
 \label{eq:L63s}%
 \end{subequations}
-where $RK_x,RK_y,RK_z$ contain the Runge-Kutta coefficient and the time step $\Delta t$.  $RK_x$ also contains the parameter $\sigma$. The superscripts $n$ and $n+1$ denote the current and next substep.
+where $RK_x,RK_y,RK_z$ contain the Runge-Kutta coefficient and the time step $\Delta t$.  $RK_x$ also contains the parameter $\sigma$. The superscripts $n$ and $n+1$ denote the current and next time substep.
 
 The rescaling of the Lorenz system has its limitations: The non-linear terms in Eq. \ref{eq:L63s} involve a division by the scaling constant $s$, which leads to the result of the arithmetic operations $\tfrac{\tilde{z}}{s}, \rho - \tfrac{\tilde{z}}{s},$ and $\tfrac{\tilde{y}}{s}$ being invariant under scaling. This is observed in the histograms of arithmetic results (Fig. \ref{fig:dec_acc}b), as high counts of values between 1 and 50 exist for different choices of $s$. A changing shape of the histogram with $s$ is a consequence. Following these results an underlying challenge of reduced precision modelling becomes apparent: One has either to find a number format that fits the range of computed numbers, or rescale the equations to optimise their range for a given number format.
 
@@ -412,14 +440,14 @@ The rescaling of the Lorenz system has its limitations: The non-linear terms in 
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/lorenz_attractor.png}
-\caption{The Lorenz attractor computed with different number formats. The scaling of the Lorenz equations (Eq. \ref{eq:L63s}) is (a,b,d) $s=1$, (c) $s=0.1$. All trajectories are integrated from the same initial conditions for 100,000 time-steps with spacing $\Delta t = 0.08$.}
+\caption{The Lorenz attractor computed with different number formats. The scaling of the Lorenz equations (Eq. \ref{eq:L63s}) is (a,b,d) $s=1$, (c) $s=0.1$. All trajectories are integrated from the same initial conditions for 100,000 time-steps with spacing $\Delta t = 0.008$.}
 \label{fig:L63}
 \end{figure}
 
 Regardless of the initial conditions, the Lorenz system will evolve towards a set of $(x,y,z)$ points called attractor (the x,z-section of the attractor is shown in Fig. \ref{fig:L63}a). This attractor is \emph{strange}, i.e. its geometric structure cannot be described in two dimensions, but is of fractal nature. 
 While points on the model trajectory will get infinitesimally close to each other, the trajectory of the analytical Lorenz system will never repeat itself. However, if the model is discretised and if the variables are represented with finite precision, only a finite amount of distinct states can be represented and the model trajectory will eventually repeat itself if integrated for long enough. 
 
-Integrating the Lorenz system with Float16 yields an attractor that is repeating itself fairly early and the space that is filled by the line of the trajectory is significantly smaller when compared to the space of a trajectory with double precision (compare Fig. \ref{fig:L63}a and b). However, when using Posit(16,1) and a rescaling factor of $s=0.1$ the representation of the attractor is improved significantly (Fig. \ref{fig:L63}c). The results for posits looks similar to the results with Float16 if no rescaling was used (not shown here). Chosing the right size of the time step $\Delta t$ allows the Lorenz system to be integrated with BFloat16, but with a poor representation of the fractal attractor (Fig. \ref{fig:L63}d). The solution of the Lorenz system with 16bit integers fails to represent the Lorenz attractor (not shown).
+Integrating the Lorenz system with Float16 yields an attractor that is repeating itself fairly early and the space that is filled by the line of the trajectory is significantly smaller when compared to the space of a trajectory with double precision (compare Fig. \ref{fig:L63}a and b). However, when using Posit(16,1) and a rescaling factor of $s=0.1$ the representation of the attractor is improved significantly (Fig. \ref{fig:L63}c). The results for posits looks similar to the results with Float16 if no rescaling was used (not shown here). Only a time step $\Delta t > 0.008$ yields tendencies that are large enough to overcome the rounding errors of BFloat16 that otherwise inhibit a temporal evolution of the system. This  allows the Lorenz system to be integrated with BFloat16, but with a poor representation of the fractal attractor (Fig. \ref{fig:L63}d). The solution of the Lorenz system with 16bit integers fails to represent the Lorenz attractor (not shown).
 
 We have calculated the so-called \emph{fractal dimension} as a diagnostic to quantify the fidelity of simulations of the discretised Lorenz equations when different number formats are used. The fractal dimension quantifies how space-filling an attractor is. Using a box-counting algorithm, we estimate the dimension of the posit attractor to be 1.78, whereas the Float16 attractor is only 1.29, compared to the true value of approximately 2.06 \cite{Grassberger1983,McGuinness1983}. 
 
@@ -445,24 +473,24 @@ To also test the use of the different number formats for the representation of p
 \frac{\partial q}{\partial t} + \mathbf{u} \cdot \nabla q = 0.
 \label{eq:adv}
 \end{equation}
-We discretise Eq. \ref{eq:adv} with a semi-Lagrangian advection scheme \cite{Smolarkiewicz1992}, which calculates the tracer concentration for a given grid cell from the concentration at the previous time step at a departure point, which is determined from the flow field. As the departure point is in general in between grid nodes an interpolation is required to find the concentration at the departure point. The discretisation of Eq. \ref{eq:adv} is therefore turned into an interpolation problem.
+We discretise Eq. \ref{eq:adv} with a semi-Lagrangian advection scheme \cite{Smolarkiewicz1992}, which calculates the tracer concentration for a given grid cell from the concentration at the previous time step at a departure point, which in turn is determined from the flow field. As the departure point is in general in between grid nodes an interpolation is required to find the concentration at the departure point. The discretisation of Eq. \ref{eq:adv} is therefore turned into an interpolation problem.
 
-For 16bit arithmetic it is essential to rescale the shallow water equations to avoid calculations with very large or very small results, as the dynamic range of representable numbers is limited (Fig. \ref{fig:dec_acc}a and Table \ref{tab:formats}). This is especially true for some sophisticated schemes like the biharmonic diffusion \cite{Griffies2000}, which is often used to remove energy from the grid scale to ensure numerical stability. For biharmonic diffusion a fourth derivative in space is calculated. Due to the large dimension of geophysical applications, this term can get very small $\mathcal{O}(10^{-20})$ while viscosity coefficients are typically very large $\mathcal{O}(10^{11})$. The prognostic variables of Eq. \ref{eq:swe} and \ref{eq:adv} are typically $\mathcal{O}(1\op{ms}^{-1})$ for $\mathbf{u}$, $\mathcal{O}(1\op{m})$ for $\eta$ and $\mathcal{O}(1)$ for $q$. We can therefore retain their physical units in the discretised numerical model. However, due to the grid spacing $\Delta$ being large for geophysical flows, we need to use dimensionless Nabla operators $\tilde{\nabla} = \Delta\nabla$. The continuity equation Eq. \ref{eq:swe}b, for example, is discretised with an explicit time integration method as
+For 16bit arithmetic it is essential to rescale the shallow water equations to avoid calculations with very large or very small results, as the dynamic range of representable numbers is limited (Fig. \ref{fig:dec_acc}a and Table \ref{tab:formats}). This is especially true for some sophisticated schemes like the biharmonic diffusion \cite{Griffies2000}, which is often used to remove energy from the grid scale to ensure numerical stability. For biharmonic diffusion a fourth derivative in space is calculated. Due to the large dimension of geophysical applications, this term can get very small $\mathcal{O}(10^{-20})$ while viscosity coefficients are typically very large $\mathcal{O}(10^{11})$. The prognostic variables of Eq. \ref{eq:swe} and \ref{eq:adv} are typically $\mathcal{O}(1\op{ms}^{-1})$ for $\mathbf{u}$, $\mathcal{O}(1\op{m})$ for $\eta$ and $\mathcal{O}(1)$ for $q$. We can therefore retain their physical units in the discretised numerical model. However, due to the grid spacing $\Delta$ of unit meter being large for geophysical flows, we need to use dimensionless Nabla operators $\tilde{\nabla} = \Delta\nabla$. The continuity equation Eq. \ref{eq:swe}b, for example, is discretised with an explicit time integration method as
 \begin{equation}
 \eta^{n+1} = \eta^n + RK_{\eta}\left( - \tilde{\nabla} \cdot (\mathbf{u}h)^n\right)
 \end{equation}
-where $RK_\eta$ is the Runge-Kutta coefficient times $\tfrac{\Delta t}{\Delta}$ which is precomputed at high precision, to avoid a division by a large value $\Delta$ and a subsequent multiplication with a large value for $\Delta t$. The other terms are rescaled accordingly ($\tilde{f} = f\Delta$; $\tilde{\mathbf{F}} = \mathbf{F}\Delta$; please see \ref{sec:app} for a discussion of the dissipation term $\mathbf{D}$). The entire numerical integration is performed using the various reduced precision number formats. However, posits are converted back to single precision floats for model output and some of the forcing and boundary terms that remain constant throughout the model integration are computed at higher precision during model initialisation to avoid problems with the dynamic range.
+where $RK_\eta$ is the Runge-Kutta coefficient times $\tfrac{\Delta t}{\Delta}$ which is precomputed at high precision, to avoid a division by a large value for $\Delta$ and a subsequent multiplication with a large value for $\Delta t$. The other terms are rescaled accordingly ($\tilde{f} = f\Delta$; $\tilde{\mathbf{F}} = \mathbf{F}\Delta$; please see \ref{sec:app} for a discussion of the dissipation term $\mathbf{D}$). The entire numerical integration is performed using the various reduced precision number formats, however, converted back to single precision floats for model output. As some of the forcing and boundary terms remain constant, they are precomputed at higher precision during model initialisation to avoid problems with the dynamic range.
 
 
-\subsection{Results}
+\subsection{Results with 16bit arithmetic}
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/snapshot.png}
-\caption{Snapshot of tracer concentration simulated by the shallow water model using different 16bit number formats. Mixed precision using Float32 for the prognostic variables only is used for (e) and (f). The tracer was injected uniformly in the lower half of the domain 50 days before. This simulation was run at a resolution of $\Delta = 5$km (400x200 grid points).}
+\caption{Snapshot of tracer concentration simulated by the shallow water model using different 16bit number formats. Mixed precision using Float32 for the prognostic variables only is used for (e) and (f). The tracer was injected uniformly in the lower half of the domain 50 days before. This simulation was run at an increased resolution of $\Delta = 5$km (400x200 grid points).}
 \label{fig:snapshot}
 \end{figure}
 
-The solution to the shallow water equations includes vigorous turbulence that dominates a meandering zonal current. Using either float or posit arithmetic with 16 bit the simulated fluid dynamics are very similar to a double precision reference: As shown in a snapshot of tracer concentration (Fig. \ref{fig:snapshot}) stirring and mixing can be well simulated with half precision floats and with 16-bit posits (2 exponent bits). However, the half precision simulation (Fig. \ref{fig:snapshot}c) deviates much faster than the posit simulation (Fig. \ref{fig:snapshot}b) from the double precision reference (Fig. \ref{fig:snapshot}a). This provides a first evidence that the accumulated rounding errors with posits are smaller than with floats. Only the posit simulations without exponent bit suffer from numerical instabilities, due to the limited dynamic range (Fig. \ref{fig:dec_acc}a). 
+The solution to the shallow water equations includes vigorous turbulence that dominates a meandering zonal current. Using either float or posit arithmetic in 16 bit the simulated fluid dynamics are very similar to a Float64 reference: As shown in a snapshot of tracer concentration (Fig. \ref{fig:snapshot}) turbulent stirring and mixing can be well simulated with posits. However, the Float16 simulation (Fig. \ref{fig:snapshot}d) deviates much faster than the posit simulations (Fig. \ref{fig:snapshot}b and c) from the Float64 reference (Fig. \ref{fig:snapshot}a), presumably due to the small scale instabilities visible in the snapshot as wavy filaments and fronts. These instabilities are clearly triggered by Float16 arithmetics, but to a lower degree also visible for posits. This provides a first evidence that the accumulated rounding errors with posits are smaller than with floats. BFloat16 arithmetic is not able to simulate the shallow water dynamics, presumably as tendencies are too small to add be added to the prognostic variables, an issue that also occurs in the Lorenz system (Fig. \ref{fig:L63}d) and even in the harmonic sum (Fig. \ref{fig:harmsum2}).
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/rmse_eta.pdf}
@@ -470,9 +498,9 @@ The solution to the shallow water equations includes vigorous turbulence that do
 \label{fig:rmse}
 \end{figure}
 
-To quantify differences between reduced precision arithmetics we perform model forecasts that compare rounding errors. The forecast error in the shallow water model is computed as root mean square error (RMSE) taking the model based on double precision floating-point arithmetics as reference truth. We use the sea surface height (equivalent to pressure) to compute the forecast error as this variable captures the large scale circulation. The forecasts are created based on 280 different initial conditions from random start dates of a 50 year long control simulation. Each forecast is performed several times from identical initial conditions but with the various number formats. To compare the magnitude of rounding error that are caused by a reduction in precision to a realistic level of error that is caused by model discretisation, we also perform forecasts at double precision that fall back to a 3rd-order Runge-Kutta scheme for time integration and a simpler enstrophy conserving advection scheme described in \citeA{Sadourny1975}. Both advection schemes have the same continuous formulation, but the \citeA{Arakawa1990} advection scheme has a wider stencil. We normalise the RMSE by the climatological mean forecast error at very long lead times. A normalised RMSE of 1 therefore means that all information of the initial conditions is removed by chaos.
+To quantify differences between the different 16bit arithmetics we perform ensemble forecasts that compare rounding errors. The forecast error in the shallow water model is computed as root mean square error (RMSE) of sea surface height with respect to Float64. Other variables yield similar results. The forecasts start from 200 different initial conditions of random start dates in a 50 year long control simulation. Each forecast is performed several times from identical initial conditions but with the various number formats. To compare the magnitude of rounding error that are caused by a reduction in precision to a realistic level of error that is caused by model discretisation, we also perform forecasts with Float64 at half the spatial resolution $\Delta = 40~\op{km}$. We normalise the RMSE by the climatological mean forecast error at very long lead times. A normalised RMSE of 1 therefore means that all information of the initial conditions is removed by chaos.
 
-Clearly the best forecast is obtained for posit arithmetic with 1 or 2 exponent bits (Fig. \ref{fig:rmse}), with a small accumulation of rounding errors even for lead times of 100 days. The forecast error for 16-bit posits without exponent bit increases quickly (Fig. \ref{fig:rmse}), especially for short forecast lead times, but a persistence forecast, i.e. assuming the initial conditions persist over time, is still worse (not shown). Half precision floats outperform 16-bit posits without exponent bit, presumably due to the limited dynamic range of only 8 orders of magnitude compared to 12 for half precision floats (Fig. \ref{fig:dec_acc}a). The forecast error of half precision floats is larger than the discretisation error.
+The forecast error of Float16 is as large as the discretisation error and clearly outperformed by 16bit posit arithmetic (Fig. \ref{fig:rmse}a). Both Posit(16,1) and Posit(16,2) yield a forecast error that is several times smaller than Float16. The forecast error of 32bit arithmetic is several orders of magnitude smaller and is only after 200 days as large as the error for 16bit arithmetic at very short lead times. Also at 32bit, posits clearly outperform floats.
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/meanvar_u.pdf}
@@ -480,11 +508,30 @@ Clearly the best forecast is obtained for posit arithmetic with 1 or 2 exponent 
 \label{fig:mean}
 \end{figure}
 
+To investigate the effect of rounding errors on the climatological mean state of the shallow water system, we zonally average the zonal velocity $u$. The mean state is an eastward flow of about 0.3~m/s which is about 3 to 4 times weaker than individual velocities throughout the domain (Fig. \ref{fig:mean}a), which is typical for turbulent flows. A weak westward mean flow is found at the northern and southern boundary. No 16bit format was found to have a significant impact on the mean state. This is in contrast to simulations run at half the spatial resolution ($\Delta = 40~\op{km}$), which increase the strength of the mean zonal flow and decrease the return flow at the southern boundary. 
+
+The variability of the flow around its mean state is high throughout the domain (Fig. \ref{fig:mean}b). The variability is significantly increased by 10 -- 30\% with 16bit arithmetic, especially with Posit(16,2). The increased rounding errors with 16bit arithmetic likely trigger instabilities in the flow, which grow and subsequently explain the increased variability. Simulations at half the spatial resolution present a variability that is up to 20\% weaker. We therefore assume that the increased variability of 16bit arithmetic is similar to an increase in resolution.
+
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/ageostrophic.pdf}
 \caption{Geostrophic balance as simulated with different number formats. (a) Histograms of flow-parallel components of geostrophic velocity. (b) as (a) but for the ageostrophic velocities. Horizontal bars denote the mean, 10th and 90th-percentile in respective colours.}
-\label{fig:mean}
+\label{fig:geo}
 \end{figure}
+
+The turbulence in shallow water simulations is largely geostrophic, such that the pressure gradient force opposes the Coriolis force. The resulting geostrophic velocities $\mathbf{u}_g$ can be derived from the sea surface height $\eta$
+\begin{subequations}
+\begin{align}
+\mathbf{u}_g &= \frac{g}{f}\hat{\mathbf{z}} \times \nabla \eta \\
+\mathbf{u} &= \mathbf{u}_{g} + \mathbf{u}_{ag}
+\end{align}
+\label{eq:geo}%
+\end{subequations}
+and deviations from the actual flow $\mathbf{u}$ are the ageostrophic velocity components $\mathbf{u}_{ag}$. We project both components on the actual velocities to obtain the flow-parallel components $\tilde{u}_{g}$ and $\tilde{u}_{ag}$ via
+\begin{equation}
+\tilde{u}_g = \frac{\mathbf{u}_g \cdot \mathbf{u}}{\| \mathbf{u} \|}, \quad \tilde{u}_{ag} = \frac{\mathbf{u}_{ag} \cdot \mathbf{u}}{\| \mathbf{u} \|}.
+\label{eq:parallel}%
+\end{equation}
+The geostrophic velocities in the shallow water simulations can reach up to 2 m/s, are virtually never negative (i.e. against the flow) and have a mean of about 0.7 m/s (Fig. \ref{fig:geo}a). This behaviour is well simulated with 16bit number formats, although posits increase the strength of geostrophic velocities slightly. Ageostrophic velocity components are found to equally increase and decrease the flow speeds, but rarely exceed $\pm$0.1m/s and are therefore comparably small as expected in geostrophically balanced turbulence. Ageostrophic velocities can be seen as a measure of the physical instabilities in the flow field and their variance is indeed increased when simulated with 16bit number formats. Float16 shows clearly fewer ageostrophic velocities around 0, pointing towards an increased number of simulated instabilities. Posits have an even further increased number of ageostrophic velocities, and especially Posit(16,1) increases the variance of those by more than factor of two. It is unclear where in the model integration rounding errors of 16bit arithmetic trigger instabilities that lead to the observed increase in ageostrophy. We conclude that although the geostrophic balance in the simulations is maintained, rounding errors lead, likely due to an increase in ageostrophy, to a higher variability in the flow field. As the tracer field simulated by Float16 includes recognizably more small scale variablity compared to posits, it follows that some of this variability is actually geostrophically balanced. 
 
 %\begin{figure}
 %\includegraphics[width=1\textwidth]{../plots/entropy.pdf}
@@ -497,6 +544,8 @@ Clearly the best forecast is obtained for posit arithmetic with 1 or 2 exponent 
 \caption{Histograms of the numeric values of the prognostic variables (a) zonal velocity $u$, (b) meridional velocity $v$, (c) sea surface height $\eta$, and the respective tendencies of (d) $u$, (e) $v$, and (f) $\eta$, simulated with different 16, 32 and 64bit number formats. Mean, 10th and 90th percentile are shown above the histograms in respective colors. Note the break on the x-axis.}
 \label{fig:tend}
 \end{figure}
+
+
 
 \subsection{Mixed precision arithmetic}
 \label{sec:mixed}

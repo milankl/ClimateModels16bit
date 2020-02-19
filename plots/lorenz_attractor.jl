@@ -14,6 +14,7 @@ XYZ_P16 = L63(Posit16,N=N,xyz=xyz_ini,Δt=Δt,s=1/10)
 XYZ_BF16 = L63(BFloat16,N=N,xyz=xyz_ini,Δt=Δt)
 
 # PLOT
+ioff()
 fig,axs = subplots(2,2,sharex=true,sharey=true)
 
 axs[1,1].plot(XYZ_F64[1,:],XYZ_F64[3,:],"k",lw=0.2)
@@ -41,3 +42,4 @@ axs[1,1].set_ylabel(L"$z$")
 
 tight_layout()
 savefig("plots/lorenz_attractor.png",dpi=300)
+close(fig)
