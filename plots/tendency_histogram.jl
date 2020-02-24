@@ -6,38 +6,38 @@ using StatsBase
 
 path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/tend/"
 
-# run_ids = [ "run0000",
-#             "run0001",
-#             "run0002",
-#             "run0003",
-#             "run0004",
-#             "run0005",
-#             "run0006"]
-#
-# labels = [  "Float64",
-#             "Float32",
-#             "BFloat16/Float32",
-#             "Float16/Float32",
-#             "Float16",
-#             "Posit(16,1)",
-#             "Posit(16,2)"]
-#
-# colours = [ "C0",
-#             "#0000A0",
-#             "grey",
-#             "C1",
-#             "k",
-#             "#50C070",
-#             "#900000"]
-#
-# nruns = length(run_ids)
-#
-# bins = cat(dims=1,[0],10.0.^(-12:0.05:1))
-# nbins = length(bins)-1
-#
-# vars = ["u","v","eta","du","dv","deta"]
-# nvars = 6       # 3 vars + 3 tendencies
-#
+run_ids = [ "run0000",
+            "run0001",
+            "run0002",
+            "run0003",
+            "run0004",
+            "run0005",
+            "run0006"]
+
+labels = [  "Float64",
+            "Float32",
+            "BFloat16/Float32",
+            "Float16/Float32",
+            "Float16",
+            "Posit(16,1)",
+            "Posit(16,2)"]
+
+colours = [ "C0",
+            "#0000A0",
+            "grey",
+            "C1",
+            "k",
+            "#50C070",
+            "#900000"]
+
+nruns = length(run_ids)
+
+bins = cat(dims=1,[0],10.0.^(-12:0.05:1))
+nbins = length(bins)-1
+
+vars = ["u","v","eta","du","dv","deta"]
+nvars = 6       # 3 vars + 3 tendencies
+
 # H = Array{Float64,3}(undef,nruns,nvars,nbins)
 # M = Array{Float64,3}(undef,nruns,nvars,3)       # mean and two percentiles
 # p = 10
@@ -83,7 +83,9 @@ detaP16 = (etaP16[:,:,tstep+1]-etaP16[:,:,tstep-1])/dt
 
 ## PLOT
 ioff()
-fig,axs = subplots(2,3,figsize=(9,5))
+fig,axs = subplots(2,3,figsize=(10,5))
+tight_layout(rect=[0.01,0.03,0.94,0.97])
+subplots_adjust(wspace=0.1,hspace=0.2)
 
 zp = [1,2,3,4,5,6,7]
 z = [4,5,7,6,1,3,2]
@@ -117,8 +119,18 @@ for (a,k) in enumerate([1,3])
     #axs[2,k].text(0.038,-0.016,"-",transform=axs[2,k].transAxes,color="w",fontweight="bold",fontsize=9)
 end
 
-axs[1,3].pcolormesh(detaF64',cmap="gray",vmin=-1e-4,vmax=1e-4)
+ax13pos = axs[1,3].get_position()
+ax23pos = axs[2,3].get_position()
+cax = fig.add_axes([ax13pos.x1+0.01,ax23pos.y0,0.01,ax13pos.y1-ax23pos.y0])
+
+phand = axs[1,3].pcolormesh(detaF64',cmap="gray",vmin=-1e-4,vmax=1e-4)
 axs[2,3].pcolormesh(detaP16',cmap="gray",vmin=-1e-4,vmax=1e-4)
+
+cb = colorbar(phand,cax=cax,orientation="vertical")
+
+cb.set_ticks([-1e-4,-5e-5,0,5e-5,1e-4])
+cb.set_ticklabels([L"$-10^{-4}$",L"-5$\cdot 10 ^{-5}$","0",L"5$\cdot 10 ^{-5}$",L"$10^{-4}$"])
+cb.set_label("[m]",labelpad=-20)
 
 a = 1.4
 alp=0.7
@@ -152,6 +164,9 @@ for i in 1:2
     end
 end
 
+axs[1,1].set_xticks([])
+axs[1,2].set_xticks([])
+
 axs[1,3].set_xticks([])
 axs[2,3].set_xticks([])
 
@@ -169,11 +184,11 @@ axs[1,1].legend(loc=2,fontsize=8)
 
 axs[1,1].set_title(L"Zonal velocity $u$")
 axs[1,2].set_title(L"Sea surface height $\eta$")
-axs[1,3].set_title(L"Float64, $\partial\eta/\partial t$ snapshot", loc="left")
+axs[1,3].set_title(L"Float64, $\partial\eta$ snapshot", loc="left")
 
 axs[2,1].set_title(L"Tendency of $u$")
 axs[2,2].set_title(L"Tendency of $\eta$")
-axs[2,3].set_title(L"Posit(16,1), $\partial\eta/\partial t$ snapshot", loc="left")
+axs[2,3].set_title(L"Posit(16,1), $\partial\eta$ snapshot", loc="left")
 
 axs[1,1].set_title("a",loc="right",fontweight="bold")
 axs[1,2].set_title("b",loc="right",fontweight="bold")
@@ -183,14 +198,13 @@ axs[2,1].set_title("d",loc="right",fontweight="bold")
 axs[2,2].set_title("e",loc="right",fontweight="bold")
 axs[2,3].set_title("f",loc="right",fontweight="bold")
 
-axs[2,1].set_xlabel("value")
-axs[2,2].set_xlabel("value")
+axs[2,1].set_xlabel("[m/s]")
+axs[2,2].set_xlabel("[m]")
 #axs[2,3].set_xlabel("value")
 
 axs[1,1].set_ylabel("N")
 axs[2,1].set_ylabel("N")
 
-tight_layout(w_pad=0.3)
 savefig("plots/tendency_hist.png",dpi=300)
 savefig("plots/tendency_hist.pdf")
 close(fig)
