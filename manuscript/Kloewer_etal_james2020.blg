@@ -12,6 +12,8 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib.bib
+Warning--entry type for "Kloewer2019" isn't style-file defined
+--line 497 of file bibliography.bib.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No journal in Bezanson2014
 Warning--No journal in Chaurasiya2018
@@ -23,43 +25,43 @@ ptr=1, stack=
 while executing---line 5079 of file apacite.bst
 You've used 33 entries,
             6951 wiz_defined-function locations,
-            1530 strings with 17408 characters,
-and the built_in function-call counts, 61956 in all, are:
-= -- 7544
-> -- 512
-< -- 2926
-+ -- 3017
+            1529 strings with 17327 characters,
+and the built_in function-call counts, 62113 in all, are:
+= -- 7611
+> -- 513
+< -- 2901
++ -- 2997
 - -- 68
-* -- 4080
-:= -- 11247
-add.period$ -- 132
+* -- 4060
+:= -- 11186
+add.period$ -- 133
 call.type$ -- 33
 change.case$ -- 563
 chr.to.int$ -- 0
 cite$ -- 70
-duplicate$ -- 1731
-empty$ -- 2533
-format.name$ -- 869
-if$ -- 11770
+duplicate$ -- 1738
+empty$ -- 2540
+format.name$ -- 879
+if$ -- 11841
 int.to.chr$ -- 0
 int.to.str$ -- 99
 missing$ -- 0
-newline$ -- 882
+newline$ -- 887
 num.names$ -- 264
-pop$ -- 998
+pop$ -- 961
 preamble$ -- 1
 purify$ -- 134
 quote$ -- 0
-skip$ -- 4010
+skip$ -- 4114
 stack$ -- 0
-substring$ -- 3297
-swap$ -- 1021
-text.length$ -- 81
+substring$ -- 3276
+swap$ -- 1013
+text.length$ -- 76
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 2704
+type$ -- 2776
 warning$ -- 4
 while$ -- 297
 width$ -- 0
-write$ -- 1068
+write$ -- 1077
 (There was 1 error message)

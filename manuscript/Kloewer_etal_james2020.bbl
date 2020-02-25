@@ -553,6 +553,37 @@ Jeffress, S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Kl{\"{o}}wer%
+\ \BBA {} Giordano%
+}{%
+Kl{\"{o}}wer%
+\ \BBA {} Giordano%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+Kloewer2019}
+\APACinsertmetastar {%
+Kloewer2019}%
+\begin{APACrefauthors}%
+Kl{\"{o}}wer, M.%
+\BCBT {}\ \BBA {} Giordano, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+\APACrefbtitle {{SoftPosit.jl - A posit arithmetic emulator}.} {{SoftPosit.jl -
+  A posit arithmetic emulator}.}
+\newblock
+\APACaddressPublisher{}{Zenodo}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.3590291}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.5281/zenodo.3590291} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Kwasniok%
 }{%
 Kwasniok%
@@ -749,35 +780,6 @@ Russell, F\BPBI P.%
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.cpc.2017.08.011} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Sadourny%
-}{%
-Sadourny%
-}{%
-{\protect \APACyear {1975}}%
-}]{%
-Sadourny1975}
-\APACinsertmetastar {%
-Sadourny1975}%
-\begin{APACrefauthors}%
-Sadourny, R.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1975}{}{}.
-\newblock
-\APACrefbtitle {{The Dynamics of Finite-Difference Models of the Shallow-Water
-  Equations}} {{The Dynamics of Finite-Difference Models of the Shallow-Water
-  Equations}}\ (\BVOL~32)\ (\BNUM~4).
-\newblock
-\begin{APACrefURL}
-  \url{http://dx.doi.org/10.1175/1520-0469(1975)032{\%}3C0680:TDOFDM{\%}3E2.0.CO{\%}5Cn2}
-  \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{10.1175/1520-0469(1975)032<0680:TDOFDM>2.0.CO;2}
-  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
