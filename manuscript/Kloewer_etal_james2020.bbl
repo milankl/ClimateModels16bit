@@ -18,16 +18,20 @@ Arakawa, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{1990}{}{}.
+\APACrefYearMonthDay{1990}{{\APACmonth{10}}}{}.
 \newblock
-\APACrefbtitle {{Energy Conserving and Potential-Enstrophy Dissipating Schemes
-  for the Shallow Water Equations}} {{Energy Conserving and Potential-Enstrophy
-  Dissipating Schemes for the Shallow Water Equations}}\ (\BVOL~118)\
-  (\BNUM~10).
+{\BBOQ}\APACrefatitle {Energy {Conserving} and {Potential}-{Enstrophy}
+  {Dissipating} {Schemes} for the {Shallow} {Water} {Equations}} {Energy
+  {Conserving} and {Potential}-{Enstrophy} {Dissipating} {Schemes} for the
+  {Shallow} {Water} {Equations}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monthly Weather Review}{118}{10}{1960--1969}.
 \newblock
 \begin{APACrefURL}
-  \url{http://dx.doi.org/10.1175/1520-0493(1990)118{\%}3C1960:ECAPED{\%}3E2.0.CO{\%}5Cn2}
+  [{2020-02-25}]\url{https://journals.ametsoc.org/doi/10.1175/1520-0493%281990%29118%3C1960%3AECAPED%3E2.0.CO%3B2}
   \end{APACrefURL}
+\newblock
+\APACrefnote{Publisher: American Meteorological Society}
 \newblock
 \begin{APACrefDOI} \doi{10.1175/1520-0493(1990)118<1960:ECAPED>2.0.CO;2}
   \end{APACrefDOI}
@@ -51,13 +55,25 @@ Arakawa, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{1977}{}{}.
+\APACrefYearMonthDay{1977}{{\APACmonth{01}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Computational design of the basic dynamical processes
-  of the UCLA general circulation model}} {{Computational design of the basic
-  dynamical processes of the UCLA general circulation model}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Computational {Design} of the {Basic} {Dynamical}
+  {Processes} of the {UCLA} {General} {Circulation} {Model}} {Computational
+  {Design} of the {Basic} {Dynamical} {Processes} of the {UCLA} {General}
+  {Circulation} {Model}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Methods of Computational Physics}{17}{}{173--265}.
+\BIn{} J.~Chang\ (\BED), \APACrefbtitle {Methods in {Computational} {Physics}:
+  {Advances} in {Research} and {Applications}} {Methods in {Computational}
+  {Physics}: {Advances} in {Research} and {Applications}}\ (\BVOL~17, \BPGS\
+  173--265).
+\newblock
+\APACaddressPublisher{}{Elsevier}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-25}]\url{http://www.sciencedirect.com/science/article/pii/B9780124608177500094}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/B978-0-12-460817-7.50009-4} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -78,13 +94,18 @@ Arbic, B\BPBI K.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2008}{}{}.
+\APACrefYearMonthDay{2008}{{\APACmonth{01}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{On Quadratic Bottom Drag, Geostrophic Turbulence, and
-  Oceanic Mesoscale Eddies}} {{On Quadratic Bottom Drag, Geostrophic
-  Turbulence, and Oceanic Mesoscale Eddies}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {On {Quadratic} {Bottom} {Drag}, {Geostrophic}
+  {Turbulence}, and {Oceanic} {Mesoscale} {Eddies}} {On {Quadratic} {Bottom}
+  {Drag}, {Geostrophic} {Turbulence}, and {Oceanic} {Mesoscale}
+  {Eddies}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Physical Oceanography}{38}{1}{84--103}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-25}]\url{http://journals.ametsoc.org/doi/10.1175/2007JPO3653.1}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1175/2007JPO3653.1} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -97,11 +118,11 @@ Bezanson%
 }{%
 Bezanson%
 \ \protect \BOthers {.}}{%
-{\protect \APACyear {2014}}%
+{\protect \APACyear {2017}}%
 }]{%
-Bezanson2014}
+Bezanson2017}
 \APACinsertmetastar {%
-Bezanson2014}%
+Bezanson2017}%
 \begin{APACrefauthors}%
 Bezanson, J.%
 , Edelman, A.%
@@ -110,16 +131,58 @@ Bezanson, J.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2014}{}{}.
+\APACrefYearMonthDay{2017}{{\APACmonth{01}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Julia: A Fresh Approach to Numerical Computing}}
-  {{Julia: A Fresh Approach to Numerical Computing}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Julia: {A} {Fresh} {Approach} to {Numerical}
+  {Computing}} {Julia: {A} {Fresh} {Approach} to {Numerical}
+  {Computing}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{}{59}{1}{65--98}.
+\APACjournalVolNumPages{SIAM Review}{59}{1}{65--98}.
 \newblock
-\begin{APACrefURL} \url{http://arxiv.org/abs/1411.1607} \end{APACrefURL}
+\begin{APACrefURL}
+  [{2020-02-25}]\url{https://epubs.siam.org/doi/10.1137/141000671}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Publisher: Society for Industrial and Applied Mathematics}
 \newblock
 \begin{APACrefDOI} \doi{10.1137/141000671} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Burgess%
+, Milanovic%
+, Stephens%
+, Monachopoulos%
+\BCBL {}\ \BBA {} Mansell%
+}{%
+Burgess%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+Burgess2019}
+\APACinsertmetastar {%
+Burgess2019}%
+\begin{APACrefauthors}%
+Burgess, N.%
+, Milanovic, J.%
+, Stephens, N.%
+, Monachopoulos, K.%
+\BCBL {}\ \BBA {} Mansell, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{{\APACmonth{06}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Bfloat16 {Processing} for {Neural} {Networks}} {Bfloat16
+  {Processing} for {Neural} {Networks}}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2019 {IEEE} 26th {Symposium} on {Computer} {Arithmetic}
+  ({ARITH})} {2019 {IEEE} 26th {Symposium} on {Computer} {Arithmetic}
+  ({ARITH})}\ (\BPGS\ 88--91).
+\newblock
+\APACrefnote{ISSN: 1063-6889}
+\newblock
+\begin{APACrefDOI} \doi{10.1109/ARITH.2019.00022} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -127,23 +190,23 @@ Butcher%
 }{%
 Butcher%
 }{%
-{\protect \APACyear {2008}}%
+{\protect \APACyear {2016}}%
 }]{%
-Butcher2008}
+Butcher2016}
 \APACinsertmetastar {%
-Butcher2008}%
+Butcher2016}%
 \begin{APACrefauthors}%
 Butcher, J\BPBI C.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYear{2008}.
+\APACrefYear{2016}.
 \newblock
-\APACrefbtitle {{Numerical Methods for Ordinary Differential Equations}}
-  {{Numerical Methods for Ordinary Differential Equations}}\
-  (\PrintOrdinal{2nd}\ \BEd).
+\APACrefbtitle {Numerical {Methods} for {Ordinary} {Differential} {Equations}}
+  {Numerical {Methods} for {Ordinary} {Differential} {Equations}}\
+  (\PrintOrdinal{3 edition}\ \BEd).
 \newblock
-\APACaddressPublisher{}{Wiley}.
+\APACaddressPublisher{Chichester, West Sussex, United Kingdom}{Wiley}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -162,28 +225,37 @@ Chaurasiya, R.%
 , Shrestha, R.%
 , Neudorfer, J.%
 , Nambiar, S.%
-\BCBL {}\ \BBA {} Niyogi, K.%
+, Niyogi, K.%
+\BDBL {}Leupers, R.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2018}{}{}.
+\APACrefYearMonthDay{2018}{{\APACmonth{10}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Parameterized Posit Arithmetic Hardware Generator}}
-  {{Parameterized Posit Arithmetic Hardware Generator}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Parameterized {Posit} {Arithmetic} {Hardware}
+  {Generator}} {Parameterized {Posit} {Arithmetic} {Hardware}
+  {Generator}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{}{}{}{9}.
+\BIn{} \APACrefbtitle {2018 {IEEE} 36th {International} {Conference} on
+  {Computer} {Design} ({ICCD})} {2018 {IEEE} 36th {International} {Conference}
+  on {Computer} {Design} ({ICCD})}\ (\BPGS\ 334--341).
 \newblock
-\begin{APACrefURL} \url{https://posithub.org/docs/iccd_submission_v1.pdf}
+\APACaddressPublisher{Orlando, FL, USA}{IEEE}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-25}]\url{https://ieeexplore.ieee.org/document/8615707/}
   \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1109/ICCD.2018.00057} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
 Chen%
-\ \BBA {} Hofstee%
+, Al-Ars%
+\BCBL {}\ \BBA {} Hofstee%
 }{%
 Chen%
-\ \BBA {} Hofstee%
-}{%
+\ \protect \BOthers {.}}{%
 {\protect \APACyear {2018}}%
 }]{%
 Chen2018}
@@ -191,27 +263,36 @@ Chen2018}
 Chen2018}%
 \begin{APACrefauthors}%
 Chen, J.%
-\BCBT {}\ \BBA {} Hofstee, H\BPBI P.%
+, Al-Ars, Z.%
+\BCBL {}\ \BBA {} Hofstee, H\BPBI P.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
 \APACrefYearMonthDay{2018}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{A Matrix-Multiply Unit for Posits in Reconfigurable
-  Logic Leveraging ( Open ) CAPI}} {{A Matrix-Multiply Unit for Posits in
-  Reconfigurable Logic Leveraging ( Open ) CAPI}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {A matrix-multiply unit for posits in reconfigurable
+  logic leveraging (open){CAPI}} {A matrix-multiply unit for posits in
+  reconfigurable logic leveraging (open){CAPI}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{}{}{}{1--5}.
+\BIn{} \APACrefbtitle {Proceedings of the {Conference} for {Next} {Generation}
+  {Arithmetic} on - {CoNGA} '18} {Proceedings of the {Conference} for {Next}
+  {Generation} {Arithmetic} on - {CoNGA} '18}\ (\BPGS\ 1--5).
+\newblock
+\APACaddressPublisher{Singapore, Singapore}{ACM Press}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-25}]\url{http://dl.acm.org/citation.cfm?doid=3190339.3190340}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1145/3190339.3190340} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
 Dawson%
-\ \BBA {} D{\"{u}}ben%
+\ \BBA {} Düben%
 }{%
 Dawson%
-\ \BBA {} D{\"{u}}ben%
+\ \BBA {} Düben%
 }{%
 {\protect \APACyear {2017}}%
 }]{%
@@ -220,25 +301,29 @@ Dawson2017}
 Dawson2017}%
 \begin{APACrefauthors}%
 Dawson, A.%
-\BCBT {}\ \BBA {} D{\"{u}}ben, P\BPBI D.%
+\BCBT {}\ \BBA {} Düben, P\BPBI D.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2017}{}{}.
+\APACrefYearMonthDay{2017}{{\APACmonth{06}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Rpe v5: An emulator for reduced floating-point
-  precision in large numerical simulations}} {{Rpe v5: An emulator for reduced
-  floating-point precision in large numerical simulations}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {rpe v5: an emulator for reduced floating-point precision
+  in large numerical simulations} {rpe v5: an emulator for reduced
+  floating-point precision in large numerical simulations}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Geoscientific Model Development}{10}{6}{2221--2230}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-25}]\url{https://www.geosci-model-dev.net/10/2221/2017/}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.5194/gmd-10-2221-2017} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-D{\"{u}}ben%
+Düben%
 }{%
-D{\"{u}}ben%
+Düben%
 }{%
 {\protect \APACyear {2018}}%
 }]{%
@@ -246,54 +331,57 @@ Duben2018}
 \APACinsertmetastar {%
 Duben2018}%
 \begin{APACrefauthors}%
-D{\"{u}}ben, P\BPBI D.%
+Düben, P\BPBI D.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2018}{}{}.
+\APACrefYearMonthDay{2018}{{\APACmonth{11}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{A new number format for ensemble simulations}} {{A new
-  number format for ensemble simulations}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {A {New} {Number} {Format} for {Ensemble} {Simulations}}
+  {A {New} {Number} {Format} for {Ensemble} {Simulations}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of Advances in Modeling Earth Systems}{}{}{}.
+\APACjournalVolNumPages{Journal of Advances in Modeling Earth
+  Systems}{10}{11}{2983--2991}.
 \newblock
-\begin{APACrefURL} \url{http://doi.wiley.com/10.1029/2018MS001420}
+\begin{APACrefURL}
+  [{2020-02-25}]\url{https://onlinelibrary.wiley.com/doi/abs/10.1029/2018MS001420}
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1029/2018MS001420} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-D{\"{u}}ben%
-\ \BBA {} Palmer%
+Düben%
+, McNamara%
+\BCBL {}\ \BBA {} Palmer%
 }{%
-D{\"{u}}ben%
-\ \BBA {} Palmer%
-}{%
+Düben%
+\ \protect \BOthers {.}}{%
 {\protect \APACyear {2014}}%
 }]{%
 Duben2014}
 \APACinsertmetastar {%
 Duben2014}%
 \begin{APACrefauthors}%
-D{\"{u}}ben, P\BPBI D.%
-\BCBT {}\ \BBA {} Palmer, T\BPBI N.%
+Düben, P\BPBI D.%
+, McNamara, H.%
+\BCBL {}\ \BBA {} Palmer, T.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2014}{}{}.
+\APACrefYearMonthDay{2014}{{\APACmonth{08}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Benchmark Tests for Numerical Weather Forecasts on
-  Inexact Hardware}} {{Benchmark Tests for Numerical Weather Forecasts on
-  Inexact Hardware}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {The use of imprecise processing to improve accuracy in
+  weather \& climate prediction} {The use of imprecise processing to improve
+  accuracy in weather \& climate prediction}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Monthly Weather Review}{142}{10}{3809--3829}.
+\APACjournalVolNumPages{Journal of Computational Physics}{271}{}{2--18}.
 \newblock
 \begin{APACrefURL}
-  \url{http://journals.ametsoc.org/doi/abs/10.1175/MWR-D-14-00110.1}
+  [{2020-02-25}]\url{https://linkinghub.elsevier.com/retrieve/pii/S0021999113007183}
   \end{APACrefURL}
 \newblock
-\begin{APACrefDOI} \doi{10.1175/MWR-D-14-00110.1} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{10.1016/j.jcp.2013.10.042} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -313,9 +401,12 @@ Gill, A\BPBI E.%
 \newblock
 \APACrefYear{1982}.
 \newblock
-\APACrefbtitle {{Atmosphere-Ocean Dynamics}} {{Atmosphere-Ocean Dynamics}}.
+\APACrefbtitle {Atmosphere-ocean dynamics} {Atmosphere-ocean dynamics}\
+  (\BNUM~30).
 \newblock
-\APACaddressPublisher{}{Academic Press}.
+\APACaddressPublisher{San Diego}{Acad. Press}.
+\newblock
+\APACrefnote{OCLC: 249294465}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -332,48 +423,23 @@ Glaser2017}%
 Glaser, F.%
 , Mach, S.%
 , Rahimi, A.%
-, G{\"{u}}rkaynak, F\BPBI K.%
+, Gürkaynak, F\BPBI K.%
 , Huang, Q.%
 \BCBL {}\ \BBA {} Benini, L.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2017}{}{}.
+\APACrefYearMonthDay{2017}{{\APACmonth{12}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{An 826 MOPS, 210 uW/MHz Unum ALU in 65 nm}} {{An 826
-  MOPS, 210 uW/MHz Unum ALU in 65 nm}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {An 826 {MOPS}, 210 {uW}/{MHz} {Unum} {ALU} in 65 nm} {An
+  826 {MOPS}, 210 {uW}/{MHz} {Unum} {ALU} in 65 nm}.{\BBCQ}
 \newblock
-\begin{APACrefURL} \url{http://arxiv.org/abs/1712.01021} \end{APACrefURL}
+\APACjournalVolNumPages{arXiv:1712.01021 [cs]}{}{}{}.
 \newblock
-\begin{APACrefDOI} \doi{10.1109/ISCAS.2018.8351546} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Grassberger%
-\ \BBA {} Procaccia%
-}{%
-Grassberger%
-\ \BBA {} Procaccia%
-}{%
-{\protect \APACyear {1983}}%
-}]{%
-Grassberger1983}
-\APACinsertmetastar {%
-Grassberger1983}%
-\begin{APACrefauthors}%
-Grassberger, P.%
-\BCBT {}\ \BBA {} Procaccia, I.%
-\end{APACrefauthors}%
-\unskip\
+\begin{APACrefURL} [{2020-02-25}]\url{http://arxiv.org/abs/1712.01021}
+  \end{APACrefURL}
 \newblock
-\APACrefYearMonthDay{1983}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{Measuring the strangeness of strange attractors}}
-  {{Measuring the strangeness of strange attractors}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Physica D: Nonlinear Phenomena}{9}{1-2}{189--208}.
-\newblock
-\begin{APACrefDOI} \doi{10.1016/0167-2789(83)90298-1} \end{APACrefDOI}
+\APACrefnote{arXiv: 1712.01021}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -390,49 +456,48 @@ Griffies2000}
 Griffies2000}%
 \begin{APACrefauthors}%
 Griffies, S\BPBI M.%
-\BCBT {}\ \BBA {} Hallberg, R.%
+\BCBT {}\ \BBA {} Hallberg, R\BPBI W.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
 \APACrefYearMonthDay{2000}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Biharmonic Friction with a Smagorinsky-Like Viscosity
-  for Use in Large-Scale Eddy-Permitting Ocean Models}} {{Biharmonic Friction
-  with a Smagorinsky-Like Viscosity for Use in Large-Scale Eddy-Permitting
-  Ocean Models}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Biharmonic {Friction} with a {Smagorinsky}-{Like}
+  {Viscosity} for {Use} in {Large}-{Scale} {Eddy}-{Permitting} {Ocean}
+  {Models}} {Biharmonic {Friction} with a {Smagorinsky}-{Like} {Viscosity} for
+  {Use} in {Large}-{Scale} {Eddy}-{Permitting} {Ocean} {Models}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Monthly Weather Review}{128}{8}{2935--2946}.
-\newblock
-\begin{APACrefDOI} \doi{10.1175/1520-0493(2000)128<2935} \end{APACrefDOI}
+\APACjournalVolNumPages{MONTHLY WEATHER REVIEW}{128}{}{12}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Gustafson%
+J.~Gustafson%
 }{%
-Gustafson%
+J.~Gustafson%
 }{%
 {\protect \APACyear {2017}}%
 }]{%
-Gustafson2017b}
+Gustafson2017a}
 \APACinsertmetastar {%
-Gustafson2017b}%
+Gustafson2017a}%
 \begin{APACrefauthors}%
-Gustafson, J\BPBI L.%
+Gustafson, J.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
 \APACrefYearMonthDay{2017}{}{}.
 \newblock
-\APACrefbtitle {{Posit Arithmetic}.} {{Posit Arithmetic}.}
+\APACrefbtitle {Posit {Arithmetic}.} {Posit {Arithmetic}.}
 \newblock
-\begin{APACrefURL} \url{https://posithub.org/docs/Posits4.pdf} \end{APACrefURL}
+\begin{APACrefURL} [{2020-02-26}]\url{https://posithub.org/docs/Posits4.pdf}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Gustafson%
+J\BPBI L.~Gustafson%
 \ \BBA {} Yonemoto%
 }{%
-Gustafson%
+J\BPBI L.~Gustafson%
 \ \BBA {} Yonemoto%
 }{%
 {\protect \APACyear {2017}}%
@@ -448,17 +513,11 @@ Gustafson, J\BPBI L.%
 \newblock
 \APACrefYearMonthDay{2017}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Beating Floating Point at its Own Game: Posit
-  Arithmetic}} {{Beating Floating Point at its Own Game: Posit
-  Arithmetic}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Beating {Floating} {Point} at its {Own} {Game}: {Posit}
+  {Arithmetic}} {Beating {Floating} {Point} at its {Own} {Game}: {Posit}
+  {Arithmetic}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Supercomputing Frontiers and
-  Innovations}{4}{2}{71--86}.
-\newblock
-\begin{APACrefURL} \url{http://superfri.org/superfri/article/view/137}
-  \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{10.14529/jsfi170206} \end{APACrefDOI}
+\APACjournalVolNumPages{Supercomputing Frontiers and Innovations}{4}{2}{16}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -473,7 +532,7 @@ Hatfield2018}
 Hatfield2018}%
 \begin{APACrefauthors}%
 Hatfield, S.%
-, D{\"{u}}ben, P.%
+, Düben, P.%
 , Chantry, M.%
 , Kondo, K.%
 , Miyoshi, T.%
@@ -481,46 +540,26 @@ Hatfield, S.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2018}{}{}.
+\APACrefYearMonthDay{2018}{{\APACmonth{09}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Choosing the Optimal Numerical Precision for Data
-  Assimilation in the Presence of Model Error}} {{Choosing the Optimal
-  Numerical Precision for Data Assimilation in the Presence of Model
-  Error}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Choosing the {Optimal} {Numerical} {Precision} for
+  {Data} {Assimilation} in the {Presence} of {Model} {Error}} {Choosing the
+  {Optimal} {Numerical} {Precision} for {Data} {Assimilation} in the {Presence}
+  of {Model} {Error}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of Advances in Modeling Earth Systems}{}{}{}.
+\APACjournalVolNumPages{Journal of Advances in Modeling Earth
+  Systems}{10}{9}{2177--2191}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-25}]\url{https://onlinelibrary.wiley.com/doi/abs/10.1029/2018MS001341}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1029/2018MS001341} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-IEEE%
-}{%
-IEEE%
-}{%
-{\protect \APACyear {2008}}%
-}]{%
-IEEE}
-\APACinsertmetastar {%
-IEEE}%
-\begin{APACrefauthors}%
-IEEE.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2008}{aug}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{IEEE Standard for Floating-Point Arithmetic}} {{IEEE
-  Standard for Floating-Point Arithmetic}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{IEEE Std 754-2008}{}{}{1--70}.
-\newblock
-\begin{APACrefDOI} \doi{10.1109/IEEESTD.2008.4610935} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Jeffress%
-, D{\"{u}}ben%
+, Düben%
 \BCBL {}\ \BBA {} Palmer%
 }{%
 Jeffress%
@@ -532,52 +571,199 @@ Jeffress2017}
 Jeffress2017}%
 \begin{APACrefauthors}%
 Jeffress, S.%
-, D{\"{u}}ben, P.%
+, Düben, P.%
 \BCBL {}\ \BBA {} Palmer, T.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2017}{}{}.
+\APACrefYearMonthDay{2017}{{\APACmonth{09}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Bitwise efficiency in chaotic models}} {{Bitwise
-  efficiency in chaotic models}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Bitwise efficiency in chaotic models} {Bitwise
+  efficiency in chaotic models}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Proceedings of the Royal Society A: Mathematical,
-  Physical and Engineering Science}{473}{2205}{20170144}.
+  Physical and Engineering Sciences}{473}{2205}{20170144}.
 \newblock
 \begin{APACrefURL}
-  \url{http://rspa.royalsocietypublishing.org/lookup/doi/10.1098/rspa.2017.0144}
+  [{2020-02-25}]\url{https://royalsocietypublishing.org/doi/10.1098/rspa.2017.0144}
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1098/rspa.2017.0144} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Kl{\"{o}}wer%
-\ \BBA {} Giordano%
+N.~Jouppi%
+, Young%
+, Patil%
+\BCBL {}\ \BBA {} Patterson%
 }{%
-Kl{\"{o}}wer%
-\ \BBA {} Giordano%
-}{%
+N.~Jouppi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+Jouppi2018}
+\APACinsertmetastar {%
+Jouppi2018}%
+\begin{APACrefauthors}%
+Jouppi, N.%
+, Young, C.%
+, Patil, N.%
+\BCBL {}\ \BBA {} Patterson, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{{\APACmonth{05}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Motivation for and {Evaluation} of the {First} {Tensor}
+  {Processing} {Unit}} {Motivation for and {Evaluation} of the {First} {Tensor}
+  {Processing} {Unit}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Micro}{38}{3}{10--19}.
+\newblock
+\APACrefnote{Conference Name: IEEE Micro}
+\newblock
+\begin{APACrefDOI} \doi{10.1109/MM.2018.032271057} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+N\BPBI P.~Jouppi%
+\ \protect \BOthers {.}}{%
+N\BPBI P.~Jouppi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+Jouppi2017}
+\APACinsertmetastar {%
+Jouppi2017}%
+\begin{APACrefauthors}%
+Jouppi, N\BPBI P.%
+, Young, C.%
+, Patil, N.%
+, Patterson, D.%
+, Agrawal, G.%
+, Bajwa, R.%
+\BDBL {}Yoon, D\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{{\APACmonth{06}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {In-{Datacenter} {Performance} {Analysis} of a {Tensor}
+  {Processing} {Unit}} {In-{Datacenter} {Performance} {Analysis} of a {Tensor}
+  {Processing} {Unit}}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 44th {Annual} {International}
+  {Symposium} on {Computer} {Architecture}} {Proceedings of the 44th {Annual}
+  {International} {Symposium} on {Computer} {Architecture}}\ (\BPGS\ 1--12).
+\newblock
+\APACaddressPublisher{Toronto, ON, Canada}{Association for Computing
+  Machinery}.
+\newblock
+\begin{APACrefURL} [{2020-02-26}]\url{https://doi.org/10.1145/3079856.3080246}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1145/3079856.3080246} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kalamkar%
+\ \protect \BOthers {.}}{%
+Kalamkar%
+\ \protect \BOthers {.}}{%
 {\protect \APACyear {2019}}%
 }]{%
-Kloewer2019}
+Kalamkar2019}
 \APACinsertmetastar {%
-Kloewer2019}%
+Kalamkar2019}%
 \begin{APACrefauthors}%
-Kl{\"{o}}wer, M.%
-\BCBT {}\ \BBA {} Giordano, M.%
+Kalamkar, D.%
+, Mudigere, D.%
+, Mellempudi, N.%
+, Das, D.%
+, Banerjee, K.%
+, Avancha, S.%
+\BDBL {}Dubey, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{{\APACmonth{06}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A {Study} of {BFLOAT16} for {Deep} {Learning}
+  {Training}} {A {Study} of {BFLOAT16} for {Deep} {Learning}
+  {Training}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv:1905.12322 [cs, stat]}{}{}{}.
+\newblock
+\begin{APACrefURL} [{2020-02-26}]\url{http://arxiv.org/abs/1905.12322}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{arXiv: 1905.12322}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Klöwer%
+, Düben%
+\BCBL {}\ \BBA {} Palmer%
+}{%
+Klöwer%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+Klower2019}
+\APACinsertmetastar {%
+Klower2019}%
+\begin{APACrefauthors}%
+Klöwer, M.%
+, Düben, P\BPBI D.%
+\BCBL {}\ \BBA {} Palmer, T\BPBI N.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
 \APACrefYearMonthDay{2019}{}{}.
 \newblock
-\APACrefbtitle {{SoftPosit.jl - A posit arithmetic emulator}.} {{SoftPosit.jl -
-  A posit arithmetic emulator}.}
+{\BBOQ}\APACrefatitle {Posits as an alternative to floats for weather and
+  climate models} {Posits as an alternative to floats for weather and climate
+  models}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the {Conference} for {Next} {Generation}
+  {Arithmetic} 2019 on - {CoNGA}'19} {Proceedings of the {Conference} for
+  {Next} {Generation} {Arithmetic} 2019 on - {CoNGA}'19}\ (\BPGS\ 1--8).
+\newblock
+\APACaddressPublisher{Singapore, Singapore}{ACM Press}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-25}]\url{http://dl.acm.org/citation.cfm?doid=3316279.3316281}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1145/3316279.3316281} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Klöwer%
+\ \BBA {} Giordano%
+}{%
+Klöwer%
+\ \BBA {} Giordano%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+Klower2019a}
+\APACinsertmetastar {%
+Klower2019a}%
+\begin{APACrefauthors}%
+Klöwer, M.%
+\BCBT {}\ \BBA {} Giordano, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{{\APACmonth{12}}}{}.
+\newblock
+\APACrefbtitle {{SoftPosit}.jl - {A} posit arithmetic emulator.}
+  {{SoftPosit}.jl - {A} posit arithmetic emulator.}
 \newblock
 \APACaddressPublisher{}{Zenodo}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.3590291}
+\begin{APACrefURL} [{2020-02-26}]\url{https://zenodo.org/record/3590291}
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.5281/zenodo.3590291} \end{APACrefDOI}
@@ -598,16 +784,53 @@ Kwasniok, F.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2014}{}{}.
+\APACrefYearMonthDay{2014}{{\APACmonth{06}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Enhanced regime predictability in atmospheric low-order
-  models due to stochastic forcing}} {{Enhanced regime predictability in
-  atmospheric low-order models due to stochastic forcing}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Enhanced regime predictability in atmospheric low-order
+  models due to stochastic forcing} {Enhanced regime predictability in
+  atmospheric low-order models due to stochastic forcing}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Philosophical Transactions of the Royal Society A:
-  Mathematical, Physical and Engineering Sciences}{372}{2018}{}.
+  Mathematical, Physical and Engineering Sciences}{372}{2018}{20130286}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-25}]\url{https://royalsocietypublishing.org/doi/10.1098/rsta.2013.0286}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1098/rsta.2013.0286} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Langroudi%
+, Carmichael%
+\BCBL {}\ \BBA {} Kudithipudi%
+}{%
+Langroudi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+Langroudi2019}
+\APACinsertmetastar {%
+Langroudi2019}%
+\begin{APACrefauthors}%
+Langroudi, H\BPBI F.%
+, Carmichael, Z.%
+\BCBL {}\ \BBA {} Kudithipudi, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{{\APACmonth{07}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep {Learning} {Training} on the {Edge} with
+  {Low}-{Precision} {Posits}} {Deep {Learning} {Training} on the {Edge} with
+  {Low}-{Precision} {Posits}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv:1907.13216 [cs, stat]}{}{}{}.
+\newblock
+\begin{APACrefURL} [{2020-02-26}]\url{http://arxiv.org/abs/1907.13216}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{arXiv: 1907.13216}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -625,40 +848,60 @@ Lorenz, E\BPBI N.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{1963}{}{}.
+\APACrefYearMonthDay{1963}{{\APACmonth{03}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Deterministic Nonperiodic Flow}} {{Deterministic
-  Nonperiodic Flow}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Deterministic {Nonperiodic} {Flow}} {Deterministic
+  {Nonperiodic} {Flow}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of the Atmospheric Sciences}{20}{}{130--141}.
+\APACjournalVolNumPages{Journal of the Atmospheric Sciences}{20}{2}{130--141}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-26}]\url{https://journals.ametsoc.org/doi/abs/10.1175/1520-0469(1963)020%3C0130:DNF%3E2.0.CO;2}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Publisher: American Meteorological Society}
 \newblock
 \begin{APACrefDOI} \doi{10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2}
   \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-McGuinness%
+Markidis%
+, Chien%
+, Laure%
+, Peng%
+\BCBL {}\ \BBA {} Vetter%
 }{%
-McGuinness%
-}{%
-{\protect \APACyear {1983}}%
+Markidis%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
 }]{%
-McGuinness1983}
+Markidis2018}
 \APACinsertmetastar {%
-McGuinness1983}%
+Markidis2018}%
 \begin{APACrefauthors}%
-McGuinness, M\BPBI J.%
+Markidis, S.%
+, Chien, S\BPBI W\BPBI D.%
+, Laure, E.%
+, Peng, I\BPBI B.%
+\BCBL {}\ \BBA {} Vetter, J\BPBI S.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{1983}{}{}.
+\APACrefYearMonthDay{2018}{{\APACmonth{05}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{The fractal dimension of the Lorenz attractor}} {{The
-  fractal dimension of the Lorenz attractor}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {{NVIDIA} {Tensor} {Core} {Programmability},
+  {Performance} {Precision}} {{NVIDIA} {Tensor} {Core} {Programmability},
+  {Performance} {Precision}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Physics Letters A}{99}{1}{5--9}.
+\BIn{} \APACrefbtitle {2018 {IEEE} {International} {Parallel} and {Distributed}
+  {Processing} {Symposium} {Workshops} ({IPDPSW})} {2018 {IEEE} {International}
+  {Parallel} and {Distributed} {Processing} {Symposium} {Workshops}
+  ({IPDPSW})}\ (\BPGS\ 522--531).
 \newblock
-\begin{APACrefDOI} \doi{10.1016/0375-9601(83)90052-X} \end{APACrefDOI}
+\APACrefnote{ISSN: null}
+\newblock
+\begin{APACrefDOI} \doi{10.1109/IPDPSW.2018.00091} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -676,12 +919,18 @@ Palmer, T.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2015}{}{}.
+\APACrefYearMonthDay{2015}{{\APACmonth{10}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Build imprecise supercomputers}} {{Build imprecise
-  supercomputers}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Modelling: {Build} imprecise supercomputers} {Modelling:
+  {Build} imprecise supercomputers}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Nature}{526}{}{2--3}.
+\APACjournalVolNumPages{Nature News}{526}{7571}{32}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-26}]\url{http://www.nature.com/news/modelling-build-imprecise-supercomputers-1.18437}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Section: Comment}
 \newblock
 \begin{APACrefDOI} \doi{10.1038/526032a} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -693,61 +942,33 @@ T\BPBI N.~Palmer%
 }{%
 {\protect \APACyear {2012}}%
 }]{%
-Palmer2012a}
+Palmer2012}
 \APACinsertmetastar {%
-Palmer2012a}%
+Palmer2012}%
 \begin{APACrefauthors}%
 Palmer, T\BPBI N.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2012}{}{}.
+\APACrefYearMonthDay{2012}{{\APACmonth{04}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Towards the probabilistic Earth-system simulator: A
-  vision for the future of climate and weather prediction}} {{Towards the
-  probabilistic Earth-system simulator: A vision for the future of climate and
-  weather prediction}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Towards the probabilistic {Earth}-system simulator: a
+  vision for the future of climate and weather prediction} {Towards the
+  probabilistic {Earth}-system simulator: a vision for the future of climate
+  and weather prediction}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Quarterly Journal of the Royal Meteorological
   Society}{138}{665}{841--861}.
+\newblock
+\begin{APACrefURL} [{2020-02-25}]\url{http://doi.wiley.com/10.1002/qj.1923}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1002/qj.1923} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-R{\"{u}}dis{\"{u}}hli%
-, Walser%
-\BCBL {}\ \BBA {} Fuhrer%
-}{%
-R{\"{u}}dis{\"{u}}hli%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2013}}%
-}]{%
-Rudisuhli2013}
-\APACinsertmetastar {%
-Rudisuhli2013}%
-\begin{APACrefauthors}%
-R{\"{u}}dis{\"{u}}hli, S.%
-, Walser, A.%
-\BCBL {}\ \BBA {} Fuhrer, O.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2013}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{COSMO in single precision}} {{COSMO in single
-  precision}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{COSMO Newsletter}{}{}{}.
-\newblock
-\begin{APACrefURL}
-  \url{http://www.cosmo-model.org/content/model/documentation/newsLetters/newsLetter14/cnl14_09.pdf}
-  \end{APACrefURL}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Russell%
-, D{\"{u}}ben%
+, Düben%
 , Niu%
 , Luk%
 \BCBL {}\ \BBA {} Palmer%
@@ -761,25 +982,53 @@ Russell2017}
 Russell2017}%
 \begin{APACrefauthors}%
 Russell, F\BPBI P.%
-, D{\"{u}}ben, P\BPBI D.%
+, Düben, P\BPBI D.%
 , Niu, X.%
 , Luk, W.%
-\BCBL {}\ \BBA {} Palmer, T\BPBI N.%
+\BCBL {}\ \BBA {} Palmer, T.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2017}{}{}.
+\APACrefYearMonthDay{2017}{{\APACmonth{12}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Exploiting the chaotic behaviour of atmospheric models
-  with reconfigurable architectures}} {{Exploiting the chaotic behaviour of
-  atmospheric models with reconfigurable architectures}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Exploiting the chaotic behaviour of atmospheric models
+  with reconfigurable architectures} {Exploiting the chaotic behaviour of
+  atmospheric models with reconfigurable architectures}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Computer Physics Communications}{221}{}{160--173}.
 \newblock
-\begin{APACrefURL} \url{http://dx.doi.org/10.1016/j.cpc.2017.08.011}
+\begin{APACrefURL}
+  [{2020-02-25}]\url{https://linkinghub.elsevier.com/retrieve/pii/S0010465517302564}
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.cpc.2017.08.011} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rüdisühli%
+, Walser%
+\BCBL {}\ \BBA {} Fuhrer%
+}{%
+Rüdisühli%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+Rudisuhli2013}
+\APACinsertmetastar {%
+Rudisuhli2013}%
+\begin{APACrefauthors}%
+Rüdisühli, S.%
+, Walser, A.%
+\BCBL {}\ \BBA {} Fuhrer, O.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{COSMO} in single precision} {{COSMO} in single
+  precision}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cosmo Newsletter}{}{14}{5--1}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -800,13 +1049,20 @@ Smolarkiewicz, P\BPBI K.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{1992}{}{}.
+\APACrefYearMonthDay{1992}{{\APACmonth{11}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{A Class of Semi-Lagrangian Approximations for Fluids}}
-  {{A Class of Semi-Lagrangian Approximations for Fluids}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {A {Class} of {Semi}-{Lagrangian} {Approximations} for
+  {Fluids}} {A {Class} of {Semi}-{Lagrangian} {Approximations} for
+  {Fluids}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of the atmospheric
-  sciences}{49}{22}{2082--2096}.
+\APACjournalVolNumPages{Journal of the Atmospheric
+  Sciences}{49}{22}{2082--2096}.
+\newblock
+\begin{APACrefURL}
+  [{2020-02-26}]\url{https://journals.ametsoc.org/doi/abs/10.1175/1520-0469%281992%29049%3C2082%3AACOSLA%3E2.0.CO%3B2}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Publisher: American Meteorological Society}
 \newblock
 \begin{APACrefDOI} \doi{10.1175/1520-0469(1992)049<2082:ACOSLA>2.0.CO;2}
   \end{APACrefDOI}
@@ -831,15 +1087,16 @@ Tantet, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2018}{}{}.
+\APACrefYearMonthDay{2018}{{\APACmonth{02}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Resonances in a Chaotic Attractor Crisis of the Lorenz
-  Flow}} {{Resonances in a Chaotic Attractor Crisis of the Lorenz
-  Flow}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Resonances in a {Chaotic} {Attractor} {Crisis} of the
+  {Lorenz} {Flow}} {Resonances in a {Chaotic} {Attractor} {Crisis} of the
+  {Lorenz} {Flow}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Statistical Physics}{170}{3}{584--616}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1007/s10955-017-1938-0}
+\begin{APACrefURL}
+  [{2020-02-25}]\url{http://link.springer.com/10.1007/s10955-017-1938-0}
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1007/s10955-017-1938-0} \end{APACrefDOI}
@@ -847,7 +1104,7 @@ Tantet, A.%
 
 \bibitem [\protect \citeauthoryear {%
 Thornes%
-, D{\"{u}}ben%
+, Düben%
 \BCBL {}\ \BBA {} Palmer%
 }{%
 Thornes%
@@ -859,19 +1116,24 @@ Thornes2017}
 Thornes2017}%
 \begin{APACrefauthors}%
 Thornes, T.%
-, D{\"{u}}ben, P.%
+, Düben, P.%
 \BCBL {}\ \BBA {} Palmer, T.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2017}{}{}.
+\APACrefYearMonthDay{2017}{{\APACmonth{01}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{On the use of scale-dependent precision in Earth System
-  modelling}} {{On the use of scale-dependent precision in Earth System
-  modelling}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {On the use of scale-dependent precision in {Earth}
+  {System} modelling: {Scale}-{Dependent} {Precision} in {Earth} {System}
+  {Modelling}} {On the use of scale-dependent precision in {Earth} {System}
+  modelling: {Scale}-{Dependent} {Precision} in {Earth} {System}
+  {Modelling}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Quarterly Journal of the Royal Meteorological
   Society}{143}{703}{897--908}.
+\newblock
+\begin{APACrefURL} [{2020-02-25}]\url{http://doi.wiley.com/10.1002/qj.2974}
+  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1002/qj.2974} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -893,16 +1155,57 @@ Vallis, G\BPBI K.%
 \newblock
 \APACrefYear{2006}.
 \newblock
-\APACrefbtitle {{Atmospheric and Ocean Fluid Dynamics}} {{Atmospheric and Ocean
-  Fluid Dynamics}}.
+\APACrefbtitle {Atmospheric and {Oceanic} {Fluid} {Dynamics}} {Atmospheric and
+  {Oceanic} {Fluid} {Dynamics}}.
 \newblock
 \APACaddressPublisher{}{Cambridge University Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-V{\'{a}}{\v{n}}a%
+van Dam%
+, Peltenburg%
+, Al-Ars%
+\BCBL {}\ \BBA {} Hofstee%
+}{%
+van Dam%
 \ \protect \BOthers {.}}{%
-V{\'{a}}{\v{n}}a%
+{\protect \APACyear {2019}}%
+}]{%
+vanDam2019}
+\APACinsertmetastar {%
+vanDam2019}%
+\begin{APACrefauthors}%
+van Dam, L.%
+, Peltenburg, J.%
+, Al-Ars, Z.%
+\BCBL {}\ \BBA {} Hofstee, H\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{{\APACmonth{03}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An {Accelerator} for {Posit} {Arithmetic} {Targeting}
+  {Posit} {Level} 1 {BLAS} {Routines} and {Pair}-{HMM}} {An {Accelerator} for
+  {Posit} {Arithmetic} {Targeting} {Posit} {Level} 1 {BLAS} {Routines} and
+  {Pair}-{HMM}}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the {Conference} for {Next} {Generation}
+  {Arithmetic} 2019} {Proceedings of the {Conference} for {Next} {Generation}
+  {Arithmetic} 2019}\ (\BPGS\ 1--10).
+\newblock
+\APACaddressPublisher{Singapore, Singapore}{Association for Computing
+  Machinery}.
+\newblock
+\begin{APACrefURL} [{2020-02-26}]\url{https://doi.org/10.1145/3316279.3316284}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1145/3316279.3316284} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Váňa%
+\ \protect \BOthers {.}}{%
+Váňa%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2017}}%
 }]{%
@@ -910,8 +1213,8 @@ Vana2017}
 \APACinsertmetastar {%
 Vana2017}%
 \begin{APACrefauthors}%
-V{\'{a}}{\v{n}}a, F.%
-, D{\"{u}}ben, P.%
+Váňa, F.%
+, Düben, P.%
 , Lang, S.%
 , Palmer, T.%
 , Leutbecher, M.%
@@ -920,46 +1223,19 @@ V{\'{a}}{\v{n}}a, F.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2017}{}{}.
+\APACrefYearMonthDay{2017}{{\APACmonth{02}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Single Precision in Weather Forecasting Models: An
-  Evaluation with the IFS}} {{Single Precision in Weather Forecasting Models:
-  An Evaluation with the IFS}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Single {Precision} in {Weather} {Forecasting} {Models}:
+  {An} {Evaluation} with the {IFS}} {Single {Precision} in {Weather}
+  {Forecasting} {Models}: {An} {Evaluation} with the {IFS}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Monthly Weather Review}{145}{2}{495--502}.
 \newblock
 \begin{APACrefURL}
-  \url{http://journals.ametsoc.org/doi/10.1175/MWR-D-16-0228.1}
+  [{2020-02-25}]\url{http://journals.ametsoc.org/doi/10.1175/MWR-D-16-0228.1}
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1175/MWR-D-16-0228.1} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-van Dam%
-}{%
-van Dam%
-}{%
-{\protect \APACyear {2018}}%
-}]{%
-VanDam2018}
-\APACinsertmetastar {%
-VanDam2018}%
-\begin{APACrefauthors}%
-van Dam, L.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2018}.
-\unskip\
-\newblock
-\APACrefbtitle {{Enabling High Performance Posit Arithmetic Applications Using
-  Hardware Acceleration}} {{Enabling High Performance Posit Arithmetic
-  Applications Using Hardware Acceleration}}\ \APACtypeAddressSchool
-  {\BUPhD}{}{}.
-\unskip\
-\newblock
-\APACaddressSchool {}{Delft University of Technology}.
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
