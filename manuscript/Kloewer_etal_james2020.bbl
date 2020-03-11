@@ -471,6 +471,40 @@ Griffies, S\BPBI M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Gupta%
+, Agrawal%
+, Gopalakrishnan%
+\BCBL {}\ \BBA {} Narayanan%
+}{%
+Gupta%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+Gupta2015}
+\APACinsertmetastar {%
+Gupta2015}%
+\begin{APACrefauthors}%
+Gupta, S.%
+, Agrawal, A.%
+, Gopalakrishnan, K.%
+\BCBL {}\ \BBA {} Narayanan, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{{\APACmonth{02}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep {Learning} with {Limited} {Numerical} {Precision}}
+  {Deep {Learning} with {Limited} {Numerical} {Precision}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv:1502.02551 [cs, stat]}{}{}{}.
+\newblock
+\begin{APACrefURL} [{2020-03-10}]\url{http://arxiv.org/abs/1502.02551}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{arXiv: 1502.02551}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 J.~Gustafson%
 }{%
 J.~Gustafson%

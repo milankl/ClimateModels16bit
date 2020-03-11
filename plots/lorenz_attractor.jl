@@ -6,11 +6,12 @@ using BFloat16s
 N = 100_000
 
 xyz_ini = [7.88,5.39,20.67]
+
 Δt = 0.008
 
 XYZ_F64 = L63(Float64,N=N,xyz=xyz_ini,Δt=Δt)
 XYZ_F16 = L63(Float16,N=N,xyz=xyz_ini,Δt=Δt)
-XYZ_P16 = L63(Posit16,N=N,xyz=xyz_ini,Δt=Δt,s=1/10)
+XYZ_P16 = L63(Posit16,N=N,xyz=xyz_ini,Δt=Δt)
 XYZ_BF16 = L63(BFloat16,N=N,xyz=xyz_ini,Δt=Δt)
 
 # PLOT
@@ -24,7 +25,7 @@ axs[2,2].plot(XYZ_BF16[1,:],XYZ_BF16[3,:],"k",lw=0.2)
 
 axs[1,1].set_title("Float64",loc="left")
 axs[1,2].set_title("Float16",loc="left")
-axs[2,1].set_title("Posit(16,1)",loc="left")
+axs[2,1].set_title("BFloat16 + stochastic round",loc="left")
 axs[2,2].set_title("BFloat16",loc="left")
 
 axs[1,1].set_title("a",loc="right",fontweight="bold")

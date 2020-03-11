@@ -14,7 +14,7 @@
 %
 
 %% To submit your paper:
-\documentclass[final]{agujournal2019}
+\documentclass[draft]{agujournal2019}
 \usepackage[utf8]{inputenc}
 \usepackage{url} %this package should fix any errors with URLs in refs.
 \usepackage{lineno}
@@ -246,11 +246,11 @@ Research on reduced precision floating-point arithmetics is motivated by the pot
 
 Using simplistic chaotic models, it was shown that the majority of 64 bits with Float64 do not contain real information \cite{Jeffress2017}. Running algorithms used for weather forecast models at precision lower than 32 bit, for example with 16bit half precision floats (Float16), is an active field of research, but remains challenging \cite{Duben2014,Thornes2017,Hatfield2018,Duben2018}. Most research on reduced precision modelling for weather and climate applications makes use of software emulators \cite{Dawson2017} that provide other arithmetics than the widely supported Float32 and Float64. This comes with the disadvantage that simulations are orders of magnitude slower. However, software emulation allows a scientific evaluation of the use of reduced numerical precision for weather and climate simulations with no need to port the models to special hardware (such as FPGAs, \cite{Russell2017}).
 
-The recent boom of deep learning techniques, that require low numerical precision but high computational performance, will influence hardware development to offer more flexibility for the use of reduced precision number formats. Graphic processing units started to support Float16 for increased performance \cite{Markidis2018}. Google's tensor processing units (TPU, \citeA{Jouppi2017,Jouppi2018}) support the 16bit BFloat16 format, a truncated version of Float32, as deep learning training was found to be succesful despite the degradation in precision with 16bit arithmetic \cite{Kalamkar2019,Burgess2019}.
+The recent boom of deep learning techniques, that require low numerical precision but high computational performance, will influence hardware development to offer more flexibility for the use of reduced precision number formats. Graphic processing units started to support Float16 for increased performance \cite{Markidis2018}. Google's tensor processing units (TPU, \citeA{Jouppi2017,Jouppi2018}) support the 16bit BFloat16 format, a truncated version of Float32, as deep learning training was found to be succesful despite the degradation in precision with 16bit arithmetic \cite{Kalamkar2019,Burgess2019,Gupta2015}.
  
-Posit numbers are a recently proposed alternative to floats and claim to provide more precision in arithmetic calculations with fewer bits in algorithms of linear algebra or machine learning \cite{Gustafson2017,Langroudi2019}. However, posits remain untested for weather and climate simulations. This study therefore focuses on posit arithmetic as an alternative to floating-point arithmetic at the appealing size of 16 bit for weather and climate models. We use a Julia-based emulator on a conventional CPU, as standardized posit hardware is not yet available. Posit research currently focuses on hardware implementations \cite{vanDam2019,Chen2018,Chaurasiya2018,Glaser2017}.
+Posit numbers are a recently proposed alternative to floats and claim to provide more precision in arithmetic calculations with fewer bits in algorithms of linear algebra or machine learning \cite{Gustafson2017,Langroudi2019}. However, posits remain untested for weather and climate simulations. As posit research currently focuses on hardware implementations \cite{vanDam2019,Chen2018,Chaurasiya2018,Glaser2017}, a standardized posit hardware is not yet available and we use a software emulator on a conventional processor. This study therefore addresses posit arithmetic as an alternative to floating-point arithmetic. Various 16bit float and posit number formats are tested in weather and climate applications and we suggest approaches to mitigate negative impact if 16bit arithmetic cannot be used for the entire model.
 
-The study  is structured as follows: Section \ref{sec:posits} introduces the posit number format, its emulation in the Julia language and the concept of decimal precision. We analyse the dynamics of a chaotic model at low complexity with posit arithmetic using the Lorenz 1963 system in section \ref{sec:L63}. In section \ref{sec:swm} we evaluate posit arithmetic in the shallow water equations, investigate a mixed-precision approach and analyse reduced precision communication. Section \ref{sec:discuss} discusses the results and summarises the conclusions.
+The study  is structured as follows: Section \ref{sec:posits} outlines the floating-point number format, the posit number format, and the concept of decimal precision. We analyse the dynamics of a chaotic model at low complexity with posit arithmetic using the Lorenz 1963 system in section \ref{sec:L63}. In section \ref{sec:swm} we compare different posit and float arithmetics in the shallow water equations, investigate a mixed-precision approach and analyse reduced precision communication. Section \ref{sec:discuss} discusses the results and summarises the conclusions.
 
 \begin{figure}[htbp]
 \center
@@ -259,12 +259,27 @@ The study  is structured as follows: Section \ref{sec:posits} introduces the pos
 \label{fig:circle}
 \end{figure}
 
-\section{Posit numbers}
+\section{Floating-point and posit numbers}
 \label{sec:posits}
+
+\subsection{The floating-point number format}
+\label{sec:floats}
+
+The IEEE standard on floating-point arithmetic defines how floats encode a real number in terms of a sign bit, and a fixed number of exponent and significant bits. Float16 has 1 sign, 5 exponent and 10 significant bits and encode a number $x$ as
+\begin{equation}
+x = (-1)^{sign~bit} \cdot 2^{e-bias} \cdot (1+f)
+\label{eq:float}
+\end{equation}
+
+
+
+
+Consequently, they have a constant number of significant digits throughout their range of representable numbers.
+
 \subsection{The posit number format}
 \label{sec:posit_methods}
 
-The IEEE standard on floating-point arithmetic defines how floats encode a real number in terms of a sign bit, and a fixed number of exponent and significant bits (16bit half-precision floats have 1 sign, 5 exponent and 10 significant bits). Consequently, they have a constant number of significant digits throughout their range of representable numbers. This is in contrast to posit numbers, which arise from a projection of the real axis onto a circle (Fig. \ref{fig:circle}), with only one bitpattern for zero and one for complex infinity (or Not-a-Real, NaR), which serves as a replacement for Not-a-Number (NaN). The circle is split into \emph{regimes}, determined by a constant $useed$, which always marks the north-west on the posit circle (Fig. \ref{fig:circle}b). Regimes are defined by $useed^{\pm2}$, $useed^{\pm3}$, $useed^{\pm4}$, etc. To encode these regimes into bits, posit numbers extend floating-point arithmetic by introducing regime bits, that are responsible for the dynamic range of representable numbers. Instead of having a fixed length, regime bits are defined as the sequence of identical bits after the sign bit, which are eventually terminated by an opposite bit. The flexible length allows the significand (or mantissa) to occupy more bits when less regime bits are needed, which is the case for numbers around one. A resulting higher precision around one is traded against a gradually lower precision for very large or very small numbers. A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017a} (negative posit numbers are converted first to their two's complement, see Eq. \ref{eq:2comp})
+Posit numbers arise from a projection of the real axis onto a circle (Fig. \ref{fig:circle}), with only one bitpattern for zero and one for complex infinity (or Not-a-Real, NaR), which serves as a replacement for Not-a-Number (NaN). The circle is split into \emph{regimes}, determined by a constant $useed$, which always marks the north-west on the posit circle (Fig. \ref{fig:circle}b). Regimes are defined by $useed^{\pm2}$, $useed^{\pm3}$, $useed^{\pm4}$, etc. To encode these regimes into bits, posit numbers extend floating-point arithmetic by introducing regime bits, that are responsible for the dynamic range of representable numbers. Instead of having a fixed length, regime bits are defined as the sequence of identical bits after the sign bit, which are eventually terminated by an opposite bit. The flexible length allows the significand (or mantissa) to occupy more bits when less regime bits are needed, which is the case for numbers around one. A resulting higher precision around one is traded against a gradually lower precision for very large or very small numbers. A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017a} (negative posit numbers are converted first to their two's complement, see Eq. \ref{eq:2comp})
 \begin{equation}
 p = (-1)^{sign~bit} \cdot useed^k \cdot 2^e \cdot (1+f)
 \label{eq:posit}
@@ -286,58 +301,7 @@ After the conversion to the two's complement, the bits are interpreted in the sa
 
 Posits also come with a no overflow/no underflow-rounding mode: Where floats overflow and return infinity when the exact result of an arithmetic operation is larger than the largest representable number ($maxpos$), posit arithmetic returns $maxpos$ instead, and similarly for underflow where the smallest representable positive number ($minpos$) is returned. This is motivated as rounding to infinity returns a result that is infinitely less correct than $maxpos$, although often desired to indicate that an overflow occurred in the simulation. Instead, it is proposed to perform overflow-like checks on the software level to simplify exception handling on hardware \cite{Gustafson2017a}. Many functions are simplified for posits, as only two exceptions cases have to be handled, zero and NaR. Conversely, Float64 has more than $10^{15}$ bitpatterns reserved for NaN, but these only make up $< 0.05\%$ of all available bit patterns. The percentage of redundant bitpatterns for NaN increases for floats with fewer exponent bits (Table \ref{tab:formats}), and only poses a noticable issue for Float16 and Float8.
 
-The posit number framework also highly recommends \emph{quires}, an additional register on hardware to store intermediate results. Fused operations like \emph{multiply-add} can therefore be executed with a single rounding error without the rounding of intermediate results. The quire concept could also be applied to floating-point arithmetic, but is technically difficult to implement on hardware as the required registers would need to be much larger in size. For fair comparison we do not take quires into account. The posit number format is explained in more detail in \citeA{Gustafson2017a}.
-
-\subsection{Emulating posit numbers in the Julia language}
-\label{sec:Julia}
-
-In order to use posits on a conventional CPU we developed for the Julia programming language \cite{Bezanson2017} the posit emulator \emph{SoftPosit.jl} \cite{Klower2019a}, which is a wrapper for the C-based library SoftPosit. This emulator defines conversion and arithmetic operations with posits. Julia's programming paradigms of \emph{multiple-dispatch} and \emph{type-stability} facilitate the use of arbitrary number formats without the need to rewrite an algorithm. As this is an essential feature of Julia and extensively made use of in this study, we briefly outline the benefits of Julia by computing the harmonic sum with various number types as an example.
-
-\begin{figure}[h]
-\small
-\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray,gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
-  function harmonic_sum(::Type{T},steps::Int=2000) where T
-
-      s = zero(T)
-      o = one(T)
-
-      for i in 1:steps
-
-          s_old = s
-          s += o/T(i)
-
-          if s == s_old    # check for convergence
-              println(Float64(s),i)
-              break
-         end
-      end
-  end
-\end{minted}
-\caption{A type-flexible harmonic sum function in the Julia language.}
-\label{fig:harmsum}
-\end{figure}
-
-Executing the function \texttt{harmonic\_sum} for the first time with a type \texttt{T} as the first argument, triggers Julia's \emph{just-in-time} compiler. The function is type stable, as the types of all variables are declared. At the same time Julia allows for type flexibility, as its \emph{multiple dispatch} means that calling  \texttt{harmonic\_sum} with another type \texttt{T2} will result in a separately compiled function for \texttt{T2}. We can therefore compute the harmonic sum with aribitrary number types, as long as the zero-element \texttt{zero(T)}; the one-element \texttt{one(T)}; addition; division; conversion from integer and conversion to float are defined for \texttt{T}. 
-
-\begin{figure}[h]
-\small
-\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray, gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
-  julia> using SoftPosit
-  julia> using BFloat16s
-  julia> harmonic_sum(Float16)
-  (7.0859375, 513)
-  julia> harmonic_sum(BFloat16)
-  (5.0625, 65)
-  julia> harmonic_sum(Posit16)
-  (7.77734375, 1024)
-\end{minted}
-\caption{Harmonic sum example use of the posit emulator \emph{SoftPosit.jl} in the Julia shell. \texttt{Posit16} is the Posit(16,1) standard.}
-\label{fig:harmsum2}
-\end{figure}
-
-The harmonic sum converges after 513 elements when using Float16. The precision of BFloat16 is so low that the sum already converges after 65 elements, as the addition of the next term $1/66$ is round back to 5.0625. We identify the addition of small terms to prognostic variables of size $\mathcal{O}(1)$ as one of the major challenges with low precision arithmetic, which is discussed in more detail in section \ref{sec:mixed}. Using Posit(16,1), the sum only converges after 1024 terms, due to the higher decimal precision of posits between 1 and 10.
-
-We implement this type-flexible programming paradigm in the numerical integration of the Lorenz equations (section \ref{sec:L63}) and the shallow water model (section \ref{sec:swm}), which allows various number types to be used interchangeably.
+The posit number framework also highly recommends \emph{quires}, an additional register on hardware to store intermediate results. Fused operations like \emph{multiply-add} can therefore be executed with a single rounding error without the rounding of intermediate results. The quire concept could also be applied to floating-point arithmetic, but is technically difficult to implement on hardware as the required registers would need to be much larger in size. For fair comparison we do not take quires into account. The posit number format is explained in more detail in \citeA{Gustafson2017a}. In order to use posits on a conventional CPU we developed for the Julia programming language \cite{Bezanson2017} the posit emulator \emph{SoftPosit.jl} \cite{Klower2019a}, which is a wrapper for the C-based library SoftPosit. The type-flexible programming paradigm,  facilitated by the Julia language, is outlined in \ref{sec:julia}.
 
 \begin{table}[htbp]
 \center
@@ -588,6 +552,58 @@ with $\tilde{c_D} = c_D\Delta = 0.2\op{m}$,  and $\tilde{\nu} = \nu\Delta^{-3} \
 %where $\mathbf{\tilde{x}}_a$ are the coordinates of the arrival grid node and $\mathbf{u}_i$ the velocity interpolated on the mid-point in space and time\cite{Smolarkiewicz1992}. The advective time step $\Delta t_\text{adv}$ is much larger than $\Delta t$ to reduce numerical diffusion of the tracer due to a smaller number of interpolations. In the simulations of Fig. \ref{fig:snapshot} ($\Delta = 10\op{km}$) the rescaled time step is $\tfrac{\Delta t_\text{adv}}{\Delta} \approx \tfrac{2 \cdot 10^4\op{s}}{10^4\op{m}} =  2 \op{sm}^{-1}$ and therefore precomputed.
 %
 
+
+\section{Emulating posit numbers in the Julia language}
+\label{sec:julia}
+
+The SoftPosit.jl emulator defines conversion and arithmetic operations with posits. Julia's programming paradigms of \emph{multiple-dispatch} and \emph{type-stability} facilitate the use of arbitrary number formats without the need to rewrite an algorithm. As this is an essential feature of Julia and extensively made use of in this study, we briefly outline the benefits of Julia by computing the harmonic sum with various number types as an example.
+
+\begin{figure}[h]
+\small
+\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray,gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
+  function harmonic_sum(::Type{T},steps::Int=2000) where T
+
+      s = zero(T)
+      o = one(T)
+
+      for i in 1:steps
+
+          s_old = s
+          s += o/T(i)
+
+          if s == s_old    # check for convergence
+              println(Float64(s),i)
+              break
+         end
+      end
+  end
+\end{minted}
+\caption{A type-flexible harmonic sum function in the Julia language.}
+\label{fig:harmsum}
+\end{figure}
+
+Executing the function \texttt{harmonic\_sum} for the first time with a type \texttt{T} as the first argument, triggers Julia's \emph{just-in-time} compiler (Fig. \ref{fig:harmsum}). The function is type stable, as the types of all variables are declared. At the same time Julia allows for type flexibility, as its \emph{multiple dispatch} means that calling  \texttt{harmonic\_sum} with another type \texttt{T2} will result in a separately compiled function for \texttt{T2}. We can therefore compute the harmonic sum with aribitrary number types, as long as the zero-element \texttt{zero(T)}; the one-element \texttt{one(T)}; addition; division; conversion from integer and conversion to float are defined for \texttt{T}. 
+
+\begin{figure}[h]
+\small
+\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray, gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia} 
+  julia> using SoftPosit
+  julia> using BFloat16s
+  julia> harmonic_sum(Float16)
+  (7.0859375, 513)
+  julia> harmonic_sum(BFloat16)
+  (5.0625, 65)
+  julia> harmonic_sum(Posit16)
+  (7.77734375, 1024)
+\end{minted}
+\caption{Harmonic sum example use of the posit emulator \emph{SoftPosit.jl} in the Julia shell. \texttt{Posit16} is the Posit(16,1) standard.}
+\label{fig:harmsum2}
+\end{figure}
+
+The harmonic sum converges after 513 elements when using Float16 (Fig. \ref{fig:harmsum2}). The precision of BFloat16 is so low that the sum already converges after 65 elements, as the addition of the next term $1/66$ is round back to 5.0625. We identify the addition of small terms to prognostic variables of size $\mathcal{O}(1)$ as one of the major challenges with low precision arithmetic, which is discussed in more detail in section \ref{sec:mixed}. Using Posit(16,1), the sum only converges after 1024 terms, due to the higher decimal precision of posits between 1 and 10.
+
+We implement this type-flexible programming paradigm in the numerical integration of the Lorenz equations (section \ref{sec:L63}) and the shallow water model (section \ref{sec:swm}), which allows various number types to be used interchangeably.
+
 %%
 
 %  Numbered lines in equations:
@@ -767,7 +783,7 @@ with $\tilde{c_D} = c_D\Delta = 0.2\op{m}$,  and $\tilde{\nu} = \nu\Delta^{-3} \
 
 
 \acknowledgments
- The authors would like to thank Cerlane Leong and Mos\`{e} Giordano who contributed to \emph{SoftPosit.jl}. Milan Kl\"{o}wer and Tim N. Palmer gratefully acknowledge funding by the European Research Council under grant number 741112 \emph{An Information Theoretic Approach to Improving the Reliability of Weather and Climate Simulations}. Milan Kl\"{o}wer is also funded by NERC grant number NE/L002612/1.  Peter D. D\"{u}ben gratefully acknowledges funding from the Royal Society for his University Research Fellowship as well as funding from the ESIWACE project. ESIWACE has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement 675191.
+ The authors would like to thank Cerlane Leong and Mos\`{e} Giordano who contributed to \emph{SoftPosit.jl}. Milan Kl\"{o}wer and Tim N. Palmer gratefully acknowledge funding by the European Research Council under grant number 741112 \emph{An Information Theoretic Approach to Improving the Reliability of Weather and Climate Simulations}. Milan Kl\"{o}wer is also funded by NERC grant number NE/L002612/1.  Peter D. D\"{u}ben gratefully acknowledges funding from the Royal Society for his University Research Fellowship as well as funding from the ESIWACE2 project. ESIWACE2 has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement 823988.
 
 %% ------------------------------------------------------------------------ %%
 %% References and Citations

@@ -609,7 +609,7 @@
 	month = may,
 	year = {2018},
 	note = {Conference Name: IEEE Micro},
-	keywords = {Central Processing Unit, computer centres, coprocessors, Data centers, deep neural network, deep neural network inference, DNN, domain-specific architecture, energy efficiency, Energy efficiency, feedforward neural nets, first-generation tensor processing unit, Google datacenters, GPU, Graphics processing units, hardware, machine learning, microprocessor, Microprocessors, motivation, Neural networks, parallel architectures, Semiconductor devices, semiconductor technologies, Tensile stress, tensor processing unit, tensors, TPU},
+	keywords = {DNN, domain-specific architecture, GPU, TPU, Central Processing Unit, computer centres, coprocessors, Data centers, deep neural network, deep neural network inference, energy efficiency, Energy efficiency, feedforward neural nets, first-generation tensor processing unit, Google datacenters, Graphics processing units, hardware, machine learning, microprocessor, Microprocessors, motivation, Neural networks, parallel architectures, Semiconductor devices, semiconductor technologies, Tensile stress, tensor processing unit, tensors},
 	pages = {10--19},
 	file = {IEEE Xplore Abstract Record:/home/kloewer/papers/storage/YVFJ4I7D/8358031.html:text/html}
 }
@@ -687,7 +687,7 @@
 	month = may,
 	year = {2018},
 	note = {ISSN: null},
-	keywords = {application program interfaces, Computer architecture, cuBLAS GEMM, CUDA Warp Matrix Multiply Accumulate API, CUDA WMMA API, CUTLASS, GEMM, GPU Programming, graphics processing units, Graphics processing units, Hardware, HPC applications, Instruction sets, matrix multiplication, Mixed Precision, Neural networks, NVIDIA Tensor Core programmability, NVIDIA Tensor Cores, NVIDIA Tesla V100 accelerator, NVIDIA Volta GPU microarchitecture, parallel architectures, parallel programming, Programming, programming matrix-multiply- accumulate, Tensile stress, tensors, Tesla V100 GPU, Volta microarchitecture},
+	keywords = {Graphics processing units, Neural networks, parallel architectures, Tensile stress, tensors, Computer architecture, application program interfaces, cuBLAS GEMM, CUDA Warp Matrix Multiply Accumulate API, CUDA WMMA API, CUTLASS, GEMM, GPU Programming, graphics processing units, Hardware, HPC applications, Instruction sets, matrix multiplication, Mixed Precision, NVIDIA Tensor Core programmability, NVIDIA Tensor Cores, NVIDIA Tesla V100 accelerator, NVIDIA Volta GPU microarchitecture, parallel programming, Programming, programming matrix-multiply- accumulate, Tesla V100 GPU, Volta microarchitecture},
 	pages = {522--531},
 	file = {IEEE Xplore Full Text PDF:/home/kloewer/papers/storage/9GJDHGPW/Markidis et al. - 2018 - NVIDIA Tensor Core Programmability, Performance Pr.pdf:application/pdf;IEEE Xplore Abstract Record:/home/kloewer/papers/storage/D2WE2S8V/8425458.html:text/html}
 }
@@ -704,4 +704,53 @@
 	note = {arXiv: 1907.13216},
 	keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
 	file = {arXiv Fulltext PDF:/home/kloewer/papers/storage/FJE5BC8K/Langroudi et al. - 2019 - Deep Learning Training on the Edge with Low-Precis.pdf:application/pdf;arXiv.org Snapshot:/home/kloewer/papers/storage/2ST243AB/1907.html:text/html}
+}
+
+@article{Hopkins2020,
+	title = {Stochastic rounding and reduced-precision fixed-point arithmetic for solving neural ordinary differential equations},
+	volume = {378},
+	url = {https://royalsocietypublishing.org/doi/10.1098/rsta.2019.0052},
+	doi = {10.1098/rsta.2019.0052},
+	abstract = {Although double-precision floating-point arithmetic currently dominates high-performance computing, there is increasing interest in smaller and simpler arithmetic types. The main reasons are potential improvements in energy efficiency and memory footprint and bandwidth. However, simply switching to lower-precision types typically results in increased numerical errors. We investigate approaches to improving the accuracy of reduced-precision fixed-point arithmetic types, using examples in an important domain for numerical computation in neuroscience: the solution of ordinary differential equations (ODEs). The Izhikevich neuron model is used to demonstrate that rounding has an important role in producing accurate spike timings from explicit ODE solution algorithms. In particular, fixed-point arithmetic with stochastic rounding consistently results in smaller errors compared to single-precision floating-point and fixed-point arithmetic with round-to-nearest across a range of neuron behaviours and ODE solvers. A computationally much cheaper alternative is also investigated, inspired by the concept of dither that is a widely understood mechanism for providing resolution below the least significant bit in digital signal processing. These results will have implications for the solution of ODEs in other subject areas, and should also be directly relevant to the huge range of practical problems that are represented by partial differential equations.This article is part of a discussion meeting issue ‘Numerical algorithms for high-performance computational science’.},
+	number = {2166},
+	urldate = {2020-03-05},
+	journal = {Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences},
+	author = {Hopkins, Michael and Mikaitis, Mantas and Lester, Dave R. and Furber, Steve},
+	month = mar,
+	year = {2020},
+	note = {Publisher: Royal Society},
+	pages = {20190052},
+	file = {Full Text PDF:/home/kloewer/papers/storage/T8HIKUSG/Hopkins et al. - 2020 - Stochastic rounding and reduced-precision fixed-po.pdf:application/pdf;Snapshot:/home/kloewer/papers/storage/MNKDL738/rsta.2019.html:text/html}
+}
+
+@article{Duben2014b,
+	title = {Benchmark {Tests} for {Numerical} {Weather} {Forecasts} on {Inexact} {Hardware}},
+	volume = {142},
+	issn = {0027-0644},
+	url = {https://journals.ametsoc.org/doi/full/10.1175/MWR-D-14-00110.1},
+	doi = {10.1175/MWR-D-14-00110.1},
+	abstract = {A reduction of computational cost would allow higher resolution in numerical weather predictions within the same budget for computation. This paper investigates two approaches that promise significant savings in computational cost: the use of reduced precision hardware, which reduces floating point precision beyond the standard double- and single-precision arithmetic, and the use of stochastic processors, which allow hardware faults in a trade-off between reduced precision and savings in power consumption and computing time. Reduced precision is emulated within simulations of a spectral dynamical core of a global atmosphere model and a detailed study of the sensitivity of different parts of the model to inexact hardware is performed. Afterward, benchmark simulations were performed for which as many parts of the model as possible were put onto inexact hardware. Results show that large parts of the model could be integrated with inexact hardware at error rates that are surprisingly high or with reduced precision to only a couple of bits in the significand of floating point numbers. However, the sensitivities to inexact hardware of different parts of the model need to be respected, for example, via scale separation. In the last part of the paper, simulations with a full operational weather forecast model in single precision are presented. It is shown that differences in accuracy between the single- and double-precision forecasts are smaller than differences between ensemble members of the ensemble forecast at the resolution of the standard ensemble forecasting system. The simulations prove that the trade-off between precision and performance is a worthwhile effort, already on existing hardware.},
+	number = {10},
+	urldate = {2020-03-06},
+	journal = {Monthly Weather Review},
+	author = {Düben, Peter D. and Palmer, T. N.},
+	month = jul,
+	year = {2014},
+	note = {Publisher: American Meteorological Society},
+	pages = {3809--3829},
+	file = {Full Text PDF:/home/kloewer/papers/storage/BM7U6BRA/Düben and Palmer - 2014 - Benchmark Tests for Numerical Weather Forecasts on.pdf:application/pdf;Snapshot:/home/kloewer/papers/storage/GC5U64VT/MWR-D-14-00110.html:text/html}
+}
+
+@article{Gupta2015,
+	title = {Deep {Learning} with {Limited} {Numerical} {Precision}},
+	url = {http://arxiv.org/abs/1502.02551},
+	abstract = {Training of large-scale deep neural networks is often constrained by the available computational resources. We study the effect of limited precision data representation and computation on neural network training. Within the context of low-precision fixed-point computations, we observe the rounding scheme to play a crucial role in determining the network's behavior during training. Our results show that deep networks can be trained using only 16-bit wide fixed-point number representation when using stochastic rounding, and incur little to no degradation in the classification accuracy. We also demonstrate an energy-efficient hardware accelerator that implements low-precision fixed-point arithmetic with stochastic rounding.},
+	urldate = {2020-03-10},
+	journal = {arXiv:1502.02551 [cs, stat]},
+	author = {Gupta, Suyog and Agrawal, Ankur and Gopalakrishnan, Kailash and Narayanan, Pritish},
+	month = feb,
+	year = {2015},
+	note = {arXiv: 1502.02551},
+	keywords = {Computer Science - Machine Learning, Statistics - Machine Learning, Computer Science - Neural and Evolutionary Computing},
+	file = {arXiv Fulltext PDF:/home/kloewer/papers/storage/M2DCVEID/Gupta et al. - 2015 - Deep Learning with Limited Numerical Precision.pdf:application/pdf;arXiv.org Snapshot:/home/kloewer/papers/storage/SZ8FYIJX/1502.html:text/html}
 }

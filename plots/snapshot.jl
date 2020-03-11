@@ -4,8 +4,8 @@ using PyCall
 
 cm = pyimport("cmocean.cm")
 
-path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast2/nx400/"
-time_step = 201
+path = "/network/aopp/chaos/pred/kloewer/julsdata/forecast/nx400/"
+time_step = 101
 
 run_id1 = "run0001"
 run_id2 = "run0002"
@@ -79,6 +79,7 @@ axs[3,2].set_xlabel(L"$x$")
 axs[1,1].set_title("Float64",loc="left",fontsize=8)
 axs[2,1].set_title("Posit(16,1)",loc="left",fontsize=8)
 axs[3,1].set_title("Posit(16,2)",loc="left",fontsize=8)
+# axs[3,1].set_title("BFloat16 + stochastic round",loc="left",fontsize=8)
 
 axs[1,2].set_title("Float16",loc="left",fontsize=8)
 axs[2,2].set_title("Mixed precision: Float16/Float32",loc="left",fontsize=8)
