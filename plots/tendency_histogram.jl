@@ -38,29 +38,29 @@ nbins = length(bins)-1
 vars = ["u","v","eta","du","dv","deta"]
 nvars = 6       # 3 vars + 3 tendencies
 
-# H = Array{Float64,3}(undef,nruns,nvars,nbins)
-# M = Array{Float64,3}(undef,nruns,nvars,3)       # mean and two percentiles
-# p = 10
-#
-# for i in 1:nruns
-#     for j in 1:nvars
-#
-#         println((i,j))
-#
-#         # READ DATA
-#         nc = NetCDF.open(joinpath(path,run_ids[i],vars[j]*".nc"))
-#         vari = nc.vars[vars[j]][:,:,2:end]
-#         NetCDF.close(nc)
-#
-#         absvari = abs.(vari[:])
-#
-#         hist = fit(Histogram,absvari,bins)
-#         H[i,j,:] = hist.weights
-#         M[i,j,1] = mean(absvari)
-#         M[i,j,2] = percentile(absvari,p)
-#         M[i,j,3] = percentile(absvari,100-p)
-#     end
-# end
+H = Array{Float64,3}(undef,nruns,nvars,nbins)
+M = Array{Float64,3}(undef,nruns,nvars,3)       # mean and two percentiles
+p = 10
+
+for i in 1:nruns
+    for j in 1:nvars
+
+        println((i,j))
+
+        # READ DATA
+        nc = NetCDF.open(joinpath(path,run_ids[i],vars[j]*".nc"))
+        vari = nc.vars[vars[j]][:,:,2:end]
+        NetCDF.close(nc)
+
+        absvari = abs.(vari[:])
+
+        hist = fit(Histogram,absvari,bins)
+        H[i,j,:] = hist.weights
+        M[i,j,1] = mean(absvari)
+        M[i,j,2] = percentile(absvari,p)
+        M[i,j,3] = percentile(absvari,100-p)
+    end
+end
 
 ## Gravity waves
 
@@ -133,7 +133,7 @@ cb.set_ticklabels([L"$-10^{-4}$",L"-5$\cdot 10 ^{-5}$","0",L"5$\cdot 10 ^{-5}$",
 cb.set_label("[m]",labelpad=-20)
 
 a = 1.4
-alp=0.7
+alp=0.3
 
 vir1 = "#440154"
 vir2 = "#fde727"
@@ -155,8 +155,12 @@ axs[2,1].set_xlim(bins[2]/2,maximum(bins))
 axs[1,2].set_xlim(bins[2]/2,maximum(bins))
 axs[2,2].set_xlim(bins[2]/2,maximum(bins))
 
-axs[1,1].set_xticks([7.5e-13,1e-10,1e-7,1e-4,1e-1])
-axs[1,1].set_xticklabels([0,L"$10^{-10}$",L"$10^{-7}$",L"$10^{-4}$",L"$10^{-1}$"])
+axs[2,1].set_xticks([7.5e-13,1e-10,1e-7,1e-4,1e-1])
+axs[2,1].set_xticklabels([0,L"$10^{-10}$",L"$10^{-7}$",L"$10^{-4}$",L"$10^{-1}$"])
+
+axs[2,2].set_xticks([7.5e-13,1e-10,1e-7,1e-4,1e-1])
+axs[2,2].set_xticklabels([0,L"$10^{-10}$",L"$10^{-7}$",L"$10^{-4}$",L"$10^{-1}$"])
+
 
 for i in 1:2
     for j in 1:2

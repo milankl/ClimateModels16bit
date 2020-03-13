@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  11 MAR 2020 18:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  13 MAR 2020 01:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -707,7 +707,11 @@ runsystem(mkdir -p _minted-Kloewer_etal_james2020)...disabled (restricted).
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(./Kloewer_etal_james2020.aux)
+(./Kloewer_etal_james2020.aux
+
+LaTeX Warning: Label `eq:posit_pos' multiply defined.
+
+)
 \openout1 = `Kloewer_etal_james2020.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
@@ -722,8 +726,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
 LaTeX Font Info:    ... okay on input line 128.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
 LaTeX Font Info:    ... okay on input line 128.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count146
 \scratchdimen=\dimen137
@@ -947,9 +950,9 @@ ound-ary val-ues, prefer-ably en-coded as posit num-
  []
 
 
-Overfull \hbox (3.43234pt too wide) in paragraph at lines 205--206
-\OT1/cmr/m/n/10 bers, in-tro-duces neg-li-gi-ble er-rors, pro-vid-ing per-spec-
-tives for re-duced data com-mu-ni-ca- 
+Overfull \hbox (7.82124pt too wide) in paragraph at lines 205--206
+\OT1/cmr/m/n/10 bers, in-tro-duces neg-li-gi-ble er-rors, pro-vid-ing a per-spe
+c-tive for re-duced data com-mu-ni-ca- 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
@@ -1141,15 +1144,15 @@ the fore-cast lead time. In con-
  []
 
 
-Overfull \hbox (9.01575pt too wide) in paragraph at lines 243--244
-\OT1/cmr/m/n/10 trast, round-ing er-rors are usu-ally neg-li-gi-ble with the IE
-EE 754 stan-dard on 64 bit dou- 
+Overfull \hbox (4.84909pt too wide) in paragraph at lines 243--244
+\OT1/cmr/m/n/10 trast, round-ing er-rors are usu-ally neg-li-gi-ble if the IEEE
+ 754 stan-dard on 64 bit dou-ble 
  []
 
 
-Overfull \hbox (1.73798pt too wide) in paragraph at lines 243--244
-\OT1/cmr/m/n/10 ble pre-ci-sion floating-point num-bers (Float64), which is the
- stan-dard for the ma-jor-ity 
+Overfull \hbox (10.18239pt too wide) in paragraph at lines 243--244
+\OT1/cmr/m/n/10 pre-ci-sion floating-point num-bers (Float64) is used, which is
+ the stan-dard for the ma-jor- 
  []
 
 
@@ -1192,6 +1195,24 @@ with-out a de-crease in fore-cast
 Overfull \hbox (9.9046pt too wide) in paragraph at lines 245--246
 \OT1/cmr/m/n/10 skill []V^^Sa^^Tna et al.[], 2017), but in 60% of the run-time.
  Sim-i-lar progress was made at Me- 
+ []
+
+
+Overfull \hbox (17.82124pt too wide) in paragraph at lines 245--246
+\OT1/cmr/m/n/10 teoSwiss with their weather fore-cast model COSMO []R^^?udis^^?
+uhli et al.[], 2013). For the Eu- 
+ []
+
+
+Overfull \hbox (14.40474pt too wide) in paragraph at lines 245--246
+\OT1/cmr/m/n/10 ro-pean ocean model NEMO mix-ing 32bit and 64bit cal-cu-la-tion
+s is a promis-ing ap-proach 
+ []
+
+
+Overfull \hbox (6.12675pt too wide) in paragraph at lines 245--246
+\OT1/cmr/m/n/10 to keep accuracy-critical parts in high pre-ci-sion while in-cr
+eas-ing per-for-mance in oth-ers 
  []
 
 
@@ -1378,189 +1399,243 @@ Overfull \hbox (16.87686pt too wide) in paragraph at lines 253--254
  []
 
 
-Overfull \hbox (10.26564pt too wide) in paragraph at lines 253--254
-\OT1/cmr/m/n/10 sys-tem in sec-tion 3[]. In sec-tion 4[] we com-pare dif-fer-en
-t posit and float arith-metics in the 
+Overfull \hbox (0.8212pt too wide) in paragraph at lines 253--254
+\OT1/cmr/m/n/10 sys-tem in sec-tion 3.1[]. In sec-tion 5[] we com-pare dif-fer-
+ent posit and float arith-metics in 
  []
 
 
-Overfull \hbox (18.87679pt too wide) in paragraph at lines 253--254
-\OT1/cmr/m/n/10 shal-low wa-ter equa-tions, in-ves-ti-gate a mixed-precision ap
--proach and anal-yse re-duced pre- 
+Overfull \hbox (15.51569pt too wide) in paragraph at lines 253--254
+\OT1/cmr/m/n/10 the shal-low wa-ter equa-tions, in-ves-ti-gate a mixed-precisio
+n ap-proach and anal-yse re-duced 
  []
 
 
-Overfull \hbox (4.1823pt too wide) in paragraph at lines 253--254
-\OT1/cmr/m/n/10 ci-sion com-mu-ni-ca-tion. Sec-tion 5[] dis-cusses the re-sults
- and sum-marises the con-clu-sions.  
- []
-
-<figs/circles.pdf, id=20, 407.76694pt x 201.26355pt>
-File: figs/circles.pdf Graphic file (type pdf)
-<use figs/circles.pdf>
-Package pdftex.def Info: figs/circles.pdf  used on input line 257.
-(pdftex.def)             Requested size: 397.48499pt x 196.19583pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--258
-[]\OT1/cmr/bx/n/9 Figure  1. \OT1/cmr/m/n/9 Two posit num-ber for-mats ob-taine
-d by pro-ject-ing the real axis onto a cir-cle. (a)
+Overfull \hbox (18.09898pt too wide) in paragraph at lines 253--254
+\OT1/cmr/m/n/10 pre-ci-sion com-mu-ni-ca-tion. Sec-tion 6[] dis-cusses the re-s
+ults and sum-marises the con-clu-sions.  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--258
-\OT1/cmr/m/n/9 2bit Posit(2,0) and (b) 4bit Posit(4,1). The bit pat-terns are m
-arked on the out-side and the re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--258
-\OT1/cmr/m/n/9 spec-tive val-ues on the in-side of each cir-cle. Bit pat-terns 
-of neg-a-tive num-bers (black) have to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--258
-\OT1/cmr/m/n/9 be con-verted to their two's com-ple-ment (colours) first (see t
-ext). At the top of ev-ery cir-cle is
- []
-
-
-Overfull \hbox (2.57121pt too wide) in paragraph at lines 268--269
+Overfull \hbox (2.57121pt too wide) in paragraph at lines 261--262
 []\OT1/cmr/m/n/10 The IEEE stan-dard on floating-point arith-metic de-fines how
  floats en-code a real 
  []
 
 
-Overfull \hbox (27.51582pt too wide) in paragraph at lines 268--269
-\OT1/cmr/m/n/10 num-ber in terms of a sign bit, and a fixed num-ber of ex-po-ne
-nt and sig-nif-i-cant bits. Float16 
+Overfull \hbox (4.1296pt too wide) in paragraph at lines 265--267
+\OT1/cmr/m/n/10 them ef-fec-tively to signed in-te-gers. The sig-nif-i-cant bit
+s $\OML/cmm/m/it/10 f[]$ \OT1/cmr/m/n/10 de-fine the sig-nif-i-cant as $\OML/cm
+m/m/it/10 f \OT1/cmr/m/n/10 = 
  []
 
 
-Overfull \hbox (4.15459pt too wide) in paragraph at lines 277--278
-[]\OT1/cmr/m/n/10 Consequently, they have a con-stant num-ber of sig-nif-i-cant
- dig-its through-out their 
+Overfull \hbox (1.49658pt too wide) in paragraph at lines 265--267
+[][] \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 2[]$ such that $(1 + \OML/cmm/m/it/10 
+f\OT1/cmr/m/n/10 )$ is in the bounds $[1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2)$.
+ An 8bit float en-codes a real num- 
  []
 
 
-Overfull \hbox (4.51561pt too wide) in paragraph at lines 282--283
+Overfull \hbox (2.41498pt too wide) in paragraph at lines 265--267
+\OT1/cmr/m/n/10 ber with a sign bit (red), $\OML/cmm/m/it/10 n[] \OT1/cmr/m/n/1
+0 = 3$ ex-po-nent bits (blue) and $\OML/cmm/m/it/10 n[] \OT1/cmr/m/n/10 = 4$ fr
+ac-tion bits (black) 
+ []
+
+
+Overfull \hbox (6.23793pt too wide) in paragraph at lines 270--272
+\OT1/cmr/m/n/10 (Inf) and Not-a-Number (NaN) when all ex-po-nent bits are ei-th
+er zero (sub-nor-mals) or 
+ []
+
+
+Overfull \hbox (5.238pt too wide) in paragraph at lines 270--272
+\OT1/cmr/m/n/10 one (Inf when f=0, or NaN else). 16bit half-precision float-ing
+ point num-bers (Float16) 
+ []
+
+
+Overfull \hbox (8.90466pt too wide) in paragraph at lines 270--272
+\OT1/cmr/m/n/10 have 5 ex-po-nent bits and 10 sig-nif-i-cant bits. A trun-cated
+ ver-sion of the Float32 for-mat 
+ []
+
+
+Overfull \hbox (4.90466pt too wide) in paragraph at lines 270--272
+\OT1/cmr/m/n/10 (8 ex-po-nent bits, 23 sig-nif-i-cant bits) is BFloat16 with 8 
+ex-po-nent bits and 7 sign-f-i-cant 
+ []
+
+
+Overfull \hbox (11.57126pt too wide) in paragraph at lines 270--272
+\OT1/cmr/m/n/10 bits. Char-ac-ter-is-tics of var-i-ous for-mats are sum-marised
+ in Ta-ble 1[]. A for-mat with more 
+ []
+
+
+Overfull \hbox (8.37675pt too wide) in paragraph at lines 270--272
+\OT1/cmr/m/n/10 ex-po-nent bits has a wider dy-namic range of rep-re-sentable n
+um-bers but lower pre-ci-sion, 
+ []
+
+
+Overfull \hbox (19.34908pt too wide) in paragraph at lines 270--272
+\OT1/cmr/m/n/10 as fewer bits are avail-able for the sig-nif-i-cant. All floati
+ng-point for-mats have a fixed num- 
+ []
+
+
+Overfull \hbox (41.09912pt too wide) in paragraph at lines 270--272
+\OT1/cmr/m/n/10 ber of sig-nif-i-cant bits, con-se-quently, they have a con-sta
+nt num-ber of sig-nif-i-cant dig-its through- 
+ []
+
+
+Overfull \hbox (10.93233pt too wide) in paragraph at lines 270--272
+\OT1/cmr/m/n/10 out their range of rep-re-sentable num-bers (sub-nor-mals ex-cl
+uded), which is in con-trast to 
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+[]\OT1/cmr/bx/n/9 Table 1. \OT1/cmr/m/n/9 Some char-ac-ter-is-tics of var-i-ous
+ num-ber for-mats. $\OML/cmm/m/it/9 minpos$ \OT1/cmr/m/n/9 is the small-est rep
+-re-sentable
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+\OT1/cmr/m/n/9 pos-i-tive num-ber, $\OML/cmm/m/it/9 maxpos$ \OT1/cmr/m/n/9 the 
+largest. The ma-chine er-ror $\OML/cmm/m/it/9 ^^O$ \OT1/cmr/m/n/9 is here given
+ as dec-i-mal pre-ci-sion. %
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+\OT1/cmr/m/n/9 NaR de-notes the per-cent-age of bit pat-terns that rep-re-sent 
+not a num-ber (NaN), in-fin-ity or not a
+ []
+
+
+Overfull \hbox (4.51561pt too wide) in paragraph at lines 296--297
 []\OT1/cmr/m/n/10 Posit num-bers arise from a pro-jec-tion of the real axis ont
 o a cir-cle (Fig. 1[]), with 
  []
 
 
-Overfull \hbox (2.76572pt too wide) in paragraph at lines 282--283
+Overfull \hbox (2.76572pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 only one bit-pat-tern for zero and one for com-plex in-fin-ity 
 (or Not-a-Real, NaR), which 
  []
 
 
-Overfull \hbox (11.23189pt too wide) in paragraph at lines 282--283
+Overfull \hbox (11.23189pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 serves as a re-place-ment for Not-a-Number (NaN). The cir-cle i
 s split into \OT1/cmr/m/it/10 regimes\OT1/cmr/m/n/10 , de-ter- 
  []
 
 
-Overfull \hbox (10.55618pt too wide) in paragraph at lines 282--283
+Overfull \hbox (10.55618pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 mined by a con-stant $\OML/cmm/m/it/10 useed$\OT1/cmr/m/n/10 , 
 which al-ways marks the north-west on the posit cir-cle (Fig. 
  []
 
 
-Overfull \hbox (4.42888pt too wide) in paragraph at lines 282--283
+Overfull \hbox (4.42888pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 1[]b). Regimes are de-fined by $\OML/cmm/m/it/10 useed[]$\OT1/c
 mr/m/n/10 , $\OML/cmm/m/it/10 useed[]$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 useed
 []$\OT1/cmr/m/n/10 , etc. To en-code these regimes 
  []
 
 
-Overfull \hbox (17.40471pt too wide) in paragraph at lines 282--283
+Overfull \hbox (17.40471pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 into bits, posit num-bers ex-tend floating-point arith-metic by
  in-tro-duc-ing regime bits, that 
  []
 
 
-Overfull \hbox (19.48795pt too wide) in paragraph at lines 282--283
+Overfull \hbox (19.48795pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 are re-spon-si-ble for the dy-namic range of rep-re-sentable nu
 m-bers. In-stead of hav-ing a fixed 
  []
 
 
-Overfull \hbox (9.93227pt too wide) in paragraph at lines 282--283
+Overfull \hbox (9.93227pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 length, regime bits are de-fined as the se-quence of iden-ti-ca
 l bits af-ter the sign bit, which 
  []
 
 
-Overfull \hbox (7.57129pt too wide) in paragraph at lines 282--283
+Overfull \hbox (7.57129pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 are even-tu-ally ter-mi-nated by an op-po-site bit. The flex-i-
 ble length al-lows the sig-nif-i-cand 
  []
 
 
-Overfull \hbox (1.23775pt too wide) in paragraph at lines 282--283
+Overfull \hbox (1.23775pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 (or man-tissa) to oc-cupy more bits when less regime bits are n
 eeded, which is the case 
  []
 
 
-Overfull \hbox (22.32129pt too wide) in paragraph at lines 282--283
+Overfull \hbox (22.32129pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 for num-bers around one. A re-sult-ing higher pre-ci-sion aroun
 d one is traded against a grad- 
  []
 
 
-Overfull \hbox (9.63023pt too wide) in paragraph at lines 282--283
+Overfull \hbox (9.63023pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 u-ally lower pre-ci-sion for very large or very small num-bers.
  A pos-i-tive posit num-ber $\OML/cmm/m/it/10 p$ \OT1/cmr/m/n/10 is 
  []
 
 
-Overfull \hbox (18.238pt too wide) in paragraph at lines 282--283
+Overfull \hbox (18.238pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 de-coded as []J. L. Gustafson & Yonemoto, 2017; J. Gustafson, 2
 017) (neg-a-tive posit num- 
  []
 
-[3]
-Overfull \hbox (6.8593pt too wide) in paragraph at lines 286--288
+
+Overfull \hbox (6.8593pt too wide) in paragraph at lines 300--302
 \OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 k$ \OT1/cmr/m/n/10 is the num-ber of re
 gime bits. $\OML/cmm/m/it/10 e$ \OT1/cmr/m/n/10 is the in-te-ger rep-re-sented 
 by the ex-po-nent bits 
  []
 
 
-Overfull \hbox (31.94507pt too wide) in paragraph at lines 286--288
+Overfull \hbox (31.94507pt too wide) in paragraph at lines 300--302
 \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 f$ \OT1/cmr/m/n/10 is the frac-tion which
  is en-coded in the frac-tion (or sig-nif-i-cant) bits. The base $\OML/cmm/m/it
 /10 useed \OT1/cmr/m/n/10 = 
  []
 
 
-Overfull \hbox (10.50146pt too wide) in paragraph at lines 286--288
+Overfull \hbox (10.50146pt too wide) in paragraph at lines 300--302
 \OT1/cmr/m/n/10 2[]$ is de-ter-mined by the num-ber of ex-po-nent bits $\OML/cm
 m/m/it/10 e[]$\OT1/cmr/m/n/10 . More ex-po-nent bits in-crease - by 
  []
 
 
-Overfull \hbox (11.36172pt too wide) in paragraph at lines 286--288
+Overfull \hbox (11.36172pt too wide) in paragraph at lines 300--302
 \OT1/cmr/m/n/10 in-creas-ing $\OML/cmm/m/it/10 useed$ \OT1/cmr/m/n/10 - the dy-
 namic range of rep-re-sentable num-bers for the cost of pre-ci-sion. 
  []
 
 
-Overfull \hbox (10.0435pt too wide) in paragraph at lines 286--288
+Overfull \hbox (10.0435pt too wide) in paragraph at lines 300--302
 \OT1/cmr/m/n/10 The ex-po-nent bits them-selves do not af-fect the dy-namic ran
 ge by chang-ing the value of 
  []
 
 
-Overfull \hbox (6.6708pt too wide) in paragraph at lines 286--288
+Overfull \hbox (6.6708pt too wide) in paragraph at lines 300--302
 \OT1/cmr/m/n/10 te-ger $\OML/cmm/m/it/10 n$ []\OT1/cmr/m/n/10 J. L. Gustafson &
  Yonemoto, 2017; Chen et al.[], 2018). We will use a no-ta-tion 
  []
 
 
-Overfull \hbox (2.74258pt too wide) in paragraph at lines 286--288
+Overfull \hbox (2.74258pt too wide) in paragraph at lines 300--302
 \OT1/cmr/m/n/10 where Posit($\OML/cmm/m/it/10 n$\OT1/cmr/m/n/10 ,$\OML/cmm/m/it
 /10 e[]$\OT1/cmr/m/n/10 ) de-fines the posit num-bers with $\OML/cmm/m/it/10 n$
  \OT1/cmr/m/n/10 bits in-clud-ing $\OML/cmm/m/it/10 e[]$ \OT1/cmr/m/n/10 ex-po-
@@ -1568,851 +1643,745 @@ nent bits. A
  []
 
 
-Overfull \hbox (10.46011pt too wide) in paragraph at lines 291--293
+Overfull \hbox (10.46011pt too wide) in paragraph at lines 305--307
 \OT1/cmr/m/n/10 The sign bit is given in red, regime bits in or-ange, the ter-m
 i-nat-ing regime bit in brown, 
  []
 
 
-Overfull \hbox (10.31432pt too wide) in paragraph at lines 291--293
+Overfull \hbox (10.31432pt too wide) in paragraph at lines 305--307
 \OT1/cmr/m/n/10 the ex-po-nent bit in blue and the frac-tion bits in black. The
  $\OML/cmm/m/it/10 k$\OT1/cmr/m/n/10 -value is in-ferred from the 
  []
 
 
-Overfull \hbox (2.40459pt too wide) in paragraph at lines 291--293
+Overfull \hbox (2.40459pt too wide) in paragraph at lines 305--307
 \OT1/cmr/m/n/10 num-ber of regime bits, that are counted as neg-a-tive for the 
 bits be-ing 0, and pos-i-tive, 
  []
 
 
-Overfull \hbox (3.59898pt too wide) in paragraph at lines 291--293
+Overfull \hbox (3.59898pt too wide) in paragraph at lines 305--307
 \OT1/cmr/m/n/10 but sub-tract 1, for the bits be-ing 1. The ex-po-nent bits are
  in-ter-preted as un-signed in- 
  []
 
 
-Overfull \hbox (3.93243pt too wide) in paragraph at lines 291--293
+Overfull \hbox (3.93243pt too wide) in paragraph at lines 305--307
 \OT1/cmr/m/n/10 te-ger and the frac-tion bits fol-low the IEEE floating-point s
 tan-dard for sig-nif-i-cant bits. 
  []
 
 
-Overfull \hbox (10.68231pt too wide) in paragraph at lines 291--293
+Overfull \hbox (10.68231pt too wide) in paragraph at lines 305--307
 \OT1/cmr/m/n/10 For neg-a-tive num-bers, i.e. the sign bit be-ing 1, all other 
 bits are first con-verted to their 
  []
 
 
-Overfull \hbox (15.48796pt too wide) in paragraph at lines 291--293
+Overfull \hbox (15.48796pt too wide) in paragraph at lines 305--307
 \OT1/cmr/m/n/10 two's com-ple-ment (de-noted with an un-der-score sub-script) b
 y flip-ping all bits and adding 
  []
 
-
-Overfull \hbox (7.9878pt too wide) in paragraph at lines 299--301
+[4]
+Overfull \hbox (7.9878pt too wide) in paragraph at lines 313--315
 \OT1/cmr/m/n/10 After the con-ver-sion to the two's com-ple-ment, the bits are 
 in-ter-preted in the same way 
  []
 
-[4 <./figs/circles.pdf>]
-Overfull \hbox (24.07121pt too wide) in paragraph at lines 302--303
+<figs/circles.pdf, id=34, 407.76694pt x 201.26355pt>
+File: figs/circles.pdf Graphic file (type pdf)
+<use figs/circles.pdf>
+Package pdftex.def Info: figs/circles.pdf  used on input line 318.
+(pdftex.def)             Requested size: 397.48499pt x 196.19583pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+[]\OT1/cmr/bx/n/9 Figure  1. \OT1/cmr/m/n/9 Two posit num-ber for-mats ob-taine
+d by pro-ject-ing the real axis onto a cir-cle. (a)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+\OT1/cmr/m/n/9 2bit Posit(2,0) and (b) 4bit Posit(4,1). The bit pat-terns are m
+arked on the out-side and the re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+\OT1/cmr/m/n/9 spec-tive val-ues on the in-side of each cir-cle. Bit pat-terns 
+of neg-a-tive num-bers (black) have to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+\OT1/cmr/m/n/9 be con-verted to their two's com-ple-ment (colours) first (see t
+ext). At the top of ev-ery cir-cle is
+ []
+
+
+Overfull \hbox (24.07121pt too wide) in paragraph at lines 323--324
 []\OT1/cmr/m/n/10 Posits also come with a no over-flow/no underflow-rounding mo
 de: Where floats over- 
  []
 
 
-Overfull \hbox (6.26572pt too wide) in paragraph at lines 302--303
+Overfull \hbox (6.26572pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 flow and re-turn in-fin-ity when the ex-act re-sult of an arith
 -metic op-er-a-tion is larger than 
  []
 
 
-Overfull \hbox (0.96007pt too wide) in paragraph at lines 302--303
+Overfull \hbox (0.96007pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 the largest rep-re-sentable num-ber ($\OML/cmm/m/it/10 maxpos$\
 OT1/cmr/m/n/10 ), posit arith-metic re-turns $\OML/cmm/m/it/10 maxpos$ \OT1/cmr
 /m/n/10 in-stead, 
  []
 
 
-Overfull \hbox (7.5592pt too wide) in paragraph at lines 302--303
+Overfull \hbox (7.5592pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 and sim-i-larly for un-der-flow where the small-est rep-re-sent
 able pos-i-tive num-ber ($\OML/cmm/m/it/10 minpos$\OT1/cmr/m/n/10 ) 
  []
 
 
-Overfull \hbox (3.18239pt too wide) in paragraph at lines 302--303
+Overfull \hbox (3.18239pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 is re-turned. This is mo-ti-vated as round-ing to in-fin-ity re
 -turns a re-sult that is in-finitely 
  []
 
 
-Overfull \hbox (5.08508pt too wide) in paragraph at lines 302--303
+Overfull \hbox (5.08508pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 less cor-rect than $\OML/cmm/m/it/10 maxpos$\OT1/cmr/m/n/10 , a
 l-though of-ten de-sired to in-di-cate that an over-flow oc-curred 
  []
 
 
-Overfull \hbox (13.93231pt too wide) in paragraph at lines 302--303
+Overfull \hbox (13.93231pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 in the sim-u-la-tion. In-stead, it is pro-posed to per-form ove
 rflow-like checks on the soft-ware 
  []
 
 
-Overfull \hbox (6.72415pt too wide) in paragraph at lines 302--303
+Overfull \hbox (6.72415pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 level to sim-plify ex-cep-tion han-dling on hard-ware []J. Gust
 afson, 2017). Many func-tions 
  []
 
 
-Overfull \hbox (14.62675pt too wide) in paragraph at lines 302--303
+Overfull \hbox (14.62675pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 are sim-pli-fied for posits, as only two ex-cep-tions cases hav
 e to be han-dled, zero and NaR. 
  []
 
 
-Overfull \hbox (24.4602pt too wide) in paragraph at lines 302--303
+Overfull \hbox (24.4602pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 Con-versely, Float64 has more than $10[]$ bit-pat-terns re-serv
 ed for NaN, but these only make 
  []
 
 
-Overfull \hbox (7.2101pt too wide) in paragraph at lines 302--303
+Overfull \hbox (7.2101pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/10 NaN in-creases for floats with fewer ex-po-nent bits (Ta-ble 1[
 ]), and only poses a not-i-ca-ble 
  []
 
 
-Overfull \hbox (5.19322pt too wide) in paragraph at lines 304--305
+Overfull \hbox (5.19322pt too wide) in paragraph at lines 325--326
 []\OT1/cmr/m/n/10 The posit num-ber frame-work also highly rec-om-mends \OT1/cm
 r/m/it/10 quires\OT1/cmr/m/n/10 , an ad-di-tional reg-is- 
  []
 
 
-Overfull \hbox (27.94298pt too wide) in paragraph at lines 304--305
+Overfull \hbox (27.94298pt too wide) in paragraph at lines 325--326
 \OT1/cmr/m/n/10 ter on hard-ware to store in-ter-me-di-ate re-sults. Fused op-e
 r-a-tions like \OT1/cmr/m/it/10 multiply-add \OT1/cmr/m/n/10 can there- 
  []
 
 
-Overfull \hbox (4.84901pt too wide) in paragraph at lines 304--305
+Overfull \hbox (4.84901pt too wide) in paragraph at lines 325--326
 \OT1/cmr/m/n/10 fore be ex-e-cuted with a sin-gle round-ing er-ror with-out the
  round-ing of in-ter-me-di-ate re- 
  []
 
 
-Overfull \hbox (7.07123pt too wide) in paragraph at lines 304--305
+Overfull \hbox (7.07123pt too wide) in paragraph at lines 325--326
 \OT1/cmr/m/n/10 sults. The quire con-cept could also be ap-plied to floating-po
 int arith-metic, but is tech- 
  []
 
 
-Overfull \hbox (24.07121pt too wide) in paragraph at lines 304--305
+Overfull \hbox (24.07121pt too wide) in paragraph at lines 325--326
 \OT1/cmr/m/n/10 ni-cally dif-fi-cult to im-ple-ment on hard-ware as the re-quir
 ed reg-is-ters would need to be much 
  []
 
 
-Overfull \hbox (4.5434pt too wide) in paragraph at lines 304--305
+Overfull \hbox (4.5434pt too wide) in paragraph at lines 325--326
 \OT1/cmr/m/n/10 larger in size. For fair com-par-i-son we do not take quires in
 to ac-count. The posit num- 
  []
 
 
-Overfull \hbox (8.30739pt too wide) in paragraph at lines 304--305
+Overfull \hbox (8.30739pt too wide) in paragraph at lines 325--326
 \OT1/cmr/m/n/10 ber for-mat is ex-plained in more de-tail in []J. Gustafson (20
 17). In or-der to use posits on 
  []
 
 
-Overfull \hbox (12.34909pt too wide) in paragraph at lines 304--305
+Overfull \hbox (12.34909pt too wide) in paragraph at lines 325--326
 \OT1/cmr/m/n/10 a con-ven-tional CPU we de-vel-oped for the Ju-lia pro-gram-min
 g lan-guage []Bezanson et al.[], 
  []
 
 
-Overfull \hbox (14.41258pt too wide) in paragraph at lines 304--305
+Overfull \hbox (14.41258pt too wide) in paragraph at lines 325--326
 \OT1/cmr/m/n/10 2017) the posit em-u-la-tor \OT1/cmr/m/it/10 Soft-Posit.jl []\O
 T1/cmr/m/n/10 Kl^^?ower & Gior-dano, 2019), which is a wrap-per for 
  []
 
 
-Overfull \hbox (5.23804pt too wide) in paragraph at lines 304--305
+Overfull \hbox (5.23804pt too wide) in paragraph at lines 325--326
 \OT1/cmr/m/n/10 the C-based li-brary Soft-Posit. The type-flexible pro-gram-min
 g paradigm, fa-cil-i-tated by 
  []
 
+[5 <./figs/circles.pdf>]
+<../plots/decimal_precision.png, id=87, 505.89pt x 433.62pt>
+File: ../plots/decimal_precision.png Graphic file (type png)
+<use ../plots/decimal_precision.png>
+Package pdftex.def Info: ../plots/decimal_precision.png  used on input line 328
+.
+(pdftex.def)             Requested size: 397.48499pt x 340.71004pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
-[]\OT1/cmr/bx/n/9 Table 1. \OT1/cmr/m/n/9 Some char-ac-ter-is-tics of var-i-ous
- num-ber for-mats. $\OML/cmm/m/it/9 minpos$ \OT1/cmr/m/n/9 is the small-est rep
--re-sentable
+Underfull \hbox (badness 10000) in paragraph at lines 329--329
+[]\OT1/cmr/bx/n/9 Figure  2. \OT1/cmr/m/n/9 (a) Dec-i-mal pre-ci-sion of var-i-
+ous num-ber for-mats. Dashed ver-ti-cal lines in-di-cate the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
-\OT1/cmr/m/n/9 pos-i-tive num-ber, $\OML/cmm/m/it/9 maxpos$ \OT1/cmr/m/n/9 the 
-largest. The ma-chine er-ror $\OML/cmm/m/it/9 ^^O$ \OT1/cmr/m/n/9 is here given
- as dec-i-mal pre-ci-sion. %
+Underfull \hbox (badness 10000) in paragraph at lines 329--329
+\OT1/cmr/m/n/9 range of rep-re-sentable num-bers for each for-mat. Float64, Flo
+at32 and Posit32 are be-yond the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
-\OT1/cmr/m/n/9 NaR de-notes the per-cent-age of bit pat-terns that rep-re-sent 
-not a num-ber (NaN), in-fin-ity or not a
+Underfull \hbox (badness 10000) in paragraph at lines 329--329
+\OT1/cmr/m/n/9 axes lim-its. (b) His-togram of re-sults of all arith-metic op-e
+r-a-tions in the rescaled Lorenz sys-tem,
  []
 
 
-Overfull \hbox (25.93234pt too wide) in paragraph at lines 329--330
+Overfull \hbox (25.93234pt too wide) in paragraph at lines 336--337
 []\OT1/cmr/m/n/10 The dec-i-mal pre-ci-sion is de-fined as []J. L. Gustafson & 
 Yonemoto, 2017; J. Gustafson, 
  []
 
 
-Overfull \hbox (11.4254pt too wide) in paragraph at lines 332--334
+Overfull \hbox (11.4254pt too wide) in paragraph at lines 339--341
 \OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 x[]$ \OT1/cmr/m/n/10 is the ex-act re-s
 ult of an arith-metic op-er-a-tion and $\OML/cmm/m/it/10 x[]$ \OT1/cmr/m/n/10 i
 s the rep-re-sentable 
  []
 
 
-Overfull \hbox (28.48805pt too wide) in paragraph at lines 332--334
+Overfull \hbox (28.48805pt too wide) in paragraph at lines 339--341
 \OT1/cmr/m/n/10 num-ber that $\OML/cmm/m/it/10 x[]$ \OT1/cmr/m/n/10 is rounded 
 to, given a spec-i-fied round-ing mode. For the com-mon round- 
  []
 
 
-Overfull \hbox (8.21011pt too wide) in paragraph at lines 332--334
+Overfull \hbox (8.21011pt too wide) in paragraph at lines 339--341
 \OT1/cmr/m/n/10 to-nearest round-ing mode, the dec-i-mal pre-ci-sion ap-proache
 s in-fin-ity when the ex-act re- 
  []
 
 
-Overfull \hbox (29.1823pt too wide) in paragraph at lines 332--334
+Overfull \hbox (29.1823pt too wide) in paragraph at lines 339--341
 \OT1/cmr/m/n/10 sult ap-proaches the rep-re-sentable num-ber and has a min-i-mu
 m in be-tween two rep-re-sentable 
  []
 
 
-Overfull \hbox (6.86661pt too wide) in paragraph at lines 332--334
+Overfull \hbox (6.86661pt too wide) in paragraph at lines 339--341
 \OT1/cmr/m/n/10 num-bers. This min-i-mum de-fines the \OT1/cmr/m/it/10 worst-ca
 se \OT1/cmr/m/n/10 dec-i-mal pre-ci-sion, i.e. the dec-i-mal pre- 
  []
 
 
-Overfull \hbox (25.12672pt too wide) in paragraph at lines 332--334
+Overfull \hbox (25.12672pt too wide) in paragraph at lines 339--341
 \OT1/cmr/m/n/10 ci-sion when the round-ing er-ror is max-imised. The worst-case
  dec-i-mal pre-ci-sion is the num- 
  []
 
-[5]
-<../plots/decimal_precision.png, id=86, 505.89pt x 433.62pt>
-File: ../plots/decimal_precision.png Graphic file (type png)
-<use ../plots/decimal_precision.png>
-Package pdftex.def Info: ../plots/decimal_precision.png  used on input line 336
-.
-(pdftex.def)             Requested size: 397.48499pt x 340.71004pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-[]\OT1/cmr/bx/n/9 Figure  2. \OT1/cmr/m/n/9 (a) Dec-i-mal pre-ci-sion of var-i-
-ous num-ber for-mats. Dashed ver-ti-cal lines in-di-cate the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-\OT1/cmr/m/n/9 range of rep-re-sentable num-bers for each for-mat. Float64, Flo
-at32 and Posit32 are be-yond the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-\OT1/cmr/m/n/9 axes lim-its. (b) His-togram of re-sults of all arith-metic op-e
-r-a-tions in the rescaled Lorenz sys-tem,
- []
-
-
-Overfull \hbox (18.90456pt too wide) in paragraph at lines 341--342
+[6 <../plots/decimal_precision.png>]
+Overfull \hbox (18.90456pt too wide) in paragraph at lines 343--344
 []\OT1/cmr/m/n/10 Fig. 2[]a com-pares the worst-case dec-i-mal pre-ci-sion for 
 var-i-ous 16 and 8bit floats and 
  []
 
 
-Overfull \hbox (14.46014pt too wide) in paragraph at lines 341--342
+Overfull \hbox (14.46014pt too wide) in paragraph at lines 343--344
 \OT1/cmr/m/n/10 posits, as well as 16bit in-te-gers and the fixed-point for-mat
  Q6.10 (6 in-te-ger bits, 10 frac- 
  []
 
 
-Overfull \hbox (3.71017pt too wide) in paragraph at lines 341--342
+Overfull \hbox (3.71017pt too wide) in paragraph at lines 343--344
 \OT1/cmr/m/n/10 tion bits). Float16 has a nearly con-stant dec-i-mal pre-ci-sio
 n of al-most 4 dec-i-mal places, 
  []
 
 
-Overfull \hbox (7.46002pt too wide) in paragraph at lines 341--342
+Overfull \hbox (7.46002pt too wide) in paragraph at lines 343--344
 \OT1/cmr/m/n/10 which de-creases for the sub-nor-mal num-bers to-wards the smal
 l-est rep-re-sentable num-ber 
  []
 
 
-Overfull \hbox (6.92032pt too wide) in paragraph at lines 341--342
+Overfull \hbox (6.92032pt too wide) in paragraph at lines 343--344
 \OML/cmm/m/it/10 minpos$\OT1/cmr/m/n/10 . 16bit posits, on the other hand, show
  an in-creased dec-i-mal pre-ci-sion for num- 
  []
 
 
-Overfull \hbox (11.7379pt too wide) in paragraph at lines 341--342
+Overfull \hbox (31.76573pt too wide) in paragraph at lines 343--344
 \OT1/cmr/m/n/10 bers around 1 and a wider dy-namic range, in ex-change for less
- pre-ci-sion for num-bers on 
+ pre-ci-sion for num-bers around 
  []
 
 
-Overfull \hbox (2.54683pt too wide) in paragraph at lines 341--342
-\OT1/cmr/m/n/10 the or-der of $10[]$ as well as $10[]$. The ma-chine er-ror $\O
-ML/cmm/m/it/10 ^^O$\OT1/cmr/m/n/10 , de-fined as half the dis-tance be- 
+Overfull \hbox (14.43573pt too wide) in paragraph at lines 343--344
+\OT1/cmr/m/n/10 10[]$ as well as $10[]$. The ma-chine er-ror $\OML/cmm/m/it/10 
+^^O$\OT1/cmr/m/n/10 , de-fined as half the dis-tance be-tween 1 and the 
  []
 
 
-Overfull \hbox (6.54338pt too wide) in paragraph at lines 341--342
-\OT1/cmr/m/n/10 tween 1 and the next rep-re-sentable num-ber, can be given in t
-erms of dec-i-mal pre-ci-sion 
+Overfull \hbox (0.54341pt too wide) in paragraph at lines 343--344
+\OT1/cmr/m/n/10 next rep-re-sentable num-ber, can be given in terms of dec-i-ma
+l pre-ci-sion and is sum-ma- 
  []
 
 
-Overfull \hbox (30.93239pt too wide) in paragraph at lines 341--342
-\OT1/cmr/m/n/10 and is sum-ma-rized in Ta-ble 1[] for the var-i-ous for-mats. D
-ue to the no over-flow/no underflow- 
+Overfull \hbox (9.18237pt too wide) in paragraph at lines 343--344
+\OT1/cmr/m/n/10 rized in Ta-ble 1[] for the var-i-ous for-mats. Due to the no o
+ver-flow/no underflow-rounding 
  []
 
 
-Overfull \hbox (7.40462pt too wide) in paragraph at lines 341--342
-\OT1/cmr/m/n/10 rounding mode, the dec-i-mal pre-ci-sion is slightly above zero
- out-side the dy-namic range.  
- []
-
-
-Overfull \hbox (3.01564pt too wide) in paragraph at lines 343--344
+Overfull \hbox (3.01564pt too wide) in paragraph at lines 345--346
 []\OT1/cmr/m/n/10 The dec-i-mal pre-ci-sion of 16bit in-te-gers is neg-a-tive i
 n-fin-ity for any num-ber be-low 
  []
 
 
-Overfull \hbox (29.73802pt too wide) in paragraph at lines 343--344
+Overfull \hbox (29.73802pt too wide) in paragraph at lines 345--346
 \OT1/cmr/m/n/10 Sim-i-lar con-clu-sions hold for the fixed-point for-mat Q6.10,
  as the dec-i-mal pre-ci-sion is shifted 
  []
 
 
-Overfull \hbox (11.73518pt too wide) in paragraph at lines 343--344
+Overfull \hbox (11.73518pt too wide) in paragraph at lines 345--346
 \OT1/cmr/m/n/10 to-wards smaller num-bers by a fac-tor of $[]$ for each ad-di-t
 ional frac-tion bit. Flex-i-bil-ity re- 
  []
 
 
-Overfull \hbox (21.96019pt too wide) in paragraph at lines 343--344
+Overfull \hbox (21.96019pt too wide) in paragraph at lines 345--346
 \OT1/cmr/m/n/10 gard-ing the dy-namic range can there-fore be achieved with in-
 te-ger arith-metic if fixed point 
  []
 
 
-Overfull \hbox (9.32112pt too wide) in paragraph at lines 343--344
+Overfull \hbox (9.32112pt too wide) in paragraph at lines 345--346
 \OT1/cmr/m/n/10 num-bers are used []Russell et al.[], 2017). How-ever, we did n
 ot achieve con-vinc-ing re-sults 
  []
 
 
-Overfull \hbox (3.07124pt too wide) in paragraph at lines 343--344
+Overfull \hbox (3.07124pt too wide) in paragraph at lines 345--346
 \OT1/cmr/m/n/10 with in-te-ger arith-metic for the ap-pli-ca-tions in this stud
 y, as rescal-ing of the equa-tions 
  []
 
 
-Overfull \hbox (6.98785pt too wide) in paragraph at lines 343--344
+Overfull \hbox (6.98785pt too wide) in paragraph at lines 345--346
 \OT1/cmr/m/n/10 is de-sired to place many arith-metic cal-cu-la-tions near the 
 largest rep-re-sentable num-ber. 
  []
 
 
-Overfull \hbox (14.93227pt too wide) in paragraph at lines 343--344
+Overfull \hbox (14.93227pt too wide) in paragraph at lines 345--346
 \OT1/cmr/m/n/10 How-ever, any re-sult be-yond will lead to dis-as-trous re-sult
 s, as in-te-ger over-flow usu-ally re- 
  []
 
-[6 <../plots/decimal_precision.png>]
-Overfull \hbox (16.46002pt too wide) in paragraph at lines 352--354
+
+Overfull \hbox (16.46002pt too wide) in paragraph at lines 354--356
 []\OT1/cmr/m/n/10 The Lorenz sys-tem (L63, []Lorenz, 1963)) is a chaotic at-tra
 c-tor and serves as a sim- 
  []
 
 
-Overfull \hbox (13.2935pt too wide) in paragraph at lines 352--354
+Overfull \hbox (13.2935pt too wide) in paragraph at lines 354--356
 \OT1/cmr/m/n/10 plis-tic model for at-mo-spheric con-vec-tion. It is an ex-ten-
 sively stud-ied toy model for fore- 
  []
 
 
-Overfull \hbox (14.32127pt too wide) in paragraph at lines 352--354
+Overfull \hbox (14.32127pt too wide) in paragraph at lines 354--356
 \OT1/cmr/m/n/10 cast un-cer-tainty []Lorenz, 1963; Kwas-niok, 2014; Jef-fress e
 t al.[], 2017; Tan-tet et al.[], 2018) 
  []
 
 
-Overfull \hbox (9.68233pt too wide) in paragraph at lines 352--354
+Overfull \hbox (9.68233pt too wide) in paragraph at lines 354--356
 \OT1/cmr/m/n/10 and is used here to in-ves-ti-gate the ac-cu-mu-la-tion of roun
 d-ing er-rors in the nu-mer-i-cal in- 
  []
 
 
-Overfull \hbox (17.13837pt too wide) in paragraph at lines 352--354
+Overfull \hbox (17.13837pt too wide) in paragraph at lines 354--356
 \OT1/cmr/m/n/10 te-gra-tion of a chaotic sys-tem. The Lorenz sys-tem con-sists 
 of the vari-ables $\OML/cmm/m/it/10 x$\OT1/cmr/m/n/10 ,$\OML/cmm/m/it/10 y$ \OT
 1/cmr/m/n/10 and $\OML/cmm/m/it/10 z$ \OT1/cmr/m/n/10 that 
  []
 
-
-Overfull \hbox (9.09894pt too wide) in paragraph at lines 363--364
-[]\OT1/cmr/m/n/10 To find the op-ti-mal num-ber rep-re-sen-ta-tion to solve Eq.
- 5[] re-quires con-sid-er-ing the 
- []
-
-
-Overfull \hbox (4.62685pt too wide) in paragraph at lines 363--364
-\OT1/cmr/m/n/10 dy-namic range of all in-ter-me-di-ate cal-cu-la-tions. It is p
-os-si-ble to in-flu-ence this dy-namic 
- []
-
-
-Overfull \hbox (12.89456pt too wide) in paragraph at lines 363--364
-\OT1/cmr/m/n/10 range us-ing a \OT1/cmr/m/it/10 rescal-ing \OT1/cmr/m/n/10 of t
-he equa-tions via a sim-ple mul-ti-pli-ca-tion of the vari-ables with 
- []
-
-
-Overfull \hbox (16.06197pt too wide) in paragraph at lines 363--364
-\OT1/cmr/m/n/10 larly for $[]\OML/cmm/m/it/10 ; []$\OT1/cmr/m/n/10 . Fig. 2[]b 
-shows his-tograms for all num-bers that are used to solve the Lorenz 
- []
-
-
-Overfull \hbox (7.15462pt too wide) in paragraph at lines 363--364
-\OT1/cmr/m/n/10 sys-tem (in-clud-ing in-ter-me-di-ate cal-cu-la-tions). A com-p
-ar-i-son to the dec-i-mal pre-ci-sion in 
- []
-
-
-Overfull \hbox (16.76573pt too wide) in paragraph at lines 363--364
-\OT1/cmr/m/n/10 Fig. 2[]a re-veals the ben-e-fit of rescal-ing, es-pe-cially fo
-r posit arith-metic: To profit from the 
- []
-
-
-Overfull \hbox (8.12679pt too wide) in paragraph at lines 363--364
-\OT1/cmr/m/n/10 in-creased dec-i-mal pre-ci-sion around 1, a scal-ing with $1\O
-ML/cmm/m/it/10 =\OT1/cmr/m/n/10 10$ is pro-posed to shift most cal- 
- []
-
-
-Overfull \hbox (12.87674pt too wide) in paragraph at lines 363--364
-\OT1/cmr/m/n/10 cu-la-tions to-wards the cen-tre of the dy-namic range of rep-r
-e-sentable num-bers. Due to the 
- []
-
-
-Overfull \hbox (14.62679pt too wide) in paragraph at lines 363--364
-\OT1/cmr/m/n/10 con-stant dec-i-mal pre-ci-sion for floats, rescal-ing is less 
-rel-e-vant for float arith-metic as long 
- []
-
-
-Overfull \hbox (6.62671pt too wide) in paragraph at lines 363--364
-\OT1/cmr/m/n/10 as no over-flow nor un-der-flow oc-curs. For in-te-gers, on the
- other hand, the Lorenz equa- 
- []
-
-
-Overfull \hbox (13.84912pt too wide) in paragraph at lines 363--364
-\OT1/cmr/m/n/10 tions should be up-scaled by a fac-tor of ap-prox-i-mately $100
-$, to shift the range of num-bers 
- []
-
-
-Overfull \hbox (13.57126pt too wide) in paragraph at lines 365--367
-[]\OT1/cmr/m/n/10 We solve the equa-tions us-ing a fourth or-der Runge-Kutta me
-thod []Butcher, 2016). 
- []
-
-
-Overfull \hbox (11.4299pt too wide) in paragraph at lines 371--375
-[]\OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 RK[]; RK[]; RK[]$ \OT1/cmr/m/n/10 con
--tain the Runge-Kutta co-ef-fi-cient and the time step $^^A\OML/cmm/m/it/10 t$\
-OT1/cmr/m/n/10 . $\OML/cmm/m/it/10 RK[]$ 
- []
-
-
-Overfull \hbox (13.92654pt too wide) in paragraph at lines 371--375
-\OT1/cmr/m/n/10 also con-tains the pa-ram-e-ter $\OML/cmm/m/it/10 ^^[$\OT1/cmr/
-m/n/10 . The su-per-scripts $\OML/cmm/m/it/10 n$ \OT1/cmr/m/n/10 and $\OML/cmm/
-m/it/10 n \OT1/cmr/m/n/10 + 1$ de-note the cur-rent and next 
- []
-
-
-Overfull \hbox (14.9045pt too wide) in paragraph at lines 376--377
-[]\OT1/cmr/m/n/10 The rescal-ing of the Lorenz sys-tem has its lim-i-ta-tions: 
-The non-linear terms in Eq. 
- []
-
-
-Overfull \hbox (13.48094pt too wide) in paragraph at lines 376--377
-\OT1/cmr/m/n/10 6[] in-volve a di-vi-sion by the scal-ing con-stant $\OML/cmm/m
-/it/10 s$\OT1/cmr/m/n/10 , which leads to the re-sult of the arith-metic 
- []
-
-
-Overfull \hbox (2.34901pt too wide) in paragraph at lines 376--377
-\OT1/cmr/m/n/10 tograms of arith-metic re-sults (Fig. 2[]b), as high counts of 
-val-ues be-tween 1 and 50 ex- 
- []
-
-
-Overfull \hbox (13.5295pt too wide) in paragraph at lines 376--377
-\OT1/cmr/m/n/10 ist for dif-fer-ent choices of $\OML/cmm/m/it/10 s$\OT1/cmr/m/n
-/10 . A chang-ing shape of the his-togram with $\OML/cmm/m/it/10 s$ \OT1/cmr/m/
-n/10 is a con-se-quence. 
- []
-
-
-Overfull \hbox (8.15457pt too wide) in paragraph at lines 376--377
-\OT1/cmr/m/n/10 Fol-low-ing these re-sults an un-der-ly-ing chal-lenge of re-du
-ced pre-ci-sion mod-elling be-comes 
- []
-
-
-Overfull \hbox (12.04352pt too wide) in paragraph at lines 376--377
-\OT1/cmr/m/n/10 ap-par-ent: One has ei-ther to find a num-ber for-mat that fits
- the range of com-puted num- 
- []
-
-[7]
-<../plots/lorenz_attractor.png, id=97, 462.528pt x 346.896pt>
+<../plots/lorenz_attractor.png, id=93, 462.528pt x 346.896pt>
 File: ../plots/lorenz_attractor.png Graphic file (type png)
 <use ../plots/lorenz_attractor.png>
-Package pdftex.def Info: ../plots/lorenz_attractor.png  used on input line 383.
+Package pdftex.def Info: ../plots/lorenz_attractor.png  used on input line 366.
 
 (pdftex.def)             Requested size: 397.48499pt x 298.12889pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--384
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 []\OT1/cmr/bx/n/9 Figure  3. \OT1/cmr/m/n/9 The Lorenz at-trac-tor com-puted wi
 th dif-fer-ent num-ber for-mats. The scal-ing of the
  []
 
 
-Overfull \hbox (9.8767pt too wide) in paragraph at lines 388--390
+Overfull \hbox (9.8767pt too wide) in paragraph at lines 371--372
 []\OT1/cmr/m/n/10 Regardless of the ini-tial con-di-tions, the Lorenz sys-tem w
 ill evolve to-wards a set of 
  []
 
 
-Overfull \hbox (18.66609pt too wide) in paragraph at lines 388--390
+Overfull \hbox (18.66609pt too wide) in paragraph at lines 371--372
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y; z\OT1/cmr/m/n/10 )$ points called at-tr
 ac-tor (the x,z-section of the at-trac-tor is shown in Fig. 3[]a). This 
  []
 
 
-Overfull \hbox (7.50977pt too wide) in paragraph at lines 388--390
+Overfull \hbox (7.50977pt too wide) in paragraph at lines 371--372
 \OT1/cmr/m/n/10 at-trac-tor is \OT1/cmr/m/it/10 strange\OT1/cmr/m/n/10 , i.e. i
 ts ge-o-met-ric struc-ture can-not be de-scribed in two di-men-sions, 
  []
 
 
-Overfull \hbox (21.01576pt too wide) in paragraph at lines 388--390
+Overfull \hbox (21.01576pt too wide) in paragraph at lines 371--372
 \OT1/cmr/m/n/10 but is of frac-tal na-ture. While points on the model tra-jec-t
 ory will get in-finites-i-mally close 
  []
 
 
-Overfull \hbox (21.98787pt too wide) in paragraph at lines 388--390
+Overfull \hbox (21.98787pt too wide) in paragraph at lines 371--372
 \OT1/cmr/m/n/10 to each other, the tra-jec-tory of the an-a-lyt-i-cal Lorenz sy
 s-tem will never re-peat it-self. How- 
  []
 
 
-Overfull \hbox (12.32115pt too wide) in paragraph at lines 388--390
+Overfull \hbox (12.32115pt too wide) in paragraph at lines 371--372
 \OT1/cmr/m/n/10 ever, if the model is dis-cre-tised and if the vari-ables are r
 ep-re-sented with fi-nite pre-ci-sion, 
  []
 
 
-Overfull \hbox (8.51569pt too wide) in paragraph at lines 388--390
+Overfull \hbox (8.51569pt too wide) in paragraph at lines 371--372
 \OT1/cmr/m/n/10 only a fi-nite amount of dis-tinct states can be rep-re-sented 
 and the model tra-jec-tory will 
  []
 
 
-Overfull \hbox (1.71013pt too wide) in paragraph at lines 391--392
+Overfull \hbox (1.71013pt too wide) in paragraph at lines 373--374
 []\OT1/cmr/m/n/10 Integrating the Lorenz sys-tem with Float16 yields an at-trac
 -tor that is re-peat-ing 
  []
 
 
-Overfull \hbox (8.84903pt too wide) in paragraph at lines 391--392
+Overfull \hbox (8.84903pt too wide) in paragraph at lines 373--374
 \OT1/cmr/m/n/10 it-self fairly early and the space that is filled by the line o
 f the tra-jec-tory is sig-nif-i-cantly 
  []
 
 
-Overfull \hbox (13.09901pt too wide) in paragraph at lines 391--392
+Overfull \hbox (13.09901pt too wide) in paragraph at lines 373--374
 \OT1/cmr/m/n/10 smaller when com-pared to the space of a tra-jec-tory with dou-
 ble pre-ci-sion (com-pare Fig. 
  []
 
 
-Overfull \hbox (22.8213pt too wide) in paragraph at lines 391--392
-\OT1/cmr/m/n/10 re-sen-ta-tion of the at-trac-tor is im-proved sig-nif-i-cantly
- (Fig. 3[]c). The re-sults for posits looks 
+Overfull \hbox (1.70297pt too wide) in paragraph at lines 373--374
+\OT1/cmr/m/n/10 3[]a and b). How-ever, when us-ing Posit(16,1) and a rescal-ing
+ fac-tor of $\OML/cmm/m/it/10 s \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m
+/n/10 1$ (see sec- 
  []
 
 
-Overfull \hbox (20.21013pt too wide) in paragraph at lines 391--392
-\OT1/cmr/m/n/10 sim-i-lar to the re-sults with Float16 if no rescal-ing was use
-d (not shown here). Only a time 
+Overfull \hbox (0.32123pt too wide) in paragraph at lines 373--374
+\OT1/cmr/m/n/10 tion 4[]) the rep-re-sen-ta-tion of the at-trac-tor is im-prove
+d sig-nif-i-cantly (Fig. 3[]c). The re- 
  []
 
 
-Overfull \hbox (9.18243pt too wide) in paragraph at lines 391--392
-\OT1/cmr/m/n/10 rors of BFloat16 that oth-er-wise in-hibit a tem-po-ral evo-lu-
-tion of the sys-tem. This al-lows 
+Overfull \hbox (24.04349pt too wide) in paragraph at lines 373--374
+\OT1/cmr/m/n/10 sults for posits look sim-i-lar to the re-sults with Float16 if
+ no rescal-ing was used (not shown 
  []
 
 
-Overfull \hbox (15.84908pt too wide) in paragraph at lines 391--392
-\OT1/cmr/m/n/10 the Lorenz sys-tem to be in-te-grated with BFloat16, but with a
- poor rep-re-sen-ta-tion of the 
+Overfull \hbox (10.6822pt too wide) in paragraph at lines 373--374
+\OT1/cmr/m/n/10 here). Only a time step $^^A\OML/cmm/m/it/10 t > \OT1/cmr/m/n/1
+0 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 008$ yields ten-den-cies that are large en
+ough to over-come 
  []
 
 
-Overfull \hbox (21.18237pt too wide) in paragraph at lines 391--392
-\OT1/cmr/m/n/10 frac-tal at-trac-tor (Fig. 3[]d). The so-lu-tion of the Lorenz 
-sys-tem with 16bit in-te-gers presents 
+Overfull \hbox (7.18245pt too wide) in paragraph at lines 373--374
+\OT1/cmr/m/n/10 the round-ing er-rors of BFloat16 that oth-er-wise in-hibit a t
+em-po-ral evo-lu-tion of the sys- 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (40.59912pt too wide) in paragraph at lines 373--374
+\OT1/cmr/m/n/10 tem. Al-though a time step of 0.008s al-lows the Lorenz sys-tem
+ to be in-te-grated with BFloat16, 
+ []
 
- [8 <../plots/lorenz_attractor.png>]
-Overfull \hbox (27.7658pt too wide) in paragraph at lines 399--401
+
+Overfull \hbox (0.32129pt too wide) in paragraph at lines 373--374
+\OT1/cmr/m/n/10 only a poor rep-re-sen-ta-tion of the frac-tal at-trac-tor is a
+chieved (Fig. 3[]d). The so-lu-tion 
+ []
+
+
+Overfull \hbox (35.7379pt too wide) in paragraph at lines 373--374
+\OT1/cmr/m/n/10 of the Lorenz sys-tem with 16bit in-te-gers presents a sim-i-la
+rly sim-ple Lorenz at-trac-tor []Kl^^?ower 
+ []
+
+
+Underfull \vbox (badness 6775) has occurred while \output is active []
+
+ [7]
+[8 <../plots/lorenz_attractor.png>]
+Overfull \hbox (27.7658pt too wide) in paragraph at lines 381--383
 []\OT1/cmr/m/n/10 This sec-tion will eval-u-ate the dif-fer-ent num-ber for-mat
 s Float16, BFloat16, Posit(16,1) 
  []
 
 
-Overfull \hbox (10.37679pt too wide) in paragraph at lines 399--401
+Overfull \hbox (10.37679pt too wide) in paragraph at lines 381--383
 \OT1/cmr/m/n/10 and Posit(16,2) when solv-ing the shal-low wa-ter equa-tions. T
 he shal-low wa-ter equa-tions 
  []
 
 
-Overfull \hbox (4.46016pt too wide) in paragraph at lines 399--401
+Overfull \hbox (4.46016pt too wide) in paragraph at lines 381--383
 \OT1/cmr/m/n/10 re-sult from a ver-ti-cal in-te-gra-tion of the Navier-Stokes e
 qua-tions un-der the as-sump-tion 
  []
 
 
-Overfull \hbox (20.15456pt too wide) in paragraph at lines 399--401
+Overfull \hbox (20.15456pt too wide) in paragraph at lines 381--383
 \OT1/cmr/m/n/10 that hor-i-zon-tal length scales are much greater than ver-ti-c
 al scales. This as-sump-tion holds 
  []
 
 
-Overfull \hbox (1.55739pt too wide) in paragraph at lines 399--401
+Overfull \hbox (1.55739pt too wide) in paragraph at lines 381--383
 \OT1/cmr/m/n/10 for many fea-tures of the gen-eral cir-cu-la-tion of at-mo-sphe
 re and ocean []Gill, 1982; Val- 
  []
 
 
-Overfull \hbox (3.66826pt too wide) in paragraph at lines 399--401
+Overfull \hbox (3.66826pt too wide) in paragraph at lines 381--383
 \OT1/cmr/m/n/10 lis, 2006). The shal-low wa-ter equa-tions for the prog-nos-tic
  vari-ables ve-loc-ity $\OT1/cmr/bx/n/10 u \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 
 u; v\OT1/cmr/m/n/10 )$ 
  []
 
 
-Overfull \hbox (9.90909pt too wide) in paragraph at lines 404--408
+Overfull \hbox (9.90909pt too wide) in paragraph at lines 386--390
 []\OT1/cmr/m/n/10 For the at-mo-sphere, $\OML/cmm/m/it/10 ^^Q$ \OT1/cmr/m/n/10 
 is in-ter-preted as pres-sure []Gill, 1982). The shal-low wa-ter sys-tem 
  []
 
 
-Overfull \hbox (1.73767pt too wide) in paragraph at lines 404--408
+Overfull \hbox (1.73767pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/10 is forced with a zonal wind stress $\OT1/cmr/bx/n/10 F$\OT1/cmr
 /m/n/10 . The dis-si-pa-tion term $\OT1/cmr/bx/n/10 D$ \OT1/cmr/m/n/10 re-moves
  en-ergy on large 
  []
 
 
-Overfull \hbox (9.3941pt too wide) in paragraph at lines 404--408
+Overfull \hbox (9.3941pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/10 is the pres-sure gra-di-ent force, with $\OML/cmm/m/it/10 g$ \O
-T1/cmr/m/n/10 be-ing the grav-i-ta-tional ac-cel-er-a-tion. Eq. 7[]b is the 
+T1/cmr/m/n/10 be-ing the grav-i-ta-tional ac-cel-er-a-tion. Eq. 9[]b is the 
  []
 
 
-Overfull \hbox (14.68239pt too wide) in paragraph at lines 404--408
+Overfull \hbox (14.68239pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/10 shal-low water-variant of the con-ti-nu-ity equa-tion, en-sur-i
 ng con-ser-va-tion of mass. The do- 
  []
 
 
-Overfull \hbox (7.57121pt too wide) in paragraph at lines 404--408
+Overfull \hbox (7.57121pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/10 main is a zon-ally pe-ri-odic rect-an-gu-lar chan-nel of size $
 2000 [] \OMS/cmsy/m/n/10 ^^B\OT1/cmr/m/n/10 1000 []$, with a merid- 
  []
 
 
-Overfull \hbox (0.54353pt too wide) in paragraph at lines 404--408
+Overfull \hbox (0.54353pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/10 ional moun-tain ridge in the mid-dle of the do-main. A more de-
 tailed de-scrip-tion of the 
  []
 
 
-Overfull \hbox (0.6546pt too wide) in paragraph at lines 404--408
+Overfull \hbox (0.6546pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/10 shal-low wa-ter model, in-tro-duc-ing the re-main-ing pa-ram-e-
-ters and vari-ables in Eq. 7[], is 
+ters and vari-ables in Eq. 9[], is 
  []
 
 
-Overfull \hbox (5.9045pt too wide) in paragraph at lines 404--408
+Overfull \hbox (5.9045pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/10 pre-sented in Ap-pendix A[]. The shal-low wa-ter equa-tions are
  dis-cre-tised us-ing 2nd or-der 
  []
 
 
-Overfull \hbox (24.43234pt too wide) in paragraph at lines 404--408
+Overfull \hbox (24.43234pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/10 cen-tred fi-nite dif-fer-ences on an Arakawa C-grid []Arakawa &
  Lamb, 1977) with a grid spac- 
  []
 
 
-Overfull \hbox (28.37683pt too wide) in paragraph at lines 404--408
+Overfull \hbox (28.37683pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/10 ing of $^^A = 20 []$ (100x50 grid points) and the Runge-Kutta f
 ourth or-der method []Butcher, 
  []
 
 
-Overfull \hbox (7.29343pt too wide) in paragraph at lines 404--408
+Overfull \hbox (7.29343pt too wide) in paragraph at lines 386--390
 \OT1/cmr/m/n/10 2016) is used for time in-te-gra-tion. The ad-vec-tion terms ar
 e dis-cre-tised us-ing an en-ergy 
  []
 
 
-Overfull \hbox (7.40446pt too wide) in paragraph at lines 409--410
-[]\OT1/cmr/m/n/10 To also test the use of the dif-fer-ent num-ber for-mats for 
-the rep-re-sen-ta-tion of pas- 
+Overfull \hbox (0.18224pt too wide) in paragraph at lines 391--392
+[]\OT1/cmr/m/n/10 To test the use of the dif-fer-ent num-ber for-mats for the r
+ep-re-sen-ta-tion of pas-sive 
  []
 
 
-Overfull \hbox (16.9045pt too wide) in paragraph at lines 409--410
-\OT1/cmr/m/n/10 sive trac-ers in at-mo-sphere and ocean, we ex-tend the shal-lo
-w wa-ter equa-tions with an ad- 
+Overfull \hbox (11.29338pt too wide) in paragraph at lines 391--392
+\OT1/cmr/m/n/10 trac-ers in at-mo-sphere and ocean, we ex-tend the shal-low wa-
+ter equa-tions with an ad-vec- 
  []
 
 
-Overfull \hbox (6.48793pt too wide) in paragraph at lines 409--410
-\OT1/cmr/m/n/10 vec-tion equa-tion. Trac-ers could, for ex-am-ple, be tem-per-a
--ture and salin-ity in the ocean 
+Overfull \hbox (4.84904pt too wide) in paragraph at lines 391--392
+\OT1/cmr/m/n/10 tion equa-tion. Trac-ers could, for ex-am-ple, be tem-per-a-tur
+e and salin-ity in the ocean or 
  []
 
 
-Overfull \hbox (21.57118pt too wide) in paragraph at lines 409--410
-\OT1/cmr/m/n/10 or aerosols in the at-mo-sphere, which are re-garded here, for 
-sim-plic-ity, as pas-sive (i.e. they 
+Overfull \hbox (9.32117pt too wide) in paragraph at lines 391--392
+\OT1/cmr/m/n/10 aerosols in the at-mo-sphere, which are re-garded here, for sim
+-plic-ity, as pas-sive (i.e. they 
  []
 
 
-Overfull \hbox (1.64409pt too wide) in paragraph at lines 409--410
+Overfull \hbox (1.64409pt too wide) in paragraph at lines 391--392
 \OT1/cmr/m/n/10 do not in-flu-ence the flow). The change of the dis-tri-bu-tion
  of a pas-sive tracer $\OML/cmm/m/it/10 q$ \OT1/cmr/m/n/10 that is 
  []
 
 
-Overfull \hbox (38.07126pt too wide) in paragraph at lines 413--415
-\OT1/cmr/m/n/10 We dis-cre-tise Eq. 8[] with a semi-Lagrangian ad-vec-tion sche
-me []Smolarkiewicz & Pudykiewicz, 
+Overfull \hbox (43.07127pt too wide) in paragraph at lines 395--397
+\OT1/cmr/m/n/10 We dis-cre-tise Eq. 10[] with a semi-Lagrangian ad-vec-tion sch
+eme []Smolarkiewicz & Pudykiewicz, 
  []
 
 
-Overfull \hbox (1.18228pt too wide) in paragraph at lines 413--415
+Overfull \hbox (1.18228pt too wide) in paragraph at lines 395--397
 \OT1/cmr/m/n/10 1992), which cal-cu-lates the tracer con-cen-tra-tion for a giv
 en grid cell from the con-cen- 
  []
 
 
-Overfull \hbox (13.26572pt too wide) in paragraph at lines 413--415
+Overfull \hbox (13.26572pt too wide) in paragraph at lines 395--397
 \OT1/cmr/m/n/10 tra-tion at the pre-vi-ous time step at a de-par-ture point, wh
 ich in turn is de-ter-mined from 
  []
 
 
-Overfull \hbox (5.15451pt too wide) in paragraph at lines 413--415
+Overfull \hbox (5.15451pt too wide) in paragraph at lines 395--397
 \OT1/cmr/m/n/10 the flow field. As the de-par-ture point is in gen-eral in be-t
 ween grid nodes an in-ter-po-la- 
  []
 
-
-Overfull \hbox (3.2379pt too wide) in paragraph at lines 413--415
-\OT1/cmr/m/n/10 tion is re-quired to find the con-cen-tra-tion at the de-par-tu
-re point. The dis-creti-sa-tion of 
- []
-
-
-Overfull \hbox (6.93224pt too wide) in paragraph at lines 416--417
+[9]
+Overfull \hbox (6.93224pt too wide) in paragraph at lines 398--399
 []\OT1/cmr/m/n/10 For 16bit arith-metic it is es-sen-tial to rescale the shal-l
 ow wa-ter equa-tions to avoid 
  []
 
 
-Overfull \hbox (11.23788pt too wide) in paragraph at lines 416--417
+Overfull \hbox (11.23788pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 cal-cu-la-tions with very large or very small re-sults, as the 
 dy-namic range of rep-re-sentable 
  []
 
 
-Overfull \hbox (8.849pt too wide) in paragraph at lines 416--417
+Overfull \hbox (8.849pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 num-bers is lim-ited (Fig. 2[]a and Ta-ble 1[]). This is es-pe-
 cially true for some so-phis-ti-cated 
  []
 
 
-Overfull \hbox (11.44624pt too wide) in paragraph at lines 416--417
+Overfull \hbox (11.44624pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 schemes like the bi-har-monic dif-fu-sion []Griffies & Hall-ber
 g, 2000), which is of-ten used to 
  []
 
 
-Overfull \hbox (2.59901pt too wide) in paragraph at lines 416--417
+Overfull \hbox (2.59901pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 re-move en-ergy from the grid scale to en-sure nu-mer-i-cal sta
 -bil-ity. For bi-har-monic dif-fu- 
  []
 
 
-Overfull \hbox (2.57123pt too wide) in paragraph at lines 416--417
+Overfull \hbox (2.57123pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 sion a fourth deriva-tive in space is cal-cu-lated. Due to the 
 large di-men-sion of geo-phys- 
  []
 
 
-Overfull \hbox (4.33792pt too wide) in paragraph at lines 416--417
+Overfull \hbox (4.33792pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 i-cal ap-pli-ca-tions, this term can get very small $\OMS/cmsy/
 m/n/10 O\OT1/cmr/m/n/10 (10[])$ while vis-cos-ity co-ef-fi-cients are 
  []
 
 
-Overfull \hbox (35.97974pt too wide) in paragraph at lines 416--417
+Overfull \hbox (40.97975pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 typ-i-cally very large $\OMS/cmsy/m/n/10 O\OT1/cmr/m/n/10 (10[]
-)$. The prog-nos-tic vari-ables of Eq. 7[] and 8[] are typ-i-cally $\OMS/cmsy/m
-/n/10 O\OT1/cmr/m/n/10 (1 [][])$ 
+)$. The prog-nos-tic vari-ables of Eq. 9[] and 10[] are typ-i-cally $\OMS/cmsy/
+m/n/10 O\OT1/cmr/m/n/10 (1 [][])$ 
  []
 
 
-Overfull \hbox (3.16814pt too wide) in paragraph at lines 416--417
+Overfull \hbox (3.16814pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 for $\OT1/cmr/bx/n/10 u$\OT1/cmr/m/n/10 , $\OMS/cmsy/m/n/10 O\O
 T1/cmr/m/n/10 (1 [])$ for $\OML/cmm/m/it/10 ^^Q$ \OT1/cmr/m/n/10 and $\OMS/cmsy
 /m/n/10 O\OT1/cmr/m/n/10 (1)$ for $\OML/cmm/m/it/10 q$\OT1/cmr/m/n/10 . We can 
@@ -2420,62 +2389,62 @@ there-fore re-tain their phys-i-cal units in the
  []
 
 
-Overfull \hbox (23.2379pt too wide) in paragraph at lines 416--417
+Overfull \hbox (23.2379pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 dis-cre-tised nu-mer-i-cal model. How-ever, due to the grid spa
 c-ing $^^A$ of unit me-ter be-ing large 
  []
 
 
-Overfull \hbox (10.04327pt too wide) in paragraph at lines 416--417
+Overfull \hbox (10.04327pt too wide) in paragraph at lines 398--399
 \OT1/cmr/m/n/10 for geo-phys-i-cal flows, we need to use di-men-sion-less Nabla
  op-er-a-tors $[] = ^^A\OMS/cmsy/m/n/10 r$\OT1/cmr/m/n/10 . The con- 
  []
 
 
-Overfull \hbox (30.79358pt too wide) in paragraph at lines 416--417
-\OT1/cmr/m/n/10 ti-nu-ity equa-tion Eq. 7[]b, for ex-am-ple, is dis-cre-tised w
+Overfull \hbox (30.79358pt too wide) in paragraph at lines 398--399
+\OT1/cmr/m/n/10 ti-nu-ity equa-tion Eq. 9[]b, for ex-am-ple, is dis-cre-tised w
 ith an ex-plicit time in-te-gra-tion method 
  []
 
-[9]
-Overfull \hbox (6.8737pt too wide) in paragraph at lines 420--422
+
+Overfull \hbox (6.8737pt too wide) in paragraph at lines 402--404
 \OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 RK[]$ \OT1/cmr/m/n/10 is the Runge-Kutt
 a co-ef-fi-cient times $[]$ which is pre-com-puted at high pre- 
  []
 
 
-Overfull \hbox (3.18242pt too wide) in paragraph at lines 420--422
+Overfull \hbox (3.18242pt too wide) in paragraph at lines 402--404
 \OT1/cmr/m/n/10 ci-sion, to avoid a di-vi-sion by a large value for $^^A$ and a
  sub-se-quent mul-ti-pli-ca-tion with 
  []
 
 
-Overfull \hbox (13.84865pt too wide) in paragraph at lines 420--422
+Overfull \hbox (13.84865pt too wide) in paragraph at lines 402--404
 \OT1/cmr/m/n/10 a large value for $^^A\OML/cmm/m/it/10 t$\OT1/cmr/m/n/10 . The 
 other terms are rescaled ac-cord-ingly ($[] = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10
  ^^A$; $[] = \OT1/cmr/bx/n/10 F\OT1/cmr/m/n/10 ^^A$; please 
  []
 
 
-Overfull \hbox (6.61278pt too wide) in paragraph at lines 420--422
+Overfull \hbox (6.61278pt too wide) in paragraph at lines 402--404
 \OT1/cmr/m/n/10 see Ap-pendix A[] for a dis-cus-sion of the dis-si-pa-tion term
  $\OT1/cmr/bx/n/10 D$\OT1/cmr/m/n/10 ). The en-tire nu-mer-i-cal in-te- 
  []
 
 
-Overfull \hbox (10.65457pt too wide) in paragraph at lines 420--422
+Overfull \hbox (10.65457pt too wide) in paragraph at lines 402--404
 \OT1/cmr/m/n/10 gra-tion is per-formed us-ing the var-i-ous re-duced pre-ci-sio
 n num-ber for-mats, how-ever, con- 
  []
 
 
-Overfull \hbox (1.40468pt too wide) in paragraph at lines 420--422
+Overfull \hbox (1.40468pt too wide) in paragraph at lines 402--404
 \OT1/cmr/m/n/10 verted back to Float32 for model out-put. As some of the forc-i
 ng and bound-ary terms 
  []
 
 
-Overfull \hbox (2.68243pt too wide) in paragraph at lines 420--422
+Overfull \hbox (2.68243pt too wide) in paragraph at lines 402--404
 \OT1/cmr/m/n/10 re-main con-stant, they are pre-com-puted at higher pre-ci-sion
  dur-ing model ini-tial-i-sa-tion 
  []
@@ -2483,94 +2452,94 @@ Overfull \hbox (2.68243pt too wide) in paragraph at lines 420--422
 <../plots/snapshot.png, id=105, 578.16pt x 505.89pt>
 File: ../plots/snapshot.png Graphic file (type png)
 <use ../plots/snapshot.png>
-Package pdftex.def Info: ../plots/snapshot.png  used on input line 427.
+Package pdftex.def Info: ../plots/snapshot.png  used on input line 409.
 (pdftex.def)             Requested size: 397.48499pt x 347.79851pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--428
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []\OT1/cmr/bx/n/9 Figure  4. \OT1/cmr/m/n/9 Snap-shot of tracer con-cen-tra-tio
 n sim-u-lated by the shal-low wa-ter model us-ing dif-fer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--428
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 \OT1/cmr/m/n/9 ent 16bit num-ber for-mats. Mixed pre-ci-sion us-ing Float32 for
  the prog-nos-tic vari-ables only is used
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--428
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 \OT1/cmr/m/n/9 for (e) and (f). The tracer was in-jected uni-formly in the lowe
 r half of the do-main 50 days be-fore.
  []
 
 
-Overfull \hbox (17.54344pt too wide) in paragraph at lines 432--433
+Overfull \hbox (17.54344pt too wide) in paragraph at lines 414--415
 []\OT1/cmr/m/n/10 The so-lu-tion to the shal-low wa-ter equa-tions in-cludes vi
 g-or-ous tur-bu-lence that dom- 
  []
 
 
-Overfull \hbox (1.57124pt too wide) in paragraph at lines 432--433
+Overfull \hbox (1.57124pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 i-nates a me-an-der-ing zonal cur-rent. Us-ing ei-ther float or
  posit arith-metic in 16 bit the 
  []
 
 
-Overfull \hbox (1.849pt too wide) in paragraph at lines 432--433
+Overfull \hbox (1.849pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 sim-u-lated fluid dy-nam-ics are very sim-i-lar to a Float64 re
 f-er-ence: As shown in a snap- 
  []
 
 
-Overfull \hbox (14.76575pt too wide) in paragraph at lines 432--433
+Overfull \hbox (14.76575pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 shot of tracer con-cen-tra-tion (Fig. 4[]) tur-bu-lent stir-rin
 g and mix-ing can be well sim-u-lated 
  []
 
 
-Overfull \hbox (0.73795pt too wide) in paragraph at lines 432--433
+Overfull \hbox (0.73795pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 with posits. How-ever, the Float16 sim-u-la-tion (Fig. 4[]d) de
 -vi-ates much faster than the 
  []
 
 
-Overfull \hbox (8.3769pt too wide) in paragraph at lines 432--433
+Overfull \hbox (8.3769pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 posit sim-u-la-tions (Fig. 4[]b and c) from the Float64 ref-er-
 ence (Fig. 4[]a), pre-sum-ably due 
  []
 
 
-Overfull \hbox (18.82123pt too wide) in paragraph at lines 432--433
+Overfull \hbox (18.82123pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 to the small scale in-sta-bil-i-ties vis-i-ble in the snap-shot
  as wavy fil-a-ments and fronts. These 
  []
 
 
-Overfull \hbox (7.9601pt too wide) in paragraph at lines 432--433
+Overfull \hbox (7.9601pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 in-sta-bil-i-ties are clearly trig-gered by Float16 arith-metic
 s, but to a lower de-gree also vis- 
  []
 
 
-Overfull \hbox (12.04346pt too wide) in paragraph at lines 432--433
+Overfull \hbox (12.04346pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 i-ble for posits. This pro-vides a first ev-i-dence that the ac
 -cu-mu-lated round-ing er-rors with 
  []
 
 
-Overfull \hbox (13.9324pt too wide) in paragraph at lines 432--433
+Overfull \hbox (13.9324pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 posits are smaller than with floats. BFloat16 arith-metic is no
 t able to sim-u-late the shal- 
  []
 
 
-Overfull \hbox (20.79347pt too wide) in paragraph at lines 432--433
+Overfull \hbox (1.34898pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 low wa-ter dy-nam-ics, pre-sum-ably as ten-den-cies are too sma
-ll to add be added to the prog- 
+ll to be added to the prog- 
  []
 
 
-Overfull \hbox (16.21011pt too wide) in paragraph at lines 432--433
+Overfull \hbox (16.21011pt too wide) in paragraph at lines 414--415
 \OT1/cmr/m/n/10 nos-tic vari-ables, an is-sue that also oc-curs in the Lorenz s
 ys-tem (Fig. 3[]d) and even in the 
  []
@@ -2578,1265 +2547,1396 @@ ys-tem (Fig. 3[]d) and even in the
 <../plots/rmse_eta.pdf, id=106, 578.16pt x 289.08pt>
 File: ../plots/rmse_eta.pdf Graphic file (type pdf)
 <use ../plots/rmse_eta.pdf>
-Package pdftex.def Info: ../plots/rmse_eta.pdf  used on input line 435.
+Package pdftex.def Info: ../plots/rmse_eta.pdf  used on input line 417.
 (pdftex.def)             Requested size: 397.48499pt x 198.742pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--436
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
 []\OT1/cmr/bx/n/9 Figure  5. \OT1/cmr/m/n/9 Fore-cast er-ror mea-sured as the r
 oot mean square er-ror (RMSE) of sea sur-face
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--436
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
 \OT1/cmr/m/n/9 height $\OML/cmm/m/it/9 ^^Q$ \OT1/cmr/m/n/9 tak-ing Float64 as r
 ef-er-ence. (a) Fore-cast er-ror for var-i-ous 16bit num-ber for-mats and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--436
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
 \OT1/cmr/m/n/9 mixed 16bit/32bit sim-u-la-tions for which the prog-nos-tic vari
 -ables are kept at Float32. (b) Fore-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--436
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
 \OT1/cmr/m/n/9 cast er-ror for re-duced pre-ci-sion com-mu-ni-ca-tion in 8 or 1
 6bit with var-i-ous num-ber for-mats used
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--436
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
 \OT1/cmr/m/n/9 for en-cod-ing, with Float64 used for all cal-cu-la-tions. The c
 om-mu-ni-ca-tion of bound-ary val-ues
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--436
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
 \OT1/cmr/m/n/9 oc-curs at ev-ery time step for the prog-nos-tic vari-ables. The
  RMSE is nor-malised by a mean fore-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--436
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
 \OT1/cmr/m/n/9 cast er-ror at very long lead times. Solid lines rep-re-sent the
  me-dian of 200 fore-casts per num-ber
  []
 
 
-Overfull \hbox (9.15446pt too wide) in paragraph at lines 440--441
+Underfull \hbox (badness 10000) in paragraph at lines 418--418
+\OT1/cmr/m/n/9 for-mat. The shaded ar-eas of each model con-fig-u-ra-tion de-no
+te the in-terquar-tile range of the en-
+ []
+
+
+Overfull \hbox (9.15446pt too wide) in paragraph at lines 422--423
 []\OT1/cmr/m/n/10 To quan-tify dif-fer-ences be-tween the dif-fer-ent 16bit ari
 th-metics we per-form en-sem- 
  []
 
 
-Overfull \hbox (20.15453pt too wide) in paragraph at lines 440--441
-\OT1/cmr/m/n/10 ble fore-casts that com-pare round-ing er-rors. The fore-cast e
-r-ror in the shal-low wa-ter model 
+Overfull \hbox (18.34898pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 ble fore-casts. Some ini-tial con-di-tions de-scribe a more pre
+-dictable state of the shal-low wa- 
  []
 
 
-Overfull \hbox (36.34903pt too wide) in paragraph at lines 440--441
-\OT1/cmr/m/n/10 is com-puted as root mean square er-ror (RMSE) of sea sur-face 
-height with re-spect to Float64. 
+Overfull \hbox (3.15456pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 ter sys-tem than oth-ers. To quan-tify the er-ror growth of rou
+nd-ing er-rors with dif-fer-ent 
  []
 
 
-Overfull \hbox (3.79346pt too wide) in paragraph at lines 440--441
-\OT1/cmr/m/n/10 Other vari-ables yield sim-i-lar re-sults. The fore-casts start
- from 200 dif-fer-ent ini-tial con- 
+Overfull \hbox (0.90445pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 arith-metics in a sta-tis-ti-cally ro-bust way, we cre-ate an e
+n-sem-ble of fore-casts with each 
  []
 
 
-Overfull \hbox (9.93237pt too wide) in paragraph at lines 440--441
-\OT1/cmr/m/n/10 di-tions of ran-dom start dates in a 50 year long con-trol sim-
-u-la-tion. Each fore-cast is per- 
+Overfull \hbox (6.59908pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 mem-ber start-ing from one of 200 ran-domly picked start dates 
+from a 50 year long con- 
  []
 
 
-Overfull \hbox (4.6824pt too wide) in paragraph at lines 440--441
-\OT1/cmr/m/n/10 formed sev-eral times from iden-ti-cal ini-tial con-di-tions bu
-t with the var-i-ous num-ber for- 
+Overfull \hbox (14.76567pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 trol sim-u-la-tion. The fore-cast er-ror in the shal-low wa-ter
+ model is com-puted as root mean 
  []
 
 
-Overfull \hbox (0.15459pt too wide) in paragraph at lines 440--441
-\OT1/cmr/m/n/10 mats. To com-pare the mag-ni-tude of round-ing er-ror that are 
-caused by a re-duc-tion in 
+Overfull \hbox (15.4879pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 square er-ror (RMSE) of sea sur-face height with re-spect to Fl
+oat64. Other vari-ables yield 
  []
 
 
-Overfull \hbox (8.76558pt too wide) in paragraph at lines 440--441
-\OT1/cmr/m/n/10 pre-ci-sion to a re-al-is-tic level of er-ror that is caused by
- model dis-creti-sa-tion, we also per- 
+Overfull \hbox (11.73792pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 sim-i-lar re-sults. Each fore-cast is per-formed sev-eral times
+ from iden-ti-cal ini-tial con-di-tions 
  []
 
 
-Overfull \hbox (24.34906pt too wide) in paragraph at lines 440--441
-\OT1/cmr/m/n/10 the RMSE by the cli-ma-to-log-i-cal mean fore-cast er-ror at ve
-ry long lead times. A nor-malised 
+Overfull \hbox (13.79356pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 but with the var-i-ous num-ber for-mats. To com-pare the mag-ni
+-tude of round-ing er-ror that 
  []
 
 
-Overfull \hbox (6.51576pt too wide) in paragraph at lines 440--441
-\OT1/cmr/m/n/10 RMSE of 1 there-fore means that all in-for-ma-tion of the ini-t
-ial con-di-tions is re-moved by 
+Overfull \hbox (16.43228pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 are caused by a re-duc-tion in pre-ci-sion to a re-al-is-tic le
+vel of er-ror that is caused by model 
  []
 
 
-Overfull \hbox (11.82114pt too wide) in paragraph at lines 442--443
+Overfull \hbox (9.96011pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 dis-creti-sa-tion, we also per-form fore-casts with Float64 at 
+half the spa-tial res-o-lu-tion $^^A = 
+ []
+
+
+Overfull \hbox (9.29344pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 40 [] []$. We nor-malise the RMSE by the cli-ma-to-log-i-cal me
+an fore-cast er-ror at very long 
+ []
+
+
+Overfull \hbox (24.40459pt too wide) in paragraph at lines 422--423
+\OT1/cmr/m/n/10 lead times, which is the same for all model con-fig-u-ra-tions.
+ A nor-malised RMSE of 1 there- 
+ []
+
+
+Overfull \hbox (11.82114pt too wide) in paragraph at lines 424--425
 []\OT1/cmr/m/n/10 The fore-cast er-ror of Float16 is as large as the dis-creti-
 sa-tion er-ror and clearly out- 
  []
 
 
-Overfull \hbox (0.65475pt too wide) in paragraph at lines 442--443
+Overfull \hbox (0.65475pt too wide) in paragraph at lines 424--425
 \OT1/cmr/m/n/10 per-formed by 16bit posit arith-metic (Fig. 5[]a). Both Posit(1
 6,1) and Posit(16,2) yield 
  []
 
 
-Overfull \hbox (1.71008pt too wide) in paragraph at lines 442--443
+Overfull \hbox (1.71008pt too wide) in paragraph at lines 424--425
 \OT1/cmr/m/n/10 a fore-cast er-ror that is sev-eral times smaller than Float16.
  The fore-cast er-ror of 32bit 
  []
 
 
-Overfull \hbox (5.21011pt too wide) in paragraph at lines 442--443
+Overfull \hbox (5.21011pt too wide) in paragraph at lines 424--425
 \OT1/cmr/m/n/10 arith-metic is sev-eral or-ders of mag-ni-tude smaller and is o
 nly af-ter 200 days as large as 
  []
 
 
-Overfull \hbox (10.62682pt too wide) in paragraph at lines 442--443
+Overfull \hbox (10.62682pt too wide) in paragraph at lines 424--425
 \OT1/cmr/m/n/10 the er-ror for 16bit arith-metic at very short lead times. Also
  at 32bit, posits clearly out- 
  []
 
-<../plots/meanvar_u.pdf, id=107, 505.89pt x 361.35pt>
+[10] [11 <../plots/snapshot.png>] [12 <../plots/rmse_eta.pdf>]
+<../plots/meanvar_u.pdf, id=169, 505.89pt x 361.35pt>
 File: ../plots/meanvar_u.pdf Graphic file (type pdf)
 <use ../plots/meanvar_u.pdf>
-Package pdftex.def Info: ../plots/meanvar_u.pdf  used on input line 445.
+Package pdftex.def Info: ../plots/meanvar_u.pdf  used on input line 427.
 (pdftex.def)             Requested size: 397.48499pt x 283.92503pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 428--428
 []\OT1/cmr/bx/n/9 Figure  6. \OT1/cmr/m/n/9 Cli-ma-tol-ogy and vari-abil-ity of
  the zonal cur-rent. (a) Zonally-averaged zonal cur-rent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
+Underfull \hbox (badness 10000) in paragraph at lines 428--428
 \OML/cmm/m/it/9 u$ \OT1/cmr/m/n/9 as a func-tion of the merid-ional co-or-di-na
 te $\OML/cmm/m/it/9 y$\OT1/cmr/m/n/9 . (b) Zonal vari-ance of the zonal cur-ren
 t as a func-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--446
-\OT1/cmr/m/n/9 tion of $\OML/cmm/m/it/9 y$\OT1/cmr/m/n/9 . Shaded ar-eas de-not
-e the in-terquar-tile tem-po-ral vari-abil-ity around the (a) mean and (b)
+Underfull \hbox (badness 10000) in paragraph at lines 428--428
+\OT1/cmr/m/n/9 tion of $\OML/cmm/m/it/9 y$\OT1/cmr/m/n/9 . The shaded area de-n
+otes the in-terquar-tile tem-po-ral vari-abil-ity around the (a) mean
  []
 
 
-Overfull \hbox (11.62675pt too wide) in paragraph at lines 450--451
+Overfull \hbox (11.62675pt too wide) in paragraph at lines 432--433
 []\OT1/cmr/m/n/10 To in-ves-ti-gate the ef-fect of round-ing er-rors on the cli
 -ma-to-log-i-cal mean state of the 
  []
 
 
-Overfull \hbox (19.57349pt too wide) in paragraph at lines 450--451
+Overfull \hbox (19.57349pt too wide) in paragraph at lines 432--433
 \OT1/cmr/m/n/10 shal-low wa-ter sys-tem, we zon-ally av-er-age the zonal ve-loc
 -ity $\OML/cmm/m/it/10 u$\OT1/cmr/m/n/10 . The mean state is an east- 
  []
 
 
-Overfull \hbox (0.34903pt too wide) in paragraph at lines 450--451
-\OT1/cmr/m/n/10 ward flow of about 0.3 m/s which is about 3 to 4 times weaker t
-han in-di-vid-ual ve-loc- 
+Overfull \hbox (20.09912pt too wide) in paragraph at lines 432--433
+\OT1/cmr/m/n/10 ward flow of about 0.3 m/s, about 3 to 4 times weaker than in-d
+i-vid-ual ve-loc-i-ties through- 
  []
 
 
-Overfull \hbox (16.12682pt too wide) in paragraph at lines 450--451
-\OT1/cmr/m/n/10 i-ties through-out the do-main (Fig. 6[]a), which is typ-i-cal 
-for tur-bu-lent flows. A weak west- 
+Overfull \hbox (4.96011pt too wide) in paragraph at lines 432--433
+\OT1/cmr/m/n/10 out the do-main (Fig. 6[]a), which is typ-i-cal for tur-bu-lent
+ flows. A weak west-ward mean 
  []
 
 
-Overfull \hbox (6.01576pt too wide) in paragraph at lines 450--451
-\OT1/cmr/m/n/10 ward mean flow is found at the north-ern and south-ern bound-ar
-y. No 16bit for-mat was 
+Overfull \hbox (17.93248pt too wide) in paragraph at lines 432--433
+\OT1/cmr/m/n/10 flow is found at the north-ern and south-ern bound-ary. No 16bi
+t for-mat was found to have 
  []
 
 
-Overfull \hbox (9.98793pt too wide) in paragraph at lines 450--451
-\OT1/cmr/m/n/10 found to have a sig-nif-i-cant im-pact on the mean state. This 
-is in con-trast to sim-u-la-tions 
+Overfull \hbox (15.12685pt too wide) in paragraph at lines 432--433
+\OT1/cmr/m/n/10 a sig-nif-i-cant im-pact on the mean state. The vari-abil-ity o
+f the flow around its mean state 
  []
 
 
-Overfull \hbox (11.84888pt too wide) in paragraph at lines 450--451
-\OT1/cmr/m/n/10 run at half the spa-tial res-o-lu-tion ($^^A = 40 [] []$), whic
-h in-crease the strength of the mean 
- []
-
-[10] [11 <../plots/snapshot.png>]
-Overfull \hbox (1.0435pt too wide) in paragraph at lines 452--453
-[]\OT1/cmr/m/n/10 The vari-abil-ity of the flow around its mean state is high t
-hrough-out the do-main 
+Overfull \hbox (11.96027pt too wide) in paragraph at lines 432--433
+\OT1/cmr/m/n/10 is high through-out the do-main (Fig. 6[]b). The vari-abil-ity 
+is sig-nif-i-cantly in-creased by 10 
  []
 
 
-Overfull \hbox (4.12689pt too wide) in paragraph at lines 452--453
-\OT1/cmr/m/n/10 (Fig. 6[]b). The vari-abil-ity is sig-nif-i-cantly in-creased b
-y 10 -- 30% with 16bit arith-metic, 
+Overfull \hbox (10.09906pt too wide) in paragraph at lines 432--433
+\OT1/cmr/m/n/10 -- 30% with 16bit arith-metic, es-pe-cially with Posit(16,2). T
+he in-creased round-ing er-rors 
  []
 
 
-Overfull \hbox (3.71016pt too wide) in paragraph at lines 452--453
-\OT1/cmr/m/n/10 es-pe-cially with Posit(16,2). The in-creased round-ing er-rors
- with 16bit arith-metic likely 
+Overfull \hbox (16.01572pt too wide) in paragraph at lines 432--433
+\OT1/cmr/m/n/10 with 16bit arith-metic likely trig-ger in-sta-bil-i-ties in the
+ flow, which grow and sub-se-quently 
  []
 
-
-Overfull \hbox (11.37677pt too wide) in paragraph at lines 452--453
-\OT1/cmr/m/n/10 trig-ger in-sta-bil-i-ties in the flow, which grow and sub-se-q
-uently ex-plain the in-creased vari- 
- []
-
-
-Overfull \hbox (9.93248pt too wide) in paragraph at lines 452--453
-\OT1/cmr/m/n/10 abil-ity. Sim-u-la-tions at half the spa-tial res-o-lu-tion pre
-sent a vari-abil-ity that is up to 20% 
- []
-
-
-Overfull \hbox (0.84897pt too wide) in paragraph at lines 452--453
-\OT1/cmr/m/n/10 weaker. We there-fore as-sume that the in-creased vari-abil-ity
- of 16bit arith-metic is sim- 
- []
-
-<../plots/ageostrophic.pdf, id=115, 578.16pt x 289.08pt>
+<../plots/ageostrophic.pdf, id=170, 578.16pt x 289.08pt>
 File: ../plots/ageostrophic.pdf Graphic file (type pdf)
 <use ../plots/ageostrophic.pdf>
-Package pdftex.def Info: ../plots/ageostrophic.pdf  used on input line 455.
+Package pdftex.def Info: ../plots/ageostrophic.pdf  used on input line 435.
 (pdftex.def)             Requested size: 397.48499pt x 198.742pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--456
+Underfull \hbox (badness 10000) in paragraph at lines 436--436
 []\OT1/cmr/bx/n/9 Figure  7. \OT1/cmr/m/n/9 Geostrophic bal-ance as sim-u-lated
  with dif-fer-ent num-ber for-mats. (a) His-tograms
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--456
+Underfull \hbox (badness 10000) in paragraph at lines 436--436
 \OT1/cmr/m/n/9 of flow-parallel com-po-nents of geostrophic ve-loc-ity. (b) as 
 (a) but for the ageostrophic ve-loc-i-ties.
  []
 
 
-Overfull \hbox (4.0156pt too wide) in paragraph at lines 460--462
+Overfull \hbox (4.0156pt too wide) in paragraph at lines 440--442
 []\OT1/cmr/m/n/10 The tur-bu-lence in shal-low wa-ter sim-u-la-tions is largely
  geostrophic, such that the 
  []
 
 
-Overfull \hbox (2.46004pt too wide) in paragraph at lines 460--462
+Overfull \hbox (2.46004pt too wide) in paragraph at lines 440--442
 \OT1/cmr/m/n/10 pres-sure gra-di-ent force op-poses the Cori-o-lis force. The r
 e-sult-ing geostrophic ve-loc-i-ties 
  []
 
 
-Overfull \hbox (15.20015pt too wide) in paragraph at lines 465--469
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <../plots/meanvar_u.pdf>]
+Overfull \hbox (15.20015pt too wide) in paragraph at lines 445--449
 []\OT1/cmr/m/n/10 and de-vi-a-tions from the ac-tual flow $\OT1/cmr/bx/n/10 u$ 
 \OT1/cmr/m/n/10 are the ageostrophic ve-loc-ity com-po-nents $\OT1/cmr/bx/n/10 
 u[]$\OT1/cmr/m/n/10 . We 
  []
 
 
-Overfull \hbox (12.29352pt too wide) in paragraph at lines 465--469
+Overfull \hbox (12.29352pt too wide) in paragraph at lines 445--449
 \OT1/cmr/m/n/10 project both com-po-nents on the ac-tual ve-loc-i-ties to ob-ta
 in the flow-parallel com-po-nents 
  []
 
-[12 <../plots/rmse_eta.pdf>] [13 <../plots/meanvar_u.pdf> <../plots/ageostrophi
-c.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ../plots/ageostrophic.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
->]
-Overfull \hbox (3.90448pt too wide) in paragraph at lines 472--474
+Overfull \hbox (3.90448pt too wide) in paragraph at lines 452--454
 \OT1/cmr/m/n/10 The geostrophic ve-loc-i-ties in the shal-low wa-ter sim-u-la-t
 ions can reach up to 2 m/s, are 
  []
 
 
-Overfull \hbox (5.988pt too wide) in paragraph at lines 472--474
+Overfull \hbox (5.988pt too wide) in paragraph at lines 452--454
 \OT1/cmr/m/n/10 vir-tu-ally never neg-a-tive (i.e. against the flow) and have a
  mean of about 0.7 m/s (Fig. 
  []
 
 
-Overfull \hbox (21.4602pt too wide) in paragraph at lines 472--474
+Overfull \hbox (21.4602pt too wide) in paragraph at lines 452--454
 \OT1/cmr/m/n/10 7[]a). This be-haviour is well sim-u-lated with 16bit num-ber f
 or-mats, al-though posits in-crease 
  []
 
 
-Overfull \hbox (22.51576pt too wide) in paragraph at lines 472--474
+Overfull \hbox (22.51576pt too wide) in paragraph at lines 452--454
 \OT1/cmr/m/n/10 the strength of geostrophic ve-loc-i-ties slightly. Ageostrophi
 c ve-loc-ity com-po-nents are found 
  []
 
 
-Overfull \hbox (24.18227pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 to equally in-crease and de-crease the flow speeds, but rarely 
-ex-ceed $\OMS/cmsy/m/n/10 ^^F$\OT1/cmr/m/n/10 0.1m/s and are there- 
+Overfull \hbox (4.26572pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 to be isotropic, and are ori-ented equally fre-quent with and a
+gainst the pre-vail-ing flow, 
  []
 
 
-Overfull \hbox (12.98799pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 fore com-pa-ra-bly small as ex-pected in geostroph-i-cally bal-
-anced tur-bu-lence. Ageostrophic 
+Overfull \hbox (16.37683pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 but rarely ex-ceed $\OMS/cmsy/m/n/10 ^^F$\OT1/cmr/m/n/10 0.1m/s
+ and are there-fore com-pa-ra-bly small as ex-pected in geostroph- 
  []
 
 
-Overfull \hbox (14.73784pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 ve-loc-i-ties can be seen as a mea-sure of the phys-i-cal in-st
-a-bil-i-ties in the flow field and their 
+Overfull \hbox (16.65453pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 i-cally bal-anced tur-bu-lence. Ageostrophic ve-loc-i-ties can 
+be seen as a mea-sure of the phys- 
  []
 
 
-Overfull \hbox (9.32126pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 vari-ance is in-deed in-creased when sim-u-lated with 16bit num
--ber for-mats. Float16 shows 
+Overfull \hbox (5.48785pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 i-cal in-sta-bil-i-ties in the flow field and their vari-ance i
+s in-deed in-creased when sim-u-lated 
  []
 
 
-Overfull \hbox (9.15457pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 clearly fewer ageostrophic ve-loc-i-ties around 0, point-ing to
--wards an in-creased num-ber of 
+Overfull \hbox (6.5435pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 with 16bit num-ber for-mats. Float16 shows clearly fewer ageost
+rophic ve-loc-i-ties around 
  []
 
 
-Overfull \hbox (13.849pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 sim-u-lated in-sta-bil-i-ties. Posits have an even fur-ther in-
-creased num-ber of ageostrophic ve- 
+Overfull \hbox (7.96013pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 0, point-ing to-wards an in-creased num-ber of sim-u-lated in-s
+ta-bil-i-ties. Posits have an even 
  []
 
 
-Overfull \hbox (1.82124pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 loc-i-ties, and es-pe-cially Posit(16,1) in-creases the vari-an
-ce of those by more than fac-tor 
+Overfull \hbox (9.15457pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 fur-ther in-creased num-ber of ageostrophic ve-loc-i-ties, and 
+es-pe-cially Posit(16,1) in-creases 
  []
 
 
-Overfull \hbox (7.68236pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 of two. It is un-clear where in the model in-te-gra-tion round-
-ing er-rors of 16bit arith-metic 
+Overfull \hbox (0.65451pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 the vari-ance of those by more than fac-tor of two. It is un-cl
+ear where in the model in- 
  []
 
 
-Overfull \hbox (10.54344pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 trig-ger in-sta-bil-i-ties that lead to the ob-served in-crease
- in ageostro-phy. We con-clude that 
+Overfull \hbox (21.15466pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 te-gra-tion round-ing er-rors of 16bit arith-metic trig-ger in-
+sta-bil-i-ties that lead to the ob-served 
  []
 
 
-Overfull \hbox (11.93243pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 al-though the geostrophic bal-ance in the sim-u-la-tions is mai
-n-tained, round-ing er-rors lead, 
+Overfull \hbox (9.87679pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 in-crease in ageostro-phy. We con-clude that al-though the geos
+trophic bal-ance in the sim- 
  []
 
 
-Overfull \hbox (7.6268pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 likely due to an in-crease in ageostro-phy, to a higher vari-ab
-il-ity in the flow field. As the 
+Overfull \hbox (11.12685pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 u-la-tions is main-tained, round-ing er-rors lead, likely due t
+o an in-crease in ageostro-phy, to 
  []
 
 
-Overfull \hbox (9.7935pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 tracer field sim-u-lated by Float16 in-cludes rec-og-niz-ably m
-ore small scale vari-ablity com- 
+Overfull \hbox (1.65459pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 a higher vari-abil-ity in the flow field. As the tracer field s
+im-u-lated by Float16 in-cludes 
  []
 
 
-Overfull \hbox (11.65471pt too wide) in paragraph at lines 472--474
-\OT1/cmr/m/n/10 pared to posits, it fol-lows that some of this vari-abil-ity mi
-ght ac-tu-ally be geostroph-i-cally 
+Overfull \hbox (10.34908pt too wide) in paragraph at lines 452--454
+\OT1/cmr/m/n/10 rec-og-niz-ably more small scale vari-ablity com-pared to posit
+s, it fol-lows that some of this 
  []
 
-<../plots/tendency_hist.png, id=287, 722.7pt x 361.35pt>
+<../plots/tendency_hist.png, id=234, 722.7pt x 361.35pt>
 File: ../plots/tendency_hist.png Graphic file (type png)
 <use ../plots/tendency_hist.png>
-Package pdftex.def Info: ../plots/tendency_hist.png  used on input line 476.
+Package pdftex.def Info: ../plots/tendency_hist.png  used on input line 456.
 (pdftex.def)             Requested size: 397.48499pt x 198.74312pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--477
+Underfull \hbox (badness 10000) in paragraph at lines 457--457
 []\OT1/cmr/bx/n/9 Figure  8. \OT1/cmr/m/n/9 His-tograms of the nu-meric val-ues
  of the prog-nos-tic vari-ables (a) zonal ve-loc-ity $\OML/cmm/m/it/9 u$\OT1/cm
 r/m/n/9 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--477
+Underfull \hbox (badness 10000) in paragraph at lines 457--457
 \OT1/cmr/m/n/9 (b) sea sur-face height $\OML/cmm/m/it/9 ^^Q$\OT1/cmr/m/n/9 , an
 d the re-spec-tive ten-den-cies of (d) $\OML/cmm/m/it/9 u$ \OT1/cmr/m/n/9 and (
 e) $\OML/cmm/m/it/9 ^^Q$\OT1/cmr/m/n/9 , sim-u-lated with dif-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--477
+Underfull \hbox (badness 10000) in paragraph at lines 457--457
 \OT1/cmr/m/n/9 fer-ent 16, 32 and 64bit num-ber for-mats. Mean, 10th and 90th p
 er-centile are shown above the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--477
+Underfull \hbox (badness 10000) in paragraph at lines 457--457
 \OT1/cmr/m/n/9 his-tograms in re-spec-tive col-ors. Snap-shots of the ten-den-c
 ies of $\OML/cmm/m/it/9 ^^Q$ \OT1/cmr/m/n/9 sim-u-lated with (c) Float64 and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--477
+Underfull \hbox (badness 10000) in paragraph at lines 457--457
 \OT1/cmr/m/n/9 (f) Posit(16,1), other 16bit for-mats are sim-i-lar. Ar-eas of s
 ea sur-face height anoma-lies ex-ceed-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--477
+Underfull \hbox (badness 10000) in paragraph at lines 457--457
 \OMS/cmsy/m/n/9 ^^F\OT1/cmr/m/n/9 1\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 4$ m are sho
 wn in pur-ple (neg-a-tiv) and yel-low (pos-i-tive). Note the break on the x-axi
 s in
  []
 
 
-Overfull \hbox (6.04347pt too wide) in paragraph at lines 481--482
+Overfull \hbox (6.04347pt too wide) in paragraph at lines 461--462
 []\OT1/cmr/m/n/10 As 16bit arith-metics have no sig-nif-i-cant im-pact on the c
 li-ma-to-log-i-cal mean state, 
  []
 
 
-Overfull \hbox (3.46016pt too wide) in paragraph at lines 481--482
+Overfull \hbox (3.46016pt too wide) in paragraph at lines 461--462
 \OT1/cmr/m/n/10 his-tograms of prog-nos-tic vari-ables are also not changed (Fi
 g. 8[]a and b). How-ever, the 
  []
 
 
-Overfull \hbox (10.34903pt too wide) in paragraph at lines 481--482
+Overfull \hbox (10.34903pt too wide) in paragraph at lines 461--462
 \OT1/cmr/m/n/10 ten-den-cies are in-creased by or-ders of mag-ni-tude with 16bi
 t arith-metics (Fig. 8[]d and e), 
  []
 
 
-Overfull \hbox (2.16846pt too wide) in paragraph at lines 481--482
+Overfull \hbox (2.16846pt too wide) in paragraph at lines 461--462
 \OT1/cmr/m/n/10 as round-ing er-rors cause grav-ity waves to ra-di-ate away fro
 m ed-dies (Fig. 8[]f). Grav-ity 
  []
 
 
-Overfull \hbox (8.51567pt too wide) in paragraph at lines 481--482
+Overfull \hbox (8.51567pt too wide) in paragraph at lines 461--462
 \OT1/cmr/m/n/10 waves are iden-ti-fied from the ten-dency of sea sur-face heigh
 t. Com-par-ing their prop-a-ga- 
  []
 
 
-Overfull \hbox (13.93236pt too wide) in paragraph at lines 481--482
+Overfull \hbox (13.93236pt too wide) in paragraph at lines 461--462
 \OT1/cmr/m/n/10 tion to the lo-ca-tion of anoma-lous sea sur-face height, which
  is used as a proxy for ed-dies, 
  []
 
 
-Overfull \hbox (13.09908pt too wide) in paragraph at lines 481--482
+Overfull \hbox (13.09908pt too wide) in paragraph at lines 461--462
 \OT1/cmr/m/n/10 we as-sume that round-ing er-rors in re-gions of high eddy ac-t
 iv-ity lead to in-sta-bil-i-ties that 
  []
 
 
-Overfull \hbox (33.71014pt too wide) in paragraph at lines 481--482
+Overfull \hbox (33.71014pt too wide) in paragraph at lines 461--462
 \OT1/cmr/m/n/10 prop-a-gate away in the form of grav-ity waves. These grav-ity 
 waves are not present in Float64 
  []
 
 
-Overfull \hbox (9.18245pt too wide) in paragraph at lines 481--482
+Overfull \hbox (9.18245pt too wide) in paragraph at lines 461--462
 \OT1/cmr/m/n/10 sim-u-la-tions (Fig. 8[]c) and tend to have only a small im-pac
 t on quasi-gestrophic dy-nam- 
  []
 
 
-Overfull \hbox (3.6267pt too wide) in paragraph at lines 481--482
+Overfull \hbox (3.6267pt too wide) in paragraph at lines 461--462
 \OT1/cmr/m/n/10 ics, as they act on dif-fer-ent time and length scales. It is u
 n-clear whether these grav-ity 
  []
 
-[14 <../plots/tendency_hist.png>]
-Overfull \hbox (7.29343pt too wide) in paragraph at lines 483--484
+[14 <../plots/ageostrophic.pdf>]
+Overfull \hbox (7.29343pt too wide) in paragraph at lines 463--464
 []\OT1/cmr/m/n/10 The ten-den-cies are about 4 or-ders of mag-ni-tude smaller t
 han the prog-nos-tic vari- 
  []
 
 
-Overfull \hbox (12.40451pt too wide) in paragraph at lines 483--484
+Overfull \hbox (12.40451pt too wide) in paragraph at lines 463--464
 \OT1/cmr/m/n/10 ables. This poses a prob-lem for num-ber for-mats with a ma-chi
 ne er-ror, mea-sured as dec- 
  []
 
 
-Overfull \hbox (18.87683pt too wide) in paragraph at lines 483--484
+Overfull \hbox (18.87683pt too wide) in paragraph at lines 463--464
 \OT1/cmr/m/n/10 i-mal pre-ci-sion, sig-nif-i-cantly lower than 4 dec-i-mal plac
 es (Ta-ble 1[]). Float16 has a ma-chine 
  []
 
 
-Overfull \hbox (5.15456pt too wide) in paragraph at lines 483--484
+Overfull \hbox (5.15456pt too wide) in paragraph at lines 463--464
 \OT1/cmr/m/n/10 er-ror of 3.7, which is pre-sum-ably close to the lower limit b
 e-yond which the ad-di-tion of 
  []
 
 
-Overfull \hbox (41.54355pt too wide) in paragraph at lines 483--484
+Overfull \hbox (41.54355pt too wide) in paragraph at lines 463--464
 \OT1/cmr/m/n/10 ten-den-cies will be round back, an ef-fect al-ready ob-served 
 for the har-monic sum. The BFloat16 
  []
 
 
-Overfull \hbox (0.12683pt too wide) in paragraph at lines 483--484
+Overfull \hbox (0.12683pt too wide) in paragraph at lines 463--464
 \OT1/cmr/m/n/10 num-ber for-mat has a ma-chine er-ror of 2.8, which ex-plains w
 hy no change from ini-tial 
  []
 
 
-Overfull \hbox (13.98781pt too wide) in paragraph at lines 488--489
+Overfull \hbox (13.98781pt too wide) in paragraph at lines 468--469
 []\OT1/cmr/m/n/10 In the pre-vi-ous sec-tion the en-tire shal-low wa-ter sim-u-
 la-tion was per-formed with the 
  []
 
 
-Overfull \hbox (6.1268pt too wide) in paragraph at lines 488--489
+Overfull \hbox (6.1268pt too wide) in paragraph at lines 468--469
 \OT1/cmr/m/n/10 spec-i-fied num-ber for-mat. As the ad-di-tion of ten-den-cies 
 to the prog-nos-tic vari-ables was 
  []
 
 
-Overfull \hbox (19.07123pt too wide) in paragraph at lines 488--489
+Overfull \hbox (19.07123pt too wide) in paragraph at lines 468--469
 \OT1/cmr/m/n/10 iden-ti-fied as a key cal-cu-la-tion that is error-pron, we in-
 ves-ti-gate now the ben-e-fits of mixed 
  []
 
 
-Overfull \hbox (8.4879pt too wide) in paragraph at lines 488--489
+Overfull \hbox (8.4879pt too wide) in paragraph at lines 468--469
 \OT1/cmr/m/n/10 pre-ci-sion arith-metic, where Float32 is used for the prog-nos
 -tic vari-ables but the ten-den- 
  []
 
 
-Overfull \hbox (4.96016pt too wide) in paragraph at lines 488--489
+Overfull \hbox (4.96016pt too wide) in paragraph at lines 468--469
 \OT1/cmr/m/n/10 cies are com-puted with ei-ther Float16 or BFloat16, two num-be
 r for-mats that have the 
  []
 
 
-Overfull \hbox (18.68231pt too wide) in paragraph at lines 488--489
+Overfull \hbox (18.68231pt too wide) in paragraph at lines 468--469
 \OT1/cmr/m/n/10 low-est dec-i-mal pre-ci-sion for num-bers around 1. The prog-n
 os-tic vari-ables are now re-duced 
  []
 
 
-Overfull \hbox (8.57133pt too wide) in paragraph at lines 488--489
+Overfull \hbox (8.57133pt too wide) in paragraph at lines 468--469
 \OT1/cmr/m/n/10 to Float16 or BFloat16 be-fore cal-cu-la-tions of the right-han
 d side and ev-ery term of the 
  []
 
 
-Overfull \hbox (17.93236pt too wide) in paragraph at lines 488--489
+Overfull \hbox (17.93236pt too wide) in paragraph at lines 468--469
 \OT1/cmr/m/n/10 ten-den-cies is con-verted back be-fore ad-di-tion to the prog-
 nos-tic vari-ables. Us-ing sub-scripts 
  []
 
 
-Overfull \hbox (1.77611pt too wide) in paragraph at lines 488--489
+Overfull \hbox (1.77611pt too wide) in paragraph at lines 468--469
 \OT1/cmr/m/n/10 16 and 32 to de-note vari-ables held at 16 and 32bit pre-ci-sio
 n re-spec-tively and let $\OML/cmm/m/it/10 T$ \OT1/cmr/m/n/10 be 
  []
 
 
-Overfull \hbox (18.54344pt too wide) in paragraph at lines 495--496
+Underfull \vbox (badness 2080) has occurred while \output is active []
+
+ [15 <../plots/tendency_hist.png>]
+Overfull \hbox (18.54344pt too wide) in paragraph at lines 475--476
 []\OT1/cmr/m/n/10 Snapshots of tracer con-cen-tra-tion re-veal well sim-u-lated
  geostrophic tur-bu-lence (Fig. 
  []
 
 
-Overfull \hbox (7.68256pt too wide) in paragraph at lines 495--496
+Overfull \hbox (7.68256pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 4[]e and f) with Float16/Float32 or BFloat16/Float32 and in-sta
 -bilites at fronts or in fil- 
  []
 
 
-Overfull \hbox (32.34904pt too wide) in paragraph at lines 495--496
+Overfull \hbox (32.34904pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 a-ments are vis-i-bly re-duced com-pared to pure 16bit arith-me
 tic. The fore-cast er-ror is strongly 
  []
 
 
-Overfull \hbox (8.26573pt too wide) in paragraph at lines 495--496
+Overfull \hbox (8.26573pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 re-duced once the prog-nos-tic vari-ables are kept as Float32 (
 Fig. 5[]a), sup-port-ing the hy- 
  []
 
 
-Overfull \hbox (0.23793pt too wide) in paragraph at lines 495--496
+Overfull \hbox (0.23793pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 poth-e-sis that the ad-di-tion of ten-den-cies to the prog-nos-
 tic vari-ables is a key com-pu-ta- 
  []
 
 
-Overfull \hbox (10.3213pt too wide) in paragraph at lines 495--496
+Overfull \hbox (10.3213pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 tion with low round-ing error-tolerance. De-spite BFloat16 not 
 be-ing suit-able for shal-low 
  []
 
 
-Overfull \hbox (19.37698pt too wide) in paragraph at lines 495--496
+Overfull \hbox (19.37698pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 wa-ter sim-u-la-tions when ap-plied to all com-pu-ta-tions, mix
 -ing BFloat16 with Float32 arith- 
  []
 
 
-Overfull \hbox (2.87666pt too wide) in paragraph at lines 495--496
+Overfull \hbox (2.87666pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 metic yields a sim-i-lar er-ror growth to posits, which is well
  be-low the dis-cretiza-tion er- 
  []
 
 
-Overfull \hbox (12.37688pt too wide) in paragraph at lines 495--496
+Overfull \hbox (12.37688pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 ror. Mean state or vari-abil-ity are vir-tu-ally iden-ti-cal fo
 r both mixed pre-ci-sion cases (Fig. 
  []
 
 
-Overfull \hbox (14.12682pt too wide) in paragraph at lines 495--496
+Overfull \hbox (14.12682pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 6[]) com-pared to the Float64 ref-er-ence. The geostrophic bal-
 ance is largely un-af-fected, but 
  []
 
 
-Overfull \hbox (26.30742pt too wide) in paragraph at lines 495--496
+Overfull \hbox (26.30742pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 ageostrophic ve-loc-i-ties in-crease in vari-ance, es-pe-cially
  for BFloat16 (Fig. 7[]). Grav-ity waves 
  []
 
 
-Overfull \hbox (9.71013pt too wide) in paragraph at lines 495--496
+Overfull \hbox (9.71013pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 are sim-i-larly present for mixed pre-ci-sion al-though weaker 
 for ten-den-cies com-puted with 
  []
 
 
-Overfull \hbox (11.57129pt too wide) in paragraph at lines 495--496
+Overfull \hbox (11.57129pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 Float16 (Fig. 8[]d) and, as dis-cussed, they tend to not in-ter
 -act with the geostrophic time 
  []
 
 
-Overfull \hbox (18.23793pt too wide) in paragraph at lines 495--496
+Overfull \hbox (18.23793pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 and length scales. Al-though the re-sults show that Float16 is 
 gen-er-ally a pre-ferrable num- 
  []
 
 
-Overfull \hbox (6.79346pt too wide) in paragraph at lines 495--496
+Overfull \hbox (6.79346pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 ber for-mat over BFloat16 for the ap-pli-ca-tions pre-sented he
 re, we ac-knowl-edge that the 
  []
 
 
-Overfull \hbox (20.04352pt too wide) in paragraph at lines 495--496
+Overfull \hbox (20.04352pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 con-ver-sion be-tween Float32 and Float16 will come with some c
 om-pu-ta-tional cost. In con- 
  []
 
 
-Overfull \hbox (0.5713pt too wide) in paragraph at lines 495--496
+Overfull \hbox (0.5713pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 trast, the con-ver-sion be-tween BFloat16 and Float32 is com-pu
 -ta-tion-ally very cheap as 
  []
 
 
-Overfull \hbox (8.37688pt too wide) in paragraph at lines 495--496
+Overfull \hbox (8.37688pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 both for-mats have the same num-ber of ex-po-nent bits. Re-mov-
 ing sig-nif-cant bits, po-ten- 
  []
 
 
-Overfull \hbox (16.57141pt too wide) in paragraph at lines 495--496
+Overfull \hbox (16.57141pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 tially ap-ply-ing round-ing, and padding trail-ing ze-ros, are 
 the only op-er-a-tions for this con- 
  []
 
 
-Overfull \hbox (6.2657pt too wide) in paragraph at lines 495--496
+Overfull \hbox (6.2657pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 ver-sion. Fol-low-ing the re-sults here, mix-ing 16 and 32bit p
 re-ci-sion is found to be a pos- 
  []
 
 
-Overfull \hbox (10.18239pt too wide) in paragraph at lines 495--496
+Overfull \hbox (10.18239pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 si-ble so-lu-tion to cir-cum-vent round-ings er-rors with 16bit
  floating-point arith-metics. Per- 
  []
 
 
-Overfull \hbox (6.7657pt too wide) in paragraph at lines 495--496
+Overfull \hbox (6.7657pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 for-mance ben-e-fits are still pos-si-ble as most cal-cu-la-tio
 ns are per-formed with 16bit, with 
  []
 
 
-Overfull \hbox (15.18242pt too wide) in paragraph at lines 495--496
+Overfull \hbox (15.18242pt too wide) in paragraph at lines 475--476
 \OT1/cmr/m/n/10 key com-pu-ta-tions in 32bit to re-duce the over-all er-ror. De
 -pend-ing on the ap-pli-ca-tion, the 
  []
 
 
-Overfull \hbox (9.57118pt too wide) in paragraph at lines 495--496
-\OT1/cmr/m/n/10 con-ver-sions be-tween num-ber for-mats are as-sumed to be like
-ly of neg-li-gi-ble cost. This is 
+Overfull \hbox (12.62672pt too wide) in paragraph at lines 475--476
+\OT1/cmr/m/n/10 con-ver-sions be-tween num-ber for-mats are as-sumed to be of n
+eg-li-gi-ble cost. This is an at- 
  []
 
 
-Overfull \hbox (9.62686pt too wide) in paragraph at lines 495--496
-\OT1/cmr/m/n/10 an at-trac-tive so-lu-tion as hardware-accelerated 16bit floati
-ng-point arith-metic is al-ready 
+Overfull \hbox (13.51575pt too wide) in paragraph at lines 475--476
+\OT1/cmr/m/n/10 trac-tive so-lu-tion as hardware-accelerated 16bit floating-poi
+nt arith-metic is al-ready avail- 
  []
 
 
-Overfull \hbox (17.54353pt too wide) in paragraph at lines 495--496
-\OT1/cmr/m/n/10 avail-able on graphic or ten-sor pro-cess-ing units and im-ple-
-men-ta-tions there-fore do not rely 
+Overfull \hbox (11.43239pt too wide) in paragraph at lines 475--476
+\OT1/cmr/m/n/10 able on graphic or ten-sor pro-cess-ing units and im-ple-men-ta
+-tions there-fore do not rely on 
  []
 
-[15]
 <../plots/snapshot_comm.png, id=295, 578.16pt x 505.89pt>
 File: ../plots/snapshot_comm.png Graphic file (type png)
 <use ../plots/snapshot_comm.png>
-Package pdftex.def Info: ../plots/snapshot_comm.png  used on input line 498.
+Package pdftex.def Info: ../plots/snapshot_comm.png  used on input line 478.
 (pdftex.def)             Requested size: 397.48499pt x 347.79851pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--499
+Underfull \hbox (badness 10000) in paragraph at lines 479--479
 []\OT1/cmr/bx/n/9 Figure  9. \OT1/cmr/m/n/9 Snap-shot of tracer con-cen-tra-tio
 n sim-u-lated by the shal-low wa-ter model us-ing re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--499
+Underfull \hbox (badness 10000) in paragraph at lines 479--479
 \OT1/cmr/m/n/9 duced pre-ci-sion com-mu-ni-ca-tion. The com-mu-ni-ca-tion of bo
 und-ary val-ues oc-curs at ev-ery time
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--499
+Underfull \hbox (badness 10000) in paragraph at lines 479--479
 \OT1/cmr/m/n/9 step for the prog-nos-tic vari-ables. Float64 was used for all c
 al-cu-la-tions. Ar-eas where the ab-so-lute
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--499
+Underfull \hbox (badness 10000) in paragraph at lines 479--479
 \OT1/cmr/m/n/9 er-ror ex-ceeds 0.05 are shaded in red only in the lower half of
  the do-main. The tracer was in-jected
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--499
+Underfull \hbox (badness 10000) in paragraph at lines 479--479
 \OT1/cmr/m/n/9 uni-formly in the lower half of the do-main 50 days be-fore. Thi
 s sim-u-la-tion was run at a res-o-lu-tion
  []
 
 
-Overfull \hbox (12.46013pt too wide) in paragraph at lines 506--507
+Overfull \hbox (9.09894pt too wide) in paragraph at lines 486--487
+[]\OT1/cmr/m/n/10 To find the op-ti-mal num-ber rep-re-sen-ta-tion to solve Eq.
+ 7[] re-quires con-sid-er-ing the 
+ []
+
+
+Overfull \hbox (4.62685pt too wide) in paragraph at lines 486--487
+\OT1/cmr/m/n/10 dy-namic range of all in-ter-me-di-ate cal-cu-la-tions. It is p
+os-si-ble to in-flu-ence this dy-namic 
+ []
+
+
+Overfull \hbox (12.89456pt too wide) in paragraph at lines 486--487
+\OT1/cmr/m/n/10 range us-ing a \OT1/cmr/m/it/10 rescal-ing \OT1/cmr/m/n/10 of t
+he equa-tions via a sim-ple mul-ti-pli-ca-tion of the vari-ables with 
+ []
+
+
+Overfull \hbox (16.06197pt too wide) in paragraph at lines 486--487
+\OT1/cmr/m/n/10 larly for $[]\OML/cmm/m/it/10 ; []$\OT1/cmr/m/n/10 . Fig. 2[]b 
+shows his-tograms for all num-bers that are used to solve the Lorenz 
+ []
+
+
+Overfull \hbox (7.15462pt too wide) in paragraph at lines 486--487
+\OT1/cmr/m/n/10 sys-tem (in-clud-ing in-ter-me-di-ate cal-cu-la-tions). A com-p
+ar-i-son to the dec-i-mal pre-ci-sion in 
+ []
+
+
+Overfull \hbox (16.76573pt too wide) in paragraph at lines 486--487
+\OT1/cmr/m/n/10 Fig. 2[]a re-veals the ben-e-fit of rescal-ing, es-pe-cially fo
+r posit arith-metic: To profit from the 
+ []
+
+
+Overfull \hbox (8.12679pt too wide) in paragraph at lines 486--487
+\OT1/cmr/m/n/10 in-creased dec-i-mal pre-ci-sion around 1, a scal-ing with $1\O
+ML/cmm/m/it/10 =\OT1/cmr/m/n/10 10$ is pro-posed to shift most cal- 
+ []
+
+
+Overfull \hbox (12.87674pt too wide) in paragraph at lines 486--487
+\OT1/cmr/m/n/10 cu-la-tions to-wards the cen-tre of the dy-namic range of rep-r
+e-sentable num-bers. Due to the 
+ []
+
+
+Overfull \hbox (14.62679pt too wide) in paragraph at lines 486--487
+\OT1/cmr/m/n/10 con-stant dec-i-mal pre-ci-sion for floats, rescal-ing is less 
+rel-e-vant for float arith-metic as long 
+ []
+
+
+Overfull \hbox (6.62671pt too wide) in paragraph at lines 486--487
+\OT1/cmr/m/n/10 as no over-flow nor un-der-flow oc-curs. For in-te-gers, on the
+ other hand, the Lorenz equa- 
+ []
+
+
+Overfull \hbox (13.84912pt too wide) in paragraph at lines 486--487
+\OT1/cmr/m/n/10 tions should be up-scaled by a fac-tor of ap-prox-i-mately $100
+$, to shift the range of num-bers 
+ []
+
+
+Overfull \hbox (13.57126pt too wide) in paragraph at lines 488--490
+[]\OT1/cmr/m/n/10 We solve the equa-tions us-ing a fourth or-der Runge-Kutta me
+thod []Butcher, 2016). 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+[17 <../plots/snapshot_comm.png>]
+Overfull \hbox (11.4299pt too wide) in paragraph at lines 494--498
+[]\OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 RK[]; RK[]; RK[]$ \OT1/cmr/m/n/10 con
+-tain the Runge-Kutta co-ef-fi-cient and the time step $^^A\OML/cmm/m/it/10 t$\
+OT1/cmr/m/n/10 . $\OML/cmm/m/it/10 RK[]$ 
+ []
+
+
+Overfull \hbox (13.92654pt too wide) in paragraph at lines 494--498
+\OT1/cmr/m/n/10 also con-tains the pa-ram-e-ter $\OML/cmm/m/it/10 ^^[$\OT1/cmr/
+m/n/10 . The su-per-scripts $\OML/cmm/m/it/10 n$ \OT1/cmr/m/n/10 and $\OML/cmm/
+m/it/10 n \OT1/cmr/m/n/10 + 1$ de-note the cur-rent and next 
+ []
+
+
+Overfull \hbox (14.9045pt too wide) in paragraph at lines 499--500
+[]\OT1/cmr/m/n/10 The rescal-ing of the Lorenz sys-tem has its lim-i-ta-tions: 
+The non-linear terms in Eq. 
+ []
+
+
+Overfull \hbox (13.48094pt too wide) in paragraph at lines 499--500
+\OT1/cmr/m/n/10 8[] in-volve a di-vi-sion by the scal-ing con-stant $\OML/cmm/m
+/it/10 s$\OT1/cmr/m/n/10 , which leads to the re-sult of the arith-metic 
+ []
+
+
+Overfull \hbox (2.34901pt too wide) in paragraph at lines 499--500
+\OT1/cmr/m/n/10 tograms of arith-metic re-sults (Fig. 2[]b), as high counts of 
+val-ues be-tween 1 and 50 ex- 
+ []
+
+
+Overfull \hbox (13.5295pt too wide) in paragraph at lines 499--500
+\OT1/cmr/m/n/10 ist for dif-fer-ent choices of $\OML/cmm/m/it/10 s$\OT1/cmr/m/n
+/10 . A chang-ing shape of the his-togram with $\OML/cmm/m/it/10 s$ \OT1/cmr/m/
+n/10 is a con-se-quence. 
+ []
+
+
+Overfull \hbox (8.15457pt too wide) in paragraph at lines 499--500
+\OT1/cmr/m/n/10 Fol-low-ing these re-sults an un-der-ly-ing chal-lenge of re-du
+ced pre-ci-sion mod-elling be-comes 
+ []
+
+
+Overfull \hbox (12.04352pt too wide) in paragraph at lines 499--500
+\OT1/cmr/m/n/10 ap-par-ent: One has ei-ther to find a num-ber for-mat that fits
+ the range of com-puted num- 
+ []
+
+
+Overfull \hbox (12.46013pt too wide) in paragraph at lines 504--505
 []\OT1/cmr/m/n/10 Complex weather and cli-mate mod-els rely on par-al-leli-sa-t
 ion to dis-tribute the com- 
  []
 
 
-Overfull \hbox (0.59904pt too wide) in paragraph at lines 506--507
+Overfull \hbox (0.59904pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 pu-ta-tional cost of sim-u-la-tions ef-fi-ciently among the pro
 -cess-ing units in a large clus-ter 
  []
 
 
-Overfull \hbox (15.01578pt too wide) in paragraph at lines 506--507
+Overfull \hbox (15.01578pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 or su-per-com-puter. One of this par-al-lelism paradigm is do-m
 ain de-com-po-si-tion, where the 
  []
 
 
-Overfull \hbox (7.15472pt too wide) in paragraph at lines 506--507
+Overfull \hbox (7.15472pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 spa-tial do-main is split into many sub-do-mains to be cal-cu-l
 ated sep-a-rately on in-di-vid-ual 
  []
 
 
-Overfull \hbox (3.98802pt too wide) in paragraph at lines 506--507
+Overfull \hbox (3.98802pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 pro-cess-ing units. Do-main de-com-po-si-tion re-quires com-mu-
 ni-ca-tion of the bound-ary val- 
  []
 
 
-Overfull \hbox (11.73804pt too wide) in paragraph at lines 506--507
+Overfull \hbox (11.73804pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 ues of a sub-do-main with the neigh-bour-ing sub-do-mains. A st
 an-dard for this distributed- 
  []
 
 
-Overfull \hbox (7.76563pt too wide) in paragraph at lines 506--507
+Overfull \hbox (7.76563pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 memory par-al-lelism is the mes-sage pass-ing in-ter-face (MPI)
 . We em-u-late MPI-like com- 
  []
 
 
-Overfull \hbox (15.29352pt too wide) in paragraph at lines 506--507
+Overfull \hbox (15.29352pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 mu-ni-ca-tion in the shal-low wa-ter model with the copy-ing of
  bound-ary val-ues be-tween the 
  []
 
 
-Overfull \hbox (26.21034pt too wide) in paragraph at lines 506--507
+Overfull \hbox (26.21034pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 right and left bound-ary (pe-ri-odic bound-ary con-di-tions). A
 l-though the shal-low wa-ter model 
  []
 
 
-Overfull \hbox (10.73798pt too wide) in paragraph at lines 506--507
+Overfull \hbox (10.73798pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 does not run in par-al-lel, re-duc-ing the pre-ci-sion in the c
 opy-ing of bound-ary val-ues in-tro- 
  []
 
 
-Overfull \hbox (13.46pt too wide) in paragraph at lines 506--507
+Overfull \hbox (13.46pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 duces an equiv-a-lent er-ror as if re-duced pre-ci-sion MPI was
  used to com-mu-ni-cate be-tween 
  []
 
 
-Overfull \hbox (11.76575pt too wide) in paragraph at lines 506--507
+Overfull \hbox (11.76575pt too wide) in paragraph at lines 504--505
 \OT1/cmr/m/n/10 sub-do-mains. Re-duced pre-ci-sion is ap-plied for the com-mu-n
 i-ca-tion of the prog-nos-tic vari- 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16 <../plots/snapshot_comm.png>]
-Overfull \hbox (15.26563pt too wide) in paragraph at lines 508--509
+Overfull \hbox (15.26563pt too wide) in paragraph at lines 506--507
 []\OT1/cmr/m/n/10 Regarding snap-shots of tracer con-cen-tra-tion sim-u-lated w
 ith re-duced pre-ci-sion com- 
  []
 
 
-Overfull \hbox (6.18237pt too wide) in paragraph at lines 508--509
+Overfull \hbox (6.18237pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 mu-ni-ca-tion show a neg-li-gi-ble er-ror for Float16 and posit
 s (Fig. 9[]). The er-ror is largest 
  []
 
 
-Overfull \hbox (20.21027pt too wide) in paragraph at lines 508--509
+Overfull \hbox (20.21027pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 at fronts and not con-cen-trated around the bound-aries. En-cod
 -ing the com-mu-ni-ca-tion with 
  []
 
 
-Overfull \hbox (7.23793pt too wide) in paragraph at lines 508--509
+Overfull \hbox (7.23793pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 BFloat16 in-tro-duces a larger er-ror than for the other 16bit 
 for-mats as the dec-i-mal pre- 
  []
 
 
-Overfull \hbox (17.40454pt too wide) in paragraph at lines 508--509
+Overfull \hbox (17.40454pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 ci-sion is with 2.8 clearly lower (Ta-ble 1[]) for the range of
  val-ues oc-cur-ing within the prog- 
  []
 
 
-Overfull \hbox (19.54347pt too wide) in paragraph at lines 508--509
+Overfull \hbox (19.54347pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 nos-tic vari-ables (Fig. 8[]a and b). The er-rors are quan-ti-f
 ied by the RMSE of sur-face height 
  []
 
 
-Overfull \hbox (0.61752pt too wide) in paragraph at lines 508--509
+Overfull \hbox (0.61752pt too wide) in paragraph at lines 506--507
 \OML/cmm/m/it/10 ^^Q$ \OT1/cmr/m/n/10 as be-fore and are up to about two or-der
 s of mag-ni-tude smaller than the er-rors that 
  []
 
 
-Overfull \hbox (11.26581pt too wide) in paragraph at lines 508--509
+Overfull \hbox (11.26581pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 re-sult from 16bit arith-metic. As even the worst 16bit com-mu-
 ni-ca-tion for-mat, BFloat16, 
  []
 
 
-Overfull \hbox (10.84904pt too wide) in paragraph at lines 508--509
+Overfull \hbox (10.84904pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 has a smaller er-ror than the best mixed pre-ci-sion for-mats, 
 Float16 with Float32, we ex- 
  []
 
 
-Overfull \hbox (31.26578pt too wide) in paragraph at lines 508--509
+Overfull \hbox (31.26578pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 tend the en-sem-ble pre-dic-tion ex-per-i-ments to in-clude two
  8bit for-mats, Posit(8,0) and Float8 
  []
 
 
-Overfull \hbox (4.01566pt too wide) in paragraph at lines 508--509
+Overfull \hbox (4.01566pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 (see Ta-ble 1[] for a de-scrip-tion). Both for-mats are found t
 o be suit-able for re-duced pre- 
  []
 
 
-Overfull \hbox (24.96014pt too wide) in paragraph at lines 508--509
+Overfull \hbox (24.96014pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 ci-sion com-mu-ni-ca-tion here and do not in-tro-duce an er-ror
  that is larger than the dis-cretiza- 
  []
 
 
-Overfull \hbox (6.18243pt too wide) in paragraph at lines 508--509
+Overfull \hbox (6.18243pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 tion er-ror. Hav-ing said that, Float8 com-mu-ni-ca-tion in-tro
 -duces an er-ror that is com-pa- 
  []
 
 
-Overfull \hbox (18.54358pt too wide) in paragraph at lines 508--509
+Overfull \hbox (18.54358pt too wide) in paragraph at lines 506--507
 \OT1/cmr/m/n/10 ra-bly large ini-tially but growths only lin-early in the first
  50 days of the sim-u-la-tion, which 
  []
 
 
-Overfull \hbox (2.79344pt too wide) in paragraph at lines 510--511
+Overfull \hbox (2.79344pt too wide) in paragraph at lines 508--509
 []\OT1/cmr/m/n/10 Reduced pre-ci-sion com-mu-ni-ca-tion was not found to have a
  sig-nif-i-cant im-pact on 
  []
 
 
-Overfull \hbox (35.71016pt too wide) in paragraph at lines 510--511
+Overfull \hbox (35.71016pt too wide) in paragraph at lines 508--509
 \OT1/cmr/m/n/10 ei-ther mean state, vari-abil-ity, geostro-phy or ten-den-cies.
  We ac-knowl-edge that not all weather 
  []
 
 
-Overfull \hbox (2.59901pt too wide) in paragraph at lines 510--511
+Overfull \hbox (2.59901pt too wide) in paragraph at lines 508--509
 \OT1/cmr/m/n/10 and cli-mate mod-els would ben-e-fit from a re-duced pre-ci-sio
 n com-mu-ni-ca-tion, as the ac- 
  []
 
 
-Overfull \hbox (5.43231pt too wide) in paragraph at lines 510--511
+Overfull \hbox (14.34904pt too wide) in paragraph at lines 508--509
 \OT1/cmr/m/n/10 cel-er-a-tion po-ten-tial de-pends on many fac-tors spe-cific t
-o a model. How-ever, in the case 
+o a model and the used hard-ware, 
  []
 
 
-Overfull \hbox (2.01572pt too wide) in paragraph at lines 510--511
-\OT1/cmr/m/n/10 that com-mu-ni-ca-tion is an iden-ti-fied bot-tle-neck in a giv
-en ap-pli-ca-tion, the re-sults here 
+Overfull \hbox (10.76573pt too wide) in paragraph at lines 508--509
+\OT1/cmr/m/n/10 e.g. num-ber of nodes in a clus-ter and how shared and dis-trib
+uted mem-ory man-age-ment 
  []
 
 
-Overfull \hbox (7.6268pt too wide) in paragraph at lines 510--511
-\OT1/cmr/m/n/10 sug-gest that re-li-able model sim-u-la-tions can be achieved w
-ith 16 or even 8bit com-mu-ni- 
+Overfull \hbox (20.62677pt too wide) in paragraph at lines 508--509
+\OT1/cmr/m/n/10 is re-al-ized. How-ever, in the case that com-mu-ni-ca-tion is 
+an iden-ti-fied bot-tle-neck in a given 
  []
 
 
-Overfull \hbox (8.07127pt too wide) in paragraph at lines 510--511
-\OT1/cmr/m/n/10 ca-tion. The range of val-ues for the prog-nos-tic vari-ables h
-ere is com-pa-ra-bly small, fa-cil- 
+Overfull \hbox (17.48792pt too wide) in paragraph at lines 508--509
+\OT1/cmr/m/n/10 ap-pli-ca-tion, the re-sults here sug-gest that re-li-able mode
+l sim-u-la-tions can be achieved with 
  []
 
 
-Overfull \hbox (11.34914pt too wide) in paragraph at lines 510--511
-\OT1/cmr/m/n/10 i-tat-ing 8bit com-mu-ni-ca-tion. Such re-duc-tions might be in
- gen-eral dif-fi-cult to im-ple-ment. 
+Overfull \hbox (8.84903pt too wide) in paragraph at lines 508--509
+\OT1/cmr/m/n/10 16 or even 8bit com-mu-ni-ca-tion. The range of val-ues for the
+ prog-nos-tic vari-ables here is 
  []
 
 
-Overfull \hbox (16.07124pt too wide) in paragraph at lines 510--511
-\OT1/cmr/m/n/10 Al-though we show that posits are a pref-er-e-able num-ber for-
-mat to be used for 16bit com- 
+Overfull \hbox (11.71028pt too wide) in paragraph at lines 508--509
+\OT1/cmr/m/n/10 com-pa-ra-bly small, fa-cil-i-tat-ing 8bit com-mu-ni-ca-tion. S
+uch re-duc-tions might be in gen-eral 
  []
 
 
-Overfull \hbox (6.9324pt too wide) in paragraph at lines 510--511
-\OT1/cmr/m/n/10 mu-ni-ca-tion, it re-mains an open ques-tion how ef-fi-cient an
- im-ple-men-ta-tion can be, given 
+Overfull \hbox (4.04349pt too wide) in paragraph at lines 508--509
+\OT1/cmr/m/n/10 dif-fi-cult to im-ple-ment. Al-though we show that posits are a
+ pref-er-e-able num-ber for-mat 
  []
 
 
-Overfull \hbox (3.9878pt too wide) in paragraph at lines 515--516
+Overfull \hbox (12.57127pt too wide) in paragraph at lines 508--509
+\OT1/cmr/m/n/10 to be used for 16bit com-mu-ni-ca-tion, it re-mains an open que
+s-tion how ef-fi-cient an im-ple- 
+ []
+
+[18]
+Overfull \hbox (3.9878pt too wide) in paragraph at lines 513--514
 []\OT1/cmr/m/n/10 Using a soft-ware em-u-la-tor we have tested posit arith-meti
 c with a per-spec-tive for 
  []
 
 
-Overfull \hbox (12.71016pt too wide) in paragraph at lines 515--516
+Overfull \hbox (12.71016pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 weather and cli-mate sim-u-la-tions. The at-trac-tor of the Lor
 enz 1963 model, a chaotic but 
  []
 
 
-Overfull \hbox (8.7102pt too wide) in paragraph at lines 515--516
+Overfull \hbox (8.7102pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 sim-plis-tic model of at-mo-spheric con-vec-tion, is con-sid-er
 -ably im-proved us-ing 16bit posits 
  []
 
 
-Overfull \hbox (10.54358pt too wide) in paragraph at lines 515--516
-\OT1/cmr/m/n/10 with com-pared to Float16 or BFloat16, two for-mats that are su
+Overfull \hbox (13.8769pt too wide) in paragraph at lines 513--514
+\OT1/cmr/m/n/10 when com-pared to Float16 or BFloat16, two for-mats that are su
 p-ported on mod-ern ten- 
  []
 
 
-Overfull \hbox (10.62679pt too wide) in paragraph at lines 515--516
+Overfull \hbox (10.62679pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 sor or graphic pro-cess-ing units. Float16 can be used to per-f
 orm fore-casts with the shal- 
  []
 
 
-Overfull \hbox (7.9879pt too wide) in paragraph at lines 515--516
+Overfull \hbox (7.9879pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 low wa-ter model, how-ever, 16bit posits with ei-ther 1 or 2 ex
 -po-nents clearly out-per-form 
  []
 
 
-Overfull \hbox (21.98811pt too wide) in paragraph at lines 515--516
+Overfull \hbox (21.98811pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 floats and ap-pear very promis-ing for ap-pli-ca-tion in high p
 er-for-mance com-put-ing for Earth 
  []
 
 
-Overfull \hbox (12.93259pt too wide) in paragraph at lines 515--516
+Overfull \hbox (12.93259pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 Sys-tem mod-elling. Run-ning com-pu-ta-tion-ally very de-mand-i
 ng al-go-rithms at 16 bit could 
  []
 
 
-Overfull \hbox (0.37679pt too wide) in paragraph at lines 515--516
+Overfull \hbox (0.37679pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 greatly re-duce the wall-clock time for weather and cli-mate si
 m-u-la-tions on fu-ture high 
  []
 
 
-Overfull \hbox (41.41858pt too wide) in paragraph at lines 515--516
+Overfull \hbox (41.41858pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 per-for-mance com-put-ing ar-chi-tec-ture. Given that only floa
 ts are cur-rently hardware-supported, 
  []
 
 
-Overfull \hbox (6.12674pt too wide) in paragraph at lines 515--516
+Overfull \hbox (6.12674pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 we in-ves-ti-gated mixed pre-ci-sion ap-proaches, where the pro
 g-nos-tic vari-ables are kept at 
  []
 
 
-Overfull \hbox (7.7935pt too wide) in paragraph at lines 515--516
+Overfull \hbox (7.7935pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 32 bit and the ten-den-cies are com-puted in 16 bit. Al-though 
 the vast ma-jor-ity of cal-cu- 
  []
 
 
-Overfull \hbox (6.62679pt too wide) in paragraph at lines 515--516
+Overfull \hbox (6.62679pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 la-tions are still per-formed with 16 bit, the er-ror is greatl
 y re-duced and adding the ten- 
  []
 
 
-Overfull \hbox (4.57117pt too wide) in paragraph at lines 515--516
+Overfull \hbox (4.57117pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 den-cies on the prog-nos-tic vari-ables was iden-ti-fied as cri
 t-i-cal to re-duce round-ing er-rors. 
  []
 
 
-Overfull \hbox (0.12679pt too wide) in paragraph at lines 515--516
+Overfull \hbox (0.12679pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 Fur-ther re-sults show that com-mu-ni-ca-tion, as oc-cur-ing in
  weather and cli-mate mod-els 
  []
 
 
-Overfull \hbox (0.84904pt too wide) in paragraph at lines 515--516
+Overfull \hbox (0.84904pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 run in par-al-lel, can be greatly re-duced down to 16 or even 8
 bit with-out in-tro-duc-ing a 
  []
 
 
-Overfull \hbox (2.43224pt too wide) in paragraph at lines 515--516
+Overfull \hbox (2.43224pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 large er-ror that would not be masked by other sources of er-ro
 r in less a ide-al-is-tic sim- 
  []
 
 
-Overfull \hbox (13.51561pt too wide) in paragraph at lines 515--516
+Overfull \hbox (13.51561pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/10 u-la-tion. The ap-proaches to re-duced pre-ci-sion pre-sented h
 ere can in gen-eral be com-bined 
  []
 
 
-Overfull \hbox (13.52068pt too wide) in paragraph at lines 517--518
+Overfull \hbox (13.52068pt too wide) in paragraph at lines 515--516
 []\OT1/cmr/m/n/10 In this study, we per-form model fore-casts with a \OT1/cmr/m
 /it/10 per-fect model\OT1/cmr/m/n/10 . Any form of model 
  []
 
 
-Overfull \hbox (4.71pt too wide) in paragraph at lines 517--518
+Overfull \hbox (4.71pt too wide) in paragraph at lines 515--516
 \OT1/cmr/m/n/10 er-ror is ig-nored, as the Float64 ref-er-ence is ex-actly the 
 same model as its re-duced pre- 
  []
 
 
-Overfull \hbox (8.46017pt too wide) in paragraph at lines 517--518
+Overfull \hbox (8.46017pt too wide) in paragraph at lines 515--516
 \OT1/cmr/m/n/10 ci-sion coun-ter-parts. Any form of ini-tial con-di-tion er-ror
  is also ig-nored. Only dis-creti-sa- 
  []
 
 
-Overfull \hbox (8.7101pt too wide) in paragraph at lines 517--518
+Overfull \hbox (8.7101pt too wide) in paragraph at lines 515--516
 \OT1/cmr/m/n/10 tion er-rors are es-ti-mated by low-er-ing the spa-tial res-o-l
 u-tion by a fac-tor of 2. This is not 
  []
 
 
-Overfull \hbox (15.48784pt too wide) in paragraph at lines 517--518
+Overfull \hbox (15.48784pt too wide) in paragraph at lines 515--516
 \OT1/cmr/m/n/10 a re-al-is-tic set-up for weather or cli-mate mod-els. Real mod
 -els in-clude many other sources 
  []
 
 
-Overfull \hbox (20.93243pt too wide) in paragraph at lines 517--518
+Overfull \hbox (20.93243pt too wide) in paragraph at lines 515--516
 \OT1/cmr/m/n/10 of fore-cast er-ror and it is likely that the con-tri-bu-tions 
 of round-ing er-rors from 16bit arith- 
  []
 
 
-Overfull \hbox (2.599pt too wide) in paragraph at lines 517--518
+Overfull \hbox (2.599pt too wide) in paragraph at lines 515--516
 \OT1/cmr/m/n/10 metic would be dwarfed by er-rors in ini-tial con-di-tions or d
 is-creti-sa-tion er-rors in many 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]
-Overfull \hbox (19.82117pt too wide) in paragraph at lines 519--520
+Overfull \hbox (19.82117pt too wide) in paragraph at lines 517--518
 []\OT1/cmr/m/n/10 The nu-mer-i-cal dis-creti-sa-tion that was used in this pa-p
 er, with an ex-plicit time step- 
  []
 
 
-Overfull \hbox (5.7934pt too wide) in paragraph at lines 519--520
+Overfull \hbox (5.7934pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/10 ping scheme and 2nd or-der cen-tred fi-nite dif-fer-ences, is c
 om-mon to solve the equa-tions 
  []
 
 
-Overfull \hbox (7.23799pt too wide) in paragraph at lines 519--520
+Overfull \hbox (7.23799pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/10 of mo-tion in fluid dy-nam-ics. How-ever, var-i-ous dif-fer-ent
  meth-ods of dis-creti-sa-tion ex-ist, 
  []
 
 
-Overfull \hbox (4.23795pt too wide) in paragraph at lines 519--520
+Overfull \hbox (4.23795pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/10 in-clud-ing spec-tral meth-ods, fi-nite el-e-men-t/vol-ume and 
 im-plicit time step-ping. The re- 
  []
 
 
-Overfull \hbox (6.93233pt too wide) in paragraph at lines 519--520
+Overfull \hbox (6.93233pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/10 quire-ments on re-duced pre-ci-sion will dif-fer for the dif-fe
 r-ent al-go-rithms and some meth- 
  []
 
 
-Overfull \hbox (18.98785pt too wide) in paragraph at lines 519--520
+Overfull \hbox (18.98785pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/10 ods may be more sen-si-tive to round-ing er-rors com-pared to t
 he tech-niques that were stud- 
  []
 
 
-Overfull \hbox (23.29338pt too wide) in paragraph at lines 519--520
+Overfull \hbox (23.29338pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/10 ied here. How-ever, there is no prior rea-son why floats should
  be su-pe-rior to posits in these 
  []
 
 
-Overfull \hbox (13.2658pt too wide) in paragraph at lines 519--520
+Overfull \hbox (13.2658pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/10 cases and the smaller round-ing er-rors of 16bit posits com-par
 ed to Float16 and BFloat16 
  []
 
 
-Overfull \hbox (17.2657pt too wide) in paragraph at lines 519--520
+Overfull \hbox (17.2657pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/10 in our ap-pli-ca-tions sug-gest that posits are com-pet-i-tive.
  Nonethe-less, we can-not draw any 
  []
 
 
-Overfull \hbox (6.6269pt too wide) in paragraph at lines 519--520
+Overfull \hbox (6.6269pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/10 pre-lim-i-nary con-clu-sion about the per-for-mance of posit ar
 ith-metic op-er-a-tions in a stan- 
  []
 
 
-Overfull \hbox (20.76569pt too wide) in paragraph at lines 519--520
+Overfull \hbox (20.76569pt too wide) in paragraph at lines 517--518
 \OT1/cmr/m/n/10 dard-ized posit pro-ces-sor. Al-though less error-prone, posit 
 arith-metic could be slower than 
  []
 
 
-Overfull \hbox (20.09894pt too wide) in paragraph at lines 521--522
+Overfull \hbox (20.09894pt too wide) in paragraph at lines 519--520
 []\OT1/cmr/m/n/10 Until progress is made on hard-ware im-ple-men-ta-tions for p
 osits, the re-sults here sug- 
  []
 
 
-Overfull \hbox (15.57126pt too wide) in paragraph at lines 521--522
+Overfull \hbox (15.57126pt too wide) in paragraph at lines 519--520
 \OT1/cmr/m/n/10 gest that also 16bit float arith-metic can suc-ces-fully be use
 d for parts of com-plex weather 
  []
 
 
-Overfull \hbox (1.04346pt too wide) in paragraph at lines 521--522
+Overfull \hbox (1.04346pt too wide) in paragraph at lines 519--520
 \OT1/cmr/m/n/10 and cli-mate mod-els with the po-ten-tial for ac-cel-er-a-tion 
 on graphic and ten-sor pro-cess- 
  []
 
 
-Overfull \hbox (9.57135pt too wide) in paragraph at lines 521--522
+Overfull \hbox (9.57135pt too wide) in paragraph at lines 519--520
 \OT1/cmr/m/n/10 ing units. It is there-fore rec-om-mended to adapt a type-flexi
 ble pro-gram-ming paradigm, 
  []
 
 
-Overfull \hbox (17.09914pt too wide) in paragraph at lines 521--522
+Overfull \hbox (17.09914pt too wide) in paragraph at lines 519--520
 \OT1/cmr/m/n/10 ide-ally in a lan-guage that sup-ports porta-bil-ity, with al-g
 o-rithms writ-ten to re-duce the dy- 
  []
 
 
-Overfull \hbox (8.79341pt too wide) in paragraph at lines 521--522
+Overfull \hbox (8.79341pt too wide) in paragraph at lines 519--520
 \OT1/cmr/m/n/10 namic range of arith-metic re-sults. Hard-ware progress on cen-
 tral, graphic or ten-sor pro- 
  []
 
 
-Overfull \hbox (6.62682pt too wide) in paragraph at lines 521--522
+Overfull \hbox (6.62682pt too wide) in paragraph at lines 519--520
 \OT1/cmr/m/n/10 cess-ing units, with var-i-ous num-bers for-mats sup-ported, ca
 n sub-se-quently be utilised to 
  []
 
 
-Overfull \hbox (8.52011pt too wide) in paragraph at lines 529--530
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Overfull \hbox (8.52011pt too wide) in paragraph at lines 527--528
 []\OT1/cmr/m/n/10 The shal-low wa-ter equa-tions are dis-cre-tised on the $(\OM
 L/cmm/m/it/10 x; y\OT1/cmr/m/n/10 )$-plane over the rect-an-gu- 
  []
 
 
-Overfull \hbox (8.63957pt too wide) in paragraph at lines 529--530
+Overfull \hbox (8.63957pt too wide) in paragraph at lines 527--528
 \OT1/cmr/m/n/10 lar do-main $\OML/cmm/m/it/10 L[] \OMS/cmsy/m/n/10 ^^B \OML/cmm
 /m/it/10 L[]$\OT1/cmr/m/n/10 . We as-so-ciate $\OML/cmm/m/it/10 x$ \OT1/cmr/m/n
 /10 with the zonal and $\OML/cmm/m/it/10 y$ \OT1/cmr/m/n/10 with the merid-iona
@@ -3844,71 +3944,71 @@ l di-rec-tion.
  []
 
 
-Overfull \hbox (4.2935pt too wide) in paragraph at lines 529--530
+Overfull \hbox (4.2935pt too wide) in paragraph at lines 527--528
 \OT1/cmr/m/n/10 The do-main is cen-tred at 45N and the beta-plane ap-prox-i-ma-
 tion []Vallis, 2006) is used 
  []
 
 
-Overfull \hbox (18.96014pt too wide) in paragraph at lines 529--530
+Overfull \hbox (18.96014pt too wide) in paragraph at lines 527--528
 \OT1/cmr/m/n/10 to lin-earize the Cori-o-lis pa-ram-e-ter which varies lin-earl
 y from $7\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 27 \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n
 /10 10[] [][]$ at the south- 
  []
 
 
-Overfull \hbox (9.3213pt too wide) in paragraph at lines 529--530
+Overfull \hbox (9.3213pt too wide) in paragraph at lines 527--528
 \OT1/cmr/m/n/10 are pe-ri-odic in zonal di-rec-tion and no-slip at the north-er
 n and south-ern bound-ary. The 
  []
 
 
-Overfull \hbox (1.82536pt too wide) in paragraph at lines 532--534
+Overfull \hbox (1.82536pt too wide) in paragraph at lines 530--532
 \OT1/cmr/m/n/10 being the undis-turbed depth, rep-re-sent-ing a moun-tain ridge
  at $\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 = []$ span-ning from 
  []
 
 
-Overfull \hbox (4.92526pt too wide) in paragraph at lines 532--534
+Overfull \hbox (4.92526pt too wide) in paragraph at lines 530--532
 \OT1/cmr/m/n/10 the south-ern to the north-ern bound-ary. The stan-dard depth i
 s $\OML/cmm/m/it/10 H[] \OT1/cmr/m/n/10 = 500 []$. The ridge 
  []
 
 
-Overfull \hbox (3.53926pt too wide) in paragraph at lines 532--534
+Overfull \hbox (3.53926pt too wide) in paragraph at lines 530--532
 \OT1/cmr/m/n/10 has a height of $\OML/cmm/m/it/10 H[] \OT1/cmr/m/n/10 = 50 []$.
  The char-ac-ter-is-tic width of the ridge is $\OML/cmm/m/it/10 H[] \OT1/cmr/m/
 n/10 = 300 []$. The 
  []
 
 
-Overfull \hbox (2.57101pt too wide) in paragraph at lines 532--534
+Overfull \hbox (2.57101pt too wide) in paragraph at lines 530--532
 \OT1/cmr/m/n/10 time step $^^A\OML/cmm/m/it/10 t \OT1/cmr/m/n/10 = 282 []$ is c
 ho-sen to re-solve sur-face grav-ity waves, trav-el-ing at max-i-mum 
  []
 
 
-Overfull \hbox (18.61278pt too wide) in paragraph at lines 532--534
+Overfull \hbox (18.61278pt too wide) in paragraph at lines 530--532
 \OT1/cmr/m/n/10 phase speed $[]$ with CFL num-ber be-ing 1 and grav-i-ta-tional
  ac-cel-er-a-tion $\OML/cmm/m/it/10 g \OT1/cmr/m/n/10 = 10 [][]$. 
  []
 
 
-Overfull \hbox (6.99457pt too wide) in paragraph at lines 532--534
+Overfull \hbox (6.99457pt too wide) in paragraph at lines 530--532
 \OT1/cmr/m/n/10 The wind stress forc-ing $\OT1/cmr/bx/n/10 F \OT1/cmr/m/n/10 = 
 (\OML/cmm/m/it/10 F[]; \OT1/cmr/m/n/10 0)$ is con-stant in time, acts only on t
 he zonal mo-men- 
  []
 
 
-Overfull \hbox (14.22716pt too wide) in paragraph at lines 536--538
+Overfull \hbox (14.22716pt too wide) in paragraph at lines 534--536
 \OT1/cmr/m/n/10 and van-ishes at the bound-aries. The wa-ter den-sity is $\OML/
 cmm/m/it/10 ^^Z \OT1/cmr/m/n/10 = 1000 [] [][]$ and $\OML/cmm/m/it/10 F[] \OT1/
 cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 12 []$. 
  []
 
 
-Overfull \hbox (16.18922pt too wide) in paragraph at lines 541--543
+Overfull \hbox (16.18922pt too wide) in paragraph at lines 539--541
 \OT1/cmr/m/n/10 2008) and a bi-har-monic dif-fu-sion with vis-cos-ity co-ef-fi-
 cient $\OML/cmm/m/it/10 ^^W \OMS/cmsy/m/n/10 ^^Y \OT1/cmr/m/n/10 1\OML/cmm/m/it
 /10 :\OT1/cmr/m/n/10 33 \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 10[] [][] [][]$ []
@@ -3916,201 +4016,202 @@ Griffies
  []
 
 
-Overfull \hbox (9.32133pt too wide) in paragraph at lines 541--543
+Overfull \hbox (9.32133pt too wide) in paragraph at lines 539--541
 \OT1/cmr/m/n/10 & Hall-berg, 2000). To avoid di-vi-sion and sub-se-quent mul-ti
 -pli-ca-tion with large num-bers 
  []
 
-[18]
-Overfull \hbox (12.33505pt too wide) in paragraph at lines 545--554
+
+Overfull \hbox (12.33505pt too wide) in paragraph at lines 543--552
 \OT1/cmr/m/n/10 of $\OT1/cmr/bx/n/10 D$ \OT1/cmr/m/n/10 is re-quired to avoid a
 rith-metic un-der and over-flow with floats or huge round-ing er- 
  []
 
 
-Overfull \hbox (13.59904pt too wide) in paragraph at lines 559--560
+Overfull \hbox (13.59904pt too wide) in paragraph at lines 557--558
 []\OT1/cmr/m/n/10 The Soft-Posit.jl em-u-la-tor de-fines con-ver-sion and arith
 -metic op-er-a-tions with posits. 
  []
 
 
-Overfull \hbox (7.95537pt too wide) in paragraph at lines 559--560
+Overfull \hbox (7.95537pt too wide) in paragraph at lines 557--558
 \OT1/cmr/m/n/10 Ju-lia's pro-gram-ming paradigms of \OT1/cmr/m/it/10 multiple-d
 ispatch \OT1/cmr/m/n/10 and \OT1/cmr/m/it/10 type-stability \OT1/cmr/m/n/10 fa-
 cil-i-tate the use 
  []
 
 
-Overfull \hbox (10.6268pt too wide) in paragraph at lines 559--560
+Overfull \hbox (10.6268pt too wide) in paragraph at lines 557--558
 \OT1/cmr/m/n/10 of ar-bi-trary num-ber for-mats with-out the need to rewrite an
  al-go-rithm. As this is an es- 
  []
 
 
-Overfull \hbox (6.98792pt too wide) in paragraph at lines 559--560
+Overfull \hbox (6.98792pt too wide) in paragraph at lines 557--558
 \OT1/cmr/m/n/10 sen-tial fea-ture of Ju-lia and ex-ten-sively made use of in th
 is study, we briefly out-line the 
  []
 
 
-Overfull \hbox (4.23796pt too wide) in paragraph at lines 559--560
+Overfull \hbox (4.23796pt too wide) in paragraph at lines 557--558
 \OT1/cmr/m/n/10 ben-e-fits of Ju-lia by com-put-ing the har-monic sum with var-
 i-ous num-ber types as an ex- 
- []
-
-
-Overfull \hbox (3.7949pt too wide) in paragraph at lines 585--586
-[]\OT1/cmr/m/n/10 Executing the func-tion \OT1/cmtt/m/n/10 harmonic[]sum \OT1/c
-mr/m/n/10 for the first time with a type \OT1/cmtt/m/n/10 T \OT1/cmr/m/n/10 as 
-the first 
- []
-
-
-Overfull \hbox (6.37224pt too wide) in paragraph at lines 585--586
-\OT1/cmr/m/n/10 ar-gu-ment, trig-gers Ju-lia's \OT1/cmr/m/it/10 just-in-time \O
-T1/cmr/m/n/10 com-piler (Fig. B1[]). The func-tion is type sta-ble, 
- []
-
-
-Overfull \hbox (2.32118pt too wide) in paragraph at lines 585--586
-\OT1/cmr/m/n/10 as the types of all vari-ables are de-clared. At the same time 
-Ju-lia al-lows for type flex-i- 
- []
-
-
-Overfull \hbox (18.54477pt too wide) in paragraph at lines 585--586
-\OT1/cmr/m/n/10 bil-ity, as its \OT1/cmr/m/it/10 mul-ti-ple dis-patch \OT1/cmr/
-m/n/10 means that call-ing \OT1/cmtt/m/n/10 harmonic[]sum \OT1/cmr/m/n/10 with 
-an-other type \OT1/cmtt/m/n/10 T2 \OT1/cmr/m/n/10 will 
- []
-
-
-Overfull \hbox (12.29337pt too wide) in paragraph at lines 585--586
-\OT1/cmr/m/n/10 re-sult in a sep-a-rately com-piled func-tion for \OT1/cmtt/m/n
-/10 T2\OT1/cmr/m/n/10 . We can there-fore com-pute the har-monic 
- []
-
-
-Overfull \hbox (15.01524pt too wide) in paragraph at lines 585--586
-\OT1/cmr/m/n/10 sum with aribi-trary num-ber types, as long as the zero-element
- \OT1/cmtt/m/n/10 zero(T)\OT1/cmr/m/n/10 ; the one-element 
- []
-
-
-Overfull \hbox (2.48763pt too wide) in paragraph at lines 585--586
-\OT1/cmtt/m/n/10 one(T)\OT1/cmr/m/n/10 ; ad-di-tion; di-vi-sion; con-ver-sion f
-rom in-te-ger and con-ver-sion to float are de-fined 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 599--599
-[]\OT1/cmr/bx/n/9 Figure  B2. \OT1/cmr/m/n/9 Har-monic sum ex-am-ple use of the
- posit em-u-la-tor \OT1/cmr/m/it/9 Soft-Posit.jl \OT1/cmr/m/n/9 in the Ju-lia s
-hell.
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (18.46011pt too wide) in paragraph at lines 603--604
+Overfull \hbox (3.7949pt too wide) in paragraph at lines 583--584
+[]\OT1/cmr/m/n/10 Executing the func-tion \OT1/cmtt/m/n/10 harmonic[]sum \OT1/c
+mr/m/n/10 for the first time with a type \OT1/cmtt/m/n/10 T \OT1/cmr/m/n/10 as 
+the first 
+ []
+
+
+Overfull \hbox (6.37224pt too wide) in paragraph at lines 583--584
+\OT1/cmr/m/n/10 ar-gu-ment, trig-gers Ju-lia's \OT1/cmr/m/it/10 just-in-time \O
+T1/cmr/m/n/10 com-piler (Fig. B1[]). The func-tion is type sta-ble, 
+ []
+
+
+Overfull \hbox (2.32118pt too wide) in paragraph at lines 583--584
+\OT1/cmr/m/n/10 as the types of all vari-ables are de-clared. At the same time 
+Ju-lia al-lows for type flex-i- 
+ []
+
+
+Overfull \hbox (18.54477pt too wide) in paragraph at lines 583--584
+\OT1/cmr/m/n/10 bil-ity, as its \OT1/cmr/m/it/10 mul-ti-ple dis-patch \OT1/cmr/
+m/n/10 means that call-ing \OT1/cmtt/m/n/10 harmonic[]sum \OT1/cmr/m/n/10 with 
+an-other type \OT1/cmtt/m/n/10 T2 \OT1/cmr/m/n/10 will 
+ []
+
+
+Overfull \hbox (12.29337pt too wide) in paragraph at lines 583--584
+\OT1/cmr/m/n/10 re-sult in a sep-a-rately com-piled func-tion for \OT1/cmtt/m/n
+/10 T2\OT1/cmr/m/n/10 . We can there-fore com-pute the har-monic 
+ []
+
+
+Overfull \hbox (15.01524pt too wide) in paragraph at lines 583--584
+\OT1/cmr/m/n/10 sum with aribi-trary num-ber types, as long as the zero-element
+ \OT1/cmtt/m/n/10 zero(T)\OT1/cmr/m/n/10 ; the one-element 
+ []
+
+
+Overfull \hbox (2.48763pt too wide) in paragraph at lines 583--584
+\OT1/cmtt/m/n/10 one(T)\OT1/cmr/m/n/10 ; ad-di-tion; di-vi-sion; con-ver-sion f
+rom in-te-ger and con-ver-sion to float are de-fined 
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 597--597
+[]\OT1/cmr/bx/n/9 Figure  B2. \OT1/cmr/m/n/9 Har-monic sum ex-am-ple use of the
+ posit em-u-la-tor \OT1/cmr/m/it/9 Soft-Posit.jl \OT1/cmr/m/n/9 in the Ju-lia s
+hell.
+ []
+
+
+Overfull \hbox (18.46011pt too wide) in paragraph at lines 601--602
 []\OT1/cmr/m/n/10 The har-monic sum con-verges af-ter 513 el-e-ments when us-in
 g Float16 (Fig. B2[]). The 
  []
 
 
-Overfull \hbox (10.62675pt too wide) in paragraph at lines 603--604
+Overfull \hbox (10.62675pt too wide) in paragraph at lines 601--602
 \OT1/cmr/m/n/10 pre-ci-sion of BFloat16 is so low that the sum al-ready con-ver
 ges af-ter 65 el-e-ments, as the 
  []
 
 
-Overfull \hbox (18.34917pt too wide) in paragraph at lines 603--604
+Overfull \hbox (18.34917pt too wide) in paragraph at lines 601--602
 \OT1/cmr/m/n/10 ad-di-tion of the next term $1\OML/cmm/m/it/10 =\OT1/cmr/m/n/10
  66$ is round back to 5.0625. We iden-tify the ad-di-tion of small 
  []
 
 
-Overfull \hbox (4.67117pt too wide) in paragraph at lines 603--604
+Overfull \hbox (4.67117pt too wide) in paragraph at lines 601--602
 \OT1/cmr/m/n/10 terms to prog-nos-tic vari-ables of size $\OMS/cmsy/m/n/10 O\OT
 1/cmr/m/n/10 (1)$ as one of the ma-jor chal-lenges with low pre- 
  []
 
 
-Overfull \hbox (12.98788pt too wide) in paragraph at lines 603--604
+Overfull \hbox (12.98788pt too wide) in paragraph at lines 601--602
 \OT1/cmr/m/n/10 ci-sion arith-metic, which is dis-cussed in more de-tail in sec
--tion 4.3[]. Us-ing Posit(16,1), the 
+-tion 5.3[]. Us-ing Posit(16,1), the 
  []
 
 
-Overfull \hbox (3.09898pt too wide) in paragraph at lines 603--604
+Overfull \hbox (3.09898pt too wide) in paragraph at lines 601--602
 \OT1/cmr/m/n/10 sum only con-verges af-ter 1024 terms, due to the higher dec-i-
 mal pre-ci-sion of posits be- 
  []
 
 
-Overfull \hbox (7.6546pt too wide) in paragraph at lines 605--606
+Overfull \hbox (7.6546pt too wide) in paragraph at lines 603--604
 []\OT1/cmr/m/n/10 We im-ple-ment this type-flexible pro-gram-ming paradigm in t
 he nu-mer-i-cal in-te-gra- 
  []
 
 
-Overfull \hbox (9.7101pt too wide) in paragraph at lines 605--606
-\OT1/cmr/m/n/10 tion of the Lorenz equa-tions (sec-tion 3[]) and the shal-low w
-a-ter model (sec-tion 4[]), which 
+Overfull \hbox (17.4879pt too wide) in paragraph at lines 603--604
+\OT1/cmr/m/n/10 tion of the Lorenz equa-tions (sec-tion 3.1[]) and the shal-low
+ wa-ter model (sec-tion 5[]), which 
  []
 
 
-Underfull \vbox (badness 1953) has occurred while \output is active []
-
- [19]
-Overfull \hbox (10.83516pt too wide) in paragraph at lines 785--787
+Overfull \hbox (10.83516pt too wide) in paragraph at lines 783--785
 \OT1/cmr/m/n/10 The au-thors would like to thank Cer-lane Leong and Mos^^Re Gio
 r-dano who con-tributed to 
  []
 
 
-Overfull \hbox (0.47647pt too wide) in paragraph at lines 785--787
+Overfull \hbox (0.47647pt too wide) in paragraph at lines 783--785
 \OT1/cmr/m/it/10 Soft-Posit.jl\OT1/cmr/m/n/10 . Mi-lan Kl^^?ower and Tim N. Pal
 mer grate-fully ac-knowl-edge fund-ing by the 
  []
 
 
-Overfull \hbox (8.02007pt too wide) in paragraph at lines 785--787
+Overfull \hbox (8.02007pt too wide) in paragraph at lines 783--785
 \OT1/cmr/m/n/10 Eu-ro-pean Re-search Coun-cil un-der grant num-ber 741112 \OT1/
 cmr/m/it/10 An In-for-ma-tion The-o-retic Ap- 
  []
 
 
-Overfull \hbox (8.10738pt too wide) in paragraph at lines 785--787
+Overfull \hbox (8.10738pt too wide) in paragraph at lines 783--785
 \OT1/cmr/m/it/10 proach to Im-prov-ing the Re-li-a-bil-ity of Weather and Cli-m
 ate Sim-u-la-tions\OT1/cmr/m/n/10 . Mi-lan Kl^^?ower 
  []
 
 
-Overfull \hbox (1.59904pt too wide) in paragraph at lines 785--787
+Overfull \hbox (1.59904pt too wide) in paragraph at lines 783--785
 \OT1/cmr/m/n/10 is also funded by NERC grant num-ber NE/L002612/1. Pe-ter D. D^
 ^?uben grate-fully ac- 
  []
 
 
-Overfull \hbox (18.2101pt too wide) in paragraph at lines 785--787
+Overfull \hbox (18.2101pt too wide) in paragraph at lines 783--785
 \OT1/cmr/m/n/10 knowl-edges fund-ing from the Royal So-ci-ety for his Uni-ver-s
 ity Re-search Fel-low-ship as well 
  []
 
 
-Overfull \hbox (12.71014pt too wide) in paragraph at lines 785--787
+Overfull \hbox (12.71014pt too wide) in paragraph at lines 783--785
 \OT1/cmr/m/n/10 as fund-ing from the ESI-WACE2 project. ESI-WACE2 has re-ceived
  fund-ing from the Eu- 
  []
 
 
-Overfull \hbox (3.54353pt too wide) in paragraph at lines 785--787
+Overfull \hbox (3.54353pt too wide) in paragraph at lines 783--785
 \OT1/cmr/m/n/10 ro-pean Union's Hori-zon 2020 re-search and in-no-va-tion pro-g
 ram un-der grant agree-ment 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
 (./Kloewer_etal_james2020.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 16--39
 []\OT1/cmr/m/n/10 Arakawa, A., & Hsu, Y.-J. G.  (1990, Oc-to-ber).  En-ergy Con
@@ -4209,7 +4310,7 @@ Underfull \hbox (badness 3009) in paragraph at lines 166--187
 ., & Mansell, D.  (2019, 
  []
 
-[20]
+
 Underfull \hbox (badness 10000) in paragraph at lines 223--251
 []\OT1/cmr/m/n/10 Chaurasiya, R., Gustafson, J., Shrestha, R., Neu-dor-fer, J.,
  Nam-biar, S., Niyogi, 
@@ -4264,7 +4365,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 334--352
 wiley [] .com / doi / abs / 10 [] .1029 / 
  []
 
-
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 366--386
 []\OT1/cmr/m/n/10 D^^?uben, P. D., Mc-Na-mara, H., & Palmer, T.  (2014, Au-gust
 ).  The use of im- 
@@ -4357,9 +4458,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 642--661
  []
 
 
-Underfull \vbox (badness 1558) has occurred while \output is active []
-
- [21]
 Underfull \hbox (badness 10000) in paragraph at lines 673--701
 []\OT1/cmr/m/n/10 Jouppi, N. P., Young, C., Patil, N., Pat-ter-son, D., Agrawal
 , G., Ba-jwa, R., ... Yoon, 
@@ -4438,6 +4536,9 @@ om $\OT1/cmtt/m/n/10 https :// zenodo [] .org / record /
  []
 
 
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [23]
 Underfull \hbox (badness 10000) in paragraph at lines 817--836
 \OT1/cmr/m/it/10 ety A: Math-e-mat-i-cal, Phys-i-cal and En-gi-neer-ing Sci-enc
 es\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 372\OT1/cmr/m/n/10 (2018), 20130286. 
@@ -4579,9 +4680,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1081--1104
  []
 
 
-Underfull \vbox (badness 1946) has occurred while \output is active []
-
- [22]
 Underfull \hbox (badness 10000) in paragraph at lines 1118--1138
 []\OT1/cmr/m/n/10 Tantet, A., Lu-carini, V., & Di-jk-stra, H. A.  (2018, Febru-
 ary).  Res-o-nances in a 
@@ -4612,71 +4710,98 @@ ent Pre-ci-sion
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 1212--1238
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1214
+[]\OT1/cmr/m/n/10 Tint^^So Prims, O., Acosta, M. C., Moore, A. M., Cas-trillo, 
+M., Ser-radell, K., Cort^^Ses, 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1214
+\OT1/cmr/m/n/10 mod-els: ex-plor-ing a po-ten-tial re-duc-tion of nu-mer-i-cal 
+pre-ci-sion in NEMO 4.0 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1214
+\OT1/cmr/m/n/10 2020-03-12, from $\OT1/cmtt/m/n/10 https :// www [] .geosci [] 
+-model [] -dev [] .net / 12 / 3135 / 2019 /$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1214
+\OT1/cmr/m/n/10 (Pub-lisher: Coper-ni-cus GmbH)  doi: $https :// doi [] .org / 
+10 [] .5194 / gmd [] -12 [] -3135 [] 
+ []
+
+
+Underfull \vbox (badness 2478) has occurred while \output is active []
+
+ [24]
+Underfull \hbox (badness 2080) in paragraph at lines 1252--1278
 []\OT1/cmr/m/n/10 van Dam, L., Pel-tenburg, J., Al-Ars, Z., & Hof-s-tee, H. P. 
  (2019, March).  An Ac- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1212--1238
+Underfull \hbox (badness 10000) in paragraph at lines 1252--1278
 \OT1/cmr/m/n/10 cel-er-a-tor for Posit Arith-metic Tar-get-ing Posit Level 1 BL
 AS Rou-tines and 
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 1212--1238
+Underfull \hbox (badness 2435) in paragraph at lines 1252--1278
 \OT1/cmr/m/n/10 Pair-HMM.  In \OT1/cmr/m/it/10 Pro-ceed-ings of the Con-fer-enc
 e for Next Gen-er-a-tion Arith-metic 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1212--1238
+Underfull \hbox (badness 10000) in paragraph at lines 1252--1278
 \OT1/cmr/m/n/10 Re-trieved 2020-02-26, from $\OT1/cmtt/m/n/10 https :// doi [] 
 .org / 10 [] .1145 / 3316279 [] .3316284$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1250--1274
+Underfull \hbox (badness 10000) in paragraph at lines 1290--1314
 []\OT1/cmr/m/n/10 V^^Sa^^Tna, F., D^^?uben, P., Lang, S., Palmer, T., Leut-bech
 er, M., Salmond, D., & Carver, 
  []
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 1250--1274
+Underfull \hbox (badness 5036) in paragraph at lines 1290--1314
 \OT1/cmr/m/n/10 G.  (2017, Febru-ary).  Sin-gle Pre-ci-sion in Weather Fore-cas
 t-ing Mod-els: An 
  []
 
 
-Underfull \hbox (badness 5832) in paragraph at lines 1250--1274
+Underfull \hbox (badness 5832) in paragraph at lines 1290--1314
 \OT1/cmr/m/n/10 Eval-u-a-tion with the IFS.  \OT1/cmr/m/it/10 Monthly Weather R
 e-view\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 145\OT1/cmr/m/n/10 (2), 495--502.  Re-
  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1250--1274
+Underfull \hbox (badness 10000) in paragraph at lines 1290--1314
 \OT1/cmr/m/n/10 trieved 2020-02-25, from $\OT1/cmtt/m/n/10 http :// journals []
  .ametsoc [] .org / doi / 10 [] .1175 / 
  []
 
-) [23] (./Kloewer_etal_james2020.aux)
+) [25] (./Kloewer_etal_james2020.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8742 strings out of 492982
- 136603 string characters out of 6134896
+ 8747 strings out of 492982
+ 136681 string characters out of 6134896
  291012 words of memory out of 5000000
- 12133 multiletter control sequences out of 15000+600000
+ 12138 multiletter control sequences out of 15000+600000
  11903 words of font info for 43 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
- 43i,18n,37p,2476b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,18n,37p,2469b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -4698,10 +4823,10 @@ blic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt9.pfb>
-Output written on Kloewer_etal_james2020.pdf (23 pages, 3594399 bytes).
+Output written on Kloewer_etal_james2020.pdf (25 pages, 3602273 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
+ 401 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

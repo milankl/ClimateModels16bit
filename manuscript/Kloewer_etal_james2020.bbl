@@ -1173,6 +1173,46 @@ Thornes, T.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Tintó~Prims%
+\ \protect \BOthers {.}}{%
+Tintó~Prims%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+TintoPrims2019}
+\APACinsertmetastar {%
+TintoPrims2019}%
+\begin{APACrefauthors}%
+Tintó~Prims, O.%
+, Acosta, M\BPBI C.%
+, Moore, A\BPBI M.%
+, Castrillo, M.%
+, Serradell, K.%
+, Cortés, A.%
+\BCBL {}\ \BBA {} Doblas-Reyes, F\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{{\APACmonth{07}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {How to use mixed precision in ocean models: exploring a
+  potential reduction of numerical precision in {NEMO} 4.0 and {ROMS} 3.6} {How
+  to use mixed precision in ocean models: exploring a potential reduction of
+  numerical precision in {NEMO} 4.0 and {ROMS} 3.6}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Geoscientific Model Development}{12}{7}{3135--3148}.
+\newblock
+\begin{APACrefURL}
+  [{2020-03-12}]\url{https://www.geosci-model-dev.net/12/3135/2019/}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{Publisher: Copernicus GmbH}
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.5194/gmd-12-3135-2019}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Vallis%
 }{%
 Vallis%

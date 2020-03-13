@@ -30,11 +30,11 @@ for i in 0:ne-1
 
     # Compute - average over x & time (last dimension)
     for k in 1:ny
-        Rm[k,i+1] = mean(F64LR[:,k,:])
+        # Rm[k,i+1] = mean(F64LR[:,k,:])
         Rv[k,i+1] = var(F64LR[:,k,:])
     end
 end
 
 # OUTPUT
-save("mean_LR_$vari.jld2","mean",Rm)
+# save("mean_LR_$vari.jld2","mean",Rm)
 save("var_LR_$vari.jld2","var",Rv)

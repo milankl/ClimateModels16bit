@@ -754,3 +754,23 @@
 	keywords = {Computer Science - Machine Learning, Statistics - Machine Learning, Computer Science - Neural and Evolutionary Computing},
 	file = {arXiv Fulltext PDF:/home/kloewer/papers/storage/M2DCVEID/Gupta et al. - 2015 - Deep Learning with Limited Numerical Precision.pdf:application/pdf;arXiv.org Snapshot:/home/kloewer/papers/storage/SZ8FYIJX/1502.html:text/html}
 }
+
+@article{TintoPrims2019,
+	title = {How to use mixed precision in ocean models: exploring a potential reduction of numerical precision in {NEMO} 4.0 and {ROMS} 3.6},
+	volume = {12},
+	issn = {1991-959X},
+	shorttitle = {How to use mixed precision in ocean models},
+	url = {https://www.geosci-model-dev.net/12/3135/2019/},
+	doi = {https://doi.org/10.5194/gmd-12-3135-2019},
+	abstract = {{\textless}p{\textgreater}{\textless}strong{\textgreater}Abstract.{\textless}/strong{\textgreater} Mixed-precision approaches can provide substantial speed-ups for both computing- and memory-bound codes with little effort. Most scientific codes have overengineered the numerical precision, leading to a situation in which models are using more resources than required without knowing where they are required and where they are not. Consequently, it is possible to improve computational performance by establishing a more appropriate choice of precision. The only input that is needed is a method to determine which real variables can be represented with fewer bits without affecting the accuracy of the results. This paper presents a novel method that enables modern and legacy codes to benefit from a reduction of the precision of certain variables without sacrificing accuracy. It consists of a simple idea: we reduce the precision of a group of variables and measure how it affects the outputs. Then we can evaluate the level of precision that they truly need. Modifying and recompiling the code for each case that has to be evaluated would require a prohibitive amount of effort. Instead, the method presented in this paper relies on the use of a tool called a reduced-precision emulator (RPE) that can significantly streamline the process. Using the RPE and a list of parameters containing the precisions that will be used for each real variable in the code, it is possible within a single binary to emulate the effect on the outputs of a specific choice of precision. When we are able to emulate the effects of reduced precision, we can proceed with the design of the tests that will give us knowledge of the sensitivity of the model variables regarding their numerical precision. The number of possible combinations is prohibitively large and therefore impossible to explore. The alternative of performing a screening of the variables individually can provide certain insight about the required precision of variables, but, on the other hand, other complex interactions that involve several variables may remain hidden. Instead, we use a divide-and-conquer algorithm that identifies the parts that require high precision and establishes a set of variables that can handle reduced precision. This method has been tested using two state-of-the-art ocean models, the Nucleus for European Modelling of the Ocean (NEMO) and the Regional Ocean Modeling System (ROMS), with very promising results. Obtaining this information is crucial to build an actual mixed-precision version of the code in the next phase that will bring the promised performance benefits.{\textless}/p{\textgreater}},
+	language = {English},
+	number = {7},
+	urldate = {2020-03-12},
+	journal = {Geoscientific Model Development},
+	author = {Tintó Prims, Oriol and Acosta, Mario C. and Moore, Andrew M. and Castrillo, Miguel and Serradell, Kim and Cortés, Ana and Doblas-Reyes, Francisco J.},
+	month = jul,
+	year = {2019},
+	note = {Publisher: Copernicus GmbH},
+	pages = {3135--3148},
+	file = {Full Text PDF:/home/kloewer/papers/storage/ZLMJCFIP/Tintó Prims et al. - 2019 - How to use mixed precision in ocean models explor.pdf:application/pdf;Snapshot:/home/kloewer/papers/storage/3XNIE5KW/2019.html:text/html}
+}
