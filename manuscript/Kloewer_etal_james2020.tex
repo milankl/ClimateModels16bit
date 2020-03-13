@@ -322,7 +322,7 @@ After the conversion to the two's complement, the bits are interpreted in the sa
 
 Posits also come with a no overflow/no underflow-rounding mode: Where floats overflow and return infinity when the exact result of an arithmetic operation is larger than the largest representable number ($maxpos$), posit arithmetic returns $maxpos$ instead, and similarly for underflow where the smallest representable positive number ($minpos$) is returned. This is motivated as rounding to infinity returns a result that is infinitely less correct than $maxpos$, although often desired to indicate that an overflow occurred in the simulation. Instead, it is proposed to perform overflow-like checks on the software level to simplify exception handling on hardware \cite{Gustafson2017a}. Many functions are simplified for posits, as only two exceptions cases have to be handled, zero and NaR. Conversely, Float64 has more than $10^{15}$ bitpatterns reserved for NaN, but these only make up $< 0.05\%$ of all available bit patterns. The percentage of redundant bitpatterns for NaN increases for floats with fewer exponent bits (Table \ref{tab:formats}), and only poses a noticable issue for Float16 and Float8.
 
-The posit number framework also highly recommends \emph{quires}, an additional register on hardware to store intermediate results. Fused operations like \emph{multiply-add} can therefore be executed with a single rounding error without the rounding of intermediate results. The quire concept could also be applied to floating-point arithmetic, but is technically difficult to implement on hardware as the required registers would need to be much larger in size. For fair comparison we do not take quires into account. The posit number format is explained in more detail in \citeA{Gustafson2017a}. In order to use posits on a conventional CPU we developed for the Julia programming language \cite{Bezanson2017} the posit emulator \emph{SoftPosit.jl} \cite{Klower2019a}, which is a wrapper for the C-based library SoftPosit. The type-flexible programming paradigm,  facilitated by the Julia language, is outlined in \ref{sec:julia}.
+The posit number framework also highly recommends \emph{quires}, an additional register on hardware to store intermediate results. Fused operations like \emph{multiply-add} can therefore be executed with a single rounding error without the rounding of intermediate results. The quire concept could also be applied to floating-point arithmetic, but is technically difficult to implement on hardware as the required registers would need to be much larger in size. For fair comparison we do not take quires into account. The posit number format is explained in more detail in \citeA{Gustafson2017a}. In order to use posits on a conventional CPU we developed for the Julia programming language \cite{Bezanson2017} the posit emulator \emph{SoftPosit.jl} \cite{Klower2019a}, which is a wrapper for the C-based library SoftPosit \cite{Leong2020}. The type-flexible programming paradigm,  facilitated by the Julia language, is outlined in \ref{sec:julia}.
 
 \begin{figure}[htbp]
 \includegraphics[width=1\textwidth]{../plots/decimal_precision.png}
@@ -372,11 +372,8 @@ Regardless of the initial conditions, the Lorenz system will evolve towards a se
 
 Integrating the Lorenz system with Float16 yields an attractor that is repeating itself fairly early and the space that is filled by the line of the trajectory is significantly smaller when compared to the space of a trajectory with double precision (compare Fig. \ref{fig:L63}a and b). However, when using Posit(16,1) and a rescaling factor of $s=0.1$ (see section \ref{sec:L63_rescale}) the representation of the attractor is improved significantly (Fig. \ref{fig:L63}c). The results for posits look similar to the results with Float16 if no rescaling was used (not shown here). Only a time step $\Delta t > 0.008$ yields tendencies that are large enough to overcome the rounding errors of BFloat16 that otherwise inhibit a temporal evolution of the system. Although a time step of 0.008s allows the Lorenz system to be integrated with BFloat16, only a poor representation of the fractal attractor is achieved (Fig. \ref{fig:L63}d). The solution of the Lorenz system with 16bit integers presents a similarly simple Lorenz attractor \cite{Klower2019}.
 
-\section{Shallow water model}
+\subsection{Shallow water model}
 \label{sec:swm}
-
-\subsection{Methods}
-\label{sec:swm_methods}
 
 This section will evaluate the different number formats Float16, BFloat16, Posit(16,1) and Posit(16,2) when solving the shallow water equations. The shallow water equations result from a vertical integration of the Navier-Stokes equations under the assumption that horizontal length scales are much greater than vertical scales. This assumption holds for many features of the general circulation of atmosphere and ocean \cite{Gill1982,Vallis2006}. The shallow water equations for the prognostic variables velocity $\mathbf{u} = (u,v)$ and sea surface elevation $\eta$ are
 \begin{subequations}
@@ -386,7 +383,24 @@ This section will evaluate the different number formats Float16, BFloat16, Posit
 \end{align}
 \label{eq:swe}%
 \end{subequations}
-For the atmosphere, $\eta$ is interpreted as pressure \cite{Gill1982}. The shallow water system is forced with a zonal wind stress $\mathbf{F}$. The dissipation term $\mathbf{D}$ removes energy on large scales (bottom friction) and on small scales (diffusion). The non-linear term $(\mathbf{u} \cdot \nabla) \mathbf{u}$ represents advection of momentum. The term $f\hat{\mathbf{z}} \times \mathbf{u}$ is the Coriolis force and $-g\nabla \eta$ is the pressure gradient force, with $g$ being the gravitational acceleration. Eq. \ref{eq:swe}b is the shallow water-variant of the continuity equation, ensuring conservation of mass. The domain is a zonally periodic rectangular channel of size $2000\op{km} \times 1000\op{km}$, with a meridional mountain ridge in the middle of the domain. A more detailed description of the shallow water model, introducing the remaining parameters and variables in Eq. \ref{eq:swe}, is presented in \ref{sec:app}. The shallow water equations are discretised using 2nd order centred finite differences on an Arakawa C-grid \cite{Arakawa1977} with a grid spacing of $\Delta = 20\operatorname{km}$ (100x50 grid points) and the Runge-Kutta fourth order method \cite{Butcher2016} is used for time integration. The advection terms are discretised using an energy and enstrophy conserving scheme \cite{Arakawa1990}. 
+For the atmosphere, $\eta$ is interpreted as pressure \cite{Gill1982}. The shallow water system is forced with a zonal wind stress $\mathbf{F}$. The dissipation term $\mathbf{D}$ removes energy on large scales (bottom friction) and on small scales (diffusion). The non-linear term $(\mathbf{u} \cdot \nabla) \mathbf{u}$ represents advection of momentum. The term $f\hat{\mathbf{z}} \times \mathbf{u}$ is the Coriolis force and $-g\nabla \eta$ is the pressure gradient force, with $g$ being the gravitational acceleration. Eq. \ref{eq:swe}b is the shallow water-variant of the continuity equation, ensuring conservation of mass. 
+
+The shallow water equations are solved in the $(x,y)$-plane over the zonally periodic rectangular domain $L_x \times L_y$, of size $2000\op{km} \times 1000\op{km}$, with a meridional mountain ridge in the middle of the domain. We associate $x$ with the zonal and $y$ with the meridional direction. The domain is centred at 45N and the beta-plane approximation \cite{Vallis2006} is used to linearize the Coriolis parameter which varies linearly from $7.27 \times 10^{-5}\op{s}^{-1}$ at the southern boundary to $9.25 \times 10^{-5}\op{s}^{-1}$ at the northern boundary. The boundary conditions are periodic in zonal direction and no-slip at the northern and southern boundary. The layer thickness is $h = \eta + H(x)$, with
+\begin{equation}
+H(x) = H_0 - H_1\exp\left(-H_\sigma^{-2}(x-\tfrac{L_x}{2})^2\right)
+\end{equation}
+being the undisturbed depth, representing a mountain ridge at $x=\tfrac{L_x}{2}$ spanning from the southern to the northern boundary. The standard depth is $H_0 = 500\op{m}$. The ridge has a height of $H_1 = 50\op{m}$. The characteristic width of the ridge is $H_\sigma = 300\op{km}$. The time step $\Delta t = 282\op{s}$ is chosen to resolve surface gravity waves, traveling at maximum phase speed $\sqrt{gH_0}$ with CFL number being close to 1 and gravitational acceleration $g=10\op{ms}^{-1}$. The wind stress forcing $\mathbf{F} = (F_x,0)$ is constant in time, acts only on the zonal momentum budget
+\begin{equation}
+Fx = \frac{F_0}{\rho h} \cos\left(\pi\left(y{L_y}^{-1} - 1\right)\right)^2
+\end{equation}
+and vanishes at the boundaries. The water density is $\rho = 1000\op{kg}\op{m}^{-3}$ and $F_0 = 0.12\op{Pa}$. The dissipation term $\mathbf{D}$ is the sum 
+\begin{equation}
+\mathbf{D} = -\frac{c_D}{h}\| \mathbf{u} \| \mathbf{u} - \nu \nabla^4 \mathbf{u}
+\label{eq:diss}
+\end{equation}
+of a quadratic bottom drag with dimensionless coefficient $c_D = 10^{-5}$ \cite{Arbic2008} and a biharmonic diffusion with viscosity coefficient $\nu \approx 1.33\times10^{11} \op{m}^4\op{s}^{-1}$ \cite{Griffies2000}. 
+
+The shallow water equations are discretised using 2nd order centred finite differences on an Arakawa C-grid \cite{Arakawa1977} with a grid spacing of $\Delta = 20\operatorname{km}$ (100x50 grid points) and the Runge-Kutta fourth order method \cite{Butcher2016} is used for time integration of the pressure, coriolis and advective terms, whereas a semi-implicit method is used for the dissipative terms $\mathbf{D}$. The advection terms are discretised using an energy and enstrophy conserving scheme \cite{Arakawa1990}. 
 
 To test the use of the different number formats for the representation of passive tracers in atmosphere and ocean, we extend the shallow water equations with an advection equation. Tracers could, for example, be temperature and salinity in the ocean or aerosols in the atmosphere, which are regarded here, for simplicity, as passive (i.e. they do not influence the flow). The change of the distribution of a passive tracer $q$ that is advected by the underlying flow field is described by
 \begin{equation}
@@ -395,15 +409,9 @@ To test the use of the different number formats for the representation of passiv
 \end{equation}
 We discretise Eq. \ref{eq:adv} with a semi-Lagrangian advection scheme \cite{Smolarkiewicz1992}, which calculates the tracer concentration for a given grid cell from the concentration at the previous time step at a departure point, which in turn is determined from the flow field. As the departure point is in general in between grid nodes an interpolation is required to find the concentration at the departure point.
 
-For 16bit arithmetic it is essential to rescale the shallow water equations to avoid calculations with very large or very small results, as the dynamic range of representable numbers is limited (Fig. \ref{fig:dec_acc}a and Table \ref{tab:formats}). This is especially true for some sophisticated schemes like the biharmonic diffusion \cite{Griffies2000}, which is often used to remove energy from the grid scale to ensure numerical stability. For biharmonic diffusion a fourth derivative in space is calculated. Due to the large dimension of geophysical applications, this term can get very small $\mathcal{O}(10^{-20})$ while viscosity coefficients are typically very large $\mathcal{O}(10^{11})$. The prognostic variables of Eq. \ref{eq:swe} and \ref{eq:adv} are typically $\mathcal{O}(1\op{ms}^{-1})$ for $\mathbf{u}$, $\mathcal{O}(1\op{m})$ for $\eta$ and $\mathcal{O}(1)$ for $q$. We can therefore retain their physical units in the discretised numerical model. However, due to the grid spacing $\Delta$ of unit meter being large for geophysical flows, we need to use dimensionless Nabla operators $\tilde{\nabla} = \Delta\nabla$. The continuity equation Eq. \ref{eq:swe}b, for example, is discretised with an explicit time integration method as
-\begin{equation}
-\eta^{n+1} = \eta^n + RK_{\eta}\left( - \tilde{\nabla} \cdot (\mathbf{u}h)^n\right)
-\label{eq:discr}
-\end{equation}
-where $RK_\eta$ is the Runge-Kutta coefficient times $\tfrac{\Delta t}{\Delta}$ which is precomputed at high precision, to avoid a division by a large value for $\Delta$ and a subsequent multiplication with a large value for $\Delta t$. The other terms are rescaled accordingly ($\tilde{f} = f\Delta$; $\tilde{\mathbf{F}} = \mathbf{F}\Delta$; please see \ref{sec:app} for a discussion of the dissipation term $\mathbf{D}$). The entire numerical integration is performed using the various reduced precision number formats, however, converted back to Float32 for model output. As some of the forcing and boundary terms remain constant, they are precomputed at higher precision during model initialisation to avoid problems with the dynamic range.
+We change the algorithms in the shallow water model slightly by employing techniques of rescaling, reordering and precomputing to make the computations more suitable for the limitations of 16bit arithmetics. Some of these techniques are discussed in section \ref{sec:rescale}.
 
-
-\subsection{Results with 16bit arithmetic}
+\subsection{16bit shallow water simulations}
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{../plots/snapshot.png}
@@ -462,12 +470,12 @@ As 16bit arithmetics have no significant impact on the climatological mean state
 
 The tendencies are about 4 orders of magnitude smaller than the prognostic variables. This poses a problem for number formats with a machine error, measured as decimal precision, significantly lower than 4 decimal places (Table \ref{tab:formats}). Float16 has a machine error of 3.7, which is presumably close to the lower limit beyond which the addition of tendencies will be round back, an effect already observed for the harmonic sum. The BFloat16 number format has a machine error of 2.8, which explains why no change from initial conditions in the shallow water system can be simulated with BFloat16.
 
-\subsection{Mixed precision arithmetic}
+\section{Mixed precision arithmetic}
 \label{sec:mixed}
 
-In the previous section the entire shallow water simulation was performed with the specified number format. As the addition of tendencies to the prognostic variables was identified as a key calculation that is error-pron, we investigate now the benefits of mixed precision arithmetic, where Float32 is used for the prognostic variables but the tendencies are computed with either Float16 or BFloat16, two number formats that have the lowest decimal precision for numbers around 1. The prognostic variables are now reduced to Float16 or BFloat16 before calculations of the right-hand side and every term of the tendencies is converted back before addition to the prognostic variables. Using subscripts 16 and 32 to denote variables held at 16 and 32bit precision respectively and let $T$ be the conversion function then Eq. \ref{eq:discr} becomes
+In the previous section the entire shallow water simulation was performed with the specified number format. As the addition of tendencies to the prognostic variables was identified as a key calculation that is error-prone, we investigate now the benefits of mixed precision arithmetic, where Float32 is used for the prognostic variables but the tendencies are computed with either Float16 or BFloat16, two number formats that have the lowest decimal precision for numbers around 1. The prognostic variables are now reduced to Float16 or BFloat16 before calculations of the right-hand side and every term of the tendencies is converted back before addition to the prognostic variables. Using subscripts 16 and 32 to denote variables held at 16 and 32bit precision respectively and let $T$ be the conversion function then the continuity Eq. \ref{eq:swe}b becomes
 \begin{equation}
-\eta_{32}^{n+1} = \eta_{32}^n + RK_{\eta}\left( - T(\tilde{\partial_x}(u_{16}h_{16})) - T(\tilde{\partial_y}(v_{16}h_{16}))\right)
+\frac{\partial \eta_{32}}{\partial t} = -T(\nabla \cdot (\mathbf{u}_{16}h_{16}))
 \label{eq:conversion}
 \end{equation}
 and similar for $u$ and $v$.
@@ -480,10 +488,13 @@ Snapshots of tracer concentration reveal well simulated geostrophic turbulence (
 \label{fig:snapshot_comm}
 \end{figure}
 
-\section{Rescaling the equations}
+\section{Algorithmic changes: Rescaling, reordering and precomputations}
+\label{sec:rescale}
+
+\subsection{Rescaling the Lorenz 1963 system }
 \label{sec:L63_rescale}
 
-To find the optimal number representation to solve Eq. \ref{eq:L63} requires considering the dynamic range of all intermediate calculations. It is possible to influence this dynamic range using a \emph{rescaling} of the equations via a simple multiplication of the variables with a constant rescaling factor $s$. The rescaled variables are denoted as $\tilde{x} = sx$, and similarly for $\tilde{y},\tilde{z}$. Fig. \ref{fig:dec_acc}b shows histograms for all numbers that are used to solve the Lorenz system (including intermediate calculations). A comparison to the decimal precision in Fig. \ref{fig:dec_acc}a reveals the benefit of rescaling, especially for posit arithmetic: To profit from the increased decimal precision around 1, a scaling with $1/10$ is proposed to shift most calculations towards the centre of the dynamic range of representable numbers. Due to the constant decimal precision for floats, rescaling is less relevant for float arithmetic as long as no overflow nor underflow occurs. For integers, on the other hand, the Lorenz equations should be upscaled by a factor of approximately $100$, to shift the range of numbers to a higher decimal precision.
+It is possible to influence the range of numbers occuring in arithmetic operations in an algorithm using a \emph{rescaling} of the equations via a simple multiplication of the variables with a constant rescaling factor $s$. For the Lorenz 1963 system (Eq. \ref{eq:L63}, the rescaled variables are denoted as $\tilde{x} = sx$, and similarly for $\tilde{y},\tilde{z}$. Fig. \ref{fig:dec_acc}b shows histograms for all numbers that are used to solve the Lorenz system (including intermediate calculations). A comparison to the decimal precision in Fig. \ref{fig:dec_acc}a reveals the benefit of rescaling, especially for posit arithmetic: To profit from the increased decimal precision around 1, a scaling with $1/10$ is proposed to shift most calculations towards the centre of the dynamic range of representable numbers. Due to the constant decimal precision for floats, rescaling is less relevant for float arithmetic as long as no overflow nor underflow occurs. For integers, on the other hand, the Lorenz equations should be upscaled by a factor of approximately $100$, to shift the range of numbers to a higher decimal precision.
 
 We solve the equations using a fourth order Runge-Kutta method \cite{Butcher2016}. Each substep in the time integration can be written as 
 \begin{subequations}
@@ -498,7 +509,30 @@ where $RK_x,RK_y,RK_z$ contain the Runge-Kutta coefficient and the time step $\D
 
 The rescaling of the Lorenz system has its limitations: The non-linear terms in Eq. \ref{eq:L63s} involve a division by the scaling constant $s$, which leads to the result of the arithmetic operations $\tfrac{\tilde{z}}{s}, \rho - \tfrac{\tilde{z}}{s},$ and $\tfrac{\tilde{y}}{s}$ being invariant under scaling. This is observed in the histograms of arithmetic results (Fig. \ref{fig:dec_acc}b), as high counts of values between 1 and 50 exist for different choices of $s$. A changing shape of the histogram with $s$ is a consequence. Following these results an underlying challenge of reduced precision modelling becomes apparent: One has either to find a number format that fits the range of computed numbers, or rescale the equations to optimise their range for a given number format.
 
-\subsection{Reduced precision communication}
+\subsection{Re-ordering arithmetic operations in the shallow water system}
+\label{sec:swm_rescale}
+
+For 16bit arithmetic it is essential to re-order the calculations in the shallow water equations to avoid calculations with very large or very small results, as the dynamic range of representable numbers is limited (Fig. \ref{fig:dec_acc}a and Table \ref{tab:formats}). This is especially true for some sophisticated schemes like the biharmonic diffusion \cite{Griffies2000}, which is often used to remove energy from the grid scale to ensure numerical stability. For biharmonic diffusion a fourth derivative in space is calculated. Due to the large dimension of geophysical applications, this term can get very small $\mathcal{O}(10^{-20})$ while viscosity coefficients are typically very large $\mathcal{O}(10^{11})$. The prognostic variables of Eq. \ref{eq:swe} and \ref{eq:adv} are typically $\mathcal{O}(1\op{ms}^{-1})$ for $\mathbf{u}$, $\mathcal{O}(1\op{m})$ for $\eta$ and $\mathcal{O}(1)$ for $q$. This is an ideal case in the shallow water system regarded here and we can therefore retain their physical units in the discretised numerical model. However, due to the grid spacing $\Delta$ of unit meter being large for geophysical flows, we need to use dimensionless Nabla operators $\tilde{\nabla} = \Delta\nabla$. The continuity equation Eq. \ref{eq:swe}b, for example, is discretised with an explicit time integration method as
+\begin{equation}
+\eta^{n+1} = \eta^n + RK_{\eta}\left( - \tilde{\nabla} \cdot (\mathbf{u}h)^n\right)
+\label{eq:discr}
+\end{equation}
+where $RK_\eta$ is the Runge-Kutta coefficient times $\tfrac{\Delta t}{\Delta}$ which is precomputed at high precision, to avoid a division by a large value for $\Delta$ and a subsequent multiplication with a large value for $\Delta t$. The other terms are rescaled accordingly ($\tilde{f} = f\Delta$; $\tilde{\mathbf{F}} = \mathbf{F}\Delta$. As these terms remain constant, they are precomputed at higher precision during model initialisation to avoid problems with the dynamic range.
+
+To avoid division and subsequent multiplication with large numbers in the dissipative terms (Eq. \ref{eq:diss}) throughout the numerical model integration, we rescale $\mathbf{D}$  accordingly
+\begin{equation}
+\tilde{\mathbf{D}} =-\frac{\tilde{c_D}}{h}\| \mathbf{u} \| \mathbf{u} - \tilde{\nu}\tilde{\nabla}^4\mathbf{u}
+\end{equation}
+with $\tilde{c_D} = c_D\Delta = 0.2\op{m}$,  and $\tilde{\nu} = \nu\Delta^{-3} \approx 0.16\op{ms}^{-1}$, which are precomputed. Computing the term $\tilde{\mathbf{D}}$ instead of $\mathbf{D}$ is required to avoid arithmetic under and overflow with floats or huge rounding errors with posit arithmetic. 
+
+The semi-Lagrangian advection scheme is based on the idea to solve the advection equation with respect to its Lagrangian formulation. In the absence of sources and sinks, the Lagrangian point-of-view states that the tracer concentration $q$ does not change following its trajectory. The concentration $q$ at a departure point $\mathbf{x}_d$ is therefore the same as the concentration at the arrival point $\mathbf{x}_a$ later, which coincide with the grid points. Based on the flow velocity at the arrival point, a departure point $\mathbf{x}_d$ is derived. In order to avoid large numbers of the coordinates ($L_x = 2 \cdot 10^6$m), non-dimensional departure points $\mathbf{\tilde{x}}_{d,rel}$ relative to the arrival point are computed as
+\begin{equation}
+\mathbf{\tilde{x}}_{d,rel} = - \mathbf{u}(\mathbf{x}_a,t+\Delta t_{\op{adv}}) \frac{\Delta t_{\op{adv}}}{\Delta}.
+\label{eq:relcoord}
+\end{equation}
+where $t$ denotes the previous and $t+\Delta t_{\op{adv}} the current time step. A scaling with the grid-spacing $\Delta$ is applied to obtain an equation with all terms being $\mathcal{O}(1)$ and therefore representable with 16bit arithmetics. In practice, when converting the relative departure point $\mathbf{\tilde{x}}_{d,rel}$ to an array index, the floor function is used in combination with integer arithmetics, which can be performed without rounding errors. This essentially separates a computation with reals into two parts. One that can be computed with integers without rounding errors, and a calculation with reals, with a removed offset to avoid rounding errors.
+
+\section{Reduced precision communication}
 \label{sec:comm}
 
 Complex weather and climate models rely on parallelisation to distribute the computational cost of simulations efficiently among the processing units in a large cluster or supercomputer. One of this parallelism paradigm is domain decomposition, where the spatial domain is split into many subdomains to be calculated separately on individual processing units. Domain decomposition requires communication of the boundary values of a subdomain with the neighbouring subdomains. A standard for this distributed-memory parallelism is the message passing interface (MPI). We emulate MPI-like communication in the shallow water model with the copying of boundary values between the right and left boundary (periodic boundary conditions). Although the shallow water model does not run in parallel, reducing the precision in the copying of boundary values introduces an equivalent error as if reduced precision MPI was used to communicate between subdomains. Reduced precision is applied for the communication of the prognostic variables at every Runge-Kutta substep.
@@ -520,37 +554,6 @@ Until progress is made on hardware implementations for posits, the results here 
 
 
 \appendix
-%%Appendix A
-\section{Shallow water model}
-\label{sec:app}
-
-The shallow water equations are discretised on the $(x,y)$-plane over the rectangular domain $L_x \times L_y$. We associate $x$ with the zonal and $y$ with the meridional direction. The domain is centred at 45N and the beta-plane approximation \cite{Vallis2006} is used to linearize the Coriolis parameter which varies linearly from $7.27 \times 10^{-5}\op{s}^{-1}$ at the southern boundary to $9.25 \times 10^{-5}\op{s}^{-1}$ at the northern boundary. The boundary conditions are periodic in zonal direction and no-slip at the northern and southern boundary. The layer thickness is $h = \eta + H(x)$, with
-\begin{equation}
-H(x) = H_0 - H_1\exp\left(-H_\sigma^{-2}(x-\tfrac{L_x}{2})^2\right)
-\end{equation}
-being the undisturbed depth, representing a mountain ridge at $x=\tfrac{L_x}{2}$ spanning from the southern to the northern boundary. The standard depth is $H_0 = 500\op{m}$. The ridge has a height of $H_1 = 50\op{m}$. The characteristic width of the ridge is $H_\sigma = 300\op{km}$. The time step $\Delta t = 282\op{s}$ is chosen to resolve surface gravity waves, traveling at maximum phase speed $\sqrt{gH_0}$ with CFL number being 1 and gravitational acceleration $g=10\op{ms}^{-1}$. The wind stress forcing $\mathbf{F} = (F_x,0)$ is constant in time, acts only on the zonal momentum budget
-\begin{equation}
-Fx = \frac{F_0}{\rho h} \cos\left(\pi\left(y{L_y}^{-1} - 1\right)\right)^2
-\end{equation}
-and vanishes at the boundaries. The water density is $\rho = 1000\op{kg}\op{m}^{-3}$ and $F_0 = 0.12\op{Pa}$. The dissipation term $\mathbf{D}$ is the sum
-
-\begin{equation}
-\mathbf{D} = -\frac{c_D}{h}\| \mathbf{u} \| \mathbf{u} - \nu \nabla^4 \mathbf{u}
-\end{equation}
-of a quadratic bottom drag with dimensionless coefficient $c_D = 10^{-5}$ \cite{Arbic2008} and a biharmonic diffusion with viscosity coefficient $\nu \approx 1.33\times10^{11} \op{m}^4\op{s}^{-1}$ \cite{Griffies2000}. To avoid division and subsequent multiplication with large numbers throughout the numerical model integration, we use instead
-\begin{equation}
-\tilde{\mathbf{D}} =-\frac{\tilde{c_D}}{h}\| \mathbf{u} \| \mathbf{u} - \tilde{\nu}\tilde{\nabla}^4\mathbf{u}
-\end{equation}
-with $\tilde{c_D} = c_D\Delta = 0.2\op{m}$,  and $\tilde{\nu} = \nu\Delta^{-3} \approx 0.16\op{ms}^{-1}$. Computing the term $\tilde{\mathbf{D}}$ instead of $\mathbf{D}$ is required to avoid arithmetic under and overflow with floats or huge rounding errors with posit arithmetic. 
-%
-%The semi-Lagrangian advection scheme involves the computation of a departure point $\mathbf{x}_d$. In order to avoid large numbers of the coordinates ($L_x = 2 \cdot 10^6$m), we use instead a non-dimensional coordinate $\mathbf{\tilde{x}} = \mathbf{x}\Delta^{-1}$ to compute the departure point as 
-%\begin{equation}
-%\mathbf{\tilde{x}}_d = \mathbf{\tilde{x}}_a - \mathbf{u}_i \tfrac{\Delta t_\text{adv}}{\Delta}
-%\end{equation}
-%where $\mathbf{\tilde{x}}_a$ are the coordinates of the arrival grid node and $\mathbf{u}_i$ the velocity interpolated on the mid-point in space and time\cite{Smolarkiewicz1992}. The advective time step $\Delta t_\text{adv}$ is much larger than $\Delta t$ to reduce numerical diffusion of the tracer due to a smaller number of interpolations. In the simulations of Fig. \ref{fig:snapshot} ($\Delta = 10\op{km}$) the rescaled time step is $\tfrac{\Delta t_\text{adv}}{\Delta} \approx \tfrac{2 \cdot 10^4\op{s}}{10^4\op{m}} =  2 \op{sm}^{-1}$ and therefore precomputed.
-%
-
-
 \section{Emulating posit numbers in the Julia language}
 \label{sec:julia}
 
@@ -602,366 +605,16 @@ The harmonic sum converges after 513 elements when using Float16 (Fig. \ref{fig:
 
 We implement this type-flexible programming paradigm in the numerical integration of the Lorenz equations (section \ref{sec:L63}) and the shallow water model (section \ref{sec:swm}), which allows various number types to be used interchangeably.
 
-%%
-
-%  Numbered lines in equations:
-%  To add line numbers to lines in equations,
-%  \begin{linenomath*}
-%  \begin{equation}
-%  \end{equation}
-%  \end{linenomath*}
-
-
-
-%% Enter Figures and Tables near as possible to where they are first mentioned:
-%
-% DO NOT USE \psfrag or \subfigure commands.
-%
-% Figure captions go below the figure.
-% Table titles go above tables;  other caption information
-%  should be placed in last line of the table, using
-% \multicolumn2l{$^a$ This is a table note.}
-%
-%----------------
-% EXAMPLE FIGURES
-%
-% \begin{figure}
-% \includegraphics{example.png}
-% \caption{caption}
-% \end{figure}
-%
-% Giving latex a width will help it to scale the figure properly. A simple trick is to use \textwidth. Try this if large figures run off the side of the page.
-% \begin{figure}
-% \noindent\includegraphics[width=\textwidth]{anothersample.png}
-%\caption{caption}
-%\label{pngfiguresample}
-%\end{figure}
-%
-%
-% If you get an error about an unknown bounding box, try specifying the width and height of the figure with the natwidth and natheight options. This is common when trying to add a PDF figure without pdflatex.
-% \begin{figure}
-% \noindent\includegraphics[natwidth=800px,natheight=600px]{samplefigure.pdf}
-%\caption{caption}
-%\label{pdffiguresample}
-%\end{figure}
-%
-%
-% PDFLatex does not seem to be able to process EPS figures. You may want to try the epstopdf package.
-%
-
-%
-% ---------------
-% EXAMPLE TABLE
-%
-% \begin{table}
-% \caption{Time of the Transition Between Phase 1 and Phase 2$^{a}$}
-% \centering
-% \begin{tabular}{l c}
-% \hline
-%  Run  & Time (min)  \\
-% \hline
-%   $l1$  & 260   \\
-%   $l2$  & 300   \\
-%   $l3$  & 340   \\
-%   $h1$  & 270   \\
-%   $h2$  & 250   \\
-%   $h3$  & 380   \\
-%   $r1$  & 370   \\
-%   $r2$  & 390   \\
-% \hline
-% \multicolumn{2}{l}{$^{a}$Footnote text here.}
-% \end{tabular}
-% \end{table}
-
-%% SIDEWAYS FIGURE and TABLE
-% AGU prefers the use of {sidewaystable} over {landscapetable} as it causes fewer problems.
-%
-% \begin{sidewaysfigure}
-% \includegraphics[width=20pc]{figsamp}
-% \caption{caption here}
-% \label{newfig}
-% \end{sidewaysfigure}
-%
-%  \begin{sidewaystable}
-%  \caption{Caption here}
-% \label{tab:signif_gap_clos}
-%  \begin{tabular}{ccc}
-% one&two&three\\
-% four&five&six
-%  \end{tabular}
-%  \end{sidewaystable}
-
-%% If using numbered lines, please surround equations with \begin{linenomath*}...\end{linenomath*}
-%\begin{linenomath*}
-%\begin{equation}
-%y|{f} \sim g(m, \sigma),
-%\end{equation}
-%\end{linenomath*}
-
-%%% End of body of article
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Optional Appendix goes here
-%
-% The \appendix command resets counters and redefines section heads
-%
-% After typing \appendix
-%
-%\section{Here Is Appendix Title}
-% will show
-% A: Here Is Appendix Title
-%
-%\appendix
-%\section{Here is a sample appendix}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Optional Glossary, Notation or Acronym section goes here:
-%
-%%%%%%%%%%%%%%
-% Glossary is only allowed in Reviews of Geophysics
-%  \begin{glossary}
-%  \term{Term}
-%   Term Definition here
-%  \term{Term}
-%   Term Definition here
-%  \term{Term}
-%   Term Definition here
-%  \end{glossary}
-
-%
-%%%%%%%%%%%%%%
-% Acronyms
-%   \begin{acronyms}
-%   \acro{Acronym}
-%   Definition here
-%   \acro{EMOS}
-%   Ensemble model output statistics
-%   \acro{ECMWF}
-%   Centre for Medium-Range Weather Forecasts
-%   \end{acronyms}
-
-%
-%%%%%%%%%%%%%%
-% Notation
-%   \begin{notation}
-%   \notation{$a+b$} Notation Definition here
-%   \notation{$e=mc^2$}
-%   Equation in German-born physicist Albert Einstein's theory of special
-%  relativity that showed that the increased relativistic mass ($m$) of a
-%  body comes from the energy of motion of the body—that is, its kinetic
-%  energy ($E$)—divided by the speed of light squared ($c^2$).
-%   \end{notation}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%  ACKNOWLEDGMENTS
-%
-% The acknowledgments must list:
-%
-% >>>>	A statement that indicates to the reader where the data
-% 	supporting the conclusions can be obtained (for example, in the
-% 	references, tables, supporting information, and other databases).
-%
-% 	All funding sources related to this work from all authors
-%
-% 	Any real or perceived financial conflicts of interests for any
-%	author
-%
-% 	Other affiliations for any author that may be perceived as
-% 	having a conflict of interest with respect to the results of this
-% 	paper.
-%
-%
-% It is also the appropriate place to thank colleagues and other contributors.
-% AGU does not normally allow dedications.
-
 
 \acknowledgments
- The authors would like to thank Cerlane Leong and Mos\`{e} Giordano who contributed to \emph{SoftPosit.jl}. Milan Kl\"{o}wer and Tim N. Palmer gratefully acknowledge funding by the European Research Council under grant number 741112 \emph{An Information Theoretic Approach to Improving the Reliability of Weather and Climate Simulations}. Milan Kl\"{o}wer is also funded by NERC grant number NE/L002612/1.  Peter D. D\"{u}ben gratefully acknowledges funding from the Royal Society for his University Research Fellowship as well as funding from the ESIWACE2 project. ESIWACE2 has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement 823988.
-
-%% ------------------------------------------------------------------------ %%
-%% References and Citations
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% \bibliography{<name of your .bib file>} don't specify the file extension
-%
-% don't specify bibliographystyle
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Milan Kl\"{o}wer and Tim N. Palmer gratefully acknowledge funding by the European Research Council under grant number 741112 \emph{An Information Theoretic Approach to Improving the Reliability of Weather and Climate Simulations}. Milan Kl\"{o}wer is also funded by NERC grant number NE/L002612/1.  Peter D. D\"{u}ben gratefully acknowledges funding from the Royal Society for his University Research Fellowship as well as funding from the ESIWACE2 project. ESIWACE2 has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement 823988.
 
 \bibliography{bibliography}
-
-
-
-%Reference citation instructions and examples:
-%
-% Please use ONLY \cite and \citeA for reference citations.
-% \cite for parenthetical references
-% ...as shown in recent studies (Simpson et al., 2019)
-% \citeA for in-text citations
-% ...Simpson et al. (2019) have shown...
-%
-%
-%...as shown by \citeA{jskilby}.
-%...as shown by \citeA{lewin76}, \citeA{carson86}, \citeA{bartoldy02}, and \citeA{rinaldi03}.
-%...has been shown \cite{jskilbye}.
-%...has been shown \cite{lewin76,carson86,bartoldy02,rinaldi03}.
-%... \cite <i.e.>[]{lewin76,carson86,bartoldy02,rinaldi03}.
-%...has been shown by \cite <e.g.,>[and others]{lewin76}.
-%
-% apacite uses < > for prenotes and [ ] for postnotes
-% DO NOT use other cite commands (e.g., \citet, \citep, \citeyear, \nocite, \citealp, etc.).
-%
-
-
 
 \end{document}
 
 
 
-More Information and Advice:
-
-%% ------------------------------------------------------------------------ %%
-%
-%  SECTION HEADS
-%
-%% ------------------------------------------------------------------------ %%
-
-% Capitalize the first letter of each word (except for
-% prepositions, conjunctions, and articles that are
-% three or fewer letters).
-
-% AGU follows standard outline style; therefore, there cannot be a section 1 without
-% a section 2, or a section 2.3.1 without a section 2.3.2.
-% Please make sure your section numbers are balanced.
-% ---------------
-% Level 1 head
-%
-% Use the \section{} command to identify level 1 heads;
-% type the appropriate head wording between the curly
-% brackets, as shown below.
-%
-%An example:
-%\section{Level 1 Head: Introduction}
-%
-% ---------------
-% Level 2 head
-%
-% Use the \subsection{} command to identify level 2 heads.
-%An example:
-%\subsection{Level 2 Head}
-%
-% ---------------
-% Level 3 head
-%
-% Use the \subsubsection{} command to identify level 3 heads
-%An example:
-%\subsubsection{Level 3 Head}
-%
-%---------------
-% Level 4 head
-%
-% Use the \subsubsubsection{} command to identify level 3 heads
-% An example:
-%\subsubsubsection{Level 4 Head} An example.
-%
-%% ------------------------------------------------------------------------ %%
-%
-%  IN-TEXT LISTS
-%
-%% ------------------------------------------------------------------------ %%
-%
-% Do not use bulleted lists; enumerated lists are okay.
-% \begin{enumerate}
-% \item
-% \item
-% \item
-% \end{enumerate}
-%
-%% ------------------------------------------------------------------------ %%
-%
-%  EQUATIONS
-%
-%% ------------------------------------------------------------------------ %%
-
-% Single-line equations are centered.
-% Equation arrays will appear left-aligned.
-
-Math coded inside display math mode \[ ...\]
- will not be numbered, e.g.,:
- \[ x^2=y^2 + z^2\]
-
- Math coded inside \begin{equation} and \end{equation} will
- be automatically numbered, e.g.,:
- \begin{equation}
- x^2=y^2 + z^2
- \end{equation}
-
-
-% To create multiline equations, use the
-% \begin{eqnarray} and \end{eqnarray} environment
-% as demonstrated below.
-\begin{eqnarray}
-  x_{1} & = & (x - x_{0}) \cos \Theta \nonumber \\
-        && + (y - y_{0}) \sin \Theta  \nonumber \\
-  y_{1} & = & -(x - x_{0}) \sin \Theta \nonumber \\
-        && + (y - y_{0}) \cos \Theta.
-\end{eqnarray}
-
-%If you don't want an equation number, use the star form:
-%\begin{eqnarray*}...\end{eqnarray*}
-
-% Break each line at a sign of operation
-% (+, -, etc.) if possible, with the sign of operation
-% on the new line.
-
-% Indent second and subsequent lines to align with
-% the first character following the equal sign on the
-% first line.
-
-% Use an \hspace{} command to insert horizontal space
-% into your equation if necessary. Place an appropriate
-% unit of measure between the curly braces, e.g.
-% \hspace{1in}; you may have to experiment to achieve
-% the correct amount of space.
-
-
-%% ------------------------------------------------------------------------ %%
-%
-%  EQUATION NUMBERING: COUNTER
-%
-%% ------------------------------------------------------------------------ %%
-
-% You may change equation numbering by resetting
-% the equation counter or by explicitly numbering
-% an equation.
-
-% To explicitly number an equation, type \eqnum{}
-% (with the desired number between the brackets)
-% after the \begin{equation} or \begin{eqnarray}
-% command.  The \eqnum{} command will affect only
-% the equation it appears with; LaTeX will number
-% any equations appearing later in the manuscript
-% according to the equation counter.
-%
-
-% If you have a multiline equation that needs only
-% one equation number, use a \nonumber command in
-% front of the double backslashes (\\) as shown in
-% the multiline equation above.
-
-% If you are using line numbers, remember to surround
-% equations with \begin{linenomath*}...\end{linenomath*}
-
-%  To add line numbers to lines in equations:
-%  \begin{linenomath*}
-%  \begin{equation}
-%  \end{equation}
-%  \end{linenomath*}
 
 
 
