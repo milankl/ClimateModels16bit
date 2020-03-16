@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  13 MAR 2020 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.23)  13 MAR 2020 20:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1058,15 +1058,27 @@ d data com-mu-ni-ca-tion within a com-
  []
 
 
-Overfull \hbox (23.1546pt too wide) in paragraph at lines 230--232
-\OT1/cmr/m/n/10 puter clus-ter. The re-sults pro-mote the po-ten-tial of 16bit 
-for-mats for at least parts of com- 
+Overfull \hbox (11.87668pt too wide) in paragraph at lines 230--232
+\OT1/cmr/m/n/10 puter clus-ter. We dis-cuss sev-eral ways how equa-tions can be
+ rescaled and al-go-rithms be 
  []
 
 
-Overfull \hbox (1.04343pt too wide) in paragraph at lines 230--232
-\OT1/cmr/m/n/10 plex weather and cli-mate mod-els, where round-ing er-rors woul
-d be en-tirely masked by 
+Overfull \hbox (24.26567pt too wide) in paragraph at lines 230--232
+\OT1/cmr/m/n/10 re-ordered to re-duce round-ing er-rors and to con-fine arith-m
+etic re-sults within a small range 
+ []
+
+
+Overfull \hbox (15.37682pt too wide) in paragraph at lines 230--232
+\OT1/cmr/m/n/10 of rep-re-sentable num-bers. The re-sults pro-mote the po-ten-t
+ial of 16bit for-mats for at least 
+ []
+
+
+Overfull \hbox (6.349pt too wide) in paragraph at lines 230--232
+\OT1/cmr/m/n/10 parts of com-plex weather and cli-mate mod-els, where round-ing
+ er-rors would be en-tirely 
  []
 
 
@@ -1642,7 +1654,7 @@ Overfull \hbox (2.74258pt too wide) in paragraph at lines 300--302
 nent bits. A 
  []
 
-
+[4]
 Overfull \hbox (10.46011pt too wide) in paragraph at lines 305--307
 \OT1/cmr/m/n/10 The sign bit is given in red, regime bits in or-ange, the ter-m
 i-nat-ing regime bit in brown, 
@@ -1684,7 +1696,7 @@ Overfull \hbox (15.48796pt too wide) in paragraph at lines 305--307
 y flip-ping all bits and adding 
  []
 
-[4]
+
 Overfull \hbox (7.9878pt too wide) in paragraph at lines 313--315
 \OT1/cmr/m/n/10 After the con-ver-sion to the two's com-ple-ment, the bits are 
 in-ter-preted in the same way 
@@ -1786,7 +1798,7 @@ Overfull \hbox (7.2101pt too wide) in paragraph at lines 323--324
 ]), and only poses a not-i-ca-ble 
  []
 
-
+[5 <./figs/circles.pdf>]
 Overfull \hbox (5.19322pt too wide) in paragraph at lines 325--326
 []\OT1/cmr/m/n/10 The posit num-ber frame-work also highly rec-om-mends \OT1/cm
 r/m/it/10 quires\OT1/cmr/m/n/10 , an ad-di-tional reg-is- 
@@ -1846,7 +1858,6 @@ Overfull \hbox (7.87694pt too wide) in paragraph at lines 325--326
 le pro-gram-ming paradigm, 
  []
 
-[5 <./figs/circles.pdf>]
 <../plots/decimal_precision.png, id=87, 505.89pt x 433.62pt>
 File: ../plots/decimal_precision.png Graphic file (type png)
 <use ../plots/decimal_precision.png>
@@ -1878,6 +1889,9 @@ Yonemoto, 2017; J. Gustafson,
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <../plots/decimal_precision.png>]
 Overfull \hbox (11.4254pt too wide) in paragraph at lines 339--341
 \OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 x[]$ \OT1/cmr/m/n/10 is the ex-act re-s
 ult of an arith-metic op-er-a-tion and $\OML/cmm/m/it/10 x[]$ \OT1/cmr/m/n/10 i
@@ -1914,7 +1928,7 @@ Overfull \hbox (25.12672pt too wide) in paragraph at lines 339--341
  dec-i-mal pre-ci-sion is the num- 
  []
 
-[6 <../plots/decimal_precision.png>]
+
 Overfull \hbox (18.90456pt too wide) in paragraph at lines 343--344
 []\OT1/cmr/m/n/10 Fig. 2[]a com-pares the worst-case dec-i-mal pre-ci-sion for 
 var-i-ous 16 and 8bit floats and 
@@ -2101,7 +2115,7 @@ Overfull \hbox (8.51569pt too wide) in paragraph at lines 371--372
 and the model tra-jec-tory will 
  []
 
-
+[7] [8 <../plots/lorenz_attractor.png>]
 Overfull \hbox (1.71013pt too wide) in paragraph at lines 373--374
 []\OT1/cmr/m/n/10 Integrating the Lorenz sys-tem with Float16 yields an at-trac
 -tor that is re-peat-ing 
@@ -2170,10 +2184,6 @@ rly sim-ple Lorenz at-trac-tor []Kl^^?ower
  []
 
 
-Underfull \vbox (badness 6775) has occurred while \output is active []
-
- [7]
-[8 <../plots/lorenz_attractor.png>]
 Overfull \hbox (27.7658pt too wide) in paragraph at lines 378--380
 []\OT1/cmr/m/n/10 This sec-tion will eval-u-ate the dif-fer-ent num-ber for-mat
 s Float16, BFloat16, Posit(16,1) 
@@ -2299,7 +2309,7 @@ Overfull \hbox (10.564pt too wide) in paragraph at lines 391--393
  only on the zonal 
  []
 
-
+[9]
 Overfull \hbox (14.22716pt too wide) in paragraph at lines 395--397
 \OT1/cmr/m/n/10 and van-ishes at the bound-aries. The wa-ter den-sity is $\OML/
 cmm/m/it/10 ^^Z \OT1/cmr/m/n/10 = 1000 [] [][]$ and $\OML/cmm/m/it/10 F[] \OT1/
@@ -2314,7 +2324,7 @@ cient $\OML/cmm/m/it/10 ^^W \OMS/cmsy/m/n/10 ^^Y \OT1/cmr/m/n/10 1\OML/cmm/m/it
 Griffies 
  []
 
-[9]
+
 Overfull \hbox (2.93219pt too wide) in paragraph at lines 403--404
 []\OT1/cmr/m/n/10 The shal-low wa-ter equa-tions are dis-cre-tised us-ing 2nd o
 r-der cen-tred fi-nite dif-fer- 
@@ -2750,7 +2760,8 @@ Overfull \hbox (16.01572pt too wide) in paragraph at lines 440--441
  flow, which grow and sub-se-quently 
  []
 
-<../plots/ageostrophic.pdf, id=170, 578.16pt x 289.08pt>
+[13 <../plots/meanvar_u.pdf>]
+<../plots/ageostrophic.pdf, id=233, 578.16pt x 289.08pt>
 File: ../plots/ageostrophic.pdf Graphic file (type pdf)
 <use ../plots/ageostrophic.pdf>
 Package pdftex.def Info: ../plots/ageostrophic.pdf  used on input line 443.
@@ -2780,9 +2791,6 @@ e-sult-ing geostrophic ve-loc-i-ties
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13 <../plots/meanvar_u.pdf>]
 Overfull \hbox (15.20015pt too wide) in paragraph at lines 453--457
 []\OT1/cmr/m/n/10 and de-vi-a-tions from the ac-tual flow $\OT1/cmr/bx/n/10 u$ 
 \OT1/cmr/m/n/10 are the ageostrophic ve-loc-ity com-po-nents $\OT1/cmr/bx/n/10 
@@ -2897,7 +2905,8 @@ Overfull \hbox (10.34908pt too wide) in paragraph at lines 460--462
 s, it fol-lows that some of this 
  []
 
-<../plots/tendency_hist.png, id=234, 722.7pt x 361.35pt>
+[14 <../plots/ageostrophic.pdf>]
+<../plots/tendency_hist.png, id=290, 722.7pt x 361.35pt>
 File: ../plots/tendency_hist.png Graphic file (type png)
 <use ../plots/tendency_hist.png>
 Package pdftex.def Info: ../plots/tendency_hist.png  used on input line 464.
@@ -3001,7 +3010,7 @@ Overfull \hbox (3.6267pt too wide) in paragraph at lines 469--470
 n-clear whether these grav-ity 
  []
 
-[14 <../plots/ageostrophic.pdf>]
+
 Overfull \hbox (7.29343pt too wide) in paragraph at lines 471--472
 []\OT1/cmr/m/n/10 The ten-den-cies are about 4 or-ders of mag-ni-tude smaller t
 han the prog-nos-tic vari- 
@@ -3086,12 +3095,15 @@ nos-tic vari-ables. Us-ing sub-scripts
  []
 
 
-Overfull \hbox (1.77611pt too wide) in paragraph at lines 476--477
+Overfull \hbox (26.6269pt too wide) in paragraph at lines 476--477
 \OT1/cmr/m/n/10 16 and 32 to de-note vari-ables held at 16 and 32bit pre-ci-sio
-n re-spec-tively and let $\OML/cmm/m/it/10 T$ \OT1/cmr/m/n/10 be 
+n, re-spec-tively, and let Float32() 
  []
 
-[15 <../plots/tendency_hist.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <../plots/tendency_hist.png>]
 Overfull \hbox (18.54344pt too wide) in paragraph at lines 483--484
 []\OT1/cmr/m/n/10 Snapshots of tracer con-cen-tra-tion re-veal well sim-u-lated
  geostrophic tur-bu-lence (Fig. 
@@ -3348,17 +3360,13 @@ Overfull \hbox (9.09901pt too wide) in paragraph at lines 497--498
  be up-scaled by a fac-tor of 
  []
 
-
+[16] [17 <../plots/snapshot_comm.png>]
 Overfull \hbox (13.57126pt too wide) in paragraph at lines 499--501
 []\OT1/cmr/m/n/10 We solve the equa-tions us-ing a fourth or-der Runge-Kutta me
 thod []Butcher, 2016). 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16]
-[17 <../plots/snapshot_comm.png>]
 Overfull \hbox (11.4299pt too wide) in paragraph at lines 505--509
 []\OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 RK[]; RK[]; RK[]$ \OT1/cmr/m/n/10 con
 -tain the Runge-Kutta co-ef-fi-cient and the time step $^^A\OML/cmm/m/it/10 t$\
@@ -3468,4 +3476,1421 @@ e in
 
 
 Overfull \hbox (10.07114pt too wide) in paragraph at lines 515--516
-\OT1/cmr
+\OT1/cmr/m/n/10 the shal-low wa-ter sys-tem re-garded here and we can there-for
+e re-tain their phys-i-cal units 
+ []
+
+
+Overfull \hbox (0.71007pt too wide) in paragraph at lines 515--516
+\OT1/cmr/m/n/10 in the dis-cre-tised nu-mer-i-cal model. How-ever, due to the g
+rid spac-ing $^^A$ of unit me-ter 
+ []
+
+
+Overfull \hbox (18.12666pt too wide) in paragraph at lines 515--516
+\OT1/cmr/m/n/10 be-ing large for geo-phys-i-cal flows, we need to use di-men-si
+on-less Nabla op-er-a-tors $[] = ^^A\OMS/cmsy/m/n/10 r$\OT1/cmr/m/n/10 . 
+ []
+
+
+Overfull \hbox (1.87677pt too wide) in paragraph at lines 515--516
+\OT1/cmr/m/n/10 The con-ti-nu-ity equa-tion Eq. 8[]b, for ex-am-ple, is dis-cre
+-tised with an ex-plicit time in-te- 
+ []
+
+
+Overfull \hbox (6.8737pt too wide) in paragraph at lines 519--521
+\OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 RK[]$ \OT1/cmr/m/n/10 is the Runge-Kutt
+a co-ef-fi-cient times $[]$ which is pre-com-puted at high pre- 
+ []
+
+
+Overfull \hbox (3.18242pt too wide) in paragraph at lines 519--521
+\OT1/cmr/m/n/10 ci-sion, to avoid a di-vi-sion by a large value for $^^A$ and a
+ sub-se-quent mul-ti-pli-ca-tion with 
+ []
+
+
+Overfull \hbox (0.23752pt too wide) in paragraph at lines 519--521
+\OT1/cmr/m/n/10 a large value for $^^A\OML/cmm/m/it/10 t$\OT1/cmr/m/n/10 . The 
+other terms are rescaled ac-cord-ingly ($[] = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10
+ ^^A$; $[] = \OT1/cmr/bx/n/10 F\OT1/cmr/m/n/10 ^^A$. As 
+ []
+
+
+Overfull \hbox (16.09903pt too wide) in paragraph at lines 519--521
+\OT1/cmr/m/n/10 these terms re-main con-stant, they are pre-com-puted at higher
+ pre-ci-sion dur-ing model ini- 
+ []
+
+
+Overfull \hbox (11.57133pt too wide) in paragraph at lines 519--521
+\OT1/cmr/m/n/10 tial-i-sa-tion to avoid prob-lems with the dy-namic range. To a
+void di-vi-sion and sub-se-quent 
+ []
+
+
+Overfull \hbox (8.09908pt too wide) in paragraph at lines 519--521
+\OT1/cmr/m/n/10 mul-ti-pli-ca-tion with large num-bers in the dis-si-pa-tive te
+rms (Eq. 11[]) through-out the nu- 
+ []
+
+
+Overfull \hbox (11.93222pt too wide) in paragraph at lines 523--525
+\OT1/cmr/m/n/10 put-ing the term $[]$ in-stead of $\OT1/cmr/bx/n/10 D$ \OT1/cmr
+/m/n/10 is re-quired to avoid arith-metic un-der and over-flow with 
+ []
+
+[18]
+Overfull \hbox (0.40454pt too wide) in paragraph at lines 526--527
+[]\OT1/cmr/m/n/10 How to re-for-mu-late the semi-Lagrangian ad-vec-tion scheme 
+for 16bit arith-metics 
+ []
+
+
+Overfull \hbox (16.29341pt too wide) in paragraph at lines 526--527
+\OT1/cmr/m/n/10 is ex-plained in the fol-low-ing. This ad-vec-tion scheme is ba
+sed on the idea to solve the ad- 
+ []
+
+
+Overfull \hbox (4.26569pt too wide) in paragraph at lines 526--527
+\OT1/cmr/m/n/10 vec-tion equa-tion with re-spect to its La-grangian for-mu-la-t
+ion. In the ab-sence of sources 
+ []
+
+
+Overfull \hbox (7.69972pt too wide) in paragraph at lines 526--527
+\OT1/cmr/m/n/10 and sinks, the La-grangian point-of-view states that the tracer
+ con-cen-tra-tion $\OML/cmm/m/it/10 q$ \OT1/cmr/m/n/10 does not 
+ []
+
+
+Overfull \hbox (7.37636pt too wide) in paragraph at lines 526--527
+\OT1/cmr/m/n/10 change fol-low-ing its tra-jec-tory. The con-cen-tra-tion $\OML
+/cmm/m/it/10 q$ \OT1/cmr/m/n/10 at de-par-ture points $\OT1/cmr/bx/n/10 x[]$ \O
+T1/cmr/m/n/10 at time $\OML/cmm/m/it/10 t$ \OT1/cmr/m/n/10 is 
+ []
+
+
+Overfull \hbox (12.43237pt too wide) in paragraph at lines 526--527
+\OT1/cmr/m/n/10 co-in-cide with the grid points. Based on the flow ve-loc-ity a
+t the ar-rival point, the de-par- 
+ []
+
+
+Overfull \hbox (12.92532pt too wide) in paragraph at lines 526--527
+\OT1/cmr/m/n/10 ture point is de-rived. In or-der to avoid large num-bers of th
+e co-or-di-nates ($\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = 2 \OMS/cmsy/m/n/10 ^^
+A \OT1/cmr/m/n/10 10[]$m), 
+ []
+
+
+Overfull \hbox (10.10178pt too wide) in paragraph at lines 530--532
+\OT1/cmr/m/n/10 A scal-ing with the grid-spacing in-verse $^^A[]$ is ap-plied s
+uch that all terms are $\OMS/cmsy/m/n/10 O\OT1/cmr/m/n/10 (1)$ and 
+ []
+
+
+Overfull \hbox (11.29341pt too wide) in paragraph at lines 530--532
+\OT1/cmr/m/n/10 there-fore rep-re-sentable with 16bit arith-metics. In prac-tic
+e, when con-vert-ing the rel-a-tive 
+ []
+
+
+Overfull \hbox (7.99817pt too wide) in paragraph at lines 530--532
+\OT1/cmr/m/n/10 de-par-ture point $[]$ to an ar-ray in-dex for the in-ter-po-la
+-tion, the floor func-tion is used 
+ []
+
+
+Overfull \hbox (7.48793pt too wide) in paragraph at lines 530--532
+\OT1/cmr/m/n/10 in com-bi-na-tion with in-te-ger arith-metics. This es-sen-tial
+ly sep-a-rates a com-pu-ta-tion with 
+ []
+
+
+Overfull \hbox (6.65456pt too wide) in paragraph at lines 530--532
+\OT1/cmr/m/n/10 re-als into two parts. One that can be com-puted with in-te-ger
+s with-out round-ing er-rors, 
+ []
+
+
+Overfull \hbox (12.46013pt too wide) in paragraph at lines 536--537
+[]\OT1/cmr/m/n/10 Complex weather and cli-mate mod-els rely on par-al-leli-sa-t
+ion to dis-tribute the com- 
+ []
+
+
+Overfull \hbox (0.59904pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 pu-ta-tional cost of sim-u-la-tions ef-fi-ciently among the pro
+-cess-ing units in a large clus-ter 
+ []
+
+
+Overfull \hbox (15.01578pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 or su-per-com-puter. One of this par-al-lelism paradigm is do-m
+ain de-com-po-si-tion, where the 
+ []
+
+
+Overfull \hbox (7.15472pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 spa-tial do-main is split into many sub-do-mains to be cal-cu-l
+ated sep-a-rately on in-di-vid-ual 
+ []
+
+
+Overfull \hbox (3.98802pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 pro-cess-ing units. Do-main de-com-po-si-tion re-quires com-mu-
+ni-ca-tion of the bound-ary val- 
+ []
+
+
+Overfull \hbox (11.73804pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 ues of a sub-do-main with the neigh-bour-ing sub-do-mains. A st
+an-dard for this distributed- 
+ []
+
+
+Overfull \hbox (7.76563pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 memory par-al-lelism is the mes-sage pass-ing in-ter-face (MPI)
+. We em-u-late MPI-like com- 
+ []
+
+
+Overfull \hbox (15.29352pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 mu-ni-ca-tion in the shal-low wa-ter model with the copy-ing of
+ bound-ary val-ues be-tween the 
+ []
+
+
+Overfull \hbox (26.21034pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 right and left bound-ary (pe-ri-odic bound-ary con-di-tions). A
+l-though the shal-low wa-ter model 
+ []
+
+
+Overfull \hbox (10.73798pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 does not run in par-al-lel, re-duc-ing the pre-ci-sion in the c
+opy-ing of bound-ary val-ues in-tro- 
+ []
+
+
+Overfull \hbox (13.46pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 duces an equiv-a-lent er-ror as if re-duced pre-ci-sion MPI was
+ used to com-mu-ni-cate be-tween 
+ []
+
+
+Overfull \hbox (11.76575pt too wide) in paragraph at lines 536--537
+\OT1/cmr/m/n/10 sub-do-mains. Re-duced pre-ci-sion is ap-plied for the com-mu-n
+i-ca-tion of the prog-nos-tic vari- 
+ []
+
+
+Overfull \hbox (15.26563pt too wide) in paragraph at lines 538--539
+[]\OT1/cmr/m/n/10 Regarding snap-shots of tracer con-cen-tra-tion sim-u-lated w
+ith re-duced pre-ci-sion com- 
+ []
+
+
+Overfull \hbox (6.18237pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 mu-ni-ca-tion show a neg-li-gi-ble er-ror for Float16 and posit
+s (Fig. 9[]). The er-ror is largest 
+ []
+
+
+Overfull \hbox (20.21027pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 at fronts and not con-cen-trated around the bound-aries. En-cod
+-ing the com-mu-ni-ca-tion with 
+ []
+
+
+Overfull \hbox (7.23793pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 BFloat16 in-tro-duces a larger er-ror than for the other 16bit 
+for-mats as the dec-i-mal pre- 
+ []
+
+
+Overfull \hbox (17.40454pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 ci-sion is with 2.8 clearly lower (Ta-ble 1[]) for the range of
+ val-ues oc-cur-ing within the prog- 
+ []
+
+
+Overfull \hbox (19.54347pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 nos-tic vari-ables (Fig. 8[]a and b). The er-rors are quan-ti-f
+ied by the RMSE of sur-face height 
+ []
+
+
+Overfull \hbox (0.61752pt too wide) in paragraph at lines 538--539
+\OML/cmm/m/it/10 ^^Q$ \OT1/cmr/m/n/10 as be-fore and are up to about two or-der
+s of mag-ni-tude smaller than the er-rors that 
+ []
+
+
+Overfull \hbox (11.26581pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 re-sult from 16bit arith-metic. As even the worst 16bit com-mu-
+ni-ca-tion for-mat, BFloat16, 
+ []
+
+
+Overfull \hbox (10.84904pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 has a smaller er-ror than the best mixed pre-ci-sion for-mats, 
+Float16 with Float32, we ex- 
+ []
+
+
+Overfull \hbox (31.26578pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 tend the en-sem-ble pre-dic-tion ex-per-i-ments to in-clude two
+ 8bit for-mats, Posit(8,0) and Float8 
+ []
+
+
+Overfull \hbox (4.01566pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 (see Ta-ble 1[] for a de-scrip-tion). Both for-mats are found t
+o be suit-able for re-duced pre- 
+ []
+
+
+Overfull \hbox (24.96014pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 ci-sion com-mu-ni-ca-tion here and do not in-tro-duce an er-ror
+ that is larger than the dis-cretiza- 
+ []
+
+
+Overfull \hbox (6.18243pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 tion er-ror. Hav-ing said that, Float8 com-mu-ni-ca-tion in-tro
+-duces an er-ror that is com-pa- 
+ []
+
+
+Overfull \hbox (18.54358pt too wide) in paragraph at lines 538--539
+\OT1/cmr/m/n/10 ra-bly large ini-tially but growths only lin-early in the first
+ 50 days of the sim-u-la-tion, which 
+ []
+
+
+Overfull \hbox (2.79344pt too wide) in paragraph at lines 540--541
+[]\OT1/cmr/m/n/10 Reduced pre-ci-sion com-mu-ni-ca-tion was not found to have a
+ sig-nif-i-cant im-pact on 
+ []
+
+
+Overfull \hbox (35.71016pt too wide) in paragraph at lines 540--541
+\OT1/cmr/m/n/10 ei-ther mean state, vari-abil-ity, geostro-phy or ten-den-cies.
+ We ac-knowl-edge that not all weather 
+ []
+
+
+Overfull \hbox (2.59901pt too wide) in paragraph at lines 540--541
+\OT1/cmr/m/n/10 and cli-mate mod-els would ben-e-fit from a re-duced pre-ci-sio
+n com-mu-ni-ca-tion, as the ac- 
+ []
+
+
+Overfull \hbox (14.34904pt too wide) in paragraph at lines 540--541
+\OT1/cmr/m/n/10 cel-er-a-tion po-ten-tial de-pends on many fac-tors spe-cific t
+o a model and the used hard-ware, 
+ []
+
+
+Overfull \hbox (10.76573pt too wide) in paragraph at lines 540--541
+\OT1/cmr/m/n/10 e.g. num-ber of nodes in a clus-ter and how shared and dis-trib
+uted mem-ory man-age-ment 
+ []
+
+
+Overfull \hbox (20.62677pt too wide) in paragraph at lines 540--541
+\OT1/cmr/m/n/10 is re-al-ized. How-ever, in the case that com-mu-ni-ca-tion is 
+an iden-ti-fied bot-tle-neck in a given 
+ []
+
+
+Overfull \hbox (17.48792pt too wide) in paragraph at lines 540--541
+\OT1/cmr/m/n/10 ap-pli-ca-tion, the re-sults here sug-gest that re-li-able mode
+l sim-u-la-tions can be achieved with 
+ []
+
+
+Overfull \hbox (8.84903pt too wide) in paragraph at lines 540--541
+\OT1/cmr/m/n/10 16 or even 8bit com-mu-ni-ca-tion. The range of val-ues for the
+ prog-nos-tic vari-ables here is 
+ []
+
+
+Overfull \hbox (11.71028pt too wide) in paragraph at lines 540--541
+\OT1/cmr/m/n/10 com-pa-ra-bly small, fa-cil-i-tat-ing 8bit com-mu-ni-ca-tion. S
+uch re-duc-tions might be in gen-eral 
+ []
+
+
+Overfull \hbox (4.04349pt too wide) in paragraph at lines 540--541
+\OT1/cmr/m/n/10 dif-fi-cult to im-ple-ment. Al-though we show that posits are a
+ pref-er-e-able num-ber for-mat 
+ []
+
+
+Overfull \hbox (12.57127pt too wide) in paragraph at lines 540--541
+\OT1/cmr/m/n/10 to be used for 16bit com-mu-ni-ca-tion, it re-mains an open que
+s-tion how ef-fi-cient an im-ple- 
+ []
+
+[19]
+Overfull \hbox (3.9878pt too wide) in paragraph at lines 545--546
+[]\OT1/cmr/m/n/10 Using a soft-ware em-u-la-tor we have tested posit arith-meti
+c with a per-spec-tive for 
+ []
+
+
+Overfull \hbox (12.71016pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 weather and cli-mate sim-u-la-tions. The at-trac-tor of the Lor
+enz 1963 model, a chaotic but 
+ []
+
+
+Overfull \hbox (8.7102pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 sim-plis-tic model of at-mo-spheric con-vec-tion, is con-sid-er
+-ably im-proved us-ing 16bit posits 
+ []
+
+
+Overfull \hbox (13.8769pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 when com-pared to Float16 or BFloat16, two for-mats that are su
+p-ported on mod-ern ten- 
+ []
+
+
+Overfull \hbox (10.62679pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 sor or graphic pro-cess-ing units. Float16 can be used to per-f
+orm fore-casts with the shal- 
+ []
+
+
+Overfull \hbox (7.9879pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 low wa-ter model, how-ever, 16bit posits with ei-ther 1 or 2 ex
+-po-nents clearly out-per-form 
+ []
+
+
+Overfull \hbox (21.98811pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 floats and ap-pear very promis-ing for ap-pli-ca-tion in high p
+er-for-mance com-put-ing for Earth 
+ []
+
+
+Overfull \hbox (12.93259pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 Sys-tem mod-elling. Run-ning com-pu-ta-tion-ally very de-mand-i
+ng al-go-rithms at 16 bit could 
+ []
+
+
+Overfull \hbox (0.37679pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 greatly re-duce the wall-clock time for weather and cli-mate si
+m-u-la-tions on fu-ture high 
+ []
+
+
+Overfull \hbox (41.41858pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 per-for-mance com-put-ing ar-chi-tec-ture. Given that only floa
+ts are cur-rently hardware-supported, 
+ []
+
+
+Overfull \hbox (6.12674pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 we in-ves-ti-gated mixed pre-ci-sion ap-proaches, where the pro
+g-nos-tic vari-ables are kept at 
+ []
+
+
+Overfull \hbox (7.7935pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 32 bit and the ten-den-cies are com-puted in 16 bit. Al-though 
+the vast ma-jor-ity of cal-cu- 
+ []
+
+
+Overfull \hbox (6.62679pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 la-tions are still per-formed with 16 bit, the er-ror is greatl
+y re-duced and adding the ten- 
+ []
+
+
+Overfull \hbox (4.57117pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 den-cies on the prog-nos-tic vari-ables was iden-ti-fied as cri
+t-i-cal to re-duce round-ing er-rors. 
+ []
+
+
+Overfull \hbox (0.12679pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 Fur-ther re-sults show that com-mu-ni-ca-tion, as oc-cur-ing in
+ weather and cli-mate mod-els 
+ []
+
+
+Overfull \hbox (0.84904pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 run in par-al-lel, can be greatly re-duced down to 16 or even 8
+bit with-out in-tro-duc-ing a 
+ []
+
+
+Overfull \hbox (2.43224pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 large er-ror that would not be masked by other sources of er-ro
+r in less a ide-al-is-tic sim- 
+ []
+
+
+Overfull \hbox (13.51561pt too wide) in paragraph at lines 545--546
+\OT1/cmr/m/n/10 u-la-tion. The ap-proaches to re-duced pre-ci-sion pre-sented h
+ere can in gen-eral be com-bined 
+ []
+
+
+Overfull \hbox (13.52068pt too wide) in paragraph at lines 547--548
+[]\OT1/cmr/m/n/10 In this study, we per-form model fore-casts with a \OT1/cmr/m
+/it/10 per-fect model\OT1/cmr/m/n/10 . Any form of model 
+ []
+
+
+Overfull \hbox (4.71pt too wide) in paragraph at lines 547--548
+\OT1/cmr/m/n/10 er-ror is ig-nored, as the Float64 ref-er-ence is ex-actly the 
+same model as its re-duced pre- 
+ []
+
+
+Overfull \hbox (8.46017pt too wide) in paragraph at lines 547--548
+\OT1/cmr/m/n/10 ci-sion coun-ter-parts. Any form of ini-tial con-di-tion er-ror
+ is also ig-nored. Only dis-creti-sa- 
+ []
+
+
+Overfull \hbox (8.7101pt too wide) in paragraph at lines 547--548
+\OT1/cmr/m/n/10 tion er-rors are es-ti-mated by low-er-ing the spa-tial res-o-l
+u-tion by a fac-tor of 2. This is not 
+ []
+
+
+Overfull \hbox (15.48784pt too wide) in paragraph at lines 547--548
+\OT1/cmr/m/n/10 a re-al-is-tic set-up for weather or cli-mate mod-els. Real mod
+-els in-clude many other sources 
+ []
+
+
+Overfull \hbox (20.93243pt too wide) in paragraph at lines 547--548
+\OT1/cmr/m/n/10 of fore-cast er-ror and it is likely that the con-tri-bu-tions 
+of round-ing er-rors from 16bit arith- 
+ []
+
+
+Overfull \hbox (2.599pt too wide) in paragraph at lines 547--548
+\OT1/cmr/m/n/10 metic would be dwarfed by er-rors in ini-tial con-di-tions or d
+is-creti-sa-tion er-rors in many 
+ []
+
+
+Overfull \hbox (19.82117pt too wide) in paragraph at lines 549--550
+[]\OT1/cmr/m/n/10 The nu-mer-i-cal dis-creti-sa-tion that was used in this pa-p
+er, with an ex-plicit time step- 
+ []
+
+
+Overfull \hbox (5.7934pt too wide) in paragraph at lines 549--550
+\OT1/cmr/m/n/10 ping scheme and 2nd or-der cen-tred fi-nite dif-fer-ences, is c
+om-mon to solve the equa-tions 
+ []
+
+
+Overfull \hbox (7.23799pt too wide) in paragraph at lines 549--550
+\OT1/cmr/m/n/10 of mo-tion in fluid dy-nam-ics. How-ever, var-i-ous dif-fer-ent
+ meth-ods of dis-creti-sa-tion ex-ist, 
+ []
+
+
+Overfull \hbox (4.23795pt too wide) in paragraph at lines 549--550
+\OT1/cmr/m/n/10 in-clud-ing spec-tral meth-ods, fi-nite el-e-men-t/vol-ume and 
+im-plicit time step-ping. The re- 
+ []
+
+
+Overfull \hbox (6.93233pt too wide) in paragraph at lines 549--550
+\OT1/cmr/m/n/10 quire-ments on re-duced pre-ci-sion will dif-fer for the dif-fe
+r-ent al-go-rithms and some meth- 
+ []
+
+
+Overfull \hbox (18.98785pt too wide) in paragraph at lines 549--550
+\OT1/cmr/m/n/10 ods may be more sen-si-tive to round-ing er-rors com-pared to t
+he tech-niques that were stud- 
+ []
+
+
+Overfull \hbox (23.29338pt too wide) in paragraph at lines 549--550
+\OT1/cmr/m/n/10 ied here. How-ever, there is no prior rea-son why floats should
+ be su-pe-rior to posits in these 
+ []
+
+
+Overfull \hbox (13.2658pt too wide) in paragraph at lines 549--550
+\OT1/cmr/m/n/10 cases and the smaller round-ing er-rors of 16bit posits com-par
+ed to Float16 and BFloat16 
+ []
+
+
+Overfull \hbox (17.2657pt too wide) in paragraph at lines 549--550
+\OT1/cmr/m/n/10 in our ap-pli-ca-tions sug-gest that posits are com-pet-i-tive.
+ Nonethe-less, we can-not draw any 
+ []
+
+
+Overfull \hbox (6.6269pt too wide) in paragraph at lines 549--550
+\OT1/cmr/m/n/10 pre-lim-i-nary con-clu-sion about the per-for-mance of posit ar
+ith-metic op-er-a-tions in a stan- 
+ []
+
+
+Overfull \hbox (20.76569pt too wide) in paragraph at lines 549--550
+\OT1/cmr/m/n/10 dard-ized posit pro-ces-sor. Al-though less error-prone, posit 
+arith-metic could be slower than 
+ []
+
+
+Overfull \hbox (20.09894pt too wide) in paragraph at lines 551--552
+[]\OT1/cmr/m/n/10 Until progress is made on hard-ware im-ple-men-ta-tions for p
+osits, the re-sults here sug- 
+ []
+
+
+Overfull \hbox (15.57126pt too wide) in paragraph at lines 551--552
+\OT1/cmr/m/n/10 gest that also 16bit float arith-metic can suc-ces-fully be use
+d for parts of com-plex weather 
+ []
+
+
+Overfull \hbox (1.04346pt too wide) in paragraph at lines 551--552
+\OT1/cmr/m/n/10 and cli-mate mod-els with the po-ten-tial for ac-cel-er-a-tion 
+on graphic and ten-sor pro-cess- 
+ []
+
+
+Overfull \hbox (9.57135pt too wide) in paragraph at lines 551--552
+\OT1/cmr/m/n/10 ing units. It is there-fore rec-om-mended to adapt a type-flexi
+ble pro-gram-ming paradigm, 
+ []
+
+
+Overfull \hbox (17.09914pt too wide) in paragraph at lines 551--552
+\OT1/cmr/m/n/10 ide-ally in a lan-guage that sup-ports porta-bil-ity, with al-g
+o-rithms writ-ten to re-duce the dy- 
+ []
+
+
+Overfull \hbox (8.79341pt too wide) in paragraph at lines 551--552
+\OT1/cmr/m/n/10 namic range of arith-metic re-sults. Hard-ware progress on cen-
+tral, graphic or ten-sor pro- 
+ []
+
+
+Overfull \hbox (6.62682pt too wide) in paragraph at lines 551--552
+\OT1/cmr/m/n/10 cess-ing units, with var-i-ous num-bers for-mats sup-ported, ca
+n sub-se-quently be utilised to 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+Overfull \hbox (13.59904pt too wide) in paragraph at lines 558--559
+[]\OT1/cmr/m/n/10 The Soft-Posit.jl em-u-la-tor de-fines con-ver-sion and arith
+-metic op-er-a-tions with posits. 
+ []
+
+
+Overfull \hbox (7.95537pt too wide) in paragraph at lines 558--559
+\OT1/cmr/m/n/10 Ju-lia's pro-gram-ming paradigms of \OT1/cmr/m/it/10 multiple-d
+ispatch \OT1/cmr/m/n/10 and \OT1/cmr/m/it/10 type-stability \OT1/cmr/m/n/10 fa-
+cil-i-tate the use 
+ []
+
+
+Overfull \hbox (10.6268pt too wide) in paragraph at lines 558--559
+\OT1/cmr/m/n/10 of ar-bi-trary num-ber for-mats with-out the need to rewrite an
+ al-go-rithm. As this is an es- 
+ []
+
+
+Overfull \hbox (6.98792pt too wide) in paragraph at lines 558--559
+\OT1/cmr/m/n/10 sen-tial fea-ture of Ju-lia and ex-ten-sively made use of in th
+is study, we briefly out-line the 
+ []
+
+
+Overfull \hbox (4.23796pt too wide) in paragraph at lines 558--559
+\OT1/cmr/m/n/10 ben-e-fits of Ju-lia by com-put-ing the har-monic sum with var-
+i-ous num-ber types as an ex- 
+ []
+
+
+Overfull \hbox (3.7949pt too wide) in paragraph at lines 584--585
+[]\OT1/cmr/m/n/10 Executing the func-tion \OT1/cmtt/m/n/10 harmonic[]sum \OT1/c
+mr/m/n/10 for the first time with a type \OT1/cmtt/m/n/10 T \OT1/cmr/m/n/10 as 
+the first 
+ []
+
+
+Overfull \hbox (6.7889pt too wide) in paragraph at lines 584--585
+\OT1/cmr/m/n/10 ar-gu-ment, trig-gers Ju-lia's \OT1/cmr/m/it/10 just-in-time \O
+T1/cmr/m/n/10 com-piler (Fig. A1[]). The func-tion is type sta-ble, 
+ []
+
+
+Overfull \hbox (2.32118pt too wide) in paragraph at lines 584--585
+\OT1/cmr/m/n/10 as the types of all vari-ables are de-clared. At the same time 
+Ju-lia al-lows for type flex-i- 
+ []
+
+
+Overfull \hbox (18.54477pt too wide) in paragraph at lines 584--585
+\OT1/cmr/m/n/10 bil-ity, as its \OT1/cmr/m/it/10 mul-ti-ple dis-patch \OT1/cmr/
+m/n/10 means that call-ing \OT1/cmtt/m/n/10 harmonic[]sum \OT1/cmr/m/n/10 with 
+an-other type \OT1/cmtt/m/n/10 T2 \OT1/cmr/m/n/10 will 
+ []
+
+
+Overfull \hbox (12.29337pt too wide) in paragraph at lines 584--585
+\OT1/cmr/m/n/10 re-sult in a sep-a-rately com-piled func-tion for \OT1/cmtt/m/n
+/10 T2\OT1/cmr/m/n/10 . We can there-fore com-pute the har-monic 
+ []
+
+
+Overfull \hbox (15.01524pt too wide) in paragraph at lines 584--585
+\OT1/cmr/m/n/10 sum with aribi-trary num-ber types, as long as the zero-element
+ \OT1/cmtt/m/n/10 zero(T)\OT1/cmr/m/n/10 ; the one-element 
+ []
+
+
+Overfull \hbox (2.48763pt too wide) in paragraph at lines 584--585
+\OT1/cmtt/m/n/10 one(T)\OT1/cmr/m/n/10 ; ad-di-tion; di-vi-sion; con-ver-sion f
+rom in-te-ger and con-ver-sion to float are de-fined 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 598--598
+[]\OT1/cmr/bx/n/9 Figure  A2. \OT1/cmr/m/n/9 Har-monic sum ex-am-ple use of the
+ posit em-u-la-tor \OT1/cmr/m/it/9 Soft-Posit.jl \OT1/cmr/m/n/9 in the Ju-lia s
+hell.
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (18.87677pt too wide) in paragraph at lines 602--603
+[]\OT1/cmr/m/n/10 The har-monic sum con-verges af-ter 513 el-e-ments when us-in
+g Float16 (Fig. A2[]). The 
+ []
+
+
+Overfull \hbox (10.62675pt too wide) in paragraph at lines 602--603
+\OT1/cmr/m/n/10 pre-ci-sion of BFloat16 is so low that the sum al-ready con-ver
+ges af-ter 65 el-e-ments, as the 
+ []
+
+
+Overfull \hbox (18.34917pt too wide) in paragraph at lines 602--603
+\OT1/cmr/m/n/10 ad-di-tion of the next term $1\OML/cmm/m/it/10 =\OT1/cmr/m/n/10
+ 66$ is round back to 5.0625. We iden-tify the ad-di-tion of small 
+ []
+
+
+Overfull \hbox (4.67117pt too wide) in paragraph at lines 602--603
+\OT1/cmr/m/n/10 terms to prog-nos-tic vari-ables of size $\OMS/cmsy/m/n/10 O\OT
+1/cmr/m/n/10 (1)$ as one of the ma-jor chal-lenges with low pre- 
+ []
+
+
+Overfull \hbox (5.21008pt too wide) in paragraph at lines 602--603
+\OT1/cmr/m/n/10 ci-sion arith-metic, which is dis-cussed in more de-tail in sec
+-tion 4[]. Us-ing Posit(16,1), the 
+ []
+
+
+Overfull \hbox (3.09898pt too wide) in paragraph at lines 602--603
+\OT1/cmr/m/n/10 sum only con-verges af-ter 1024 terms, due to the higher dec-i-
+mal pre-ci-sion of posits be- 
+ []
+
+
+Overfull \hbox (7.6546pt too wide) in paragraph at lines 604--605
+[]\OT1/cmr/m/n/10 We im-ple-ment this type-flexible pro-gram-ming paradigm in t
+he nu-mer-i-cal in-te-gra- 
+ []
+
+
+Overfull \hbox (25.2657pt too wide) in paragraph at lines 604--605
+\OT1/cmr/m/n/10 tion of the Lorenz equa-tions (sec-tion 3.1[]) and the shal-low
+ wa-ter model (sec-tion 3.2[]), which 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Overfull \hbox (8.98796pt too wide) in paragraph at lines 607--609
+\OT1/cmr/m/n/10 Milan Kl^^?ower and Tim N. Palmer grate-fully ac-knowl-edge fun
+d-ing by the Eu-ro-pean Re- 
+ []
+
+
+Overfull \hbox (6.63066pt too wide) in paragraph at lines 607--609
+\OT1/cmr/m/n/10 search Coun-cil un-der grant num-ber 741112 \OT1/cmr/m/it/10 An
+ In-for-ma-tion The-o-retic Ap-proach to Im- 
+ []
+
+
+Overfull \hbox (15.41345pt too wide) in paragraph at lines 607--609
+\OT1/cmr/m/it/10 prov-ing the Re-li-a-bil-ity of Weather and Cli-mate Sim-u-la-
+tions\OT1/cmr/m/n/10 . Mi-lan Kl^^?ower is also funded 
+ []
+
+
+Overfull \hbox (10.15463pt too wide) in paragraph at lines 607--609
+\OT1/cmr/m/n/10 by NERC grant num-ber NE/L002612/1. Pe-ter D. D^^?uben grate-fu
+lly ac-knowl-edges fund- 
+ []
+
+
+Overfull \hbox (18.51567pt too wide) in paragraph at lines 607--609
+\OT1/cmr/m/n/10 ing from the Royal So-ci-ety for his Uni-ver-sity Re-search Fel
+-low-ship as well as fund-ing from 
+ []
+
+
+Overfull \hbox (3.26569pt too wide) in paragraph at lines 607--609
+\OT1/cmr/m/n/10 the ESI-WACE2 project. ESI-WACE2 has re-ceived fund-ing from th
+e Eu-ro-pean Union's 
+ []
+
+(./Kloewer_etal_james2020.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 16--39
+[]\OT1/cmr/m/n/10 Arakawa, A., & Hsu, Y.-J. G.  (1990, Oc-to-ber).  En-ergy Con
+-serv-ing and 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--39
+\OT1/cmr/m/n/10 Potential-Enstrophy Dis-si-pat-ing Schemes for the Shal-low Wa-
+ter Equa-tions. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--39
+\OT1/cmr/m/it/10 Monthly Weather Re-view\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 118\
+OT1/cmr/m/n/10 (10), 1960--1969.  Re-trieved 2020-02-25, from 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--39
+\OT1/cmtt/m/n/10 https :// journals [] .ametsoc [] .org / doi / 10 [] .1175 / 1
+520 [] -0493 % 281990 % 29118 % 
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 16--39
+\OT1/cmtt/m/n/10 3C1960 % 3AECAPED % 3E2 [] .0 [] .CO % 3B2$   \OT1/cmr/m/n/10 
+(Pub-lisher: Amer-i-can Me-te-o-ro-log-i-cal So-ci- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--78
+\OT1/cmr/m/n/10 Dy-nam-i-cal Pro-cesses of the UCLA Gen-eral Cir-cu-la-tion Mod
+el.  In J. Chang 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--78
+\OT1/cmr/m/n/10 (Ed.[]), \OT1/cmr/m/it/10 Meth-ods in Com-pu-ta-tional Physics:
+ Ad-vances in Re-search and Ap-pli-ca- 
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 53--78
+\OT1/cmr/m/it/10 tions \OT1/cmr/m/n/10 (Vol.[] 17, pp.[] 173--265).  El-se-vier
+.  Re-trieved 2020-02-25, from $\OT1/cmtt/m/n/10 http :// 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--78
+\OT1/cmtt/m/n/10 www [] .sciencedirect [] .com / science / article / pii / B978
+0124608177500094$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--112
+[]\OT1/cmr/m/n/10 Arbic, B. K., & Scott, R. B.  (2008, Jan-uary).  On Quadratic
+ Bot-tom Drag, 
+ []
+
+
+Underfull \hbox (badness 7273) in paragraph at lines 92--112
+\OT1/cmr/m/n/10 Geostrophic Tur-bu-lence, and Oceanic Mesoscale Ed-dies.  \OT1/
+cmr/m/it/10 Jour-nal of Phys-i-cal 
+ []
+
+
+Underfull \hbox (badness 7308) in paragraph at lines 92--112
+\OT1/cmr/m/it/10 Oceanog-ra-phy\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 38\OT1/cmr/m/
+n/10 (1), 84--103.  Re-trieved 2020-02-25, from $\OT1/cmtt/m/n/10 http :// jour
+nals [] 
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 127--150
+\OT1/cmr/m/n/10 Fresh Ap-proach to Nu-mer-i-cal Com-put-ing.  \OT1/cmr/m/it/10 
+SIAM Re-view\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 59\OT1/cmr/m/n/10 (1), 65--98.  
+Re- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--150
+\OT1/cmr/m/n/10 trieved 2020-02-25, from $\OT1/cmtt/m/n/10 https :// epubs [] .
+siam [] .org / doi / 10 [] .1137 / 141000671$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--150
+\OT1/cmr/m/n/10 (Pub-lisher: So-ci-ety for In-dus-trial and Ap-plied Math-e-mat
+-ics)  doi: $10 [] .1137 / 
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 166--187
+[]\OT1/cmr/m/n/10 Burgess, N., Mi-lanovic, J., Stephens, N., Mona-chopou-los, K
+., & Mansell, D.  (2019, 
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 223--251
+[]\OT1/cmr/m/n/10 Chaurasiya, R., Gustafson, J., Shrestha, R., Neu-dor-fer, J.,
+ Nam-biar, S., Niyogi, 
+ []
+
+
+Underfull \hbox (badness 1424) in paragraph at lines 223--251
+\OT1/cmr/m/n/10 K., ... Le-u-pers, R.  (2018, Oc-to-ber).  Pa-ram-e-ter-ized Po
+sit Arith-metic Hard- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--251
+\OT1/cmr/m/n/10 ware Gen-er-a-tor.  In \OT1/cmr/m/it/10 2018 IEEE 36th In-ter-n
+a-tional Con-fer-ence on Com-puter 
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 223--251
+\OT1/cmr/m/it/10 De-sign (ICCD) \OT1/cmr/m/n/10 (pp.[] 334--341).  Or-lando, FL
+, USA: IEEE.  Re-trieved 2020- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--251
+\OT1/cmr/m/n/10 02-25, from $\OT1/cmtt/m/n/10 https :// ieeexplore [] .ieee [] 
+.org / document / 8615707 /$   \OT1/cmr/m/n/10 doi: 
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 265--289
+\OT1/cmr/m/n/10 re-con-fig-urable logic lever-ag-ing (open)CAPI.  In \OT1/cmr/m
+/it/10 Pro-ceed-ings of the Con-fer-ence 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--322
+\OT1/cmr/m/n/10 point pre-ci-sion in large nu-mer-i-cal sim-u-la-tions.  \OT1/c
+mr/m/it/10 Geo-sci-en-tific Model De-vel-op- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--322
+\OT1/cmr/m/it/10 ment\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 10\OT1/cmr/m/n/10 (6), 
+2221--2230.  Re-trieved 2020-02-25, from $\OT1/cmtt/m/n/10 https :// www [] .ge
+osci [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--352
+\OT1/cmr/m/n/10 2020-02-25, from $\OT1/cmtt/m/n/10 https :// onlinelibrary [] .
+wiley [] .com / doi / abs / 10 [] .1029 / 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--386
+[]\OT1/cmr/m/n/10 D^^?uben, P. D., Mc-Na-mara, H., & Palmer, T.  (2014, Au-gust
+).  The use of im- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--386
+\OT1/cmr/m/n/10 pre-cise pro-cess-ing to im-prove ac-cu-racy in weather & cli-m
+ate pre-dic-tion. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--386
+\OT1/cmr/m/it/10 Jour-nal of Com-pu-ta-tional Physics\OT1/cmr/m/n/10 , \OT1/cmr
+/m/it/10 271\OT1/cmr/m/n/10 , 2--18.  Re-trieved 2020-02-25, from 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--386
+\OT1/cmtt/m/n/10 https :// linkinghub [] .elsevier [] .com / retrieve / pii / S
+0021999113007183$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--444
+[]\OT1/cmr/m/n/10 Glaser, F., Mach, S., Rahimi, A., G^^?urkaynak, F. K., Huang,
+ Q., & Benini, L. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--444
+\OT1/cmr/m/n/10 (2017, De-cem-ber).  An 826 MOPS, 210 uW/MHz Unum ALU in 65 nm.
+ 
+ []
+
+
+Underfull \hbox (badness 6725) in paragraph at lines 423--444
+\OT1/cmr/m/it/10 arXiv:1712.01021 [cs]\OT1/cmr/m/n/10 .  Re-trieved 2020-02-25,
+ from $\OT1/cmtt/m/n/10 http :// arxiv [] .org / abs / 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--472
+\OT1/cmr/m/n/10 Like Vis-cos-ity for Use in Large-Scale Eddy-Permitting Ocean M
+od-els. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--506
+[]\OT1/cmr/m/n/10 Gupta, S., Agrawal, A., Gopalakr-ish-nan, K., & Narayanan, P.
+  (2015, Febru-ary). 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--506
+\OT1/cmr/m/n/10 Re-trieved 2020-03-10, from $\OT1/cmtt/m/n/10 http :// arxiv []
+ .org / abs / 1502 [] .02551$   \OT1/cmr/m/n/10 (arXiv: 
+ []
+
+
+Underfull \hbox (badness 3547) in paragraph at lines 518--529
+[]\OT1/cmr/m/n/10 Gustafson, J.  (2017).  \OT1/cmr/m/it/10 Posit Arith-metic.  
+\OT1/cmr/m/n/10 Re-trieved 2020-02-26, from $\OT1/cmtt/m/n/10 https :// 
+ []
+
+
+Underfull \hbox (badness 4013) in paragraph at lines 568--593
+[]\OT1/cmr/m/n/10 Hatfield, S., D^^?uben, P., Chantry, M., Kondo, K., Miyoshi, 
+T., & Palmer, T.  (2018, 
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 568--593
+\OT1/cmr/m/n/10 in the Pres-ence of Model Er-ror.  \OT1/cmr/m/it/10 Jour-nal of
+ Ad-vances in Mod-el-ing Earth Sys- 
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 607--627
+\OT1/cmr/m/it/10 neer-ing Sci-ences\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 473\OT1/c
+mr/m/n/10 (2205), 20170144.  Re-trieved 2020-02-25, from $\OT1/cmtt/m/n/10 http
+s :// 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 642--661
+\OT1/cmr/m/n/10 Eval-u-a-tion of the First Ten-sor Pro-cess-ing Unit.  \OT1/cmr
+/m/it/10 IEEE Mi-cro\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 38\OT1/cmr/m/n/10 (3), 1
+0--19. 
+ []
+
+
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [23]
+Underfull \hbox (badness 10000) in paragraph at lines 673--701
+[]\OT1/cmr/m/n/10 Jouppi, N. P., Young, C., Patil, N., Pat-ter-son, D., Agrawal
+, G., Ba-jwa, R., ... Yoon, 
+ []
+
+
+Underfull \hbox (badness 5431) in paragraph at lines 673--701
+\OT1/cmr/m/n/10 D. H.  (2017, June).  In-Datacenter Per-for-mance Anal-y-sis of
+ a Ten-sor Pro- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--701
+\OT1/cmr/m/n/10 cess-ing Unit.  In \OT1/cmr/m/it/10 Pro-ceed-ings of the 44th A
+n-nual In-ter-na-tional Sym-po-sium 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--701
+\OT1/cmr/m/it/10 on Com-puter Ar-chi-tec-ture \OT1/cmr/m/n/10 (pp.[] 1--12).  T
+oronto, ON, Canada: As-so-ci-a-tion 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--701
+\OT1/cmr/m/n/10 for Com-put-ing Ma-chin-ery.  Re-trieved 2020-02-26, from $\OT1
+/cmtt/m/n/10 https :// doi [] .org / 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 713--736
+[]\OT1/cmr/m/n/10 Kalamkar, D., Mudi-gere, D., Mellem-pudi, N., Das, D., Baner-
+jee, K., Avan-cha, 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 713--736
+\OT1/cmr/m/n/10 S., ... Dubey, P.  (2019, June).  A Study of BFLOAT16 for Deep 
+Learn- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 713--736
+\OT1/cmr/m/n/10 ing Train-ing.  \OT1/cmr/m/it/10 arXiv:1905.12322 [cs, stat]\OT
+1/cmr/m/n/10 .  Re-trieved 2020-02-26, from 
+ []
+
+
+Underfull \hbox (badness 7722) in paragraph at lines 750--774
+[]\OT1/cmr/m/n/10 Kl^^?ower, M., D^^?uben, P. D., & Palmer, T. N.  (2019).  Pos
+its as an al-ter-na-tive to 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--774
+\OT1/cmr/m/n/10 floats for weather and cli-mate mod-els.  In \OT1/cmr/m/it/10 P
+ro-ceed-ings of the Con-fer-ence for 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--774
+\OT1/cmr/m/it/10 Next Gen-er-a-tion Arith-metic 2019 on - CoNGA'19 \OT1/cmr/m/n
+/10 (pp.[] 1--8).  Sin-ga-pore, 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--774
+\OT1/cmr/m/n/10 Sin-ga-pore: ACM Press.  Re-trieved 2020-02-25, from $\OT1/cmtt
+/m/n/10 http :// dl [] .acm [] .org / 
+ []
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 788--805
+\OT1/cmr/m/it/10 u-la-tor.  \OT1/cmr/m/n/10 Zen-odo.  Re-trieved 2020-02-26, fr
+om $\OT1/cmtt/m/n/10 https :// zenodo [] .org / record / 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 817--836
+\OT1/cmr/m/it/10 ety A: Math-e-mat-i-cal, Phys-i-cal and En-gi-neer-ing Sci-enc
+es\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 372\OT1/cmr/m/n/10 (2018), 20130286. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 817--836
+\OT1/cmr/m/n/10 Re-trieved 2020-02-25, from $\OT1/cmtt/m/n/10 https :// royalso
+cietypublishing [] .org / doi / 
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 850--869
+[]\OT1/cmr/m/n/10 Langroudi, H. F., Carmichael, Z., & Ku-dithipudi, D.  (2019, 
+July).  Deep Learn-ing 
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 850--869
+\OT1/cmr/m/n/10 Train-ing on the Edge with Low-Precision Posits.  \OT1/cmr/m/it
+/10 arXiv:1907.13216 [cs, stat]\OT1/cmr/m/n/10 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 850--869
+\OT1/cmr/m/n/10 Re-trieved 2020-02-26, from $\OT1/cmtt/m/n/10 http :// arxiv []
+ .org / abs / 1907 [] .13216$   \OT1/cmr/m/n/10 (arXiv: 
+ []
+
+
+Underfull \hbox (badness 3088) in paragraph at lines 881--898
+[]\OT1/cmr/m/n/10 Leong, S. H.  (2020, March).  \OT1/cmr/m/it/10 Soft-Posit.  \
+OT1/cmr/m/n/10 Zen-odo.  Re-trieved 2020-03-13, from 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 910--930
+\OT1/cmr/m/it/10 mo-spheric Sci-ences\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 20\OT1/
+cmr/m/n/10 (2), 130--141.  Re-trieved 2020-02-26, from $\OT1/cmtt/m/n/10 https 
+:// 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 910--930
+\OT1/cmtt/m/n/10 journals [] .ametsoc [] .org / doi / abs / 10 [] .1175 / 1520 
+[] -0469(1963 ) 020 % 3C0130 : 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 910--930
+\OT1/cmtt/m/n/10 DNF % 3E2 [] .0 [] .CO ; 2$   \OT1/cmr/m/n/10 (Pub-lisher: Ame
+r-i-can Me-te-o-ro-log-i-cal So-ci-ety)  doi: 
+ []
+
+
+Underfull \hbox (badness 7047) in paragraph at lines 946--969
+[]\OT1/cmr/m/n/10 Markidis, S., Chien, S. W. D., Laure, E., Peng, I. B., & Vet-
+ter, J. S.  (2018, May). 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 946--969
+\OT1/cmr/m/n/10 NVIDIA Ten-sor Core Pro-gramma-bil-ity, Per-for-mance Pre-ci-si
+on.  In \OT1/cmr/m/it/10 2018 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 946--969
+\OT1/cmr/m/it/10 IEEE In-ter-na-tional Par-al-lel and Dis-tributed Pro-cess-ing
+ Sym-po-sium Work-shops 
+ []
+
+
+Underfull \hbox (badness 7486) in paragraph at lines 981--1000
+\OT1/cmr/m/it/10 News\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 526\OT1/cmr/m/n/10 (757
+1), 32.  Re-trieved 2020-02-26, from $\OT1/cmtt/m/n/10 http :// www [] .nature 
+[] .com / 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 981--1000
+\OT1/cmtt/m/n/10 news / modelling [] -build [] -imprecise [] -supercomputers []
+ -1 [] .18437$   \OT1/cmr/m/n/10 (Sec-tion: 
+ []
+
+
+Underfull \hbox (badness 4479) in paragraph at lines 1012--1031
+\OT1/cmr/m/it/10 Royal Me-te-o-ro-log-i-cal So-ci-ety\OT1/cmr/m/n/10 , \OT1/cmr
+/m/it/10 138\OT1/cmr/m/n/10 (665), 841--861.  Re-trieved 2020-02-25, from 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1069
+[]\OT1/cmr/m/n/10 Russell, F. P., D^^?uben, P. D., Niu, X., Luk, W., & Palmer, 
+T.  (2017, De-cem-ber). 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1069
+\OT1/cmr/m/n/10 Ex-ploit-ing the chaotic be-haviour of at-mo-spheric mod-els wi
+th re-con-fig-urable 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1069
+\OT1/cmr/m/n/10 ar-chi-tec-tures.  \OT1/cmr/m/it/10 Com-puter Physics Com-mu-ni
+-ca-tions\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 221\OT1/cmr/m/n/10 , 160--173.  Re-
+ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1069
+\OT1/cmr/m/n/10 trieved 2020-02-25, from $\OT1/cmtt/m/n/10 https :// linkinghub
+ [] .elsevier [] .com / retrieve / 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1133
+[]\OT1/cmr/m/n/10 Smolarkiewicz, P. K., & Pudykiewicz, J. A.  (1992, Novem-ber)
+.  A Class of 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1133
+\OT1/cmr/m/n/10 Semi-Lagrangian Ap-prox-i-ma-tions for Flu-ids.  \OT1/cmr/m/it/
+10 Jour-nal of the At-mo-spheric 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1133
+\OT1/cmr/m/it/10 Sci-ences\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 49\OT1/cmr/m/n/10 
+(22), 2082--2096.  Re-trieved 2020-02-26, from $\OT1/cmtt/m/n/10 https :// 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1133
+\OT1/cmtt/m/n/10 journals [] .ametsoc [] .org / doi / abs / 10 [] .1175 / 1520 
+[] -0469 % 281992 % 29049 % 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1133
+\OT1/cmtt/m/n/10 3C2082 % 3AACOSLA % 3E2 [] .0 [] .CO % 3B2$   \OT1/cmr/m/n/10 
+(Pub-lisher: Amer-i-can Me-te-o-ro-log-i-cal 
+ []
+
+
+Underfull \vbox (badness 1946) has occurred while \output is active []
+
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1167
+[]\OT1/cmr/m/n/10 Tantet, A., Lu-carini, V., & Di-jk-stra, H. A.  (2018, Febru-
+ary).  Res-o-nances in a 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1167
+\OT1/cmr/m/n/10 Chaotic At-trac-tor Cri-sis of the Lorenz Flow.  \OT1/cmr/m/it/
+10 Jour-nal of Sta-tis-ti-cal Physics\OT1/cmr/m/n/10 , 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1167
+\OT1/cmr/m/it/10 170\OT1/cmr/m/n/10 (3), 584--616.  Re-trieved 2020-02-25, from
+ $\OT1/cmtt/m/n/10 http :// link [] .springer [] .com / 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1203
+[]\OT1/cmr/m/n/10 Thornes, T., D^^?uben, P., & Palmer, T.  (2017, Jan-uary).  O
+n the use of scale- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1203
+\OT1/cmr/m/n/10 dependent pre-ci-sion in Earth Sys-tem mod-elling: Scale-Depend
+ent Pre-ci-sion 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1243
+[]\OT1/cmr/m/n/10 Tint^^So Prims, O., Acosta, M. C., Moore, A. M., Cas-trillo, 
+M., Ser-radell, K., Cort^^Ses, 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1243
+\OT1/cmr/m/n/10 mod-els: ex-plor-ing a po-ten-tial re-duc-tion of nu-mer-i-cal 
+pre-ci-sion in NEMO 4.0 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1243
+\OT1/cmr/m/n/10 2020-03-12, from $\OT1/cmtt/m/n/10 https :// www [] .geosci [] 
+-model [] -dev [] .net / 12 / 3135 / 2019 /$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1243
+\OT1/cmr/m/n/10 (Pub-lisher: Coper-ni-cus GmbH)  doi: $https :// doi [] .org / 
+10 [] .5194 / gmd [] -12 [] -3135 [] 
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 1281--1307
+[]\OT1/cmr/m/n/10 van Dam, L., Pel-tenburg, J., Al-Ars, Z., & Hof-s-tee, H. P. 
+ (2019, March).  An Ac- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1307
+\OT1/cmr/m/n/10 cel-er-a-tor for Posit Arith-metic Tar-get-ing Posit Level 1 BL
+AS Rou-tines and 
+ []
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 1281--1307
+\OT1/cmr/m/n/10 Pair-HMM.  In \OT1/cmr/m/it/10 Pro-ceed-ings of the Con-fer-enc
+e for Next Gen-er-a-tion Arith-metic 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1307
+\OT1/cmr/m/n/10 Re-trieved 2020-02-26, from $\OT1/cmtt/m/n/10 https :// doi [] 
+.org / 10 [] .1145 / 3316279 [] .3316284$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1319--1343
+[]\OT1/cmr/m/n/10 V^^Sa^^Tna, F., D^^?uben, P., Lang, S., Palmer, T., Leut-bech
+er, M., Salmond, D., & Carver, 
+ []
+
+
+Underfull \hbox (badness 5036) in paragraph at lines 1319--1343
+\OT1/cmr/m/n/10 G.  (2017, Febru-ary).  Sin-gle Pre-ci-sion in Weather Fore-cas
+t-ing Mod-els: An 
+ []
+
+
+Underfull \hbox (badness 5832) in paragraph at lines 1319--1343
+\OT1/cmr/m/n/10 Eval-u-a-tion with the IFS.  \OT1/cmr/m/it/10 Monthly Weather R
+e-view\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 145\OT1/cmr/m/n/10 (2), 495--502.  Re-
+ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1319--1343
+\OT1/cmr/m/n/10 trieved 2020-02-25, from $\OT1/cmtt/m/n/10 http :// journals []
+ .ametsoc [] .org / doi / 10 [] .1175 / 
+ []
+
+) [25] (./Kloewer_etal_james2020.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.45pt have occurred.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 8752 strings out of 492982
+ 136753 string characters out of 6134896
+ 292012 words of memory out of 5000000
+ 12143 multiletter control sequences out of 15000+600000
+ 11903 words of font info for 43 fonts, out of 8000000 for 9000
+ 1147 hyphenation exceptions out of 8191
+ 43i,18n,37p,2469b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt9.pfb>
+Output written on Kloewer_etal_james2020.pdf (25 pages, 3604659 bytes).
+PDF statistics:
+ 401 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+
