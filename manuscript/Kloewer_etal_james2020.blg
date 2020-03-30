@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Kloewer_etal_james2020.aux
 The style file: apacite.bst
@@ -13,44 +13,44 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 40 entries,
+You've used 41 entries,
             6951 wiz_defined-function locations,
-            1625 strings with 23017 characters,
-and the built_in function-call counts, 85772 in all, are:
-= -- 10364
-> -- 763
-< -- 4037
-+ -- 4250
-- -- 80
-* -- 5750
-:= -- 15190
-add.period$ -- 175
-call.type$ -- 40
-change.case$ -- 752
+            1590 strings with 21480 characters,
+and the built_in function-call counts, 86428 in all, are:
+= -- 10546
+> -- 777
+< -- 4124
++ -- 4313
+- -- 82
+* -- 5614
+:= -- 15486
+add.period$ -- 179
+call.type$ -- 41
+change.case$ -- 769
 chr.to.int$ -- 0
-cite$ -- 80
-duplicate$ -- 2595
-empty$ -- 3483
-format.name$ -- 1327
-if$ -- 16146
+cite$ -- 82
+duplicate$ -- 2533
+empty$ -- 3367
+format.name$ -- 1343
+if$ -- 16266
 int.to.chr$ -- 0
-int.to.str$ -- 120
+int.to.str$ -- 123
 missing$ -- 0
-newline$ -- 1187
-num.names$ -- 322
-pop$ -- 1541
+newline$ -- 1124
+num.names$ -- 330
+pop$ -- 1556
 preamble$ -- 1
-purify$ -- 224
+purify$ -- 228
 quote$ -- 0
-skip$ -- 5237
+skip$ -- 5386
 stack$ -- 0
-substring$ -- 4682
-swap$ -- 1508
-text.length$ -- 189
+substring$ -- 4740
+swap$ -- 1476
+text.length$ -- 191
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 3712
+type$ -- 3792
 warning$ -- 0
-while$ -- 535
+while$ -- 534
 width$ -- 0
-write$ -- 1481
+write$ -- 1424
