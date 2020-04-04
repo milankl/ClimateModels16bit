@@ -173,9 +173,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT ../plots/snapshot.png
 INPUT ../plots/snapshot.png
 INPUT ../plots/snapshot.png
-INPUT ../plots/rmse_eta.pdf
-INPUT ../plots/rmse_eta.pdf
-INPUT ../plots/rmse_eta.pdf
+INPUT ../plots/rmse_eta_darker.pdf
+INPUT ../plots/rmse_eta_darker.pdf
+INPUT ../plots/rmse_eta_darker.pdf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT ../plots/meanvar_u.pdf
 INPUT ../plots/meanvar_u.pdf
