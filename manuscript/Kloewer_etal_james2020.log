@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.6)  7 APR 2020 22:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.6)  7 APR 2020 22:35
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1161,9 +1161,6 @@ Overfull \hbox (13.65448pt too wide) in paragraph at lines 293--294
  []
 
 
-LaTeX Warning: Reference `sec:julia' on page 8 undefined on input line 295.
-
-
 Overfull \hbox (10.32118pt too wide) in paragraph at lines 295--296
 []\OT1/cmr/m/n/10 As posit re-search cur-rently fo-cuses on hard-ware im-ple-men-ta-tions []van Dam et al.[], 
  []
@@ -1186,11 +1183,6 @@ Overfull \hbox (7.84915pt too wide) in paragraph at lines 295--296
 
 Overfull \hbox (15.55144pt too wide) in paragraph at lines 295--296
 \OT1/cmr/m/it/10 Soft-Posit.jl []\OT1/cmr/m/n/10 Kl^^?ower & Gior-dano, 2019), which is a wrap-per for the C-based li-brary Soft- 
- []
-
-
-Overfull \hbox (4.84917pt too wide) in paragraph at lines 295--296
-\OT1/cmr/m/n/10 Posit []Leong, 2020). The type-flexible pro-gram-ming paradigm, fa-cil-i-tated by the Ju-lia 
  []
 
 
@@ -1316,7 +1308,10 @@ Overfull \hbox (29.73802pt too wide) in paragraph at lines 315--316
 \OT1/cmr/m/n/10 Sim-i-lar con-clu-sions hold for the fixed-point for-mat Q6.10, as the dec-i-mal pre-ci-sion is shifted 
  []
 
-[9] [10 <./decimal_precision.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9] [10 <./decimal_precision.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 337--337
 []\OT1/cmr/bx/n/9 Table 1. \OT1/cmr/m/n/9 Some char-ac-ter-is-tics of var-i-ous num-ber for-mats. $\OML/cmm/m/it/9 minpos$ \OT1/cmr/m/n/9 is the small-est rep-re-sentable
  []
@@ -2124,10 +2119,10 @@ Overfull \hbox (13.21011pt too wide) in paragraph at lines 467--469
 \OT1/cmr/m/n/10 with re-als into two parts. One that can be com-puted with in-te-gers with-out round-ing er- 
  []
 
-<../plots/snapshot.png, id=134, 578.16pt x 505.89pt>
-File: ../plots/snapshot.png Graphic file (type png)
-<use ../plots/snapshot.png>
-Package pdftex.def Info: ../plots/snapshot.png  used on input line 473.
+<snapshot.png, id=134, 578.16pt x 505.89pt>
+File: snapshot.png Graphic file (type png)
+<use snapshot.png>
+Package pdftex.def Info: snapshot.png  used on input line 473.
 (pdftex.def)             Requested size: 397.48499pt x 347.79851pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 474--474
@@ -2148,9 +2143,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 474--474
 Underfull \hbox (badness 10000) in paragraph at lines 474--474
 \OT1/cmr/m/n/9 ables only. The tracer was in-jected uni-formly in the lower half of the do-main 50 sim-u-la-tion days
  []
-
-
-LaTeX Warning: Reference `fig:harmsum2' on page 19 undefined on input line 478.
 
 
 Overfull \hbox (17.54344pt too wide) in paragraph at lines 478--479
@@ -2207,12 +2199,7 @@ Overfull \hbox (1.34898pt too wide) in paragraph at lines 478--479
 \OT1/cmr/m/n/10 low wa-ter dy-nam-ics, pre-sum-ably as ten-den-cies are too small to be added to the prog- 
  []
 
-
-Overfull \hbox (16.21011pt too wide) in paragraph at lines 478--479
-\OT1/cmr/m/n/10 nos-tic vari-ables, an is-sue that also oc-curs in the Lorenz sys-tem (Fig. 3[]d) and even in the 
- []
-
-[19] [20 <../plots/snapshot.png>]
+[19] [20 <./snapshot.png>]
 <rmse_eta_darker.pdf, id=143, 578.16pt x 289.08pt>
 File: rmse_eta_darker.pdf Graphic file (type pdf)
 <use rmse_eta_darker.pdf>
@@ -3569,23 +3556,20 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4109 strings out of 492649
- 55722 string characters out of 6129622
+ 4106 strings out of 492649
+ 55652 string characters out of 6129622
  138548 words of memory out of 5000000
- 7898 multiletter control sequences out of 15000+600000
+ 7896 multiletter control sequences out of 15000+600000
  12262 words of font info for 44 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
  43i,18n,37p,2479b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Kloewer_etal_james2020.pdf (35 pages, 3605654 bytes).
+Output written on Kloewer_etal_james2020.pdf (35 pages, 3605301 bytes).
 PDF statistics:
  433 PDF objects out of 1000 (max. 8388607)
  212 compressed objects within 3 object streams

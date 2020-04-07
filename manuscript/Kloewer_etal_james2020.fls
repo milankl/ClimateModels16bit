@@ -129,9 +129,9 @@ INPUT ./lorenz_attractor.png
 INPUT ./lorenz_attractor.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
-INPUT ../plots/snapshot.png
-INPUT ../plots/snapshot.png
-INPUT ../plots/snapshot.png
+INPUT snapshot.png
+INPUT ./snapshot.png
+INPUT ./snapshot.png
 INPUT rmse_eta_darker.pdf
 INPUT ./rmse_eta_darker.pdf
 INPUT ./rmse_eta_darker.pdf
