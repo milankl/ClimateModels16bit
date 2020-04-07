@@ -22,12 +22,7 @@
 \usepackage[inline]{trackchanges} %for better track changes. finalnew option will compile document with changes incorporated.
 \usepackage{soul}
 \usepackage{amsmath}
-\usepackage{listings}
-\usepackage{minted}
 \linenumbers
-
-\definecolor{mygreen}{rgb}{0,.5,0}
-\definecolor{mygray}{rgb}{0.9,0.9,0.9}
 
 \definecolor{psign}{rgb}{0.9  ,0.1,0.1}
 \definecolor{pregime}{rgb}{0.9,0.5,0.0}
@@ -35,34 +30,6 @@
 \definecolor{pexpo}{rgb}{0.1,0.4,0.7}
 
 \newcommand{\op}{\operatorname}
-
-\lstset{
-  backgroundcolor=\color{mygray},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
-  basicstyle=\ttfamily,        % the size of the fonts that are used for the code
-  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-  breaklines=true,                 % sets automatic line breaking
-  captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{mygreen},    % comment style
-  deletekeywords={...},            % if you want to delete keywords from the given language
-  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-  frame=single,	                   % adds a frame around the code
-  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-  keywordstyle=\color{mygreen}\textbf,       % keyword style
-  language=Matlab,                 % the language of the code
-  morekeywords={julia},            % if you want to add more keywords to the set
-  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
-  numbersep=5pt,                   % how far the line-numbers are from the code
-  numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
-  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
-  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-  showstringspaces=false,          % underline spaces within strings only
-  showtabs=false,                  % show tabs within strings adding particular underscores
-  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
-  stringstyle=\color{black},     % string literal style
-  tabsize=2,	                   % sets default tabsize to 2 spaces
-  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
-}
 
 \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
@@ -620,63 +587,12 @@ Until progress is made on hardware implementations for posits, the results here 
 It is therefore recommended to adapt a type-flexible programming paradigm, ideally in a language that supports portability, with algorithms written to reduce the dynamic range of arithmetic results.
 Hardware progress on central, graphic or tensor processing units, with various numbers formats supported, can subsequently be utilised to accelerate weather and climate simulations.
 
-\appendix
-\section{Emulating posit numbers in the Julia language}
-\label{sec:julia}
-
-The SoftPosit.jl emulator defines conversion and arithmetic operations with posits. Julia's programming paradigms of \emph{multiple-dispatch} and \emph{type-stability} facilitate the use of arbitrary number formats without the need to rewrite an algorithm. As this is an essential feature of Julia and extensively made use of in this study, we briefly outline the benefits of Julia by computing the harmonic sum with various number types as an example.
-
-\begin{figure}[h]
-\small
-\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray,gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia}
-  function harmonic_sum(::Type{T},steps::Int=2000) where T
-
-      s = zero(T)
-      o = one(T)
-
-      for i in 1:steps
-
-          s_old = s
-          s += o/T(i)
-
-          if s == s_old    # check for convergence
-              println(Float64(s),i)
-              break
-          end
-      end
-  end
-\end{minted}
-\caption{A type-flexible harmonic sum function in the Julia language.}
-\label{fig:harmsum}
-\end{figure}
-
-Executing the function \texttt{harmonic\_sum} for the first time with a type \texttt{T1} as the first argument, triggers Julia's \emph{just-in-time} compiler (Fig. \ref{fig:harmsum}). The function is type-stable, as the types of all variables are declared. At the same time Julia allows for type-flexibility, as its \emph{multiple-dispatch} means that calling \texttt{harmonic\_sum} with another type \texttt{T2} will result in a separately compiled function for \texttt{T2}. We can therefore compute the harmonic sum with arbitrary number types, as long as the zero-element \texttt{zero(T)}; the one-element \texttt{one(T)}; addition; division; conversion from integer and conversion to float are defined for \texttt{T}.
-
-\begin{figure}[h]
-\small
-\begin{minted}[breaklines,escapeinside=||,mathescape=true,baselinestretch=0.7, linenos, numbersep=3pt, bgcolor=mygray, gobble=2, frame=lines, fontsize=\small, framesep=2mm]{julia}
-  julia> using SoftPosit
-  julia> using BFloat16s
-  julia> harmonic_sum(Float16)
-  (7.0859375, 513)
-
-  julia> harmonic_sum(BFloat16)
-  (5.0625, 65)
-
-  julia> harmonic_sum(Posit16)
-  (7.77734375, 1024)
-\end{minted}
-\caption{Harmonic sum example use of the posit emulator \emph{SoftPosit.jl} in the Julia shell. \texttt{Posit16} is the Posit(16,1) standard.}
-\label{fig:harmsum2}
-\end{figure}
-
-The harmonic sum converges after 513 elements when using Float16 (Fig. \ref{fig:harmsum2}). The precision of BFloat16 is so low that the sum already converges after 65 elements, as the addition of the next term $1/66$ is round back to 5.0625. We identify the addition of small terms to prognostic variables of size $\mathcal{O}(1)$ as one of the major challenges with low precision arithmetic, which is discussed in more detail in section \ref{sec:mixed}. Using Posit(16,1), the sum only converges after 1024 terms, due to the higher decimal precision of posits between 1 and 10.
-
-We implement this type-flexible programming paradigm in the numerical integration of the Lorenz 1963 system (section \ref{sec:L63}) and the shallow water model (section \ref{sec:swm}), which allows various number types to be used interchangeably.
-
 
 \acknowledgments
 Milan Kl\"{o}wer and Tim N. Palmer gratefully acknowledge funding by the European Research Council under grant number 741112 \emph{An Information Theoretic Approach to Improving the Reliability of Weather and Climate Simulations}. Milan Kl\"{o}wer is also funded by NERC grant number NE/L002612/1.  Peter D. D\"{u}ben gratefully acknowledges funding from the Royal Society for his University Research Fellowship as well as funding from the ESIWACE2 project. ESIWACE2 has received funding from the European Union's Horizon 2020 research and innovation program under grant agreement 823988.
+
+Data and scripts will be available at
+\url{https://github.com/milankl/ClimateModels16bit} upon acceptance. Relevant software is available via \url{https://github.com/milankl} in the following repositories: SoftPosit.jl, ShallowWaters.jl, Lorenz63.jl, and Float8s.jl.
 
 \bibliography{bibliography}
 
