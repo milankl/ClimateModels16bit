@@ -53,7 +53,7 @@ ax1.fill_between(t,Rp[1,6,:]/cerr,Rp[2,6,:]/cerr,color="grey",alpha=0.2)
 ax1.fill_between(t,Rp[1,5,:]/cerr,Rp[2,5,:]/cerr,color="C1",alpha=0.2)
 ax1.fill_between(t,Rp[1,1,:]/cerr,Rp[2,1,:]/cerr,color="C0",alpha=0.2)
 ax1.fill_between(t,Rp[1,7,:]/cerr,Rp[2,7,:]/cerr,color="#808000",alpha=0.2)
-ax1.fill_between(t,Rp[2,8,:]/cerr,color="C0",alpha=0.05,hatch="x",label="discretisation error")
+ax1.fill_between(t,Rp[2,8,:]/cerr,color="C0",alpha=0.1,hatch="x",label="discretisation error")
 ax1.plot(t,Rp[2,8,:]/cerr,color="grey",alpha=0.5,lw=0.5)
 
 
@@ -83,7 +83,7 @@ ax2.fill_between(t2,Rp2[1,5,:]/cerr,Rp2[2,5,:]/cerr,color="C4",alpha=0.2)
 ax2.fill_between(t2,Rp2[1,6,:]/cerr,Rp2[2,6,:]/cerr,color="#E0E020",alpha=0.2)
 
 # discretisation error
-ax2.fill_between(t,Rp[2,8,:]/cerr,color="C0",alpha=0.05,hatch="x",label="discretisation error")
+ax2.fill_between(t,Rp[2,8,:]/cerr,color="C0",alpha=0.1,hatch="x",label="discretisation error")
 ax2.plot(t,Rp[2,8,:]/cerr,color="grey",alpha=0.5,lw=0.5)
 
 ax2.set_title("Forecast error:\n16 or 8bit communication", loc="left")
@@ -92,6 +92,6 @@ ax2.set_title("b", loc="right", fontweight="bold")
 ax2.legend(loc=2,fontsize=7,ncol=2)
 
 tight_layout()
-savefig("plots/rmse_$var.pdf")
-savefig("plots/rmse_$var.png",dpi=300)
+savefig("plots/rmse_$(var)_darker.pdf")
+savefig("plots/rmse_$(var)_darker.png",dpi=300)
 close(fig)
