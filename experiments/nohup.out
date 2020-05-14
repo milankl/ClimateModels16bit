@@ -2018,3 +2018,50 @@ Starting ShallowWaters run 4 on Thu, 13 Feb 2020 20:27:45
 and is hopefully done on Fri, 14 Feb 2020 16:01:07
 [K1%[K2%[K3%[K4%[K5%[K6%[K7%[K8%[K9%[K10%[K11%[K12%[K13%[K14%[K15%[K16%[K17%[K18%[K19%[K20%[K21%[K22%[K23%[K24%[K25%[K26%[K27%[K28%[K29%[K30%[K31%[K32%[K33%[K34%[K35%[K36%[K37%[K38%[K39%[K40%[K41%[K42%[K43%[K44%[K45%[K46%[K47%[K48%[K49%[K50%[K51%[K52%[K53%[K54%[K55%[K56%[K57%[K58%[K59%[K60%[K61%[K62%[K63%[K64%[K65%[K66%[K67%[K68%[K69%[K70%[K71%[K72%[K73%[K74%[K75%[K76%[K77%[K78%[K79%[K80%[K81%[K82%[K83%[K84%[K85%[K86%[K87%[K88%[K89%[K90%[K91%[K92%[K93%[K94%[K95%[K96%[K97%[K98%[K99%[K100% Integration done in 20h, 20min.
 All data stored.
+ERROR: LoadError: MethodError: no method matching round(::Float16sr, ::RoundingMode{:Down})
+Closest candidates are:
+  round(::Real, ::RoundingMode; digits, sigdigits, base) at floatfuncs.jl:129
+  round(!Matched::Float64, ::RoundingMode{:Down}) at float.jl:372
+  round(!Matched::Float32, ::RoundingMode{:Down}) at float.jl:373
+  ...
+Stacktrace:
+ [1] #round#570 at ./floatfuncs.jl:134 [inlined]
+ [2] round at ./floatfuncs.jl:129 [inlined]
+ [3] #floor#572 at ./floatfuncs.jl:152 [inlined]
+ [4] floor at ./floatfuncs.jl:152 [inlined]
+ [5] interp_uv!(::Array{Float16sr,2}, ::Array{Float16sr,2}, ::Array{Float16sr,2}, ::Array{Float16sr,2}, ::Main.ShallowWaters.ModelSetup{Float16sr,Float16sr}) at /home/kloewer/git/ShallowWaters.jl/src/TracerAdvection.jl:163
+ [6] departure!(::Array{Float16sr,2}, ::Array{Float16sr,2}, ::Main.ShallowWaters.DiagnosticVars{Float16sr,Float16sr}, ::Main.ShallowWaters.ModelSetup{Float16sr,Float16sr}) at /home/kloewer/git/ShallowWaters.jl/src/TracerAdvection.jl:78
+ [7] tracer!(::Int64, ::Array{Float16sr,2}, ::Array{Float16sr,2}, ::Main.ShallowWaters.PrognosticVars{Float16sr}, ::Main.ShallowWaters.DiagnosticVars{Float16sr,Float16sr}, ::Main.ShallowWaters.ModelSetup{Float16sr,Float16sr}) at /home/kloewer/git/ShallowWaters.jl/src/TracerAdvection.jl:27
+ [8] time_integration(::Main.ShallowWaters.PrognosticVars{Float16sr}, ::Main.ShallowWaters.DiagnosticVars{Float16sr,Float16sr}, ::Main.ShallowWaters.ModelSetup{Float16sr,Float16sr}) at /home/kloewer/git/ShallowWaters.jl/src/TimeIntegration.jl:94
+ [9] RunModel(::Type{Float16sr}, ::Parameter) at /home/kloewer/git/ShallowWaters.jl/src/RunModel.jl:37
+ [10] #RunModel#59 at /home/kloewer/git/ShallowWaters.jl/src/RunModel.jl:17 [inlined]
+ [11] (::Main.ShallowWaters.var"#kw##RunModel")(::NamedTuple{(:output, :Ndays, :nx, :outpath, :output_vars, :initial_cond, :init_run_id),Tuple{Bool,Int64,Int64,String,Array{String,1},String,Int64}}, ::typeof(RunModel), ::Type{Float16sr}) at ./none:0
+ [12] top-level scope at /home/kloewer/git/posit_paper/experiments/forecast_master_hr.jl:67
+ [13] include at ./boot.jl:328 [inlined]
+ [14] include_relative(::Module, ::String) at ./loading.jl:1105
+ [15] include(::Module, ::String) at ./Base.jl:31
+ [16] exec_options(::Base.JLOptions) at ./client.jl:287
+ [17] _start() at ./client.jl:460
+in expression starting at /home/kloewer/git/posit_paper/experiments/forecast_master_hr.jl:67
+Starting ShallowWaters run 8 on Wed, 18 Mar 2020 02:30:50
+ERROR: LoadError: InexactError: Int64(NaN)
+Stacktrace:
+ [1] Int64 at ./float.jl:710 [inlined]
+ [2] adv_sst!(::Array{LogFixPoint16,2}, ::Main.ShallowWaters.DiagnosticVars{LogFixPoint16,Float32}, ::Main.ShallowWaters.ModelSetup{LogFixPoint16,Float32}) at /home/kloewer/git/ShallowWaters.jl/src/TracerAdvection.jl:196
+ [3] tracer!(::Int64, ::Array{LogFixPoint16,2}, ::Array{LogFixPoint16,2}, ::Main.ShallowWaters.PrognosticVars{Float32}, ::Main.ShallowWaters.DiagnosticVars{LogFixPoint16,Float32}, ::Main.ShallowWaters.ModelSetup{LogFixPoint16,Float32}) at /home/kloewer/git/ShallowWaters.jl/src/TracerAdvection.jl:28
+ [4] time_integration(::Main.ShallowWaters.PrognosticVars{Float32}, ::Main.ShallowWaters.DiagnosticVars{LogFixPoint16,Float32}, ::Main.ShallowWaters.ModelSetup{LogFixPoint16,Float32}) at /home/kloewer/git/ShallowWaters.jl/src/TimeIntegration.jl:94
+ [5] RunModel(::Type{LogFixPoint16}, ::Parameter) at /home/kloewer/git/ShallowWaters.jl/src/RunModel.jl:37
+ [6] #RunModel#57 at /home/kloewer/git/ShallowWaters.jl/src/RunModel.jl:17 [inlined]
+ [7] top-level scope at /home/kloewer/git/posit_paper/experiments/forecast_master_hr.jl:70
+ [8] include(::Module, ::String) at ./Base.jl:377
+ [9] exec_options(::Base.JLOptions) at ./client.jl:288
+ [10] _start() at ./client.jl:484
+in expression starting at /home/kloewer/git/posit_paper/experiments/forecast_master_hr.jl:70
+Starting ShallowWaters run 9 on Thu, 09 Apr 2020 18:00:53
+[KModel integration will take approximately 2h, 19min,
+and is hopefully done on Thu, 09 Apr 2020 20:20:07
+[K1%[K2%[K3%[K4%[K5%[K6%[K7%[K8%[K9%[K10%[K11%[K12%[K13%[K14%[K15%[K16%[K17%[K18%[K19%[K20%[K21%[K22%[K23%[K24%[K25%[K26%[K27%[K28%[K29%[K30%[K31%[K32%[K33%[K34%[K35%[K36%[K37%[K38%[K39%[K40%[K41%[K42%[K43%[K44%[K45%[K46%[K47%[K48%[K49%[K50%[K51%[K52%[K53%[K54%[K55%[K56%[K57%[K58%Starting ShallowWaters run 10 on Thu, 09 Apr 2020 18:45:01
+[KModel integration will take approximately 7h, 19min,
+and is hopefully done on Fri, 10 Apr 2020 02:04:55
+[K1%[K2%[K3%[K4%[K5%[K6%[K7%[K8%[K9%[K10%[K11%[K12%[K13%[K14%[K15%[K16%[K17%[K18%[K19%[K20%[K21%[K22%[K23%[K24%[K25%[K26%[K27%[K28%[K29%[K30%[K31%[K32%[K33%[K34%[K35%[K36%[K37%[K38%[K39%[K40%[K41%[K42%[K43%[K44%[K45%[K46%[K47%[K48%[K49%[K50%[K51%[K52%[K53%[K54%[K55%[K56%[K57%[K58%[K59%[K60%[K61%[K62%[K63%[K64%[K65%[K66%[K67%[K68%[K69%[K70%[K71%[K72%[K73%[K74%[K75%[K76%[K77%[K78%[K79%[K80%[K81%[K82%[K83%[K84%[K85%[K86%[K87%[K88%[K89%[K90%[K91%[K92%[K93%[K94%[K95%[K96%[K97%[K98%[K99%[K100% Integration done in 6h, 37min.
+All data stored.

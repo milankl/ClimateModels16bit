@@ -1,5 +1,6 @@
 using NetCDF
 using FileIO
+using JLD2
 using Printf
 using Statistics
 using StatsBase
@@ -62,5 +63,5 @@ for i in 0:ne-1
 end
 
 # OUTPUT
-save("mean_$vari.jld2","mean",Rm)
-save("var_$vari.jld2","var",Rv)
+save("analysis/mean_$vari.jld2","mean",Rm)
+save("analysis/var_$vari.jld2","var",Rv)
