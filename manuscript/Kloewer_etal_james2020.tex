@@ -232,16 +232,14 @@ The paper is structured as follows: Section \ref{sec:formats} outlines the diffe
 \section{16-bit number formats and mitigation methods}
 \label{sec:formats}
 
-This section will introduce the different types of 16-bit arithmetic that are available, will discuss similarities and differences between these types, and will introduce mitigation methods to allow for the use of 16-bit arithmetic within weather and climate applications.
+This section discusses different types of 16-bit arithmetic, and similarities and differences between them. Mitigation methods that allow for the use of 16-bit arithmetic within weather and climate applications are introduced.
 
 \subsection{16-bit number formats}
 
 \subsubsection{The integer and fixed point number format}
 \label{sec:integer}
 
-The simplest way to represent a real number in bits is the integer format. An $n$-bit signed integer starts with a sign bit followed by a sequence of integer bits, that are decoded as a sum of powers of two with exponents $0,1,...,n-2$. The largest representable integer for a signed integer format is $2^{n-1}-1$. Fixed-point numbers extend the integer format by adding $n_f$ fraction bits to decode an additional sum of powers of two with negative exponents $-1,-2,...,-n_f$. Every additional fraction bit reduces the number of integer bits, for example Q6.10 is the 16-bit fixed-point format with 6 signed integer bits and 10 fraction bits.
-
-Flexibility regarding the dynamic range can therefore be achieved with integer arithmetic if fixed-point numbers are used \cite{Russell2017}. Unfortunately, we did not achieve convincing results with integer arithmetic for the applications in this study, as rescaling of the equations is desired to place many arithmetic calculations near the largest representable number. However, any result beyond will lead to disastrous results, as integer overflow usually returns a negative value following a wrap-around behaviour. We will therefore focus on the discussion of the other formats in the rest of the study.
+The simplest way to represent a real number in bits is the integer format. An $n$-bit signed integer starts with a sign bit followed by a sequence of integer bits, that are decoded as a sum of powers of two with integer exponents $0,1,2,...,n-2$. The largest representable integer for a signed integer format is $2^{n-1}-1$. Fixed-point numbers extend the integer format by adding $n_f$ fraction bits to decode an additional sum of powers of two with negative integer exponents $-1,-2,...,-n_f$. Every additional fraction bit reduces the number of integer bits, for example, Q6.10 is the 16-bit fixed-point format with 6 signed integer bits and 10 fraction bits. The arithmetic of fixed-point numbers is very similar to integers. Using fixed-point numbers instead of integers therefore allows for a flexible dynamic range of representable numbers.
 
 \subsubsection{The floating-point number format}
 \label{sec:floats}
@@ -256,53 +254,51 @@ The exponent bits $e$ are interpreted as unsigned integers, such that $e-bias$ c
 3.14 \approx {\color{psign}0}{\color{pexpo}100}1001_{\op{Float8}} = (-1)^{\color{psign}0} \cdot 2^{{\color{pexpo}4}-bias} \cdot (1+2^{-1}+2^{-4}) = 3.125
 \label{eq:posit_pos}
 \end{equation}
-with $bias=2^{n_e-1} - 1 = 3$. Exceptions to Eq. \ref{eq:float} occur for subnormal numbers, infinity (Inf) and Not-a-Number (NaN) when all exponent bits are either zero (subnormals) or one (Inf when f=0, or NaN else). 16-bit half-precision floating point numbers (Float16) have 5 exponent bits and 10 significant bits. A truncated version of the Float32 format (8 exponent bits, 23 significant bits) is BFloat16 with 8 exponent bits and 7 signficant bits. A format with more exponent bits has a wider dynamic range of representable numbers but lower precision, as fewer bits are available for the significant. All floating-point formats have a fixed number of bits in the significand, consequently, they have a constant number of significant digits throughout their range of representable numbers (subnormals excluded).
+with $bias=2^{n_e-1} - 1 = 3$. Exceptions to Eq. \ref{eq:float} occur for subnormal numbers, infinity (Inf) and Not-a-Number (NaN) when all exponent bits are either zero (subnormals) or one (Inf when f=0, or NaN else). 16-bit half-precision floating point numbers (Float16) have 5 exponent bits and 10 significant bits. A truncated version of the Float32 format (8 exponent bits, 23 significant bits) is BFloat16 with 8 exponent bits and 7 signficant bits. A format with more exponent bits has a wider dynamic range of representable numbers but lower precision, as fewer bits are available for the significand. All floating-point formats have a fixed number of bits in the significand, consequently, they have a constant number of significant digits throughout their range of representable numbers.
 
 \subsubsection{The posit number format}
 \label{sec:posit_methods}
 
-The posit number format is explained in more detail in \citeA{Gustafson2017a}. Posit numbers arise from a projection of the real axis onto a circle (Fig. \ref{fig:circle}), with only one bitpattern for zero and one for complex infinity (or Not-a-Real, NaR), which serves as a replacement for Not-a-Number (NaN). The circle is split into \emph{regimes}, determined by a constant $useed$, which always marks the north-west on the posit circle (Fig. \ref{fig:circle}b). Regimes are defined by $useed^{\pm1}$, $useed^{\pm2}$, $useed^{\pm3}$, etc. To encode these regimes into bits, posit numbers extend floating-point arithmetic by introducing regime bits, that are responsible for the dynamic range of representable numbers. Instead of having a fixed length, regime bits are defined as the sequence of identical bits after the sign bit, which are eventually terminated by an opposite bit. The flexible length allows the significand (or mantissa) to occupy more bits when less regime bits are needed, which is the case for numbers around one. A resulting higher precision around one is traded against a gradually lower precision for very large or very small numbers. A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017a} (negative posit numbers are converted first to their two's complement, see Eq. \ref{eq:2comp})
+Posit numbers arise from a projection of the real axis onto a circle (Fig. \ref{fig:circle}), with only one bitpattern for zero and one for complex infinity (or Not-a-Real, NaR), which serves as a replacement for Not-a-Number (NaN). The circle is split into \emph{regimes}, determined by a constant $useed$, which always marks the north-west on the posit circle (Fig. \ref{fig:circle}b). Regimes are defined by $useed^{\pm1}$, $useed^{\pm2}$, $useed^{\pm3}$, etc., which set the dynamic range of representable numbers. To encode these regimes into bits, posit numbers extend floating-point arithmetic by introducing regime bits, a flexible-length sequence of identical bits after the sign bit, terminated by an opposite bit. The significand (or mantissa) increases in length for numbers towards $\pm1$, when fewer regime bits are needed. Consequently, a higher precision around one can be achieved with posits, which is traded against a gradually lower precision for very large or very small numbers.
+
+A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017a,Chen2018,Klower2019}
 \begin{equation}
-p = (-1)^{sign~bit} \cdot useed^k \cdot 2^e \cdot (1+f)
+p = (-1)^{sign~bit} \cdot useed^k \cdot 2^e \cdot (1+f).
 \label{eq:posit}
 \end{equation}
-where $k$ is the number of regime bits. $e$ is the integer represented by the exponent bits and $f$ is the fraction which is encoded in the fraction (or significant) bits. The base $useed = 2^{2^{e_s}}$ is determined by the number of exponent bits $e_s$. More exponent bits increase - by increasing $useed$ - the dynamic range of representable numbers for the cost of precision. The exponent bits themselves do not affect the dynamic range by changing the value of $2^e$ in Eq. \ref{eq:posit}. They fill gaps of powers of 2 spanned by $useed = 4,16,256,...$ for $e_s=1,2,3,...$, and every posit number can be written as $p = \pm 2^n \cdot (1+f)$ with a given integer $n$ \cite{Gustafson2017,Chen2018}. We will use a notation where Posit($n$,$e_s$) defines the posit numbers with $n$ bits including $e_s$ exponent bits. A posit example is provided in the Posit(8,1)-system (i.e. $useed = 4$)
+$k$ is the number of regime bits. $e$ is the unsigned integer represented by the exponent bits and $f$ is the fraction which is encoded in the fraction (or significant) bits. The number of exponent bits $e_s$ determines the base $useed = 2^{2^{e_s}}$ of the regime bits. More exponent bits increase - by increasing $useed$ - the dynamic range of representable numbers at the cost of precision. The exponent bits themselves fill gaps of powers of 2 spanned by $useed = 4,16,256,...$ for $e_s=1,2,3,...$ and so do not affect the dynamic range directly by changing the value of $2^e$ in Eq. \ref{eq:posit}. Consequently, every posit number, except for zero and NaR, can be written as $p = \pm 2^i \cdot (1+f)$ for a given integer $i$. In the following, a posit number format with $n$ bits including $e_s$ exponent bits is denoted as Posit($n$,$e_s$).
+
+We provide an example in the Posit(8,1)-system (i.e. $useed = 4$), which encodes the number 14 as follows
 \begin{equation}
-57 \approx {\color{psign}0}{\color{pregime}111}{\color{pregimet}0}{\color{pexpo}1}11_{\op{Posit}(8,1)} = (-1)^{\color{psign}0} \cdot 4^{\color{pregime}2} \cdot 2^{\color{pexpo}1} \cdot (1+2^{-1}+2^{-2}) = 56.
+{\color{psign}0}{\color{pregime}11}{\color{pregimet}0}{\color{pexpo}1}110_{\op{Posit}(8,1)} = (-1)^{\color{psign}0} \cdot 4^{\color{pregime}1} \cdot 2^{\color{pexpo}1} \cdot (1+2^{-1}+2^{-2}) = 14.
 \label{eq:posit_pos}
 \end{equation}
-The sign bit is given in red, regime bits in orange, the terminating regime bit in brown, the exponent bit in blue and the fraction bits in black. The $k$-value is inferred from the number of regime bits, that are counted as negative for the bits being 0, and positive, but subtract 1, for the bits being 1. The exponent bits are interpreted as unsigned integer and the fraction bits follow the IEEE floating-point standard for significant bits. For negative numbers, i.e. the sign bit being 1, all other bits are first converted to their two's complement (\citeA{Choo2003}, denoted with an underscore subscript) by flipping all bits and adding 1,
-\begin{equation}
-\begin{split}
--0.28 &  \approx 11011110_{\op{Posit}(8,1)} = {\color{psign}1}{\color{pregime}0}{\color{pregimet}1}{\color{pexpo}0}0010\_ \\
-& = (-1)^{\color{psign}1} \cdot 4^{\color{pregime}-1} \cdot 2^{\color{pexpo}0} \cdot (1+2^{-3}) = -0.28125.
-\end{split}
-\label{eq:2comp}
-\end{equation}
-After the conversion to the two's complement, the bits are interpreted in the same way as in Eq. \ref{eq:posit_pos}.
+The sign bit is given in red, regime bits in orange, the terminating regime bit in brown, the exponent bit in blue and the fraction bits in black. The $k$-value is inferred from the number of regime bits, which are counted as negative for the bits being 0, and positive, but subtract 1, for the bits being 1. The exponent bits are interpreted as unsigned integer and the fraction bits follow the IEEE floating-point standard for significant bits.
 
 \begin{figure}[htbp]
 \center
 \includegraphics[width=1\textwidth]{circles.pdf}
-\caption{Two posit number formats obtained by projecting the real axis onto a circle. (a) 2-bit Posit(2,0) and (b) 4-bit Posit(4,1). The bit patterns are marked on the outside and the respective values on the inside of each circle. Bit patterns of negative numbers (black) have to be converted to their two's complement (colours) first (see text). At the top of every circle is complex infinity ($\pm \infty$) or NaR (Not-a-Real). After \citeA{Gustafson2017a}. }
+\caption{Two posit number formats obtained by projecting the real axis onto a circle. (a) 2-bit Posit(2,0) and (b) 4-bit Posit(4,1). The bit patterns are marked on the outside and the respective values on the inside of each circle. Bit patterns of negative numbers (black) have to be converted to their two's complement (colours) first (see text). At the top of every circle is complex infinity ($\pm \infty$) or NaR (Not-a-Real). After \citeA{Gustafson2017a}.}
 \label{fig:circle}
 \end{figure}
 
-Posits also working in a no overflow/no underflow-rounding mode: Where floats overflow and return infinity when the exact result of an arithmetic operation is larger than the largest representable number ($maxpos$), posit arithmetic returns $maxpos$ instead, and similarly for underflow where the smallest representable positive number ($minpos$) is returned. This is motivated as rounding to infinity returns a result that is infinitely less correct than $maxpos$, although often desired to indicate that an overflow occurred in the simulation. Instead, it is proposed to perform overflow-like checks on the software level to simplify exception handling on hardware \cite{Gustafson2017a}. Many functions are simplified for posits, as only two exceptions cases have to be handled, zero and NaR.
-
-The posit number framework also highly recommends \emph{quires}, an additional register on hardware to store intermediate results. Dot-product operations are fused with quire arithmetic and can therefore be executed with a single rounding error, which is only applied when converting back to posits. The quire concept could also be applied to floating-point arithmetic (fused multiply-add is available on some processors), but is technically difficult to implement on hardware for a general dot-product as the required registers would need to be much larger in size. For fair comparison we do not take quires into account in this study.
-
-As posit research currently focuses on hardware implementations \cite{vanDam2019,Chen2018,Chaurasiya2018,Glaser2017}, a standardized posit hardware is not yet available. In order to use posits on a conventional processor we developed for the Julia programming language \cite{Bezanson2017} the posit emulator \emph{SoftPosit.jl} \cite{Klower2019a}, which is a wrapper for the C-based library SoftPosit \cite{Leong2020}.
+In order to use posits on a conventional processor we developed for the Julia programming language \cite{Bezanson2017} the posit emulator \emph{SoftPosit.jl} \cite{Klower2019a}, which is a wrapper for the C-based library SoftPosit \cite{Leong2020}. A standardized posit processor is not yet available, but current research focuses on hardware implementations \cite{Zhang2020,vanDam2019,Chen2018,Chaurasiya2018,Glaser2017}.
 
 \subsection{The concept of decimal precision and summary of number formats}
 \label{sec:decprec}
 
-The decimal precision is defined as \cite{Gustafson2017,Gustafson2017a}
+Most arithmetic operations include rounding of an exact result $x_\text{exact}$
+to a representable number $x_\text{repr}$. Based on the decimal rounding error
+$\vert \log_{10}( \tfrac{x_\text{repr}}{x_\text{exact}} ) \vert$ the decimal precision
+is defined as \cite{Gustafson2017}
 \begin{equation}
 \op{decimal} \op{precision} = -\log_{10} \vert \log_{10}( \frac{x_\text{repr}}{x_\text{exact}} ) \vert
 \end{equation}
-where $x_\text{exact}$ is the exact result of an arithmetic operation and $x_\text{repr}$ is the representable number that $x_\text{exact}$ is rounded to, given a specified rounding mode. For the common round-to-nearest rounding mode, the decimal precision approaches infinity when the exact result approaches the representable number and has a minimum in between two representable numbers. This minimum defines the \emph{worst-case} decimal precision, i.e. the decimal precision when the rounding error is maximised. The worst-case decimal precision is the number of decimal places that are at least correct after rounding. The machine epsilon $\epsilon$, a relative rounding error in floating-point arithmetic, usually defined as the distance $\delta$ between 1 and the next largest representable number, can be given in terms of decimal precision as $\epsilon = -\log_{10} ( \log_{10}( 1 + \frac{\delta}{2} ))$.
-
+which measures the number of correct decimal places after rounding. The decimal precision tends to infinity when the representable number approaches the exact result. An exact result in between two representable numbers minimises the decimal precision as the decimal error is maximised. This minimum defines the \emph{worst-case} decimal precision, i.e. the number of decimal places that are at least correct after rounding. In the following we will refer to the worst-case decimal precision simply as decimal precision.
+The machine epsilon $\epsilon$, a relative rounding error in floating-point arithmetic,
+is commonly used to measure the precision of number formats. It is defined as the
+distance $\delta$ between 1 and the next largest representable number, and can be
+given in terms of decimal precision as $\epsilon = -\log_{10} ( \log_{10}( 1 + \tfrac{\delta}{2} ))$.
 
 \begin{figure}[htbp]
 \includegraphics[width=1\textwidth]{decimal_precision.png}
@@ -310,9 +306,24 @@ where $x_\text{exact}$ is the exact result of an arithmetic operation and $x_\te
 \label{fig:dec_prec}
 \end{figure}
 
-Fig. \ref{fig:dec_prec}a compares the worst-case decimal precision for various 16 and 8-bit floats and posits, as well as 16-bit integers and the fixed-point format Q6.10 (6 integer bits, 10 fraction bits). Float16 has a nearly constant decimal precision of almost 4 decimal places, which decreases in the subnormal numbers towards the smallest representable number $minpos$. 16-bit posits, on the other hand, show an increased decimal precision for numbers around 1 and a wider dynamic range, in exchange for less precision for numbers around $10^4$ as well as $10^{-4}$. Due to the no overflow/no underflow-rounding mode, the decimal precision is slightly above zero outside the dynamic range.
-
-The decimal precision of 16-bit integers is negative infinity for any number below 0.5 (round to 0) and maximised for the largest representable integer $2^{15} - 1 =  32767$. Similar conclusions hold for the fixed-point format Q6.10, as the decimal precision is shifted towards smaller numbers by a factor of $\tfrac{1}{2}$ for each additional fraction bit.
+The decimal precision for various 16 and 8-bit floats and posits, 16-bit integers
+and the fixed-point format Q6.10 (6 integer bits, 10 fraction bits) is presented
+in Fig. \ref{fig:dec_prec}a. Floats have an exponent that is linearly-spaced in
+log-space, which results in a nearly constant decimal precision. The deviations
+from a constant decimal precision, which can be seen as spikes in Fig. \ref{fig:dec_prec}a,
+are due to a linearly-spaced significant. The decimal precision for flats decreases
+for the subnormal numbers towards the smallest representable number $minpos$.
+Posits have an increased decimal precision around 1 and a yet a wide dynamic range,
+due to the tapered precision towards $minpos$ and the largest representable number
+$maxpos$. The decimal precision for posits is above zero outside the dynamic range as posits
+have a no overflow/no underflow-rounding mode. Integers are linearly-spaced,
+consequently their precision increases towards $maxpos$,
+which is $2^{15} - 1 =  32767$ for 16-bit signed integers. The decimal precision of
+fixed-point numbers has an identical shape, but shifted towards smaller numbers
+by a factor of $\tfrac{1}{2}$ for each additional fraction bit. Consequently,
+many arithmetic calculations should be placed close to $maxpos$, but the small
+range of high precision is restrictive for many applications. No convincing results
+with integer or fixed-point arithmetic was achieved in this study.
 
 \begin{table}[htbp]
 \center
@@ -345,71 +356,71 @@ Characteristics of various formats are summarised in Table \ref{tab:formats}. Th
 
 \subsubsection{Mixed precision arithmetic}
 
-In many models, it will not be possible (or useful) to use 16-bit arithmetic throughout the entire model. Often, some model components will be more sensitive to a reduction in precision when compared to others and it often makes sense to reduce precision only in those places where a precision reduction does not deteriorate results while keeping precision high in precision-sensitive model components. This approach is called \emph{mixed-precision} and is already used for the reduction to single precision in ocean and atmosphere models \cite{Vana2017,TintoPrims2019}.
+In many models, it will not be possible (or useful) to use 16-bit arithmetic
+throughout the entire model. Some model components will be more sensitive to a
+reduction in precision when compared to others and it often makes sense to reduce
+precision only in those components where results are not deteriorated, while
+keeping precision high in precision-sensitive components. This approach is
+called \emph{mixed-precision} and is already used for the reduction to single
+precision in ocean and atmosphere models \cite{Vana2017,TintoPrims2019}.
 
 \subsubsection{Algorithmic changes: Rescaling, reordering and precomputations}
 
-It is possible to influence the range of numbers occuring in arithmetic operations in an algorithm using a \emph{rescaling} of the equations via a simple multiplication of the variables with a constant rescaling factor $s$. Similar to the shift of the number range in fixed-point number representation, the rescaling of a linear equation will shift the dynamic range of the numbers that are used to the left (for $s < 1$) or right ($s > 1$) in Fig. \ref{fig:dec_prec}. This process can be used to adjust the number range to the optimal distribution given the decimal precision of the different number formats. Rescaling is, however, more complicated if non-linear equations are considered as the scaling factor $s$ appears inside the non-linear terms, such that the non-linear terms are invariant under scaling, that means only the linear terms are effectively shifted by $s$.
+Equations can be \emph{rescaled} via multiplication with a constant rescaling
+factor $s$ to shift the dynamic range occurring in an algorithm towards larger
+numbers (for $s > 1$) or towards smaller numbers ($s < 1$). Rescaling can be used
+to adjust the number range to the decimal precision of the number formats. If
+non-linear terms are considered, this multiplicative rescaling is ineffective,
+as the rescaling factor $s$ appears (as an additional multiplication with $s^{-1}$)
+inside the non-linear terms. The non-linear terms are therefore effectively invariant
+under multiplicate rescaling and only the linear terms are scaled by $s$.
+Fig. \ref{fig:dec_prec} includes histograms of numbers occurring in the rescaled
+Lorenz system \cite{Lorenz1963,Kwasniok2014,Jeffress2017,Tantet2018} as an example
+from \citeA{Klower2019}. For posit arithmetic it is preferable to use
+$s=\tfrac{1}{10}$ in the Lorenz system to scale the prognostic variables
+to match the range of highest decimal precision around 1, which increases the
+complexity of the Lorennz attractor and decreases the average rounding error.
 
-Furthermore, it is sometimes possible to avoid intermediate arithmetic results, which may be outside the dynamic range of a number format, by changing the order in which multiplications and divisions are executed. In general, it is preferable to combine such operations to a single multiplication with a constant, that can be precomputed. Although this will have a negligible effect on the rounding error for floating-point arithmetic due to the approximately constant decimal precision throughout the range of numbers (subnormals excluded), it reduces the risk of over- or underflow.
+Furthermore, it is sometimes possible to avoid intermediate arithmetic results,
+which may be outside the dynamic range of a number format, by changing the order
+in which multiplications and divisions are executed. In general, it is preferable
+to combine such operations to a single multiplication with a constant, that can
+be precomputed. Although this will have a negligible effect on the rounding error
+for floating-point arithmetic due to the approximately constant decimal precision
+throughout the range of numbers (subnormals excluded), it reduces the risk of
+over- or underflow.
 
 \subsubsection{Reduced precision communication}
 
-Complex weather and climate models rely on parallelisation to distribute the computational cost of simulations efficiently among the processing units in a large cluster or supercomputer. Parallel execution typically requires domain decomposition, where the spatial domain is split into many subdomains to be calculated separately on individual processing units. Domain decomposition requires communication of the boundary values of a subdomain with the neighbouring subdomains. If 16-bit arithmetic cannot be used within the entire model, it may still be possible to reduce precision in the communication between processors.
+Complex weather and climate models rely on parallelisation to distribute the
+computational cost of simulations efficiently among the processing units in a
+large cluster or supercomputer. Parallel execution typically requires domain
+decomposition, where the spatial domain is split into many subdomains to be
+calculated separately on individual processing units. Domain decomposition
+requires communication of the boundary values of a subdomain with the
+neighbouring subdomains. If 16-bit arithmetic cannot be used within the
+entire model, it may still be possible to reduce precision in the communication
+between processors.
 
-Not all weather and climate models would benefit from a reduced precision communication as the acceleration potential depends on many factors specific to a model and the used hardware, e.g. number of nodes in a cluster and how shared and distributed memory management is realized. It will also be important whether communication is latency or volume bound. Latency bound communication is bound by the time a piece of information requires to travel between processors. In contrast, volume bound communication is limited by the bandwidth that is available for communication. Only the latter will benefit from a reduction in precision and therefore data volume.
+Not all weather and climate models would benefit from a reduced precision
+communication as the acceleration potential depends on many factors specific
+to a model and the used hardware, e.g. number of nodes in a cluster and how
+shared and distributed memory management is realized. It will also be important
+whether communication is latency or volume bound. Latency bound communication is
+bound by the time a package of information requires to travel between processors.
+In contrast, volume bound communication is limited by the bandwidth that is
+available for communication. Only the latter will benefit from a reduction in
+precision and therefore data volume.
 
-However, in the case that the volume of the communication is an identified bottleneck in a given application, which is often the case in weather and climate models, it is possible that reliable model simulations can be achieved with 16 or even 8-bit communication allowing for a signficant reduction in computing time. The range of values that are communicated can be adjusted, facilitating a strong compression of the data that is communicated and opening the door to communication in very low precision.
+However, in the case that the volume of the communication is an identified
+bottleneck in a given application, which is often the case in weather and
+climate models, it is possible that reliable model simulations can be achieved
+with 16 or even 8-bit communication allowing for a signficant reduction in
+computing time. The range of values that are communicated can be adjusted,
+facilitating a strong compression of the data that is communicated and
+opening the door to communication in very low precision.
 
-
-\section{Weather and climate applications with 16-bit arithmetics}
-\label{sec:runs}
-
-In this section we will study the use of the different formats for 16-bit arithmetic and apply the mitigation methods to achive optimal results for the Lorenz 1963 system and a shallow water model.
-
-\subsection{The Lorenz 1963 system}
-\label{sec:L63}
-
-The Lorenz system (called L63 in the following; \cite{Lorenz1963}) is a chaotic attractor and serves as a simplistic model for atmospheric convection. It is an extensively studied toy model for forecast uncertainty \cite{Lorenz1963,Kwasniok2014,Jeffress2017,Tantet2018} and is used here to investigate the accumulation of rounding errors in the numerical integration of a chaotic system. The Lorenz system consists of the variables $x$,$y$ and $z$ that are described by the following non-linear differential equations
-\begin{subequations}
-\begin{align}
-\frac{dx}{dt} &= \sigma(y-x) \\
-\frac{dy}{dt} &= x(\rho - z) - y \\
-\frac{dz}{dt} &= xy - \beta z
-\end{align}
-\label{eq:L63}%
-\end{subequations}
-with the typical parameter choices $\sigma = 10, \rho = 28$ and $\beta = \tfrac{8}{3}$, that permit chaotic behaviour.
-
-\begin{figure}
-\includegraphics[width=1\textwidth]{lorenz_attractor.png}
-\caption{The Lorenz attractor computed with different number formats. The scaling of the Lorenz equations (Eq. \ref{eq:L63s}) is (a,b,d) $s=1$, (c) $s=0.1$. All trajectories are integrated from the same initial conditions for 100,000 time steps with spacing $\Delta t = 0.008$ using the Runge-Kutta 4th order scheme.}
-\label{fig:L63}
-\end{figure}
-
-Regardless of the initial conditions, the Lorenz system will evolve towards a set of $(x,y,z)$ points called attractor (the x,z-section of the attractor is shown in Fig. \ref{fig:L63}a). This attractor is \emph{strange}, i.e. its geometric structure cannot be described in two dimensions, but is of fractal nature. While points on the attractor will get infinitesimally close to each other, the trajectory of the analytical Lorenz system will never repeat itself. However, if the model is discretised and if the variables are represented with finite precision, only a finite amount of distinct states can be represented and the model trajectory will eventually repeat itself if integrated for long enough.
-
-Integrating the Lorenz system with Float16 yields an attractor that is repeating itself fairly early and the space that is filled by the line of the trajectory is significantly smaller when compared to the space of a trajectory with double precision (compare Fig. \ref{fig:L63}a and b). However, when using Posit(16,1) and a rescaling factor of $s=0.1$ (see section \ref{sec:L63_rescale}) the representation of the attractor is improved significantly (Fig. \ref{fig:L63}c). The results for posits look similar to the results with Float16 if no rescaling was used (not shown here). Only a time step $\Delta t > 0.008$ yields tendencies that are large enough to overcome the rounding errors of BFloat16 that otherwise inhibit a temporal evolution of the system. Although a time step of 0.008s allows the Lorenz system to be integrated with BFloat16, only a poor representation of the fractal attractor is achieved (Fig. \ref{fig:L63}d). The solution of the Lorenz system with 16-bit integers presents a similarly simple Lorenz attractor \cite{Klower2019}.
-
-\subsubsection{Rescaling in L63}
-\label{sec:L63_rescale}
-
-To improve results, we apply a rescaling of the equations with a constant rescaling factor $s$. The rescaled variables are denoted as $\tilde{x} = sx$, and similarly for $\tilde{y},\tilde{z}$. Fig. \ref{fig:dec_prec}b shows histograms for all numbers that are used to solve the Lorenz system (including intermediate calculations). A comparison to the decimal precision in Fig. \ref{fig:dec_prec}a reveals the benefit of rescaling, especially for posit arithmetic: To profit from the increased decimal precision around 1, a scaling with $1/10$ is proposed to shift most calculations towards the centre of the dynamic range of representable numbers. Due to the constant decimal precision for floats, rescaling is less relevant for float arithmetic as long as no overflow nor underflow occurs. For integers, on the other hand, the Lorenz equations should be upscaled by a factor of approximately $100$, to shift the range of numbers to a higher decimal precision.
-
-We solve the equations using a fourth order Runge-Kutta method \cite{Butcher2016}. Each substep in the time integration can be written as
-\begin{subequations}
-\begin{align}
-\tilde{x}^{n+1} &= \tilde{x}^n + RK_x\left(\tilde{y}^n-\tilde{x}^n\right) \\
-\tilde{y}^{n+1} &= \tilde{y}^n + RK_y\left(\tilde{x}^n(\rho - \frac{\tilde{z}^n}{s}) - \tilde{y}^n \right) \\
-\tilde{z}^{n+1} &= \tilde{z}^n + RK_z\left(\tilde{x}^n\frac{\tilde{y}^n}{s} - \beta \tilde{z}^n\right)
-\end{align}
-\label{eq:L63s}%
-\end{subequations}
-where $RK_x,RK_y,RK_z$ contain the Runge-Kutta coefficient and the time step $\Delta t$. $RK_x$ also contains the parameter $\sigma$. The superscripts $n$ and $n+1$ denote the current and next time substep.
-
-The rescaling of the Lorenz system has its limitations: The non-linear terms in Eq. \ref{eq:L63s} involve a division by the scaling constant $s$, which leads to the result of the arithmetic operations $\tfrac{\tilde{z}}{s}, \rho - \tfrac{\tilde{z}}{s},$ and $\tfrac{\tilde{y}}{s}$ being invariant under scaling. This is observed in the histograms of arithmetic results (Fig. \ref{fig:dec_prec}b), as high counts of values between 1 and 50 exist for different choices of $s$. A changing shape of the histogram with $s$ is a consequence. Following these results an underlying challenge of reduced precision modelling becomes apparent: One has either to find a number format that fits the range of computed numbers, or rescale the equations to optimise their range for a given number format.
-
-\subsection{Shallow water model}
+\section{A shallow water model with 16-bit arithmetic}
 \label{sec:swm}
 
 This section will evaluate the different number formats Float16, BFloat16, Posit(16,1) and Posit(16,2) when solving the shallow water equations. The shallow water equations result from a vertical integration of the Navier-Stokes equations under the assumption that horizontal length scales are much greater than vertical scales. This assumption holds for many features of the general circulation of atmosphere and ocean \cite{Gill1982,Vallis2006}. The shallow water equations for the prognostic variables velocity $\mathbf{u} = (u,v)$ and sea surface elevation $\eta$ are
