@@ -196,8 +196,25 @@
 %% \begin{abstract} starts the second page
 
 \begin{abstract}
-The need for high precision calculations with 64-bit floating-point arithmetic for weather and climate models has been questioned. Lower precision numbers can accelerate simulations and are increasingly supported by modern computing hardware. This paper investigates the potential of 16-bit arithmetic when applied within weather and climate applications. There are several 16-bit number formats that can potentially be used (IEEE half precision, BFloat16, posits, integer and fixed-point). Furthermore, a number of mitigation methods are available to make model simulations resilient against a precision reduction. In this paper, the different number formats and mitigation methods are applied within the Lorenz 1963 toy model for atmospheric dynamics and a medium-complexity shallow water model. It is evident that a simple change from 64 to 16-bit arithmetic will not be possible for complex weather and climate applications as it will degrade model results or trigger number under- or overflows that cause a stalling of model dynamics or model instabilities. However, if mitigation methods are applied, 16-bit arithmetic can be used successfully within the applications of this paper. In particular if the so-called posit number format is used as an alternative to the standard floating-point representation for real numbers. The results show the potential of 16-bit formats for at least parts of complex weather and climate models where rounding errors would be entirely masked by intitial condition, model or discretization error.
-
+The need for high precision calculations with 64-bit or 32-bit floating-point
+arithmetic for weather and climate models is questioned.
+Lower precision numbers can accelerate simulations and are increasingly supported
+by modern computing hardware. This paper investigates the potential of 16-bit
+arithmetic when applied within a shallow water model that serves as a medium
+complexity weather or climate application. There are several 16-bit number
+formats that can potentially be used (IEEE half precision, BFloat16, posits,
+integer and fixed-point). It is evident that a simple change to 16-bit arithmetic
+will not be possible for complex weather and climate applications as it will
+degrade model results by intolerable rounding errors that cause a stalling of
+model dynamics or model instabilities. However, if the posit number format is
+used as an alternative to the standard floating-point numbers the model degradation
+can be reduced to a tolerable minimum. Furthermore, a number of mitigation methods,
+such as rescaling, reordering and mixed-precision, are available to make model
+simulations resilient against a precision reduction. If mitigation methods are applied,
+16-bit floating-point arithmetic can be used successfully within the shallow water model.
+The results show the potential of 16-bit formats for at least parts of complex weather
+and climate models where rounding errors would be entirely masked by intitial
+condition, model or discretization error.
 
 \end{abstract}
 
@@ -209,7 +226,23 @@ The need for high precision calculations with 64-bit floating-point arithmetic f
 
 \section*{Plain Language Summary}
 
-64-bit floating-point numbers are the standard number format for scientific computing in fluid dynamics, which allows for very precise calculations with negligible rounding errors. The need for calculations at this precision level has been questioned for weather and climate models, as errors are caused primarily by insufficient observations or deficiencies of the models themselves. Reducing numerical precision can accelerate simulations and low precision number formats are increasingly supported by modern computers. This paper investigates the potential of low numerical precision with numbers that only use 16 bit of information, when applied within weather and climate applications. There are several 16-bit number formats that can potentially be used, all of which have considerably larger rounding errors than the standard 64-bit numbers. In this paper, the different number formats are applied in a simple model for atmospheric dynamics and a two-dimensional ocean circulation model. A simple change from 64 to 16-bits for all calculations will not be possible as it will degrade simulation results. However, if mitigation methods are applied, 16-bit calculations can be used successfully within the applications of this paper. The results show the potential of 16-bit number formats for at least parts of complex weather and climate models.
+64-bit floating-point numbers are the standard number format for scientific
+computing in fluid dynamics, which allows for very precise calculations with
+negligible rounding errors. The need for calculations at this precision level
+has been questioned for weather and climate models, as errors are caused
+primarily by insufficient observations or deficiencies of the models themselves.
+Reducing numerical precision can accelerate simulations and low precision number
+formats are increasingly supported by modern computers. This paper investigates
+the potential of low numerical precision with numbers that only use 16 bit of
+information, when applied within weather and climate applications. There are
+several 16-bit number formats that can potentially be used, all of which have
+considerably larger rounding errors than the standard 64-bit numbers. In this
+paper, the different number formats are applied in a two-dimensional oceanic or
+atmospheric circulation model. A simple change to 16-bits for all calculations
+will not be possible as it will degrade simulation results. However, if mitigation
+methods are applied, 16-bit calculations can be used successfully within the
+applications of this paper. The results show the potential of 16-bit number
+formats for at least parts of complex weather and climate models.
 
 \section{Introduction}
 \label{sec:intro}
@@ -232,36 +265,79 @@ The paper is structured as follows: Section \ref{sec:formats} outlines the diffe
 \section{16-bit number formats and mitigation methods}
 \label{sec:formats}
 
-This section will introduce the different types of 16-bit arithmetic that are available, will discuss similarities and differences between these types, and will introduce mitigation methods to allow for the use of 16-bit arithmetic within weather and climate applications.
+This section will introduce the different types of 16-bit arithmetic that are
+available, will discuss similarities and differences between these types, and
+will introduce mitigation methods to allow for the use of 16-bit arithmetic
+within weather and climate applications.
 
 \subsection{16-bit number formats}
 
 \subsubsection{The integer and fixed point number format}
 \label{sec:integer}
 
-The simplest way to represent a real number in bits is the integer format. An $n$-bit signed integer starts with a sign bit followed by a sequence of integer bits, that are decoded as a sum of powers of two with exponents $0,1,...,n-2$. The largest representable integer for a signed integer format is $2^{n-1}-1$. Fixed-point numbers extend the integer format by adding $n_f$ fraction bits to decode an additional sum of powers of two with negative exponents $-1,-2,...,-n_f$. Every additional fraction bit reduces the number of integer bits, for example Q6.10 is the 16-bit fixed-point format with 6 signed integer bits and 10 fraction bits.
+The simplest way to represent a real number in bits is the integer format.
+An $n$-bit signed integer starts with a sign bit followed by a sequence of integer
+bits, that are decoded as a sum of powers of 2 with exponents $0,1,...,n-2$.
+The largest representable number $maxpos$ for a signed integer format is $2^{n-1}-1$.
+Fixed-point numbers extend the integer format by adding $n_f$ fraction bits to
+decode an additional sum of powers of 2 with negative exponents $-1,-2,...,-n_f$.
+Every additional fraction bit reduces the number of integer bits. For example,
+Q6.10 is the 16-bit fixed-point format with 6 signed integer bits and 10 fraction bits.
 
-Flexibility regarding the dynamic range can therefore be achieved with integer arithmetic if fixed-point numbers are used \cite{Russell2017}. Unfortunately, we did not achieve convincing results with integer arithmetic for the applications in this study, as rescaling of the equations is desired to place many arithmetic calculations near the largest representable number. However, any result beyond will lead to disastrous results, as integer overflow usually returns a negative value following a wrap-around behaviour. We will therefore focus on the discussion of the other formats in the rest of the study.
+The range of representable numbers with integer arithmetic can therefore be
+changed with fixed-point numbers, providing some flexibility for integer arithmetics
+\cite{Russell2017}. However, the width of the dynamic range $\log_{10}(maxpos/minpos)$
+is always limited and less than five orders of magnitude for any 16-bit integer
+or fixed-point format -- too small for most applications. We will therefore focus
+on the discussion of the other number formats in the rest of the study.
 
 \subsubsection{The floating-point number format}
 \label{sec:floats}
 
-The IEEE standard on floating-point arithmetic defines how floats encode a real number $x$ in terms of a sign, and several exponent and significant bits
+The IEEE standard on floating-point arithmetic defines how floats encode a real
+number $x$ in terms of a sign, and several exponent and significant bits
 \begin{equation}
 x = (-1)^{sign~bit} \cdot 2^{e-bias} \cdot (1+f).
 \label{eq:float}
 \end{equation}
-The exponent bits $e$ are interpreted as unsigned integers, such that $e-bias$ converts them effectively to signed integers. The fraction (or significant) bits $f_i$ are defined as before, such that the significand $(1+f)$ is in the bounds $[1,2)$. An 8-bit float encodes a real number with a sign bit (red), $n_e = 3$ exponent bits (blue) and $n_f=4$ fraction bits (black) as illustrated in the following example
+The exponent bits $e$ are interpreted as unsigned integers, such that $e-bias$
+converts them effectively to signed integers. The fraction (or significant) bits
+$f_i$ are defined as before, such that the significand $(1+f)$ is in the bounds
+$[1,2)$. An 8-bit float encodes a real number with a sign bit (red), $n_e = 3$
+exponent bits (blue) and $n_f=4$ fraction bits (black) as illustrated in the
+following example
 \begin{equation}
 3.14 \approx {\color{psign}0}{\color{pexpo}100}1001_{\op{Float8}} = (-1)^{\color{psign}0} \cdot 2^{{\color{pexpo}4}-bias} \cdot (1+2^{-1}+2^{-4}) = 3.125
 \label{eq:posit_pos}
 \end{equation}
-with $bias=2^{n_e-1} - 1 = 3$. Exceptions to Eq. \ref{eq:float} occur for subnormal numbers, infinity (Inf) and Not-a-Number (NaN) when all exponent bits are either zero (subnormals) or one (Inf when f=0, or NaN else). 16-bit half-precision floating point numbers (Float16) have 5 exponent bits and 10 significant bits. A truncated version of the Float32 format (8 exponent bits, 23 significant bits) is BFloat16 with 8 exponent bits and 7 signficant bits. A format with more exponent bits has a wider dynamic range of representable numbers but lower precision, as fewer bits are available for the significant. All floating-point formats have a fixed number of bits in the significand, consequently, they have a constant number of significant digits throughout their range of representable numbers (subnormals excluded).
+with $bias=2^{n_e-1} - 1 = 3$. Exceptions to Eq. \ref{eq:float} occur for
+subnormal numbers, infinity (Inf) and Not-a-Number (NaN) when all exponent bits
+are either zero (subnormals) or one (Inf when f=0, or NaN else). 16-bit half-precision
+floating point numbers (Float16) have 5 exponent bits and 10 significant bits.
+A truncated version of the Float32 format (8 exponent bits, 23 significant bits)
+is BFloat16 with 8 exponent bits and 7 signficant bits. A format with more exponent
+bits has a wider dynamic range of representable numbers but lower precision, as
+fewer bits are available for the significant. All floating-point formats have a
+fixed number of bits in the significand (or mantissa), consequently, they have a constant
+number of significant digits throughout their range of representable numbers
+(subnormals excluded).
 
 \subsubsection{The posit number format}
 \label{sec:posit_methods}
 
-The posit number format is explained in more detail in \citeA{Gustafson2017a}. Posit numbers arise from a projection of the real axis onto a circle (Fig. \ref{fig:circle}), with only one bitpattern for zero and one for complex infinity (or Not-a-Real, NaR), which serves as a replacement for Not-a-Number (NaN). The circle is split into \emph{regimes}, determined by a constant $useed$, which always marks the north-west on the posit circle (Fig. \ref{fig:circle}b). Regimes are defined by $useed^{\pm1}$, $useed^{\pm2}$, $useed^{\pm3}$, etc. To encode these regimes into bits, posit numbers extend floating-point arithmetic by introducing regime bits, that are responsible for the dynamic range of representable numbers. Instead of having a fixed length, regime bits are defined as the sequence of identical bits after the sign bit, which are eventually terminated by an opposite bit. The flexible length allows the significand (or mantissa) to occupy more bits when less regime bits are needed, which is the case for numbers around one. A resulting higher precision around one is traded against a gradually lower precision for very large or very small numbers. A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017a} (negative posit numbers are converted first to their two's complement, see Eq. \ref{eq:2comp})
+Posit numbers arise from a projection of the real axis onto a circle (Fig. \ref{fig:circle}),
+with only one bitpattern for zero and one for complex infinity (or Not-a-Real, NaR),
+which serves as a replacement for Not-a-Number (NaN). The circle is split into
+\emph{regimes}, determined by a constant $useed$, which always marks the north-west
+on the posit circle (Fig. \ref{fig:circle}b). Regimes are defined by
+$useed^{\pm1}$, $useed^{\pm2}$, $useed^{\pm3}$, etc. To encode these regimes
+into bits, posit numbers use regime bits which extend the standard on floating-point
+arithmetic. Regime bits are responsible for a wide dynamic range of representable numbers.
+Regime bits are the sequence of identical bits after the sign bit, which is
+eventually terminated by an opposite bit. The length of regime bits is not fixed
+but flexible, such that the significand can occupy more bits when fewer regime bits
+are needed. A resulting higher precision around one is traded against a
+gradually lower precision for very large or very small numbers. A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017a} (negative posit numbers are converted first to their two's complement, see Eq. \ref{eq:2comp})
 \begin{equation}
 p = (-1)^{sign~bit} \cdot useed^k \cdot 2^e \cdot (1+f)
 \label{eq:posit}
