@@ -12,45 +12,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
+Warning--I didn't find a database entry for "Zhang2020"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 41 entries,
+You've used 40 entries,
             6951 wiz_defined-function locations,
-            1590 strings with 21480 characters,
-and the built_in function-call counts, 86428 in all, are:
-= -- 10546
-> -- 777
-< -- 4124
-+ -- 4313
-- -- 82
-* -- 5614
-:= -- 15486
-add.period$ -- 179
-call.type$ -- 41
-change.case$ -- 769
+            1584 strings with 21293 characters,
+and the built_in function-call counts, 84262 in all, are:
+= -- 10290
+> -- 758
+< -- 4000
++ -- 4193
+- -- 80
+* -- 5461
+:= -- 15052
+add.period$ -- 175
+call.type$ -- 40
+change.case$ -- 752
 chr.to.int$ -- 0
-cite$ -- 82
-duplicate$ -- 2533
-empty$ -- 3367
-format.name$ -- 1343
-if$ -- 16266
+cite$ -- 80
+duplicate$ -- 2479
+empty$ -- 3291
+format.name$ -- 1311
+if$ -- 15877
 int.to.chr$ -- 0
-int.to.str$ -- 123
+int.to.str$ -- 120
 missing$ -- 0
-newline$ -- 1124
-num.names$ -- 330
-pop$ -- 1556
+newline$ -- 1098
+num.names$ -- 322
+pop$ -- 1531
 preamble$ -- 1
-purify$ -- 228
+purify$ -- 224
 quote$ -- 0
-skip$ -- 5386
+skip$ -- 5257
 stack$ -- 0
-substring$ -- 4740
-swap$ -- 1476
-text.length$ -- 191
+substring$ -- 4614
+swap$ -- 1443
+text.length$ -- 189
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 3792
+type$ -- 3712
 warning$ -- 0
-while$ -- 534
+while$ -- 522
 width$ -- 0
-write$ -- 1424
+write$ -- 1389
+(There was 1 warning)

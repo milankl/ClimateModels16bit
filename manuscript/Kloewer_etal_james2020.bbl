@@ -255,35 +255,6 @@ Chen, J.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Choo%
-, Muhammad%
-\BCBL {}\ \BBA {} Roy%
-}{%
-Choo%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2003}}%
-}]{%
-Choo2003}
-\APACinsertmetastar {%
-Choo2003}%
-\begin{APACrefauthors}%
-Choo, H.%
-, Muhammad, K.%
-\BCBL {}\ \BBA {} Roy, K.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2003}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Two's Complement Computation Sharing Multiplier and Its
-  Applications to High Performance {{DFE}}} {Two's complement computation
-  sharing multiplier and its applications to high performance {{DFE}}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{IEEE Transactions on Signal
-  Processing}{51}{}{458--469}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Dawson%
 \ \BBA {} D{\"u}ben%
 }{%
