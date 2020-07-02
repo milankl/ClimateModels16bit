@@ -61,7 +61,6 @@ pos2 = axs[3,2].get_position()
 cax = fig.add_axes([pos1.x0,0.07,pos2.x1-pos1.x0,0.02])
 
 cmap = cm.tempo_r
-cmap2 = "bwr_r"
 lw = 0.4
 α = 0.3
 

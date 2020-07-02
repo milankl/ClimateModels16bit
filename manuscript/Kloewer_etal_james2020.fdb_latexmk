@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Kloewer_etal_james2020"] 1586293572 "Kloewer_etal_james2020.aux" "Kloewer_etal_james2020.bbl" "Kloewer_etal_james2020" 1586295321
+["bibtex Kloewer_etal_james2020"] 1590066723 "Kloewer_etal_james2020.aux" "Kloewer_etal_james2020.bbl" "Kloewer_etal_james2020" 1590066740
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/apacite/apacite.bst" 1480098433 141073 9d7b79dbf9d91133318126032cff8c27 ""
-  "Kloewer_etal_james2020.aux" 1586295319 14419 a7dbc94cd5277c22bf7bfd44c8240475 ""
+  "Kloewer_etal_james2020.aux" 1590066733 13559 b18b41c360465a0788151dc4b635e9a9 ""
   "bibliography.bib" 1585604218 66714 1c1d394f66f43caf44a34fe1324374d8 ""
   (generated)
   "Kloewer_etal_james2020.blg"
   "Kloewer_etal_james2020.bbl"
-["pdflatex"] 1586295309 "Kloewer_etal_james2020.tex" "Kloewer_etal_james2020.pdf" "Kloewer_etal_james2020" 1586295321
+["pdflatex"] 1590066724 "Kloewer_etal_james2020.tex" "Kloewer_etal_james2020.pdf" "Kloewer_etal_james2020" 1590066740
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1480098696 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
@@ -45,6 +45,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1480098733 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1480098733 36094 798f80770b3b148ceedd006d487db67c ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1480098733 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1480098733 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1480098733 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1480098733 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1480098733 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
@@ -100,14 +101,13 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1541546567 4220280 13cff46b1d7e11cfbb2dde40e9fe15a3 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "Kloewer_etal_james2020.aux" 1586295319 14419 a7dbc94cd5277c22bf7bfd44c8240475 ""
-  "Kloewer_etal_james2020.bbl" 1586293572 31322 ca520c074c3fc62dab82a0bcb6824226 "bibtex Kloewer_etal_james2020"
-  "Kloewer_etal_james2020.tex" 1586295235 71926 d6da75daf7311d716fdba5807dda9a41 ""
+  "Kloewer_etal_james2020.aux" 1590066733 13559 b18b41c360465a0788151dc4b635e9a9 ""
+  "Kloewer_etal_james2020.bbl" 1590066723 30614 8152349c4b7df1e795841692942e4065 "bibtex Kloewer_etal_james2020"
+  "Kloewer_etal_james2020.tex" 1590066712 64120 107c9b2490a469a6f0d75ceabfbc8093 ""
   "ageostrophic.pdf" 1581977470 81392 19ec875558163dfc9c7abe82a25c8641 ""
   "agujournal2019.cls" 1580252474 40781 7d92826f8a29a1c316f6a24166b7dedb ""
   "circles.pdf" 1584493569 25230 17fe99f20a12019d55ab408ec2238ea6 ""
   "decimal_precision.png" 1584493569 312964 8ba5f0921ee912d6c0e564ace570245b ""
-  "lorenz_attractor.png" 1581977470 677415 69cbb35c8f483d958a1136ccb7011516 ""
   "meanvar_u.pdf" 1585660705 27127 184a9042da7412822cbf1ef79eb7449d ""
   "rmse_eta_darker.pdf" 1585998211 197434 8fdf87f1ed4954f785da6ce62a65f00e ""
   "snapshot.png" 1580252474 1306370 13c9a13ff72c2042e4b0e9012f75eb46 ""
@@ -115,6 +115,6 @@
   "tendency_hist.png" 1584493569 549097 959302538e41193279ac3bd13e558819 ""
   "trackchanges.sty" 1580160062 26287 09689e5e9db973d136f0537b8570fadf ""
   (generated)
+  "Kloewer_etal_james2020.pdf"
   "Kloewer_etal_james2020.log"
   "Kloewer_etal_james2020.aux"
-  "Kloewer_etal_james2020.pdf"
