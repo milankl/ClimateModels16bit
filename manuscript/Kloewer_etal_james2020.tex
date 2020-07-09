@@ -160,9 +160,9 @@
 
 % Example:
 % \begin{keypoints}
-% \item	List up to three key points (at least one is required)
-% \item	Key Points summarize the main points and conclusions of the article
-% \item	Each must be 140 characters or fewer with no special characters or punctuation and must be complete sentences
+% \item    List up to three key points (at least one is required)
+% \item    Key Points summarize the main points and conclusions of the article
+% \item    Each must be 140 characters or fewer with no special characters or punctuation and must be complete sentences
 % \end{keypoints}
 
 \begin{keypoints}
@@ -219,7 +219,7 @@ such as rescaling, reordering and mixed-precision, are available to make model
 simulations resilient against a precision reduction. If mitigation methods are applied,
 16-bit floating-point arithmetic can be used successfully within the shallow water model.
 The results show the potential of 16-bit formats for at least parts of complex weather
-and climate models where rounding errors would be entirely masked by intitial
+and climate models where rounding errors would be entirely masked by initial
 condition, model or discretization error.
 
 \end{abstract}
@@ -253,9 +253,32 @@ formats for at least parts of complex weather and climate models.
 \section{Introduction}
 \label{sec:intro}
 
-Weather and climate models provide predictions that are of great importance for society and economy. The Earth's climate system remains very difficult to predict even with the computational resources of the world's largest supercomputers, due to its complexity and non-linear dynamics that couple all features from the smallest time and length-scales to the largest. The forecast error of a weather forecast model has several origins \cite{Palmer2012,Palmer2015}: (i) Initial and boundary condition errors, which result from observations, data assimilation, model errors and external factors; (ii) model error, i.e. the difference between the mathematical model and the real world; (iii) discretisation error resulting from a finite spatial and temporal resolution of the discretised equations and (iv) rounding errors with finite precision arithmetic. In general, the forecast error is dominated by (i-iii), depending on the forecast variable and the forecast lead time. In contrast, rounding errors are usually negligible if the IEEE 754 standard on 64 bit double precision floating-point numbers (Float64) is used, which is the standard for the majority of operational weather forecasts and in climate models.
+Predictions of weather and climate remain very difficult despite the use of the
+world's largest supercomputers. Although the available computational resources
+have vastly increased over the last decades, forecast errors remain and have
+several origins \cite{Palmer2012,Palmer2015}. They can be categorized as
+initial and boundary condition errors, model errors and discretisation.
+For instance, uncertainties in the observational data and their
+assimilation contribute to the errors in the initial conditions; discrepancies
+between the mathematical model and the real world cause model errors; and the finite
+spatial and temporal resolution result in discretisation errors. The forecast error
+is in general a combination and respective contributions depend on factors such as
+forecast variable and the forecast lead time. The standard number format for
+weather and climate model are 64-bit double precision floating-point numbers
+(Float64), which introduce mostly negligible rounding errors compared to the other
+mentioned sources of error.
 
-Research on reduced precision floating-point arithmetics is motivated by the potential for faster processing and communication between different elements of the computing architecture. The gained speed can be traded for increased complexity of simulations, resulting in more accurate predictions of weather and climate. The Integrated Forecast System at the European Centre for Medium-Range Weather Forecasts can be run almost entirely with 32-bit single precision (Float32) without a decrease in forecast skill \cite{Vana2017}, but in 60\% of the run-time. Similar progress was made at MeteoSwiss with their weather forecast model COSMO \cite{Rudisuhli2013}. For the European ocean model NEMO a mix of 32-bit and 64-bit arithmetic is a promising approach to keep accuracy-critical parts in high precision while increasing performance in others \cite{TintoPrims2019}.
+Faster calculations and communication on computing architectures can be achieved
+with reduced precision floating-point numbers, with a trade-off between speed
+and precision. A gained speed from low precision calculations can free resources
+to increase the complexity and therefore the forecast skill in weather and climate models.
+The European Centre for Medium-Range Weather Forecasts reduces the runtime by
+40\% but not the forecast skill in their forecast model when using almost entirely
+32-bit single precision (Float32) instead of Float64 \cite{Vana2017}. MeteoSwiss
+profited similarly with Float32 in their forecast model \cite{Rudisuhli2013}. For
+the European ocean model NEMO a mix of 32-bit and 64-bit arithmetic is a promising
+approach to keep accuracy-critical parts in high precision while increasing
+performance in others \cite{TintoPrims2019}.
 
 Deep learning algorithms require only low numerical precision but high
 computational performance. The recent boom of machine learning applications
@@ -270,16 +293,40 @@ support the 16-bit BFloat16 format, a truncated version of Float32, as this
 format is sufficient for many deep learning applications
 \cite{Kalamkar2019,Burgess2019,Gupta2015}.
 
-Using simplistic chaotic models, it was shown that the majority of 64 bits with Float64 do not contain real information \cite{Jeffress2017}. Running algorithms used for weather forecast models at precision lower than 32 bit, for example with 16-bit half precision floats (Float16), is an active field of research, but remains challenging \cite{Duben2014,Thornes2017,Hatfield2018,Duben2018}. Most research on reduced precision modelling for weather and climate applications makes use of software emulators \cite{Dawson2017} that provide other arithmetics than Float32 and Float64 which are widely supported on today's hardware. This comes with the disadvantage that simulations are orders of magnitude slower. However, software emulation allows a scientific evaluation of the use of reduced numerical precision for weather and climate simulations with no need to port the models to special hardware (such as FPGAs, \citeA{Russell2017}).
+Software emulators for other number formats than Float32 and Float64 are often
+used to investigate rounding errors caused by lower precision formats \cite{Dawson2017}.
+Although emulators are considerably slower than hardware-accelerated formats,
+they allow a scientific evaluation of the introduced errors without requiring
+specialised hardware, such as FPGAs \cite{Russell2017}. Unfortunately, the
+computational performance cannot be assessed with software emulators.
 
-Posit\texttrademark ~numbers are a recently proposed alternative to floating point numbers and claim to provide more precision in arithmetic calculations with fewer bits in algorithms of linear algebra or machine learning \cite{Gustafson2017,Langroudi2019}. However, posits remain untested for weather and climate simulations.
+Reducing the precision raises questions of the real bitwise information content.
+In simplistic chaotic models only a minority of bits contain real information
+\cite{Jeffress2017}, providing an information theoretic argument for reduced
+precision calculations. Recent research covers reduced precision in
+floating-point arithmetic for some algorithms used in weather forecast models
+\cite{Duben2014,Thornes2017,Hatfield2018,Hatfield2020}, but other number formats
+than floats have gained little attention.
 
-To get a better impression whether 16-bit arithmetic can be useful within weather and climate applications, which 16-bit formats are most promising, and how model simulations can be made resilient against a reduction in precision to 16 bits, this study will apply common types of 16-bit arithmetic in weather and climate applications and test approaches to mitigate negative impact if 16-bit arithmetic cannot be used for the entire model.
+Although floating-point numbers are the dominating number format in scientific
+computing, alternatives have been proposed \cite{Gustafson2017a,Johnson2020}.
+Posit\texttrademark ~numbers claim to provide more effective precision in algorithms
+of machine learning and linear algebra \cite{Gustafson2017,Langroudi2019}, compared
+to floats at the same word length. Posits were initially tested in simplistic
+weather and climate simulations \cite{Klower2019c} -- research that is extended
+here, providing a more thorough investigation of various 16-bit number formats.
+
+Is 16-bit arithmetic useful within weather and climate models? Which 16-bit
+formats are most promising, and how model simulations can be made resilient
+against a reduction in precision to 16 bits, is covered in this study. We apply
+several types of 16-bit arithmetic and test their impact on the simulated dynamics
+in a shallow water model that serves as a medium-complexity weather and climate
+application.
 
 The study is structured as follows: Section \ref{sec:formats} outlines the
 different number formats, the concept of decimal precision, and mitigation
-methods how weather and climate models can be made resilient against a reduction
-in numerical precision of 16-bit formats. Section \ref{sec:swm} presents results
+methods to increase a model's tolerance for lower precision and a limited dynamic
+range with 16-bit formats. Section \ref{sec:swm} presents results
 of various implementations of 16-bit arithmetic in the shallow water model.
 Section \ref{sec:discuss} discusses the results and provides the conclusions.
 
@@ -307,7 +354,7 @@ Q6.10 is the 16-bit fixed-point format with 6 signed integer bits and 10 fractio
 The arithmetic of fixed-point numbers is very similar to integers. The range of
 representable numbers with integer arithmetic can therefore be
 changed with fixed-point numbers, providing some flexibility for integer arithmetics
-\cite{Russell2017}. However, the width of the dynamic range $\log_{10}(maxpos/minpos)$
+\cite{Russell2017}. However, the width of the dynamic range, $\log_{10}(maxpos/minpos)$,
 is always limited and less than five orders of magnitude for any 16-bit integer
 or fixed-point format -- too small for most applications. We will therefore focus
 on the discussion of the other number formats in the rest of the study.
@@ -338,7 +385,7 @@ subnormal numbers, infinity (Inf) and Not-a-Number (NaN) when all exponent bits
 are either zero (subnormals) or one (Inf when f=0, or NaN else). 16-bit half-precision
 floating point numbers (Float16) have 5 exponent bits and 10 significant bits.
 A truncated version of the Float32 format (8 exponent bits, 23 significant bits)
-is BFloat16 with 8 exponent bits and 7 signficant bits. A format with more exponent
+is BFloat16 with 8 exponent bits and 7 significant bits. A format with more exponent
 bits has a wider dynamic range of representable numbers but lower precision, as
 fewer bits are available for the significand. All floating-point formats have a
 fixed number of bits in the significand, consequently, they have a constant
@@ -349,7 +396,7 @@ number of significant digits throughout their range of representable numbers
 \label{sec:posit_methods}
 
 Posit numbers arise from a projection of the real axis onto a circle (Fig. \ref{fig:circle}),
-with only one bitpattern for zero and one for Not-a-Real (NaR, also called \emph{complex infinity}),
+with only one bit pattern for zero and one for Not-a-Real (NaR, also called \emph{complex infinity}),
 which serves as a replacement for Not-a-Number (NaN) as well as positive and negative infinity.
 The circle is split into \emph{regimes}, determined by a constant $useed$, which
 always marks the north-west on the posit circle (Fig. \ref{fig:circle}b). Regimes
@@ -362,7 +409,7 @@ increases in length for numbers towards $\pm1$, when fewer regime bits are neede
 Consequently, a higher precision around one can be achieved with posits, which
 is traded against a gradually lower precision for very large or very small numbers.
 
-A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017a,Chen2018,Klower2019}
+A positive posit number $p$ is decoded as \cite{Gustafson2017,Gustafson2017a,Chen2018,Klower2019c}
 \begin{equation}
 p = (-1)^{sign~bit} \cdot useed^k \cdot 2^e \cdot (1+f).
 \label{eq:posit}
@@ -409,7 +456,7 @@ or NaR (Not-a-Real). After \citeA{Gustafson2017a}.}
 
 In order to use posits on a conventional processor we developed for the Julia
 programming language \cite{Bezanson2017} the posit emulator \emph{SoftPosit.jl}
-\cite{Klower2019a}, which are bindings for the C-based library SoftPosit \cite{Leong2020}.
+\cite{Klower2019b}, which are bindings for the C-based library SoftPosit \cite{Leong2020}.
 A standardized posit processor is not yet available, but current research focuses
 on hardware implementations \cite{Zhang2020,vanDam2019,Chen2018,Chaurasiya2018,Glaser2017}.
 
@@ -419,12 +466,12 @@ on hardware implementations \cite{Zhang2020,vanDam2019,Chen2018,Chaurasiya2018,G
 Most arithmetic operations include rounding of an exact result $x_\text{exact}$
 to a representable number $x_\text{repr}$. Based on the decimal rounding error
 $\vert \log_{10}( \tfrac{x_\text{repr}}{x_\text{exact}} ) \vert$ the decimal precision
-is defined as \cite{Gustafson2017, Klower2019}
+is defined as \cite{Gustafson2017, Klower2019c}
 \begin{equation}
 \op{decimal} \op{precision} = -\log_{10} \vert \log_{10}( \frac{x_\text{repr}}{x_\text{exact}} ) \vert.
 \end{equation}
 The decimal precision measures the number of correct decimal places after rounding.
-The decimal precision goes to infinity when the exact result aprroaches a
+The decimal precision goes to infinity when the exact result approaches a
 representable number. Rounding an exact result half-way between two representable
 numbers maximises the decimal error and minimises the decimal precision.
 This minimum is the \emph{worst-case} decimal precision, which measures the number
@@ -469,13 +516,13 @@ constrain to avoid under- or overflows.
 \begin{tabular}{l | r | r | l | l | r | r}
 Format & bits & exp bits & $minpos$ & $maxpos$ & $\epsilon$ &  \% NaR \\
 \hline
-Float64	& 64 & 11 & $5.0 \cdot 10^{-324}$ & $1.8 \cdot 10^{308}$  & 16.3 & 0.0 \\
-Float32	& 32 & 8 & $1.0 \cdot 10^{-45}$ & $3.4 \cdot 10^{38}$ & 7.6 & 0.4 \\
-Float16	& 16 & 5 & $6.0 \cdot 10^{-8}$ & 65504 & 3.7 & 3.1 \\
-BFloat16	& 16 & 8 & $ 9.2 \cdot 10^{-41}$ & $3.4 \cdot 10^{38}$ & 2.8 & 0.4  \\
+Float64    & 64 & 11 & $5.0 \cdot 10^{-324}$ & $1.8 \cdot 10^{308}$  & 16.3 & 0.0 \\
+Float32    & 32 & 8 & $1.0 \cdot 10^{-45}$ & $3.4 \cdot 10^{38}$ & 7.6 & 0.4 \\
+Float16    & 16 & 5 & $6.0 \cdot 10^{-8}$ & 65504 & 3.7 & 3.1 \\
+BFloat16    & 16 & 8 & $ 9.2 \cdot 10^{-41}$ & $3.4 \cdot 10^{38}$ & 2.8 & 0.4  \\
 Float8 & 8 & 3 & $1.5 \cdot 10^{-2}$ & 15.5 & 1.9 &12.5\\
 \hline
-Posit32	& 32 & 2 &  $7.5 \cdot 10^{-37}$ & $7.5 \cdot 10^{37}$ & 8.8 & 0.0 \\
+Posit32    & 32 & 2 &  $7.5 \cdot 10^{-37}$ & $7.5 \cdot 10^{37}$ & 8.8 & 0.0 \\
 Posit(16,1) & 16 & 1 & $3.7 \cdot 10^{-9}$ & $3.7 \cdot 10^{9}$ & 4.3 & 0.0\\
 Posit(16,2) & 16 & 2 & $1.4 \cdot 10^{-17}$ & $1.4 \cdot 10^{17}$ & 4.0 & 0.0\\
 Posit(8,0) & 8 & 0 & $1.5 \cdot 10^{-2}$ & 64 & 2.2 & 0.4  \\
@@ -493,11 +540,11 @@ infinity or not a real (NaR).}
 \end{table}
 
 Characteristics of various formats are summarised in Table \ref{tab:formats}.
-Float64 has more than $10^{15}$ bitpatterns reserved for NaN, but these only
+Float64 has more than $10^{15}$ bit patterns reserved for NaN, but these only
 make up $< 0.05\%$ of all available bit patterns. However, the percentage of
-redundant bitpatterns for NaN increases for floats with fewer exponent bits
-and poses a noticable issue for Float16 and Float8. Every posit number format
-has only one bitpattern reserved for NaR, such that this issue is negligible for
+redundant bit patterns for NaN increases for floats with fewer exponent bits
+and poses a noticeable issue for Float16 and Float8. Every posit number format
+has only one bit pattern reserved for NaR, such that this issue is negligible for
 posits.
 
 \subsection{Mitigation measures to allow for the use of 16-bit arithmetic in
@@ -519,13 +566,13 @@ Equations can be \emph{rescaled} via multiplication with a constant rescaling
 factor $s$ to shift the dynamic range occurring in an algorithm towards larger
 numbers (for $s > 1$) or towards smaller numbers ($s < 1$).
 Rescaling can be used to adjust the number range to the decimal precision of the
-number formats. If non-linear terms are considered, this multiplicative rescaling
+number formats. If nonlinear terms are considered, this multiplicative rescaling
 is ineffective, as the rescaling factor $s$ appears inside the non-linear terms.
-The non-linear terms are therefore effectively invariant under multiplicate
+The nonlinear terms are therefore effectively invariant under multiplicative
 rescaling and only the linear terms are scaled by $s$.
 Fig. \ref{fig:dec_prec} includes histograms of numbers occurring in the rescaled
 Lorenz system \cite{Lorenz1963,Kwasniok2014,Jeffress2017,Tantet2018} as an example
-from \citeA{Klower2019}. For posit arithmetic it is preferable to use
+from \citeA{Klower2019c}. For posit arithmetic it is preferable to use
 $s=\tfrac{1}{10}$ in the Lorenz system to scale the prognostic variables
 to match the range of highest decimal precision around $\pm1$, which increases the
 complexity of the Lorenz attractor and decreases the average rounding error.
@@ -564,7 +611,7 @@ volume, which can be achieved with reducing precision.
 
 However, if communication volume is an identified bottleneck in a given application,
 which is often the case in weather and climate models, reliable model simulations
-might be possible with 16 or even 8-bit communication, allowing for a signficant
+might be possible with 16 or even 8-bit communication, allowing for a significant
 reduction in computing time. In general, various lossy and lossless data compression
 techniques can be used to reduce communication volume \cite{Fan2019}. We restrict
 ourselves to lossy type conversions, which introduce likely a negligible overhead
@@ -575,11 +622,11 @@ due to encoding before and decoding after communication.
 
 In this section, the different number formats Float16, BFloat16, Posit(16,1) and
 Posit(16,2) are evaluated when solving the shallow water equations. The shallow
-water model usede here is an updated version of \citeA{Klower2019}, and most details
-described therein are also valid here. A vertical integration of the Navier-Stokes
-equations yields the shallow water equations, that can be used to understand
-many features of the general circulation of atmosphere and ocean as well as
-some two-dimensional non-linear interactions on shorter length and time scales
+water model used here is an updated version of the one used in \citeA{Klower2019c},
+and most details described therein are also valid here. A vertical integration of
+the Navier-Stokes equations yields the shallow water equations, that can be used
+to understand many features of the general circulation of atmosphere and ocean as
+well as some two-dimensional non-linear interactions on shorter length and time scales
 \cite{Gill1982,Vallis2006}. The shallow water equations for the prognostic variables
 velocity $\mathbf{u} = (u,v)$ and sea surface elevation $\eta$ are
 \begin{subequations}
@@ -624,7 +671,7 @@ budget
 Fx = \frac{F_0}{\rho h} \cos\left(\pi\left(y{L_y}^{-1} - 1\right)\right)^2
 \end{equation}
 and vanishes at the boundaries. The water density is $\rho = 1000\op{kg}\op{m}^{-3}$
-and $F_0 = 0.12\op{Pa}$. The wind forcing acts as a contiunuous input of large-scale
+and $F_0 = 0.12\op{Pa}$. The wind forcing acts as a continuous input of large-scale
 kinetic energy that is balanced by the dissipation term.
 
 The dissipation term $\mathbf{D}$ is the sum
@@ -635,20 +682,20 @@ The dissipation term $\mathbf{D}$ is the sum
 of a quadratic bottom drag with dimensionless coefficient $c_D = 10^{-5}$ \cite{Arbic2008}
 and a biharmonic diffusion with viscosity coefficient $\nu \approx 1.33\times10^{11} \op{m}^4\op{s}^{-1}$ \cite{Griffies2000}.
 
-The shallow water equations are discretised using 2nd order centred finite differences
-on an Arakawa C-grid \cite{Arakawa1977} and the fourth order Runge-Kutta method \cite{Butcher2016}
-is used for time integration of the pressure, coriolis and advective terms, whereas a
+The shallow water equations are discretized using 2nd order centred finite differences
+on an Arakawa C-grid \cite{Arakawa1977} and the fourth-order Runge-Kutta method \cite{Butcher2016}
+is used for time integration of the pressure, Coriolis and advective terms, whereas a
 semi-implicit method is used for the dissipative terms $\mathbf{D}$. We present results
 of simulations with three different levels of resolution: high resolution simulations
 with a grid spacing of $\Delta = 5\operatorname{km}$ (400x200 grid points), medium
 resolution simulations with a grid-spacing of $\Delta = 20\operatorname{km}$
 (100x50 grid points) and low resolution with a grid-spacing of $\Delta = 40\operatorname{km}$
-(50x25 grid points). The advection terms are discretised using an energy and
+(50x25 grid points). The advection terms are discretized using an energy and
 enstrophy conserving scheme \cite{Arakawa1990}.
 
 The shallow water equations are extended with an advection equation for tracers.
 Temperature and humidity or salinity are examples of tracers in the atmosphere
-and ocean. For simplicity, we regard them as passive here, such that they do not
+and the ocean. For simplicity, we regard them as passive here, such that they do not
 influence the flow. The advection of a passive tracer $q$ given a velocity $\mathbf{u}$
 is governed by
 \begin{equation}
@@ -696,9 +743,9 @@ The momentum equations are rescaled similarly.
 
 Diffusion is an example of a discretization scheme that requires rescaling for
 the arithmetic results to fit into the limited dynamic range. Biharmonic diffusion
-\cite{Griffies2000} calculates a fourth derivative in space,
+\cite{Griffies2000} calculates a fourth-derivative in space,
 which is often very small $\mathcal{O}(10^{-20})$ in geophysical applications,
-due to the large physical dimensions, when using meter as a unit for length.
+due to the large physical dimensions, when using meters as a unit for length.
 Contrarily, biharmonic viscosity coefficients are typically very large
 $\mathcal{O}(10^{11})$.
 We therefore rescale $\mathbf{D}$ accordingly
@@ -747,7 +794,7 @@ the time step shown.}
 \label{fig:snapshot}
 \end{figure}
 
-The shallow water model simulates vigurous turbulence interacting with a
+The shallow water model simulates vigorous turbulence interacting with a
 zonal current (Fig. \ref{fig:snapshot}). Both float and posit arithmetic
 present very similar fluid dynamics in comparison to the Float64 reference in
 only 16 bit. A snapshot of tracer concentration many simulated days after
@@ -892,7 +939,7 @@ anomalous sea surface height, which is used as a proxy to locate eddies, we
 assume that rounding errors in regions of high eddy activity lead to instabilities
 that propagate away in the form of gravity waves. These gravity waves are not
 present in Float64 simulations (Fig. \ref{fig:tend}c) and tend to have only a
-small impact on quasi-gestrophic dynamics, as they act on different time and
+small impact on quasi-geostrophic dynamics, as they act on different time and
 length scales. It is unclear but possible that gravity waves cause the observed
 increased ageostrophic velocities for 16-bit arithmetic.
 
@@ -927,7 +974,7 @@ and similar for $u$ and $v$ in Eq. \ref{eq:swe}a.
 
 Snapshots of tracer concentration reveal well simulated geostrophic turbulence
 (Fig. \ref{fig:snapshot}e and f) with Float16/Float32 or BFloat16/Float32 and
-instabilites at fronts or in filaments are visibly reduced compared to pure
+instabilities at fronts or in filaments are visibly reduced compared to pure
 16-bit arithmetic. The forecast error is strongly reduced once the prognostic
 variables are kept as Float32 (Fig. \ref{fig:rmse}a), supporting the hypothesis
 that the addition of tendencies to the prognostic variables is a key computation
@@ -941,7 +988,7 @@ in variance, especially for BFloat16 (Fig. \ref{fig:geo}). Gravity waves are
 similarly present for mixed precision although weaker for tendencies computed
 with Float16 (Fig. \ref{fig:tend}d) and, as discussed, they tend to not interact
 with the geostrophic time and length scales. Although the results show that Float16
-is generally a preferrable number format over BFloat16 for the applications presented
+is generally a preferable number format over BFloat16 for the applications presented
 here, we acknowledge that the conversion between Float32 and Float16 will come
 with some computational cost. In contrast, the conversion between BFloat16 and
 Float32 is computationally very cheap as both formats have the same number of
@@ -983,11 +1030,11 @@ between subdomains. Reduced precision is applied for the communication of the
 prognostic variables at every Runge-Kutta substep.
 
 Regarding snapshots of tracer concentration simulated with reduced precision
-communication show a negligible error for Float16 and posits (Fig. \ref{fig:snapshot_comm}).
+communication shows a negligible error for Float16 and posits (Fig. \ref{fig:snapshot_comm}).
 The error is largest at fronts and not concentrated around the boundaries.
 Encoding the communication with BFloat16 introduces a larger error than for the
 other 16-bit formats as the decimal precision is with 2.8 clearly lower
-(Table \ref{tab:formats}) for the range of values occuring within the prognostic
+(Table \ref{tab:formats}) for the range of values occurring within the prognostic
 variables (Fig. \ref{fig:tend}a and b). The errors are quantified by the RMSE of
 surface height $\eta$ as before and are up to about two orders of magnitude smaller
 than the errors that result from 16-bit arithmetic. As even the worst 16-bit
@@ -1054,7 +1101,7 @@ As there is no hardware available for posit arithmetic that we could have used
 for performance testing, we cannot draw any conclusion about the performance of
 posit arithmetic operations in comparison to Float16 or the other formats.
 Until progress is made on hardware implementations for posits, the results here
-suggest that also 16-bit float arithmetic can succesfully be used for parts of
+suggest that also 16-bit float arithmetic can successfully be used for parts of
 complex weather and climate models with the potential for acceleration on graphic
 and tensor processing units. It is therefore recommended to adapt a type-flexible
 programming paradigm, ideally in a language that supports portability, with
@@ -1078,6 +1125,6 @@ Data and scripts will be available at
 software is already available via \url{https://github.com/milankl} in the following
 repositories: SoftPosit.jl, ShallowWaters.jl, and Float8s.jl.
 
-\bibliography{bibliography}
+\bibliography{bibliography_new}
 
 \end{document}

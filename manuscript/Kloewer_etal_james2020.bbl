@@ -285,37 +285,11 @@ Dawson, A.%
 
 \bibitem [\protect \citeauthoryear {%
 D{\"u}ben%
+, McNamara%
+\BCBL {}\ \BBA {} Palmer%
 }{%
 D{\"u}ben%
-}{%
-{\protect \APACyear {2018}}%
-}]{%
-Duben2018}
-\APACinsertmetastar {%
-Duben2018}%
-\begin{APACrefauthors}%
-D{\"u}ben, P\BPBI D.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2018}{{\APACmonth{11}}}{}.
-\newblock
-{\BBOQ}\APACrefatitle {A {{New Number Format}} for {{Ensemble Simulations}}} {A
-  {{New Number Format}} for {{Ensemble Simulations}}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of Advances in Modeling Earth
-  Systems}{10}{11}{2983--2991}.
-\newblock
-\begin{APACrefDOI} \doi{10.1029/2018MS001420} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-D{\"u}ben%
-\ \BBA {} Palmer%
-}{%
-D{\"u}ben%
-\ \BBA {} Palmer%
-}{%
+\ \protect \BOthers {.}}{%
 {\protect \APACyear {2014}}%
 }]{%
 Duben2014}
@@ -323,19 +297,56 @@ Duben2014}
 Duben2014}%
 \begin{APACrefauthors}%
 D{\"u}ben, P\BPBI D.%
-\BCBT {}\ \BBA {} Palmer, T\BPBI N.%
+, McNamara, H.%
+\BCBL {}\ \BBA {} Palmer, T.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2014}{{\APACmonth{07}}}{}.
+\APACrefYearMonthDay{2014}{{\APACmonth{08}}}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Benchmark {{Tests}} for {{Numerical Weather Forecasts}}
-  on {{Inexact Hardware}}} {Benchmark {{Tests}} for {{Numerical Weather
-  Forecasts}} on {{Inexact Hardware}}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {The Use of Imprecise Processing to Improve Accuracy in
+  Weather \& Climate Prediction} {The use of imprecise processing to improve
+  accuracy in weather \& climate prediction}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Monthly Weather Review}{142}{10}{3809--3829}.
+\APACjournalVolNumPages{Journal of Computational Physics}{271}{}{2--18}.
 \newblock
-\begin{APACrefDOI} \doi{10.1175/MWR-D-14-00110.1} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{10.1016/j.jcp.2013.10.042} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fan%
+, Lilja%
+\BCBL {}\ \BBA {} Sapatnekar%
+}{%
+Fan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+Fan2019}
+\APACinsertmetastar {%
+Fan2019}%
+\begin{APACrefauthors}%
+Fan, Q.%
+, Lilja, D\BPBI J.%
+\BCBL {}\ \BBA {} Sapatnekar, S\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{{\APACmonth{10}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Using {{DCT}}-Based {{Approximate Communication}} to
+  {{Improve MPI Performance}} in {{Parallel Clusters}}} {Using {{DCT}}-based
+  {{Approximate Communication}} to {{Improve MPI Performance}} in {{Parallel
+  Clusters}}}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2019 {{IEEE}} 38th {{International Performance
+  Computing}} and {{Communications Conference}} ({{IPCCC}})} {2019 {{IEEE}}
+  38th {{International Performance Computing}} and {{Communications
+  Conference}} ({{IPCCC}})}\ (\BPGS\ 1--10).
+\newblock
+\APACaddressPublisher{{London, United Kingdom}}{{IEEE}}.
+\newblock
+\begin{APACrefDOI} \doi{10.1109/IPCCC47392.2019.8958720} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -359,8 +370,6 @@ Gill, A\BPBI E.%
   (\BNUM~30).
 \newblock
 \APACaddressPublisher{{San Diego}}{{Acad. Press}}.
-\newblock
-\APACrefnote{OCLC: 249294465}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -455,9 +464,9 @@ J.~Gustafson%
 }{%
 {\protect \APACyear {2017}}%
 }]{%
-Gustafson2017a}
+Gustafson2017}
 \APACinsertmetastar {%
-Gustafson2017a}%
+Gustafson2017}%
 \begin{APACrefauthors}%
 Gustafson, J.%
 \end{APACrefauthors}%
@@ -477,9 +486,9 @@ J\BPBI L.~Gustafson%
 }{%
 {\protect \APACyear {2017}}%
 }]{%
-Gustafson2017}
+Gustafson2017a}
 \APACinsertmetastar {%
-Gustafson2017}%
+Gustafson2017a}%
 \begin{APACrefauthors}%
 Gustafson, J\BPBI L.%
 \BCBT {}\ \BBA {} Yonemoto, I.%
@@ -529,6 +538,39 @@ Hatfield, S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Hatfield%
+, McRae%
+, Palmer%
+\BCBL {}\ \BBA {} D{\"u}ben%
+}{%
+Hatfield%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+Hatfield2020}
+\APACinsertmetastar {%
+Hatfield2020}%
+\begin{APACrefauthors}%
+Hatfield, S.%
+, McRae, A.%
+, Palmer, T.%
+\BCBL {}\ \BBA {} D{\"u}ben, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{{\APACmonth{02}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Single-{{Precision}} in the {{Tangent}}-{{Linear}} and
+  {{Adjoint Models}} of {{Incremental 4D}}-{{Var}}} {Single-{{Precision}} in
+  the {{Tangent}}-{{Linear}} and {{Adjoint Models}} of {{Incremental
+  4D}}-{{Var}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monthly Weather Review}{148}{4}{1541--1552}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/MWR-D-19-0291.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Jeffress%
 , D{\"u}ben%
 \BCBL {}\ \BBA {} Palmer%
@@ -556,6 +598,30 @@ Jeffress, S.%
   Physical and Engineering Sciences}{473}{2205}{20170144}.
 \newblock
 \begin{APACrefDOI} \doi{10.1098/rspa.2017.0144} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Johnson%
+}{%
+Johnson%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+Johnson2020}
+\APACinsertmetastar {%
+Johnson2020}%
+\begin{APACrefauthors}%
+Johnson, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{{\APACmonth{04}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Efficient, Arbitrarily High Precision Hardware
+  Logarithmic Arithmetic for Linear Algebra} {Efficient, arbitrarily high
+  precision hardware logarithmic arithmetic for linear algebra}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv:2004.09313 [cs, math]}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -665,9 +731,9 @@ Kl{\"o}wer%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2019}}%
 }]{%
-Klower2019}
+Klower2019c}
 \APACinsertmetastar {%
-Klower2019}%
+Klower2019c}%
 \begin{APACrefauthors}%
 Kl{\"o}wer, M.%
 , D{\"u}ben, P\BPBI D.%
@@ -699,9 +765,9 @@ Kl{\"o}wer%
 }{%
 {\protect \APACyear {2019}}%
 }]{%
-Klower2019a}
+Klower2019b}
 \APACinsertmetastar {%
-Klower2019a}%
+Klower2019b}%
 \begin{APACrefauthors}%
 Kl{\"o}wer, M.%
 \BCBT {}\ \BBA {} Giordano, M.%
@@ -793,8 +859,6 @@ Leong, S\BPBI H.%
 \APACrefbtitle {{{SoftPosit}}.} {{{SoftPosit}}.}
 \newblock
 \APAChowpublished {Zenodo}.
-\newblock
-\APACrefnote{Language: eng}
 \newblock
 \begin{APACrefDOI} \doi{10.5281/zenodo.3709035} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -1100,8 +1164,7 @@ Tint{\'o}~Prims, O.%
 \newblock
 \APACjournalVolNumPages{Geoscientific Model Development}{12}{7}{3135--3148}.
 \newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.5194/gmd-12-3135-2019}
-  \end{APACrefDOI}
+\begin{APACrefDOI} \doi{10.5194/gmd-12-3135-2019} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1195,6 +1258,35 @@ V{\'a}{\v n}a, F.%
 \APACjournalVolNumPages{Monthly Weather Review}{145}{2}{495--502}.
 \newblock
 \begin{APACrefDOI} \doi{10.1175/MWR-D-16-0228.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Zhang%
+\ \BBA {} Ko%
+}{%
+Zhang%
+\ \BBA {} Ko%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+Zhang2020}
+\APACinsertmetastar {%
+Zhang2020}%
+\begin{APACrefauthors}%
+Zhang, H.%
+\BCBT {}\ \BBA {} Ko, S\BHBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{{\APACmonth{05}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Design of {{Power Efficient Posit Multiplier}}} {Design
+  of {{Power Efficient Posit Multiplier}}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Transactions on Circuits and Systems II: Express
+  Briefs}{67}{5}{861--865}.
+\newblock
+\begin{APACrefDOI} \doi{10.1109/TCSII.2020.2980531} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

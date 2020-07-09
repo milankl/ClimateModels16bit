@@ -1,9 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2018)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Kloewer_etal_james2020.aux
 The style file: apacite.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
@@ -11,48 +11,46 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "Zhang2020"
+Database file #1: bibliography_new.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 40 entries,
+You've used 43 entries,
             6951 wiz_defined-function locations,
-            1584 strings with 21293 characters,
-and the built_in function-call counts, 84262 in all, are:
-= -- 10290
-> -- 758
-< -- 4000
-+ -- 4193
-- -- 80
-* -- 5461
-:= -- 15052
-add.period$ -- 175
-call.type$ -- 40
-change.case$ -- 752
+            1601 strings with 22072 characters,
+and the built_in function-call counts, 91413 in all, are:
+= -- 11157
+> -- 822
+< -- 4388
++ -- 4576
+- -- 86
+* -- 5945
+:= -- 16422
+add.period$ -- 189
+call.type$ -- 43
+change.case$ -- 810
 chr.to.int$ -- 0
-cite$ -- 80
-duplicate$ -- 2479
-empty$ -- 3291
-format.name$ -- 1311
-if$ -- 15877
+cite$ -- 86
+duplicate$ -- 2661
+empty$ -- 3543
+format.name$ -- 1416
+if$ -- 17178
 int.to.chr$ -- 0
-int.to.str$ -- 120
+int.to.str$ -- 129
 missing$ -- 0
-newline$ -- 1098
-num.names$ -- 322
-pop$ -- 1531
+newline$ -- 1180
+num.names$ -- 346
+pop$ -- 1646
 preamble$ -- 1
-purify$ -- 224
+purify$ -- 242
 quote$ -- 0
-skip$ -- 5257
+skip$ -- 5686
 stack$ -- 0
-substring$ -- 4614
-swap$ -- 1443
-text.length$ -- 189
+substring$ -- 5021
+swap$ -- 1551
+text.length$ -- 205
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 3712
+type$ -- 4016
 warning$ -- 0
-while$ -- 522
+while$ -- 567
 width$ -- 0
-write$ -- 1389
-(There was 1 warning)
+write$ -- 1500
