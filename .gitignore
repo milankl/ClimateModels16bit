@@ -2,3 +2,4 @@
 *.nc
 nohup.out
 .DS_Store
+manuscript/
