@@ -254,23 +254,42 @@ formats for at least parts of complex weather and climate models.
 \label{sec:intro}
 
 Predictions of weather and climate remain very difficult despite the use of the
-world's largest supercomputers. Although the available computational resources
+world's fastest supercomputers. Although the available computational resources
 have vastly increased over the last decades, forecast errors remain and have
 several origins \cite{Palmer2012,Palmer2015}. They can be categorized as
-initial and boundary condition errors, model errors and discretisation.
+initial and boundary condition errors, model errors and discretisation errors.
 For instance, uncertainties in the observational data and their
 assimilation contribute to the errors in the initial conditions; discrepancies
 between the mathematical model and the real world cause model errors; and the finite
 spatial and temporal resolution result in discretisation errors. The forecast error
-is in general a combination and respective contributions depend on factors such as
-forecast variable and the forecast lead time. The standard number format for
-weather and climate model are 64-bit double precision floating-point numbers
-(Float64), which introduce mostly negligible rounding errors compared to the other
-mentioned sources of error.
+is in general a combination and respective contributions can be different for
+different variables and forecast lead times. 64-bit double precision floating-point
+numbers (Float64) are used as the default option for weather and climate models.
+The Float64 format introduces mostly negligible rounding errors compared to the
+other mentioned sources of error.
 
 Faster calculations and communication on computing architectures can be achieved
 with reduced precision floating-point numbers, with a trade-off between speed
-and precision. A gained speed from low precision calculations can free resources
+and precision. Deep learning algorithms require only low numerical precision but
+high computational performance. The recent boom of machine learning applications
+increased the demand on hardware-accelerated reduced precision calculations,
+such that hardware developments increasingly offer more flexibility on
+low precision number formats. While 16-bit arithmetic was not available for use
+on commodity supercomputing hardware in the past, today most hardware vendors
+offer the use of 16-bit formats, such as 16-bit half precision floating-point
+numbers (Float16), on the next generation of hardware.
+
+Graphic processing units started to support Float16 for increased performance
+\cite{Markidis2018}. Google's tensor processing units (TPU, \citeA{Jouppi2017,Jouppi2018})
+support the 16-bit BFloat16 format, a truncated version of Float32, as this
+format is sufficiently precise for many deep learning applications
+\cite{Kalamkar2019,Burgess2019,Gupta2015}. The world's fastest
+supercomputers have reached peak performances of 100 Petaflop/s ($10^{17}$
+floating-point operations per second) with Float64 in the last years, but peak
+performances with Float16 are already beyond the exascale milestone
+($10^{18}$ flop/s, \citeA{Kurth2018}).
+
+A gained speed from low precision calculations can free resources
 to increase the complexity and therefore the forecast skill in weather and climate models.
 The European Centre for Medium-Range Weather Forecasts reduces the runtime by
 40\% but not the forecast skill in their forecast model when using almost entirely
@@ -280,18 +299,9 @@ the European ocean model NEMO a mix of 32-bit and 64-bit arithmetic is a promisi
 approach to keep accuracy-critical parts in high precision while increasing
 performance in others \cite{TintoPrims2019}.
 
-Deep learning algorithms require only low numerical precision but high
-computational performance. The recent boom of machine learning applications
-increased the demand on hardware-accelerated reduced precision calculations,
-such that hardware developments increasingly offer more flexibility on
-low precision number formats. While 16-bit arithmetic was not available for use
-on commodity supercomputing hardware in the past, today most hardware vendors
-offer the use of 16-bit formats on the next generation of hardware. Graphic
-processing units started to support Float16 for increased performance
-\cite{Markidis2018}. Google's tensor processing units (TPU, \citeA{Jouppi2017,Jouppi2018})
-support the 16-bit BFloat16 format, a truncated version of Float32, as this
-format is sufficient for many deep learning applications
-\cite{Kalamkar2019,Burgess2019,Gupta2015}.
+
+
+
 
 Software emulators for other number formats than Float32 and Float64 are often
 used to investigate rounding errors caused by lower precision formats \cite{Dawson2017}.
@@ -317,11 +327,11 @@ weather and climate simulations \cite{Klower2019c} -- research that is extended
 here, providing a more thorough investigation of various 16-bit number formats.
 
 Is 16-bit arithmetic useful within weather and climate models? Which 16-bit
-formats are most promising, and how model simulations can be made resilient
-against a reduction in precision to 16 bits, is covered in this study. We apply
-several types of 16-bit arithmetic and test their impact on the simulated dynamics
-in a shallow water model that serves as a medium-complexity weather and climate
-application.
+formats are most promising, and can model simulations be made resilient
+against a reduction in precision to 16 bits? These questions are covered in
+this study. We apply several types of 16-bit arithmetic and test their impact
+on the simulated dynamics in a shallow water model that serves as a medium-complexity
+weather and climate application.
 
 The study is structured as follows: Section \ref{sec:formats} outlines the
 different number formats, the concept of decimal precision, and mitigation
@@ -456,7 +466,7 @@ or NaR (Not-a-Real). After \citeA{Gustafson2017a}.}
 
 In order to use posits on a conventional processor we developed for the Julia
 programming language \cite{Bezanson2017} the posit emulator \emph{SoftPosit.jl}
-\cite{Klower2019b}, which are bindings for the C-based library SoftPosit \cite{Leong2020}.
+\cite{Klower2019b} as bindings for the C-based library SoftPosit \cite{Leong2020}.
 A standardized posit processor is not yet available, but current research focuses
 on hardware implementations \cite{Zhang2020,vanDam2019,Chen2018,Chaurasiya2018,Glaser2017}.
 
@@ -498,7 +508,7 @@ logarithmic-space, which results in a nearly constant decimal precision. The dev
 from a constant decimal precision, which can be seen as regular spikes in Fig. \ref{fig:dec_prec}a,
 are due to a linearly-spaced significand. The decimal precision for floats decreases
 for the subnormal numbers towards the smallest representable number $minpos$.
-Posits have an increased decimal precision around 1 and a yet a wide dynamic range,
+Posits have an increased decimal precision around 1 and a wide dynamic range,
 due to the tapered precision towards $minpos$ and the largest representable number
 $maxpos$. The decimal precision for posits is above zero outside the dynamic range
 as posits have a no overflow/no underflow-rounding mode. Integers are linearly-spaced,
@@ -507,7 +517,7 @@ The decimal precision of fixed-point numbers has an identical shape, but is shif
 towards smaller numbers by a factor of $\tfrac{1}{2}$ for each additional fraction bit.
 Consequently, many arithmetic calculations should be placed close to $maxpos$, but
 the small range of high precision is restrictive for many applications. No convincing results
-with integer or fixed-point arithmetic was achieved in this study, especially as
+with integer or fixed-point arithmetic were achieved in this study, especially as
 the limited dynamic range of less than five orders of magnitude imposes a very difficult
 constrain to avoid under- or overflows.
 
@@ -585,7 +595,7 @@ be precomputed. Although this will have a negligible effect on the rounding erro
 for floating-point arithmetic due to the approximately constant decimal precision
 throughout the range of numbers (subnormals excluded), it reduces the risk of
 over- or underflow. Re-ordering the shallow water equations is discussed in
-section \label{sec:swm_rescale}.
+section \ref{sec:swm_rescale}.
 
 \subsubsection{Reduced precision communication}
 
@@ -663,8 +673,8 @@ makes the zonal current barotropically unstable. The flow regime is therefore
 governed both by eddy-mean flow as well as eddy-eddy interactions.
 
 The time step $\Delta t = 282\op{s}$ is chosen to resolve surface gravity waves,
-traveling at an estimated phase speed of $\sqrt{gH_0}$ with CFL number being
-close to 1 and gravitational acceleration $g=10\op{ms}^{-1}$. The wind stress
+traveling at an estimated phase speed of $\sqrt{gH_0}$ with a CFL number close to
+1 and gravitational acceleration $g=10\op{ms}^{-1}$. The wind stress
 forcing $\mathbf{F} = (F_x,0)$ is constant in time, acts only on the zonal momentum
 budget
 \begin{equation}
@@ -705,13 +715,13 @@ is governed by
 A semi-Lagrangian advection scheme \cite{Smolarkiewicz1992} is used to discretise
 Eq. \ref{eq:adv}. In this discretization, the tracer concentration for a given grid cell
 (i.e. the arrival point) is calculated from the concentration at a departure point
-at the previous time step. The departure point is determined from by the flow field
-by back-tracing the velocities from the arrival point. Departure points in general
+at the previous time step. The departure point is determined by back-tracing the
+velocities from the arrival point. Departure points in general
 do not coincide with grid nodes, such that an interpolation from the surrounding grid
 points is required to find the concentration at the departure point, which is then
-directly the concentration at the arrival point.
+defined to be the concentration at the arrival point.
 
-\subsubsection{Rescaling in the shallow water equations}
+\subsubsection{Rescaling the shallow water equations}
 \label{sec:swm_rescale}
 
 The dynamic range of representable numbers with 16-bit arithmetic is for most

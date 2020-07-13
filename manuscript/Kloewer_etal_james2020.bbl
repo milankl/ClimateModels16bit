@@ -785,6 +785,41 @@ Kl{\"o}wer, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Kurth%
+\ \protect \BOthers {.}}{%
+Kurth%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+Kurth2018}
+\APACinsertmetastar {%
+Kurth2018}%
+\begin{APACrefauthors}%
+Kurth, T.%
+, Treichler, S.%
+, Romero, J.%
+, Mudigonda, M.%
+, Luehr, N.%
+, Phillips, E.%
+\BDBL {}Houston, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{{\APACmonth{11}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Exascale Deep Learning for Climate Analytics} {Exascale
+  deep learning for climate analytics}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the {{International Conference}} for
+  {{High Performance Computing}}, {{Networking}}, {{Storage}}, and
+  {{Analysis}}} {Proceedings of the {{International Conference}} for {{High
+  Performance Computing}}, {{Networking}}, {{Storage}}, and {{Analysis}}}\
+  (\BPGS\ 1--12).
+\newblock
+\APACaddressPublisher{{Dallas, Texas}}{{IEEE Press}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Kwasniok%
 }{%
 Kwasniok%
