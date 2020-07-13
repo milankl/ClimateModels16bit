@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.15)  10 JUL 2020 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.15)  13 JUL 2020 17:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3496,15 +3496,9 @@ e Eu-ro-pean Union's
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
-Overfull \hbox (48.70769pt too wide) in paragraph at lines 1133--1137
-[]\OT1/cmr/m/n/10 Data and scripts will be avail-able at $\OT1/cmtt/m/n/10 http
-s :// github [] .com / milankl / ClimateModels16bit$ 
- []
-
-
-Overfull \hbox (26.09763pt too wide) in paragraph at lines 1133--1137
-\OT1/cmr/m/n/10 upon ac-cep-tance. Rel-e-vant soft-ware is al-ready avail-able 
-via $\OT1/cmtt/m/n/10 https :// github [] .com / milankl$ 
+Overfull \hbox (45.041pt too wide) in paragraph at lines 1133--1136
+[]\OT1/cmr/m/n/10 Scripts and soft-ware is avail-able at $\OT1/cmtt/m/n/10 http
+s :// github [] .com / milankl / ClimateModels16bit$\OT1/cmr/m/n/10 . 
  []
 
 (./Kloewer_etal_james2020.bbl
@@ -3676,15 +3670,15 @@ Underfull \hbox (badness 4832) in paragraph at lines 518--539
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29]
 Underfull \hbox (badness 10000) in paragraph at lines 554--572
 \OT1/cmr/m/n/10 in the Tangent-Linear and Ad-joint Mod-els of In-cre-men-tal 4D
 -Var.  \OT1/cmr/m/it/10 Monthly 
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
 Underfull \hbox (badness 4048) in paragraph at lines 641--657
 []\OT1/cmr/m/n/10 Jouppi, N. P., Young, C., Patil, N., & Pat-ter-son, D.  (2018
 , Au-gust).  A domain- 
@@ -3858,9 +3852,6 @@ nal of the Royal Me-te-o-ro-log-i-cal
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31]
 Underfull \hbox (badness 10000) in paragraph at lines 1183--1204
 []\OT1/cmr/m/n/10 Tint^^So Prims, O., Acosta, M. C., Moore, A. M., Cas-trillo, 
 M., Ser-radell, K., Cort^^Ses, 
@@ -3880,6 +3871,9 @@ i:
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
 Underfull \hbox (badness 2080) in paragraph at lines 1242--1265
 []\OT1/cmr/m/n/10 van Dam, L., Pel-tenburg, J., Al-Ars, Z., & Hof-s-tee, H. P. 
  (2019, March).  An Ac- 
@@ -3970,7 +3964,7 @@ t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist
 onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2020/texmf-dist/font
 s/type1/public/cm-super/sfrm1000.pfb>
-Output written on Kloewer_etal_james2020.pdf (32 pages, 3112771 bytes).
+Output written on Kloewer_etal_james2020.pdf (32 pages, 3112701 bytes).
 PDF statistics:
  430 PDF objects out of 1000 (max. 8388607)
  212 compressed objects within 3 object streams
