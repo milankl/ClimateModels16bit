@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.24)  3 SEP 2020 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.24)  4 SEP 2020 15:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3018,11 +3018,6 @@ Overfull \hbox (3.26569pt too wide) in paragraph at lines 1159--1168
 \OT1/cmr/m/n/10 the ESI-WACE2 project. ESI-WACE2 has re-ceived fund-ing from the Eu-ro-pean Union's 
  []
 
-
-Overfull \hbox (45.041pt too wide) in paragraph at lines 1169--1172
-[]\OT1/cmr/m/n/10 Scripts and soft-ware is avail-able at $\OT1/cmtt/m/n/10 https :// github [] .com / milankl / ClimateModels16bit$\OT1/cmr/m/n/10 . 
- []
-
 (./Kloewer_etal_james2020.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 16--33
 \OT1/cmr/m/n/10 Enstrophy Dis-si-pat-ing Schemes for the Shal-low Wa-ter Equa-tions.  \OT1/cmr/m/it/10 Monthly 
@@ -3048,10 +3043,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--68
 \OT1/cmr/m/it/10 search and Ap-pli-ca-tions \OT1/cmr/m/n/10 (Vol.[] 17, pp.[] 173--265).  El-se-vier.  doi: $10 [] .1016 / 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 82--97
 []\OT1/cmr/m/n/10 Arbic, B. K., & Scott, R. B.  (2008, Jan-uary).  On Quadratic Bot-tom Drag, 
  []
@@ -3233,32 +3225,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 801--819
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--853
+Underfull \hbox (badness 10000) in paragraph at lines 862--882
 \OT1/cmr/m/n/10 for weather and cli-mate mod-els.  In \OT1/cmr/m/it/10 Pro-ceed-ings of the Con-fer-ence for Next 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 893--916
+Underfull \hbox (badness 10000) in paragraph at lines 922--945
 []\OT1/cmr/m/n/10 Kurth, T., Tre-ich-ler, S., Romero, J., Mudigonda, M., Luehr, N., Phillips, E., ... 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 893--916
+Underfull \hbox (badness 10000) in paragraph at lines 922--945
 \OT1/cmr/m/n/10 In \OT1/cmr/m/it/10 Pro-ceed-ings of the In-ter-na-tional Con-fer-ence for High Per-for-mance Com- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 893--916
+Underfull \hbox (badness 10000) in paragraph at lines 922--945
 \OT1/cmr/m/it/10 put-ing, Net-work-ing, Stor-age, and Anal-y-sis \OT1/cmr/m/n/10 (pp.[] 1--12).  Dal-las, Texas: IEEE 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--943
+Underfull \hbox (badness 10000) in paragraph at lines 957--972
 \OT1/cmr/m/it/10 ety A: Math-e-mat-i-cal, Phys-i-cal and En-gi-neer-ing Sci-ences\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 372\OT1/cmr/m/n/10 (2018), 20130286. 
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 957--971
+Underfull \hbox (badness 1005) in paragraph at lines 986--1000
 []\OT1/cmr/m/n/10 Langroudi, H. F., Carmichael, Z., & Ku-dithipudi, D.  (2019, July).  Deep Learn-ing 
  []
 
@@ -3266,150 +3258,150 @@ Underfull \hbox (badness 1005) in paragraph at lines 957--971
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31]
-Underfull \hbox (badness 7047) in paragraph at lines 1037--1058
+Underfull \hbox (badness 7047) in paragraph at lines 1066--1087
 []\OT1/cmr/m/n/10 Markidis, S., Chien, S. W. D., Laure, E., Peng, I. B., & Vet-ter, J. S.  (2018, May). 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1058
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1087
 \OT1/cmr/m/n/10 NVIDIA Ten-sor Core Pro-gramma-bil-ity, Per-for-mance Pre-ci-sion.  In \OT1/cmr/m/it/10 2018 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1058
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1087
 \OT1/cmr/m/it/10 IEEE In-ter-na-tional Par-al-lel and Dis-tributed Pro-cess-ing Sym-po-sium Work-shops 
  []
 
 
-Underfull \hbox (badness 5431) in paragraph at lines 1095--1111
+Underfull \hbox (badness 5431) in paragraph at lines 1124--1140
 []\OT1/cmr/m/n/10 Palmer, T. N.  (2012, April).  To-wards the prob-a-bilis-tic Earth-system sim-u-la-tor: 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1154--1172
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1201
 []\OT1/cmr/m/n/10 Russell, F. P., D^^?uben, P. D., Niu, X., Luk, W., & Palmer, T.  (2017, De-cem-ber). 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1154--1172
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1201
 \OT1/cmr/m/n/10 Ex-ploit-ing the chaotic be-haviour of at-mo-spheric mod-els with re-con-fig-urable 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1154--1172
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1201
 \OT1/cmr/m/n/10 ar-chi-tec-tures.  \OT1/cmr/m/it/10 Com-puter Physics Com-mu-ni-ca-tions\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 221\OT1/cmr/m/n/10 , 160--173.  doi: 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1187--1206
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1235
 []\OT1/cmr/m/n/10 Saffin, L., Hat-field, S., D^^?uben, P., & Palmer, T.  (2020).  Reduced-precision 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1187--1206
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1235
 \OT1/cmr/m/n/10 parametriza-tion: Lessons from an intermediate-complexity at-mo-spheric model. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1187--1206
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1235
 \OT1/cmr/m/it/10 Quar-terly Jour-nal of the Royal Me-te-o-ro-log-i-cal So-ci-ety\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 146\OT1/cmr/m/n/10 (729), 1590--1607. 
  []
 
 
-Underfull \hbox (badness 2837) in paragraph at lines 1220--1237
+Underfull \hbox (badness 2837) in paragraph at lines 1249--1266
 []\OT1/cmr/m/n/10 Smolarkiewicz, P. K., & Pudykiewicz, J. A.  (1992, Novem-ber).  A Class of Semi- 
  []
 
 
-Underfull \hbox (badness 2837) in paragraph at lines 1220--1237
+Underfull \hbox (badness 2837) in paragraph at lines 1249--1266
 \OT1/cmr/m/n/10 Lagrangian Ap-prox-i-ma-tions for Flu-ids.  \OT1/cmr/m/it/10 Jour-nal of the At-mo-spheric Sci-ences\OT1/cmr/m/n/10 , 
  []
 
 
-Underfull \hbox (badness 3646) in paragraph at lines 1220--1237
+Underfull \hbox (badness 3646) in paragraph at lines 1249--1266
 \OT1/cmr/m/it/10 49\OT1/cmr/m/n/10 (22), 2082--2096.  doi: $10 [] .1175 / 1520 [] -0469(1992 ) 049\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 2082 : ACOSLA [] 2 [] .0 [] .CO ; 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1251--1267
+Underfull \hbox (badness 10000) in paragraph at lines 1280--1296
 []\OT1/cmr/m/n/10 Tantet, A., Lu-carini, V., & Di-jk-stra, H. A.  (2018, Febru-ary).  Res-o-nances in a 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1251--1267
+Underfull \hbox (badness 10000) in paragraph at lines 1280--1296
 \OT1/cmr/m/n/10 Chaotic At-trac-tor Cri-sis of the Lorenz Flow.  \OT1/cmr/m/it/10 Jour-nal of Sta-tis-ti-cal Physics\OT1/cmr/m/n/10 , 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1281--1300
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1329
 []\OT1/cmr/m/n/10 Thornes, T., D^^?uben, P., & Palmer, T.  (2017, Jan-uary).  On the use of scale- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1281--1300
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1329
 \OT1/cmr/m/n/10 dependent pre-ci-sion in Earth Sys-tem mod-elling: Scale-Dependent Pre-ci-sion 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1281--1300
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1329
 \OT1/cmr/m/n/10 in Earth Sys-tem Mod-elling.  \OT1/cmr/m/it/10 Quar-terly Jour-nal of the Royal Me-te-o-ro-log-i-cal 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1312--1333
-[]\OT1/cmr/m/n/10 Tint^^So Prims, O., Acosta, M. C., Moore, A. M., Cas-trillo, M., Ser-radell, K., Cort^^Ses, 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1312--1333
-\OT1/cmr/m/n/10 mod-els: Ex-plor-ing a po-ten-tial re-duc-tion of nu-mer-i-cal pre-ci-sion in NEMO 4.0 
- []
-
-
-Underfull \hbox (badness 6047) in paragraph at lines 1312--1333
-\OT1/cmr/m/n/10 and ROMS 3.6.  \OT1/cmr/m/it/10 Geo-sci-en-tific Model De-vel-op-ment\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 12\OT1/cmr/m/n/10 (7), 3135--3148.  doi: 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32]
-Underfull \hbox (badness 2080) in paragraph at lines 1371--1394
+Underfull \hbox (badness 10000) in paragraph at lines 1341--1362
+[]\OT1/cmr/m/n/10 Tint^^So Prims, O., Acosta, M. C., Moore, A. M., Cas-trillo, M., Ser-radell, K., Cort^^Ses, 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1341--1362
+\OT1/cmr/m/n/10 mod-els: Ex-plor-ing a po-ten-tial re-duc-tion of nu-mer-i-cal pre-ci-sion in NEMO 4.0 
+ []
+
+
+Underfull \hbox (badness 6047) in paragraph at lines 1341--1362
+\OT1/cmr/m/n/10 and ROMS 3.6.  \OT1/cmr/m/it/10 Geo-sci-en-tific Model De-vel-op-ment\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 12\OT1/cmr/m/n/10 (7), 3135--3148.  doi: 
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 1400--1423
 []\OT1/cmr/m/n/10 van Dam, L., Pel-tenburg, J., Al-Ars, Z., & Hof-s-tee, H. P.  (2019, March).  An Ac- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1371--1394
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1423
 \OT1/cmr/m/n/10 cel-er-a-tor for Posit Arith-metic Tar-get-ing Posit Level 1 BLAS Rou-tines and 
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 1371--1394
+Underfull \hbox (badness 2435) in paragraph at lines 1400--1423
 \OT1/cmr/m/n/10 Pair-HMM.  In \OT1/cmr/m/it/10 Pro-ceed-ings of the Con-fer-ence for Next Gen-er-a-tion Arith-metic 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1406--1426
+Underfull \hbox (badness 10000) in paragraph at lines 1435--1455
 []\OT1/cmr/m/n/10 V^^Sa^^Tna, F., D^^?uben, P., Lang, S., Palmer, T., Leut-becher, M., Salmond, D., & Carver, 
  []
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 1406--1426
+Underfull \hbox (badness 5036) in paragraph at lines 1435--1455
 \OT1/cmr/m/n/10 G.  (2017, Febru-ary).  Sin-gle Pre-ci-sion in Weather Fore-cast-ing Mod-els: An 
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 1406--1426
+Underfull \hbox (badness 5189) in paragraph at lines 1435--1455
 \OT1/cmr/m/n/10 Eval-u-a-tion with the IFS.  \OT1/cmr/m/it/10 Monthly Weather Re-view\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 145\OT1/cmr/m/n/10 (2), 495--502.  doi: 
  []
 
 
-Underfull \hbox (badness 3884) in paragraph at lines 1440--1455
+Underfull \hbox (badness 3884) in paragraph at lines 1469--1484
 []\OT1/cmr/m/n/10 Zhang, H., & Ko, S.-B.  (2020, May).  De-sign of Power Ef-fi-cient Posit Mul-ti-plier. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1440--1455
+Underfull \hbox (badness 10000) in paragraph at lines 1469--1484
 \OT1/cmr/m/it/10 IEEE Trans-ac-tions on Cir-cuits and Sys-tems II: Ex-press Briefs\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 67\OT1/cmr/m/n/10 (5), 861-- 
  []
 
@@ -3423,16 +3415,16 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4337 strings out of 480608
- 60618 string characters out of 5903630
- 320214 words of memory out of 5000000
- 20132 multiletter control sequences out of 15000+600000
+ 4340 strings out of 480608
+ 60687 string characters out of 5903630
+ 320287 words of memory out of 5000000
+ 20135 multiletter control sequences out of 15000+600000
  541295 words of font info for 55 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
  38i,10n,41p,293b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Kloewer_etal_james2020.pdf (33 pages, 3114841 bytes).
+Output written on Kloewer_etal_james2020.pdf (33 pages, 3114935 bytes).
 PDF statistics:
  432 PDF objects out of 1000 (max. 8388607)
  215 compressed objects within 3 object streams

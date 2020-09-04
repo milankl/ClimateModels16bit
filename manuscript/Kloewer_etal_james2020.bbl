@@ -819,6 +819,35 @@ Kalamkar, D.%
 
 \bibitem [\protect \citeauthoryear {%
 Kl{\"o}wer%
+}{%
+Kl{\"o}wer%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+milan_k_2020_4015134}
+\APACinsertmetastar {%
+milan_k_2020_4015134}%
+\begin{APACrefauthors}%
+Kl{\"o}wer, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+\APACrefbtitle {github.com/milankl/ClimateModels16bit: Software and data
+  respository for accepted manuscript.} {github.com/milankl/climatemodels16bit:
+  Software and data respository for accepted manuscript.}
+\newblock
+\APACaddressPublisher{}{Zenodo}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.5281/zenodo.4015134}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.5281/zenodo.4015134} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kl{\"o}wer%
 , D{\"u}ben%
 \BCBL {}\ \BBA {} Palmer%
 }{%
