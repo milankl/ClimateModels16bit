@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Kloewer_etal_james2020"] 1599143981 "Kloewer_etal_james2020.aux" "Kloewer_etal_james2020.bbl" "Kloewer_etal_james2020" 1599144926
+["bibtex Kloewer_etal_james2020"] 1599228522 "Kloewer_etal_james2020.aux" "Kloewer_etal_james2020.bbl" "Kloewer_etal_james2020" 1599228526
   "/usr/local/texlive/2020/texmf-dist/bibtex/bst/apacite/apacite.bst" 1374530685 141073 9d7b79dbf9d91133318126032cff8c27 ""
-  "Kloewer_etal_james2020.aux" 1599144926 16303 66fa27e6e4f91ebb56ea5b92ead873f7 "pdflatex"
-  "bibliography_new2.bib" 1598983589 85767 7629444bcb2ba9e36c8708d289aa616e ""
+  "Kloewer_etal_james2020.aux" 1599228526 16525 f684dc466b3bc675aadb8b7297fcc29a "pdflatex"
+  "bibliography_new2.bib" 1599228403 86127 cfb085a4499de4813b0ab8dda3dce40f ""
   (generated)
-  "Kloewer_etal_james2020.bbl"
   "Kloewer_etal_james2020.blg"
-["pdflatex"] 1599144922 "Kloewer_etal_james2020.tex" "Kloewer_etal_james2020.pdf" "Kloewer_etal_james2020" 1599144926
+  "Kloewer_etal_james2020.bbl"
+["pdflatex"] 1599228523 "Kloewer_etal_james2020.tex" "Kloewer_etal_james2020.pdf" "Kloewer_etal_james2020" 1599228526
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -103,9 +103,9 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1598304609 2432462 d472201a20d353e21b0e39d8197a5c3c ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "Kloewer_etal_james2020.aux" 1599144926 16303 66fa27e6e4f91ebb56ea5b92ead873f7 "pdflatex"
-  "Kloewer_etal_james2020.bbl" 1599143981 37329 add98db1cb123cad834b59f1b4e1ad77 "bibtex Kloewer_etal_james2020"
-  "Kloewer_etal_james2020.tex" 1599144589 67592 4df894aefaeb45a75c3d4a134d3d16f2 ""
+  "Kloewer_etal_james2020.aux" 1599228526 16525 f684dc466b3bc675aadb8b7297fcc29a "pdflatex"
+  "Kloewer_etal_james2020.bbl" 1599228523 38075 99f24b37f94c770021a514e2664911e9 "bibtex Kloewer_etal_james2020"
+  "Kloewer_etal_james2020.tex" 1599228517 67586 754ce42ab4b00c822bb89369dd69e120 ""
   "ageostrophic.pdf" 1594657078 81392 19ec875558163dfc9c7abe82a25c8641 ""
   "agujournal2019.cls" 1594657078 40781 7d92826f8a29a1c316f6a24166b7dedb ""
   "circles.pdf" 1594657078 25230 17fe99f20a12019d55ab408ec2238ea6 ""

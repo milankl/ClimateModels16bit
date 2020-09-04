@@ -144,9 +144,9 @@ INPUT ./tendency_hist.png
 INPUT snapshot_comm.png
 INPUT ./snapshot_comm.png
 INPUT ./snapshot_comm.png
+INPUT Kloewer_etal_james2020.bbl
+INPUT Kloewer_etal_james2020.bbl
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-INPUT Kloewer_etal_james2020.bbl
-INPUT Kloewer_etal_james2020.bbl
 INPUT Kloewer_etal_james2020.aux
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

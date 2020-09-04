@@ -12,45 +12,48 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography_new2.bib
+Warning--entry type for "milan_k_2020_4015134" isn't style-file defined
+--line 888 of file bibliography_new2.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 48 entries,
+You've used 49 entries,
             6951 wiz_defined-function locations,
-            1638 strings with 23366 characters,
-and the built_in function-call counts, 102869 in all, are:
-= -- 12506
-> -- 944
-< -- 4957
-+ -- 5163
-- -- 96
-* -- 6731
-:= -- 18460
-add.period$ -- 210
-call.type$ -- 48
-change.case$ -- 904
+            1643 strings with 23555 characters,
+and the built_in function-call counts, 105026 in all, are:
+= -- 12807
+> -- 954
+< -- 5061
++ -- 5263
+- -- 98
+* -- 6863
+:= -- 18846
+add.period$ -- 215
+call.type$ -- 49
+change.case$ -- 921
 chr.to.int$ -- 0
-cite$ -- 96
-duplicate$ -- 3025
-empty$ -- 3982
-format.name$ -- 1638
-if$ -- 19297
+cite$ -- 98
+duplicate$ -- 3065
+empty$ -- 4058
+format.name$ -- 1652
+if$ -- 19714
 int.to.chr$ -- 0
-int.to.str$ -- 144
+int.to.str$ -- 147
 missing$ -- 0
-newline$ -- 1330
-num.names$ -- 386
-pop$ -- 1828
+newline$ -- 1356
+num.names$ -- 394
+pop$ -- 1848
 preamble$ -- 1
-purify$ -- 270
+purify$ -- 274
 quote$ -- 0
-skip$ -- 6374
+skip$ -- 6552
 stack$ -- 0
-substring$ -- 5647
-swap$ -- 1769
-text.length$ -- 227
+substring$ -- 5752
+swap$ -- 1788
+text.length$ -- 229
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 4480
+type$ -- 4632
 warning$ -- 0
-while$ -- 651
+while$ -- 656
 width$ -- 0
-write$ -- 1704
+write$ -- 1732
+(There was 1 warning)
