@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4015133.svg)](https://doi.org/10.5281/zenodo.4015133)
 # Number formats, error mitigation and scope for 16-bit arithmetics in weather and climate modelling analysed with a shallow water model
 
 M Klöwer¹, PD Düben² and TN Palmer¹, 2020.
