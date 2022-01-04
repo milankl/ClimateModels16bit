@@ -6,9 +6,12 @@ M Klöwer¹, PD Düben² and TN Palmer¹, 2020.
 ¹Atmospheric, Oceanic and Planeteray Physics, University of Oxford, UK.   
 ²European Centre for Medium-Range Weather-Forecasts, Reading, UK.
 
-accepted in [Journal of Advances in Modeling the Earth System (JAMES)](https://agupubs.onlinelibrary.wiley.com/journal/19422466). This repository contains scripts to reproduce the results in this publication.
+published in [Journal of Advances in Modeling the Earth System (JAMES)](https://agupubs.onlinelibrary.wiley.com/journal/19422466)
+as 
 
-Additional software that was used
+> Klöwer, Düben and Palmer, 2020. *Number formats, error mitigation and scope for 16-bit arithmetics in weather and climate modelling analyzed with a shallow water model*, Journal of Advances in Modeling Earth Systems, 12, e2020MS002246. [10.1029/2020MS002246](https://doi.org/10.1029/2020MS002246).
+
+This repository contains scripts to reproduce the results in this publication. Additional software that was used
 - [ShallowWaters.jl](https://github.com/milankl/ShallowWaters.jl)
 - [SoftPosit.jl](https://github.com/milankl/SoftPosit.jl)
 - [BFloat16s.jl](https://github.com/JuliaComputing/BFloat16s.jl)
